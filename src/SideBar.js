@@ -12,8 +12,6 @@ export class SideBar extends Component {
 							<Link to="/heroes">Heroes</Link>
 							<Link to="/movies">Movies</Link>
 							<Link to="/theme">Theming</Link>
-						
-						
 						</div>)
 				}
 			</ThemeContext.Consumer>

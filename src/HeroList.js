@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { initialHeroes } from './heroes';
+import { initialHeroes } from './not-important/heroes';
 import { withScroll } from 'react-fns';
-import { calculateBackgroundColor } from './utils';
-import { FormController } from './FormController';
+import { calculateBackgroundColor } from './not-important/utils';
+import { FormController } from './not-important/FormController';
 
 class HeroListClass extends Component {
 	state = {
