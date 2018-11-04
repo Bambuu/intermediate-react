@@ -51,7 +51,7 @@ class HeroListClass extends Component {
 			.map(hero => <li className="hero-list-item" key={hero.name}>{hero.evil} - {hero.name}</li>)
 		
 		return (
-			<div style={calculateBackgroundColor(document.height, this.props.y)}>
+			<div style={calculateBackgroundColor(document.body.clientHeight, this.props.y)}>
 				<ul>
 					{heroList}
 				</ul>
