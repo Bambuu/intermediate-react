@@ -35,7 +35,6 @@ export class FormController extends React.Component{
 			propsToPassDown[key] = {
 				value: value,
 				onChange: (e) => {
-					console.log('setState', key, ':', e.target.value);
 					this.setState({
 						[key]: e.target.value,
 					})
