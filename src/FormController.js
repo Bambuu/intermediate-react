@@ -1,9 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export class FormController extends React.Component{
 	
 	static propTypes = {
 		initialState: PropTypes.object.isRequired,
+		onSubmit: PropTypes.func.isRequired,
 		children: PropTypes.func.isRequired,
 	};
 	
@@ -16,17 +18,33 @@ export class FormController extends React.Component{
 		};
 	}
 	
+	onSubmit = (e) => {
+		e.preventDefault();
+		
+		this.props.onSubmit(this.state);
+		
+		this.setState({
+			...this.props.initialState
+		});
+	};
+	
 	render(){
+		const propsToPassDown = {};
+		
 		for (const [key, value] of Object.entries(this.state)){
-			props[key] = {
+			propsToPassDown[key] = {
 				value: value,
-				onChange: (e) => this.setState({
-					[value]: e.target.value,
-				})
+				onChange: (e) => {
+					console.log('setState', key, ':', e.target.value);
+					this.setState({
+						[key]: e.target.value,
+					})
+				}
 			}
 		}
 		
-		
-		this.children(props);
+		return <form onSubmit={this.onSubmit}>
+			{this.props.children(propsToPassDown)}
+		</form>
 	}
 }
