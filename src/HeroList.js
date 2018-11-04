@@ -44,10 +44,14 @@ export class HeroList extends Component {
 	
 	
 	render() {
+		const heroList = [... this.state.heroes]
+			.sort((hero, secondHero) => hero.evil - secondHero.evil)
+			.map(hero => <li className="hero-list-item" key={hero.name}>{hero.evil} - {hero.name}</li>)
+		
 		return (
 			<div>
 				<ul>
-					{this.state.heroes.map(hero => <li className="hero-list-item" key={hero.name}>{hero.evil} - {hero.name}</li>)}
+					{heroList}
 				</ul>
 				<form onSubmit={this.createSuperHero}>
 					<input ref={this.ref} value={this.state.evil} onChange={this.changeEvilValue} type="number"/>
