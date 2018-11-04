@@ -8,10 +8,12 @@ class App extends Component {
 	render() {
 		return (
 			<BrowserRouter>
-				<div>
+				<div className="root">
 					<SideBar />
+					<div className="content">
 					<Header />
 					<Route path="/heroes" component={HeroList} />
+					</div>
 				</div>
 			</BrowserRouter>
 		);
