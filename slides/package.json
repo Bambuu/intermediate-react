@@ -1,0 +1,26 @@
+{
+  "name": "bambuu-intermediate-react-slides",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Bambuu/intermediate-react",
+  "author": "bambuu ApS",
+  "contributors": [
+    "Jeppe Reinhold <jeppe@bambuu.dk> (https://reinhold.is)",
+    "Gustav Wengel <gustav@bambuu.dk> (https://gustavwengel.dk)"
+  ],
+  "license": "UNLICENSED",
+  "private": false,
+  "scripts": {
+    "start": "mdx-deck deck.mdx"
+  },
+  "devDependencies": {
+    "css-loader": "^1.0.1",
+    "mdx-deck": "^1.7.7",
+    "mdx-deck-code-surfer": "^0.5.3",
+    "raw-loader": "^0.5.1",
+    "style-loader": "^0.23.1"
+  },
+  "dependencies": {
+    "prism-react-renderer": "^0.1.4"
+  }
+}
