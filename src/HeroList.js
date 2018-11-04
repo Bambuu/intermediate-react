@@ -28,7 +28,7 @@ class HeroListClass extends Component {
 		});
 	};
 	
-	createSuperHero = (e) => {
+	createSuperHero = (e, save) => {
 		e.preventDefault(); // No page changes
 		const newHero = {
 			name: this.state.name,
@@ -51,16 +51,22 @@ class HeroListClass extends Component {
 			.map(hero => <li className="hero-list-item" key={hero.name}>{hero.evil} - {hero.name}</li>)
 		
 		return (
-			<div style={calculateBackgroundColor(document.body.clientHeight, this.props.y)}>
-				<ul>
-					{heroList}
-				</ul>
-				<form onSubmit={this.createSuperHero}>
-					<input ref={this.ref} value={this.state.evil} onChange={this.changeEvilValue} type="number"/>
-					<input value={this.state.name} onChange={this.changeName} type="text" />
-					<button>Create</button>
-				</form>
-			</div>);
+			<FormThingy keys={{evil: 0, name: ''}}>
+				val => (
+				<div style={calculateBackgroundColor(document.body.clientHeight, this.props.y)}>
+					<ul>
+						{heroList}
+					</ul>
+					<form onSubmit={this.createSuperHero}>
+						<input ref={this.ref} value={val.evil} onChange={val.changeEvil} type="number"/>
+						<input value={val.name} onChange={val.changeName} type="text" />
+						<button>Create</button>
+					</form>
+				</div>
+			)
+			
+			</FormThingy>
+				);
 	}
 }
 
