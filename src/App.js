@@ -2,15 +2,18 @@ import React, { Component } from 'react';
 import { SideBar } from './SideBar';
 import { Header } from './Header';
 import { HeroList } from './HeroList';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 class App extends Component {
 	render() {
 		return (
-			<div>
-				<SideBar />
-				<Header />
-				<HeroList/>
-			</div>
+			<BrowserRouter>
+				<div>
+					<SideBar />
+					<Header />
+					<Route path="/heroes" component={HeroList} />
+				</div>
+			</BrowserRouter>
 		);
 	}
 }

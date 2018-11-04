@@ -1,5 +1,8 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
-export const Header = () => {
-	return <div>Header!</div>
-}
+const HeaderComponent = (props) => {
+	return <div>You are at <code>{props.location.pathname}</code></div>
+};
+
+export const Header = withRouter(HeaderComponent);
