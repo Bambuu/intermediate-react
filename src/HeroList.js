@@ -9,47 +9,25 @@ class HeroListClass extends Component {
 		heroes: initialHeroes
 	};
 	
-	ref = React.createRef();
-	
-	componentDidMount(){
-		this.ref.current.focus();
-	}
-	
-	createSuperHero = (values) => {
-		const newHero = {
-			name: values.name,
-			evil: values.evil,
-		};
-		this.setState({
-			heroes: [...this.state.heroes, newHero],
-		});
-		
-		// Focus back on the evil input
-		this.ref.current.focus();
-	};
-	
-	
 	render() {
-		const heroList = [... this.state.heroes]
-			.sort((hero, secondHero) => hero.evil - secondHero.evil)
+		const sortedHeroes = [... this.state.heroes]
+			.sort((hero, secondHero) => hero.evil - secondHero.evil);
+		
+		const heroComponents = sortedHeroes
 			.map(hero => <li className="hero-list-item" key={hero.name}>{hero.evil} - {hero.name}</li>)
 		
 		return (
 				<div style={calculateBackgroundColor(document.body.clientHeight, this.props.y)}>
 					<ul>
 						<li className="hero-list-item hero-list-header">Evil score - Hero name</li>
-						{heroList}
+						{heroComponents}
 					</ul>
-					<FormController initialState={{evil: 0, name: ''}} onSubmit={this.createSuperHero}>
-						{ form => (
-							<div>
-								<input ref={this.ref} value={form.evil.value} onChange={form.evil.onChange} type="number"/>
-								<input value={form.name.value} onChange={form.name.onChange} type="text" />
-								<button>Create</button>
-							</div>
-						)
-						}
-					</FormController>
+					
+					<form onSubmit={(e) => e.preventDefault()}>
+						<input type="number"/>
+						<input type="text" />
+						<button>Create</button>
+					</form>
 				</div>
 			);
 	}
