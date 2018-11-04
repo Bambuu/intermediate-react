@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { initialHeroes } from './heroes';
+import { withScroll } from 'react-fns';
+import { calculateBackgroundColor } from './utils';
 
-export class HeroList extends Component {
+class HeroListClass extends Component {
 	state = {
 		evil: 0,
 		name: '',
@@ -49,7 +51,7 @@ export class HeroList extends Component {
 			.map(hero => <li className="hero-list-item" key={hero.name}>{hero.evil} - {hero.name}</li>)
 		
 		return (
-			<div>
+			<div style={calculateBackgroundColor(document.height, this.props.y)}>
 				<ul>
 					{heroList}
 				</ul>
@@ -61,3 +63,5 @@ export class HeroList extends Component {
 			</div>);
 	}
 }
+
+export const HeroList = withScroll(HeroListClass);
