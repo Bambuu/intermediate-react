@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import { initialHeroes } from './not-important/heroes';
-import { withScroll } from 'react-fns';
-import { calculateBackgroundColor } from './not-important/utils';
-import { FormController } from './not-important/FormController';
 
 export class HeroList extends Component {
 	state = {
@@ -14,7 +11,7 @@ export class HeroList extends Component {
 			.sort((hero, secondHero) => hero.evil - secondHero.evil);
 		
 		const heroComponents = sortedHeroes
-			.map(hero => <li className="hero-list-item" key={hero.name}>{hero.evil} - {hero.name}</li>)
+			.map(hero => <li className="hero-list-item" key={hero.name}>{hero.evil} - {hero.name}</li>);
 		
 		return (
 			<div>
