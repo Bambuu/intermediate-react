@@ -37,6 +37,7 @@ class HeroListClass extends Component {
 		return (
 				<div style={calculateBackgroundColor(document.body.clientHeight, this.props.y)}>
 					<ul>
+						<li className="hero-list-item hero-list-header">Evil score - Hero name</li>
 						{heroList}
 					</ul>
 					<FormController initialState={{evil: 0, name: ''}} onSubmit={this.createSuperHero}>
