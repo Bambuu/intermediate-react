@@ -1,25 +1,16 @@
 {
   "name": "intermediate-react",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0",
-    "react-scripts": "2.1.1"
-  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Bambuu/intermediate-react.git",
+  "author": "bambuu ApS",
+  "contributors": [
+    "Jeppe Reinhold <jeppe@bambuu.dk> (https://reinhold.is)",
+    "Gustav Wengel <gustav@bambuu.dk> (https://gustavwengel.dk)"
+  ],
+  "license": "UNLICENSED",
+  "private": false,
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+    "setupAll": "cd part1 && npm install && cd ../part2 && npm install && cd ../part3 && npm install && cd ../part4 && npm install && cd ../part5 && npm install && cd ../part6 && npm install && cd ../final && npm install && cd ../slides && npm install"
+  }
 }
