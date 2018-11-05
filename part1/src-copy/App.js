@@ -13,7 +13,7 @@ class App extends Component {
 	};
 
 	render() {
-		// Default component is herolist
+		// Default component is HeroList
 		let mainComponent = <HeroList/>;
 		if (this.state.currentPage === '/movies'){
 			mainComponent = <div>Here's a fun list of superhero movies.. to be implemented later..</div>

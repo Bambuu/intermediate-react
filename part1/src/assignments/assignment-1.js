@@ -2,7 +2,6 @@
 
 /*
 EXERCISE A:
-Make sure the app runs.
 Inside your terminal, navigate to the "/part1" directory and type "npm run start"
 
 You should see a list of superheroes pop up in your browser at localhost:3000
@@ -14,27 +13,34 @@ Tip: You might have to run "npm install" inside this directory if you get an err
 EXERCISE B:
 Let's make a form so we can add superheros! We want to be able to specify how
 
-Find the render() function inside the HeroList. Inside the JSX returned,
+Find the render() function inside the HeroList. Inside the JSX, below the </ul>,
 add a <form> element.
 
 Inside the <form> element, add two <input> elements. The first one with type="number" and the second with type="text"
+Like below:
 */
+<form>
+  <input type="number" />
+  <input type="text"/>
+</form>
 
 /*
 EXERCISE C:
 You should now have two input elements, where you can enter things.
-Let's try making a button so we can submit our form as well.
-Add a <button> inside the form. Buttons inside forms automatically submit the form when clicked.
+Let's make a button so we can submit our form.
+Add a <button> inside the form.
 If you click the button you will notice something strange - the page reloads!
 */
 
 /*
 EXERCISE D:
-That's not what we want at all ! React forms behave like normal HTML forms, which submits some data to a page
+React forms behave like normal HTML forms, which submits some data
 and then loads a new page. We'll want to implement our custom logic.
 
-Create a function inside heroList that's called "addSuperhero", it will take in an "event" as parameter.
+Create a function inside HeroList that's called "addSuperhero", it will take in an "event" as parameter.
 To stop the default behaviour call 'event.preventDefault()' on the event parameter.
+
+Add "this.addSuperHero" to the "onSubmit" attribute on the form element.
 
 Ensure that when you submit your form now, nothing happens.
 */
