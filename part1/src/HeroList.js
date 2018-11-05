@@ -3,7 +3,13 @@ import { initialHeroes } from "./not-important/heroes";
 
 export class HeroList extends Component {
   state = {
-    heroes: initialHeroes
+    heroes: initialHeroes,
+    awesomeInputValue: '',
+    nameInputValue: '',
+  };
+
+  addSuperHero = (event) => {
+    event.preventDefault()
   };
 
   render() {
@@ -19,6 +25,11 @@ export class HeroList extends Component {
           <li className="hero-list-item hero-list-header">Awesome score - Hero name</li>
           {heroComponents}
         </ul>
+        <form onSubmit={this.addSuperHero}>
+          <input value={this.state.awesomeInputValue} type="number" />
+          <input value={this.state.nameInputValue} type="text"/>
+          <button>Submit</button>
+        </form>
       </div>
     );
   }

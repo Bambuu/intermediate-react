@@ -47,13 +47,15 @@ Ensure that when you submit your form now, nothing happens.
 
 /*
 EXERCISE E:
-But how do we actually create the hero? We need to get the information from our input elements, into our state.
+To create the hero, we need to get the values the user type, into our state.
 
-We do this by making them 'controlled components' - what this means is that we keep their value inside the state
-of the component above them.
+We do this by making our <input> components into 'controlled components'
+What this means is that we keep their value inside the state of the component above them.
 
-Add two new keys to the state, call them "awesomeInputValue" and "nameInputValue"
-Set the "value" prop of the input element to the value of the state like this
+Add two new keys to the state, call them "awesomeInputValue" and "nameInputValue".
+Have them both be empty strings to start with.
+
+Set the "value" prop of the <input/> element to the value of the state like this:
   value={this.state.awesomeInputValue}
 
 Now the value is always the value in state. Try typing in the <input> components. Nothing changes!
