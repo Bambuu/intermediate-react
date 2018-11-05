@@ -40,7 +40,7 @@ export class HeroList extends Component {
     const sortedHeroes = copyOfHeroArray.sort((hero, secondHero) => hero.awesome - secondHero.awesome);
 
     const heroComponents = sortedHeroes
-      .map(hero => <li className="hero-list-item">{hero.awesome} - {hero.name}</li>);
+      .map(hero => <li className="hero-list-item" key={hero.name}>{hero.awesome} - {hero.name}</li>);
 
     return (
       <div>
