@@ -2,19 +2,17 @@
 
 /*
 EXERCISE A:
-Let's get the app running. Inside your terminal, navigate to the /part1 directory and type "npm run start"
+Make sure the app runs.
+Inside your terminal, navigate to the "/part1" directory and type "npm run start"
 
 You should see a list of superheroes pop up in your browser at localhost:3000
 
-Tip: You might have to run npm install inside this directory if you get an error that packages are missing.
-To do this for all the parts at once, go into the root "intermediate-react" directory and run "npm run setupAll"
+Tip: You might have to run "npm install" inside this directory if you get an error that packages are missing.
 */
 
 /*
 EXERCISE B:
-We have a list of superheroes here. But we'll want to be able to add our own superheroes.
-For that we'll need a form. We'll want to be able to specify the name of our superhero,
-and how evil they are.
+Let's make a form so we can add superheros! We want to be able to specify how
 
 Find the render() function inside the HeroList. Inside the JSX returned,
 add a <form> element.
@@ -48,9 +46,9 @@ But how do we actually create the hero? We need to get the information from our 
 We do this by making them 'controlled components' - what this means is that we keep their value inside the state
 of the component above them.
 
-Add two new keys to the state, call them "evilInputValue" and "nameInputValue"
+Add two new keys to the state, call them "awesomeInputValue" and "nameInputValue"
 Set the "value" prop of the input element to the value of the state like this
-  value={this.state.evilInputValue}
+  value={this.state.awesomeInputValue}
 
 Now the value is always the value in state. Try typing in the <input> components. Nothing changes!
 */
@@ -59,12 +57,12 @@ Now the value is always the value in state. Try typing in the <input> components
 Let's update our state when the user types something. We'll need to add onChange handlers to our input fields.
 onChange handlers take in an event, and update the state with the new value. It could look like this:
 */
-onEvilInputChange = (e) => {
-  this.setState({evil: e.target.value})
+onAwesomeInputChange = (e) => {
+  this.setState({awesome: e.target.value})
 };
 /*
 EXERCISE D:
-Implement an onEvilInputChange function like the one above, in your HeroList.
+Implement an onAwesomeInputChange function like the one above, in your HeroList.
 Pass it to the onChange handler inside the <input> element.
 
 Ensure that your input field works when typing.
@@ -95,7 +93,7 @@ addSuperHero = (event) => {
   const newSuperHero = {
     // You should read these from this.state in your application
     name: "The Terminator",
-    evil: "40"
+    awesome: "40"
   };
 
   // Concat takes an array and a value, and merges them into a new array.
@@ -112,6 +110,6 @@ Make sure it appears on the list!
 
 /*
 EXERCISE G
-We don't want to accidentally add the same SuperHero twice! Inside addSuperHero, set the 'evilInputValue' and 'nameInputValue'
+We don't want to accidentally add the same SuperHero twice! Inside addSuperHero, set the 'awesomeInputValue' and 'nameInputValue'
 parts of the state, to empty strings.
 */

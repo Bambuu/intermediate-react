@@ -8,15 +8,15 @@ export class HeroList extends Component {
 	
 	render() {
 		const sortedHeroes = [...this.state.heroes]
-			.sort((hero, secondHero) => hero.evil - secondHero.evil);
+			.sort((hero, secondHero) => hero.awesome - secondHero.awesome);
 		
 		const heroComponents = sortedHeroes
-			.map(hero => <li className="hero-list-item" key={hero.name}>{hero.evil} - {hero.name}</li>);
+			.map(hero => <li className="hero-list-item" key={hero.name}>{hero.awesome} - {hero.name}</li>);
 		
 		return (
 			<div>
 				<ul>
-					<li className="hero-list-item hero-list-header">Evil score - Hero name</li>
+					<li className="hero-list-item hero-list-header">Awesome score - Hero name</li>
 					{heroComponents}
 				</ul>
 			</div>
