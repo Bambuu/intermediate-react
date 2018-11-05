@@ -4,12 +4,35 @@ import { initialHeroes } from "./not-important/heroes";
 export class HeroList extends Component {
   state = {
     heroes: initialHeroes,
-    awesomeInputValue: '',
+    awesomeInputValue: 0,
     nameInputValue: '',
   };
 
   addSuperHero = (event) => {
-    event.preventDefault()
+    event.preventDefault();
+
+    const newSuperHero = {
+      name: this.state.nameInputValue,
+      awesome: this.state.awesomeInputValue
+    };
+
+    this.setState({
+      heroes: this.state.heroes.concat(newSuperHero),
+      nameInputValue: '',
+      awesomeInputValue: 0,
+    })
+  };
+
+  onAwesomeInputChange = (event) => {
+    this.setState({
+      awesomeInputValue: event.target.value,
+    })
+  };
+
+  onNameInputChange = (event) => {
+    this.setState({
+      nameInputValue: event.target.value,
+    })
   };
 
   render() {
@@ -17,7 +40,7 @@ export class HeroList extends Component {
     const sortedHeroes = copyOfHeroArray.sort((hero, secondHero) => hero.awesome - secondHero.awesome);
 
     const heroComponents = sortedHeroes
-      .map(hero => <li className="hero-list-item" key={hero.name}>{hero.awesome} - {hero.name}</li>);
+      .map(hero => <li className="hero-list-item">{hero.awesome} - {hero.name}</li>);
 
     return (
       <div>
@@ -26,8 +49,8 @@ export class HeroList extends Component {
           {heroComponents}
         </ul>
         <form onSubmit={this.addSuperHero}>
-          <input value={this.state.awesomeInputValue} type="number" />
-          <input value={this.state.nameInputValue} type="text"/>
+          <input value={this.state.awesomeInputValue} onChange={this.onAwesomeInputChange} type="number" />
+          <input value={this.state.nameInputValue} onChange={this.onNameInputChange} type="text"/>
           <button>Submit</button>
         </form>
       </div>

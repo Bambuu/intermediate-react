@@ -53,7 +53,7 @@ We do this by making our <input> components into 'controlled components'
 What this means is that we keep their value inside the state of the component above them.
 
 Add two new keys to the state, call them "awesomeInputValue" and "nameInputValue".
-Have them both be empty strings to start with.
+Have awesomeInputValue start as 0, and nameInputValue start as an empty string ""
 
 Set the "value" prop of the <input/> element to the value of the state like this:
   value={this.state.awesomeInputValue}
@@ -63,37 +63,34 @@ Now the value is always the value in state. Try typing in the <input> components
 
 /*
 Let's update our state when the user types something. We'll need to add onChange handlers to our input fields.
-onChange handlers take in an event, and update the state with the new value. It could look like this:
+onChange handlers take in an event, and update the state with the new value. The below is an onChange handler
+that updates the awesomeInputValue value in the state:
 */
-onAwesomeInputChange = (e) => {
-  this.setState({awesome: e.target.value})
+onAwesomeInputChange = (event) => {
+  this.setState({awesomeInputValue: event.target.value})
 };
 /*
 EXERCISE D:
 Implement an onAwesomeInputChange function like the one above, in your HeroList.
-Pass it to the onChange handler inside the <input> element.
+Pass it to the onChange attribute inside the first <input> element.
 
 Ensure that your input field works when typing.
 */
 
 /*
 EXERCISE E:
-Implement a onChange handler for the <input> component that holds the "name" as well.
+Implement a onChange handler for the <input> component that corresponds to the nameInputValue as well.
 */
 
 /*
-Now we're back where we started. The difference is now we have two controlled components, which means
-React will handle the state. Every time the user types something, the onChange handler is called, and that updates
+Now we have two controlled components!
+Every time the user types something, the onChange handler is called, and that updates
 the state. Updating the state in turn, updates the text in the <input> component.
-*/
 
-/*
-Now we can create a Superhero!
-Go back to your old addSuperHero method. Here we will want to use setState
-to create a new hero.
+Now we can create a Superhero inside your addSuperHero method!
 
 We can use setState to update the heroes array. Remember that you must never mutate the state directly.
-Create a new hero object using 'concat()' like this:
+Create a new hero array using 'concat()' with an object like this:
 */
 addSuperHero = (event) => {
   event.preventDefault();
@@ -119,5 +116,5 @@ Make sure it appears on the list!
 /*
 EXERCISE G
 We don't want to accidentally add the same SuperHero twice! Inside addSuperHero, set the 'awesomeInputValue' and 'nameInputValue'
-parts of the state, to empty strings.
+parts of the state, to their starting values: The number 0, and an empty string.
 */
