@@ -10,6 +10,12 @@
   ],
   "license": "UNLICENSED",
   "private": false,
+  "eslintConfig": {
+    "extends": "react-app",
+    "rules": {
+      "jsx-a11y/anchor-is-valid": "off"
+    }
+  },
   "scripts": {
     "setupAll": "cd part1 && npm install && cd ../part2 && npm install && cd ../part3 && npm install && cd ../part4 && npm install && cd ../part5 && npm install && cd ../part6 && npm install && cd ../final && npm install && cd ../slides && npm install"
   }
