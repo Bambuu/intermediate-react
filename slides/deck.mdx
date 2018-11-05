@@ -1,8 +1,9 @@
 export { default as theme } from './theme'
 import { Appear } from 'mdx-deck'
-import { Head } from 'mdx-deck'
+import { Head, Image } from 'mdx-deck'
 import nightOwl from 'prism-react-renderer/themes/nightOwl'
 import './styles.css';
+import { CodeSurfer } from "mdx-deck-code-surfer"
 import {Tester} from './tester'
 
 <Head>
@@ -86,54 +87,29 @@ by Jeppe Reinhold and Gustav Wengel
 
 ---
 
-# Component keys
+# Component keys 🔑
 
 <ul style={{textAlign: 'left',fontSize: '1.5em'}}>
   <li>React needs a way to uniquely identify components</li>
   <Appear>
     <li>Usually this is handled by React</li>
-    <li>But when you render <b>lists</b>, React can't do that automatically</li>
+    <li>But when you <b>dynamically render lists</b>, React can't do that automatically</li>
 	<li>Therefore we have to add a <code>key</code> prop to each element in our list</li>
   </Appear>
 </ul>
 
 ---
 
-# What does React consider a list?
+# Dynamically rendering lists? 🤔
 
-<!--- 
-	GUSTAV:
-	should we show a simple array here, in JSX, to describe what a "list" is in react?
-	and then just afterwads say, that the way u usually do this, is with array.map.
-	or is that a complexity we need to leave out?
+- When you have an array of items that you use to build JSX elements with
+- 99 % of the time you use `array.map()` to do this
 
-	eg.
-
-	<ul>
-	 <li>not</li>
-	 <li>a</li>
-	 <li>"list"</li>
-	</ul>
-
-	vs.
-
-	<ul>
-	 {[
-		 <li>this</li>,
-		 <li>needs</li>,
-		 <li>keys</li>
-	]}
-	</ul>
-
-
- --->
 ---
-
-import { CodeSurfer } from "mdx-deck-code-surfer"
 
 <CodeSurfer
   title="array.map()"
-  code={require("!raw-loader!./examples/array-map.js")}
+  code={require("!raw-loader!./examples/array-map-faulty.js")}
   lang="jsx"
   showNumbers={true}
   theme={nightOwl}
@@ -148,9 +124,71 @@ import { CodeSurfer } from "mdx-deck-code-surfer"
 
 ---
 
-# SHOW REACT ERROR SCREENSHOT 
+<img style={{height: "300px"}} src="./public/computer-says-no.png"/>
+<img style={{width: "1000px"}} src="./public/keys-error.png"/>
 
 ---
+
+<CodeSurfer
+  title="array.map()"
+  code={require("!raw-loader!./examples/array-map.js")}
+  lang="jsx"
+  showNumbers={true}
+  theme={nightOwl}
+  steps={[
+	{ tokens: {4: [4,5,6,7,8]}, notes: "adding 'key' prop to element"},
+	{ range: [10,16], notes: 'output'}
+  ]}
+/>
+
+
+---
+
+# Don't use the array index as key!
+
+<ul style={{textAlign: 'left',fontSize: '1.5em'}}>
+  <Appear>
+  	<li>What happens if the array gets reordered?</li>
+    <li>Or if an item in the middle of the array is removed?</li>
+    <li>Or added?</li>
+	<li>Indexes are not bound to the item, only it's <b>position</b>!</li>
+  </Appear>
+</ul>
+
+---
+
+# Using `ref` to reference native elements
+
+---
+
+# The problem
+
+You want to do something with the actual DOM element
+
+<ul style={{textAlign: 'left',fontSize: '1.5em'}}>
+  <Appear>
+  	<li>Managing focus, text selection, or media playback</li>
+    <li>Triggering imperative animations</li>
+    <li>Integrating with third-party DOM libraries</li>
+  </Appear>
+</ul>
+
+---
+
+<CodeSurfer
+  title="How do we do that within React?"
+  code={require("!raw-loader!./examples/array-map.js")}
+  lang="jsx"
+  showNumbers={true}
+  theme={nightOwl}
+  steps={[
+	{ tokens: {4: [4,5,6,7,8]}, notes: "adding 'key' prop to element"},
+	{ range: [10,16], notes: 'output'}
+  ]}
+/>
+
+---
+
 
 # The end - Testing stuff
 

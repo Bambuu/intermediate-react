@@ -1,5 +1,10 @@
-import React from 'react';
+import React from "react";
 
-export const Tester = (props) => {
-	return <p>{[<code>cool</code>, <code>beans</code>]}</p>
-}
+export const Tester = props => {
+  const animals = ["elephant", "lion", "giraffe"];
+  const animalElements = animals.map(animal => (
+    <li>{animal}</li>
+  ));
+
+  return <ul>{animalElements}</ul>;
+};
