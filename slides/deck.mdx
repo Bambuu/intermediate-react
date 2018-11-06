@@ -157,7 +157,7 @@ by Jeppe Reinhold and Gustav Wengel
 
 ---
 
-# Using `ref` to reference native elements
+# Using `ref` to reference native elements ⤵️
 
 ---
 
@@ -177,18 +177,137 @@ You want to do something with the actual DOM element
 
 <CodeSurfer
   title="How do we do that within React?"
-  code={require("!raw-loader!./examples/array-map.js")}
+  code={require("!raw-loader!./examples/ref-base.js")}
   lang="jsx"
   showNumbers={true}
   theme={nightOwl}
   steps={[
-	{ tokens: {4: [4,5,6,7,8]}, notes: "adding 'key' prop to element"},
-	{ range: [10,16], notes: 'output'}
-  ]}
+	  {},
+	  { range: [6, 14] },
+	  { range: [2, 4]}
+	]}
 />
 
 ---
 
+# `ref` to the rescue!
+
+<ul style={{textAlign: 'left',fontSize: '1.5em'}}>
+  <Appear>
+  	<li>Reference the native element from a class variable</li>
+    <li>The class variable is now a "DOM element", like any vanilla JS</li>
+	<li>Now we can do anything with it, within React!</li>
+  </Appear>
+</ul>
+
+
+---
+
+<CodeSurfer
+  title="Adding a ref"
+  code={require("!raw-loader!./examples/ref-base.js")}
+  lang="diff"
+  showNumbers={true}
+  theme={nightOwl}
+  steps={[
+	  {},
+	]}
+/>
+
+
+---
+
+<CodeSurfer
+  title="Adding a ref"
+  code={require("!raw-loader!./examples/ref-1.js")}
+  lang="diff"
+  showNumbers={true}
+  theme={nightOwl}
+  steps={[
+	  {},
+	]}
+/>
+
+---
+
+<CodeSurfer
+  title="Adding a ref"
+  code={require("!raw-loader!./examples/ref-2.js")}
+  lang="diff"
+  showNumbers={true}
+  theme={nightOwl}
+  steps={[
+	  {},
+	]}
+/>
+
+---
+
+<CodeSurfer
+  title="Adding a ref"
+  code={require("!raw-loader!./examples/ref-3.js")}
+  lang="diff"
+  showNumbers={true}
+  theme={nightOwl}
+  steps={[
+	  {},
+	]}
+/>
+
+---
+
+<CodeSurfer
+  title="Adding a ref"
+  code={require("!raw-loader!./examples2/ref-base.js")}
+  lang="jsx"
+  showNumbers={true}
+  theme={nightOwl}
+  steps={[
+	  {},
+	]}
+/>
+
+
+---
+
+<CodeSurfer
+  title="Adding a ref"
+  code={require("!raw-loader!./examples2/ref-1.js")}
+  lang="jsx"
+  showNumbers={true}
+  theme={nightOwl}
+  steps={[
+	  {lines: [2]},
+	]}
+/>
+
+---
+
+<CodeSurfer
+  title="Adding a ref"
+  code={require("!raw-loader!./examples2/ref-2.js")}
+  lang="jsx"
+  showNumbers={true}
+  theme={nightOwl}
+  steps={[
+	  {tokens: {11: [10,11,12,13,14,15,16]}},
+	]}
+/>
+
+---
+
+<CodeSurfer
+  title="Adding a ref"
+  code={require("!raw-loader!./examples2/ref-3.js")}
+  lang="jsx"
+  showNumbers={true}
+  theme={nightOwl}
+  steps={[
+	  	  {lines: [5]},
+	]}
+/>
+
+---
 
 # The end - Testing stuff
 

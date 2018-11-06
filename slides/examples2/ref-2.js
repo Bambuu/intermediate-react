@@ -1,6 +1,6 @@
 class AddHeroForm extends React.Component {
+  inputRef = React.createRef();
 
-	
   componentDidMount() {
     // how to focus input element here?!?! 🤷‍♂️
   }
@@ -8,7 +8,7 @@ class AddHeroForm extends React.Component {
   render() {
     return (
       <form>
-        <input type="text" />
+        <input type="text" ref={this.inputRef} />
         <button type="submit">Add Hero</button>
       </form>
     );
