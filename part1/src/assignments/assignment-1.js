@@ -23,7 +23,7 @@ Open up your Developer Tools and make sure you can see the warning in the consol
 EXERCISE C:
 
 Let's try to go through the render() method of the HeroList. Spend a few minutes trying to understand what's
-going on.
+going on. you can find it in the file src/HeroList.js
 When you're done, there's a step-by-step walkthrough just below:
  */
 render() {
@@ -34,19 +34,30 @@ render() {
   // The specifics of sort isn't important - but it sorts the hero after their awesome score.
   const sortedHeroes = copyOfHeroArray.sort((hero, secondHero) => hero.awesome - secondHero.awesome);
 
-  // Here we use map to turn our array of heroes, into a array of React Components!
+  // Here we use map to turn our array of heroes, into an array of React Components!
   // Which we can then render in the JSX using {}'s
   const heroComponents = sortedHeroes
     .map(hero => <li className="hero-list-item">{hero.awesome} - {hero.name}</li>);
 
   // Here we return some JSX.
+  return (
+	<div>
+	  <ul>
+		{/* This first list element is just to create a header for the list */}
+		<li className="hero-list-item hero-list-header">Awesome score - Hero name</li>
+		{/* Here we render our list of heroes */}
+		{heroComponents}
+	  </ul>
+	</div>
+  );
 }
 
 /*
 EXERCISE D:
-  We need to add a "key" property to the <li> elements returned by our .map() function.
+  You need to add a "key" property to the <li> elements returned by our .map() function.
   A key should be unique. In our case, we can use the name of the hero, assuming nobody adds the same hero twice.
   When you add the key, the warning should disappear in your console.
+  GUSTAV: WHERE TO DO THE CHANGE?
 
   An example of adding a key to a <li> element is below:
  */

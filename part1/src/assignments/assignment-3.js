@@ -1,5 +1,5 @@
 // ASSIGNMENT THREE - REFS
-
+// GUSTAV: MAYBE EXTRA ASSIGNMENT
 /*
 Occasionally we do need to access the underlying DOM. It's very rare,
 and mostly for managing user focus, or integrating with third party libraries.
@@ -12,7 +12,7 @@ In this assignment we'll want to use refs to manage focus inside the form we jus
 /*
 EXERCISE A:
 
-Create a ref inside your HeroList. This is done via the statement:
+Create an empty ref inside your HeroList component. This is done via the statement:
 
 ref = React.createRef();
  */
@@ -30,19 +30,19 @@ Add your ref to the first <input> element in your form.
 
 /*
 EXERCISE C:
-We need to add some heroes quickly!
+We need to add some heroes quickly! GUSTAV: UDDYB
 Use the ref inside the componentDidMount lifecycle method
 to focus the first input field when the component loads.
 More help below:
 */
 componentDidMount(){
   // Here we can access "this.ref"
-  // We get the DOM element by "this.ref.currentTarget"
+  // We get the DOM element by accessing "this.ref.currentTarget"
   // We can focus it by calling "this.ref.currentTarget.focus()"
 }
 
 /*
-Now when the HeroList loads, you should be able to start typing right away in the input field!
+Now when the HeroList loads, you should be able to start typing right away in the input field, whitout clicking on it first!
 */
 
 /*
