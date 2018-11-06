@@ -1,3 +1,8 @@
 Part 1 time (Gustav):
     Lists and keys: 5min
     Controlled components: 25min
+
+Part 1 time (Jeppe):
+    Keys: 8min
+    Controlled components: 15min
+    Refs: 5min
