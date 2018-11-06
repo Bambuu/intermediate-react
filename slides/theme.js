@@ -4,6 +4,7 @@ import baseTheme from "mdx-deck/themes";
 
 export default {
   ...baseTheme,
+  transitionDuration: 0,
   colors: {
     ...baseTheme.colors,
     text: "#d6deeb",

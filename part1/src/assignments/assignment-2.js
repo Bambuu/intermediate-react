@@ -9,6 +9,7 @@ add a <form> element.
 
 Inside the <form> element, add two <input> elements. The first one with type="number" and the second with type="text"
 Like below:
+GUSTAV: ADD CLASSNAME THAT MAKES THE STICK TO THE RIGHT
 */
 <form>
   <input type="number" />
@@ -21,6 +22,7 @@ You should now have two input elements, where you can enter things.
 Let's make a button so we can submit our form.
 Add a <button> inside the form.
 If you click the button you will notice something strange - the page reloads!
+GUSTAV: SHOULD WE MOVE THE BUTTON DOWN TO LATER EXERCISE?!?
 */
 
 /*
@@ -41,15 +43,19 @@ EXERCISE D:
 To create the hero, we need to get the values the user type, into our state.
 
 We do this by making our <input> components into 'controlled components'
-What this means is that we keep their value inside the state of the component above them.
+This means two things:
+1. We keep their value inside the state of the component above them.
+2. We update the value, when it's needed (by updating the state)
 
 Add two new keys to the state, call them "awesomeInputValue" and "nameInputValue".
 Have awesomeInputValue start as 0, and nameInputValue start as an empty string ""
 
-Set the "value" prop of the <input/> element to the value of the state like this:
+Set the "value" prop of the <input/> element to the value of the new state you just created,
+like this:
   value={this.state.awesomeInputValue}
 
 Now the value is always the value in state. Try typing in the <input> components. Nothing changes!
+ GUSTAV: MAYBE EXPLAIN WHY?
 */
 
 /*
@@ -70,7 +76,7 @@ Ensure that your input field works when typing.
 
 /*
 EXERCISE F:
-Implement a onChange handler for the <input> component that corresponds to the nameInputValue as well.
+Implement the exact same thing for the other <input> component that corresponds to the nameInputValue as well.
 */
 
 /*
@@ -81,7 +87,7 @@ the state. Updating the state in turn, updates the text in the <input> component
 Now we can create a Superhero inside your addSuperHero method!
 
 We can use setState to update the heroes array. Remember that you must never mutate the state directly.
-Create a new hero array using 'concat()' with an object like this:
+We can create a new hero array using 'concat()' with an object like this:
 */
 addSuperHero = (event) => {
   event.preventDefault();
@@ -106,6 +112,6 @@ Make sure it appears on the list!
 
 /*
 EXERCISE H
-We don't want to accidentally add the same SuperHero twice! Inside addSuperHero, set the 'awesomeInputValue' and 'nameInputValue'
+We don't want to accidentally add the same SuperHero twice! Inside addSuperHero, reset the 'awesomeInputValue' and 'nameInputValue'
 parts of the state, to their starting values: The number 0, and an empty string.
 */
