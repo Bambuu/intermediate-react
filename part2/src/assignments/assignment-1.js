@@ -67,3 +67,4 @@ it into React.
  */
 
 // Good job, now let's see how we can do this smarter.
+// JEPPE IS THIS TOO MUCH?
