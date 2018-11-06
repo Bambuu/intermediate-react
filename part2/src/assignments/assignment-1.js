@@ -1,4 +1,4 @@
-// ASSIGNMENT 1 - Higher Order Components
+// ASSIGNMENT 1 - LISTENING FOR THE SCROLLS
 
 /*
   We've seen how React lets us reuse visual components.
@@ -44,5 +44,26 @@ still see new scroll events. When using eventListeners on DOM elements, you have
 manually, as they don't know anything about the React lifecycle.
 
 We can do this in the lifecycle method "componentWillUnmount"
-Implement "componentWillUnmount()"
+Implement "componentWillUnmount()" and have it console.log("Goodbye")
+Click around to get a feel for when it is called.
  */
+
+/*
+EXERCISE E:
+Now let's unsubscribe in our componentWillUnmount, you can do that by calling:
+window.removeEventListener('scroll', this.onScroll)
+
+Check to see that now we get the scroll events inside our "HeroList", but not when we go to the "movies" tab
+*/
+
+/*
+EXERCISE F:
+Alright, but we'll want to be able to use the scroll position in the render method as well, so we need to get
+it into React.
+
+- Add a "scrollPosition" key to the state. Have it be 0 as a default.
+- Inside your onScroll function, call setState with the new scroll position. You can access it through "event.pageY'
+- Inside your render method, output {this.state.scrollPosition} - so that you can see it changes.
+ */
+
+// Good job, now let's see how we can do this smarter.

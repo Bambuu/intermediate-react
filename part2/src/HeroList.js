@@ -6,12 +6,24 @@ export class HeroList extends Component {
     heroes: initialHeroes,
     awesomeInputValue: 0,
     nameInputValue: '',
+    scrollPosition: 0
   };
 
   ref = React.createRef();
 
   componentDidMount(){
     this.ref.current.focus();
+    window.addEventListener('scroll', this.onScroll)
+  }
+
+  onScroll = (event) => {
+    console.log(event.pageY)
+    this.setState({scrollPosition: event.pageY})
+  };
+
+  componentWillUnmount(){
+    console.log("Goodbye");
+    window.removeEventListener('scroll', this.onScroll)
   }
 
   addSuperHero = (event) => {
@@ -44,6 +56,7 @@ export class HeroList extends Component {
   };
 
   render() {
+
     const copyOfHeroArray = this.state.heroes.slice();
     const sortedHeroes = copyOfHeroArray.sort((hero, secondHero) => hero.awesome - secondHero.awesome);
 
@@ -52,6 +65,7 @@ export class HeroList extends Component {
 
     return (
       <div>
+        {this.state.scrollPosition}
         <ul>
           <li className="hero-list-item hero-list-header">Awesome score - Hero name</li>
           {heroComponents}
