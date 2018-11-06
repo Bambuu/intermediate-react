@@ -37,8 +37,8 @@ More help below:
 */
 componentDidMount(){
   // Here we can access "this.ref"
-  // We get the DOM element by accessing "this.ref.currentTarget"
-  // We can focus it by calling "this.ref.currentTarget.focus()"
+  // We get the DOM element by accessing "this.ref.current"
+  // We can focus it by calling "this.ref.current.focus()"
 }
 
 /*

@@ -1,55 +1,48 @@
-// ASSIGNMENT ONE - LISTS AND KEYS
+// ASSIGNMENT 1 - Higher Order Components
+
+/*
+  We've seen how React lets us reuse visual components.
+  We can use a Header or a PlusButton anywhere we need one.
+  However, React also lets us reuse logic.
+  Here we'll try implementing some behaviour, and then using
+  a Higher-Order Component (HOC) to get the same result.
+*/
 
 /*
 EXERCISE A:
-Inside your terminal, navigate to the "/part1" directory and type "npm run start"
-
-You should see a list of superheroes pop up in your browser at localhost:3000
-
-Tip: You might have to run "npm install" inside this directory if you get an error that packages are missing.
-*/
+Switch to the part 2 directory in your console and rum "npm start"
+ */
 
 /*
 EXERCISE B:
-We're missing a key in our list!
-React warns you of this with a message like this:
-    "Warning: Each child in an array or iterator should have a unique "key" prop.
-    Check the render method of `HeroList`"
+Our mission here is to make the background of the document
+more golden, the more the user scrolls down. More awesome
+superheroes, deserve more gold.
 
-Open up your Developer Tools and make sure you can see the warning in the console.
+The first thing we need to do, is listen to the scroll event
+of the window
+
+Inside the componentDidMount of your HeroList add the following line:
+window.addEventListener('scroll', console.log);
+
+Now go to your HeroList. You should see a long list of scroll events when you scroll down.
 */
 
 /*
-EXERCISE C:
+EXERCISE C
+Let's create a function to handle the scrolling part. Create a new function inside your HeroList
+called "onScroll". Have this function take in "event" as a parameter, and console.log the event.
 
-Let's try to go through the render() method of the HeroList. Spend a few minutes trying to understand what's
-going on.
-When you're done, there's a step-by-step walkthrough just below:
- */
-render() {
-  // Here we create a copy of the array in state, using slice(). Normally this is not needed but..
-  const copyOfHeroArray = this.state.heroes.slice();
-  // We want to sort the array! The JavaScript .sort() method does not return a new array
-  // but changes the old one. As we're not allowed to modify state, we need the copy for above.
-  // The specifics of sort isn't important - but it sorts the hero after their awesome score.
-  const sortedHeroes = copyOfHeroArray.sort((hero, secondHero) => hero.awesome - secondHero.awesome);
-
-  // Here we use map to turn our array of heroes, into a array of React Components!
-  // Which we can then render in the JSX using {}'s
-  const heroComponents = sortedHeroes
-    .map(hero => <li className="hero-list-item">{hero.awesome} - {hero.name}</li>);
-
-  // Here we return some JSX.
-}
+Change the "addEventListener" call, to instead of "console.log", say: "this.onScroll"
+Ensure it still works.
+*/
 
 /*
 EXERCISE D:
-  We need to add a "key" property to the <li> elements returned by our .map() function.
-  A key should be unique. In our case, we can use the name of the hero, assuming nobody adds the same hero twice.
-  When you add the key, the warning should disappear in your console.
+Now, try to go to the "Movies" part, and scroll down. In your console you will
+still see new scroll events. When using eventListeners on DOM elements, you have to unsubscribe
+manually, as they don't know anything about the React lifecycle.
 
-  An example of adding a key to a <li> element is below:
+We can do this in the lifecycle method "componentWillUnmount"
+Implement "componentWillUnmount()"
  */
-
-const animalElements = ['elephant', 'zebra', 'giraffe']
-  .map(animal => <li key={animal}>This animal is a {animal}</li>);
