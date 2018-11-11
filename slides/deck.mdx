@@ -1,33 +1,45 @@
-export { default as theme } from './theme'
-import { Appear } from 'mdx-deck'
-import { Head, Image } from 'mdx-deck'
-import nightOwl from 'prism-react-renderer/themes/nightOwl'
-import './styles.css';
-import { CodeSurfer } from "mdx-deck-code-surfer"
-import {Tester} from './tester'
+export { default as theme } from "./theme";
+import { Appear } from "mdx-deck";
+import { Head, Image } from "mdx-deck";
+import nightOwl from "prism-react-renderer/themes/nightOwl";
+import "./styles.css";
+import { CodeSurfer } from "mdx-deck-code-surfer";
+import { Tester } from "./tester";
 
 <Head>
   <title>bambuu React Intermediate slides</title>
 </Head>
 
 # Intermediate React
+
 ### Getting better at React
+
 by Jeppe Reinhold and Gustav Wengel
 
 ---
 
 # Introduction & Setup
+
 ## Part 1
 
 ---
 
-<ul style={{textAlign: 'left',fontSize: '1.5em'}}>
+<ul style={{ fontSize: "1.5em" }}>
   <li>We are Jeppe and Gustav</li>
   <Appear>
-    <li>We’ve done web development and specifically React development for two years</li>
+    <li>
+      We’ve done web development and specifically React
+      development for two years
+    </li>
     <li>The workshop is split into 6 parts</li>
-	<li>Each with a short presentation followed, by you doing exercises</li>
-	<li>We might add or remove exercises during the workshop, to account for your specific level</li>
+    <li>
+      Each with a short presentation followed, by you doing
+      exercises
+    </li>
+    <li>
+      We might add or remove exercises during the workshop,
+      to account for your specific level
+    </li>
   </Appear>
 </ul>
 
@@ -35,39 +47,53 @@ by Jeppe Reinhold and Gustav Wengel
 
 # Agenda
 
-<ol style={{textAlign: 'left',fontSize: '1.5em'}}>
+<ol style={{ fontSize: "1.5em" }}>
   <Appear>
     <li>Introduction and setup</li>
     <li>Lists and forms</li>
     <li>Component Patterns 1: Higher order Components</li>
-	<li>Routing and the location</li>
-	<li>Component Patterns 2: Render Props</li>
-	<li>Global state with the Context API</li>
+    <li>Routing and the location</li>
+    <li>Component Patterns 2: Render Props</li>
+    <li>Global state with the Context API</li>
   </Appear>
 </ol>
 
 ---
 
 # Demonstration
+
 ## What we'll build
+
 [Final application](LINK-TO-FINAL-APPLICATION)
 
 ---
 
 # How we'll build it
 
-<ul style={{textAlign: 'left',fontSize: '1.5em'}}>
+<ul style={{ fontSize: "1.5em" }}>
   <Appear>
-    <li>We have a git repository with all exercises (and slides)</li>
-    <li>Each part has its own directory with assignments</li>
-    <li>We will be working on the same application throughout the workshop</li>
-	<li>So you can always see the solution, by peaking in the directory for the next part</li>
+    <li>
+      We have a git repository with all exercises (and
+      slides)
+    </li>
+    <li>
+      Each part has its own directory with assignments
+    </li>
+    <li>
+      We will be working on the same application throughout
+      the workshop
+    </li>
+    <li>
+      So you can always see the solution, by peaking in the
+      directory for the next part
+    </li>
   </Appear>
 </ul>
 
 ---
 
 # Demonstration
+
 ## How it is setup
 
 ---
@@ -83,18 +109,25 @@ by Jeppe Reinhold and Gustav Wengel
 ---
 
 # Working with lists
+
 ## Part 2
 
 ---
 
 # Component keys 🔑
 
-<ul style={{textAlign: 'left',fontSize: '1.5em'}}>
+<ul style={{ fontSize: "1.5em" }}>
   <li>React needs a way to uniquely identify components</li>
   <Appear>
     <li>Usually this is handled by React</li>
-    <li>But when you <b>dynamically render lists</b>, React can't do that automatically</li>
-	<li>Therefore we have to add a <code>key</code> prop to each element in our list</li>
+    <li>
+      But when you <b>dynamically render lists</b>, React
+      can't do that automatically
+    </li>
+    <li>
+      Therefore we have to add a <code>key</code> prop to
+      each element in our list
+    </li>
   </Appear>
 </ul>
 
@@ -114,11 +147,14 @@ by Jeppe Reinhold and Gustav Wengel
   showNumbers={true}
   theme={nightOwl}
   steps={[
-    { range: [1,8]},
-	{ lines: [2]},
-	{ range: [2, 5], notes: 'map array values to JSX elements'},
-	{ lines: [7], notes: 'return created elements'},
-	{ range: [10,16], notes: 'output'}
+    { range: [1, 8] },
+    { lines: [2] },
+    {
+      range: [2, 5],
+      notes: "map array values to JSX elements"
+    },
+    { lines: [7], notes: "return created elements" },
+    { range: [10, 16], notes: "output" }
   ]}
 />
 
@@ -136,28 +172,35 @@ by Jeppe Reinhold and Gustav Wengel
   showNumbers={true}
   theme={nightOwl}
   steps={[
-	{ tokens: {4: [4,5,6,7,8]}, notes: "adding 'key' prop to element"},
-	{ range: [10,16], notes: 'output'}
+    {
+      tokens: { 4: [4, 5, 6, 7, 8] },
+      notes: "adding 'key' prop to element"
+    },
+    { range: [10, 16], notes: "output" }
   ]}
 />
-
 
 ---
 
 # Don't use the array index as key!
 
-<ul style={{textAlign: 'left',fontSize: '1.5em'}}>
+<ul style={{ fontSize: "1.5em" }}>
   <Appear>
-  	<li>What happens if the array gets reordered?</li>
-    <li>Or if an item in the middle of the array is removed?</li>
+    <li>What happens if the array gets reordered?</li>
+    <li>
+      Or if an item in the middle of the array is removed?
+    </li>
     <li>Or added?</li>
-	<li>Indexes are not bound to the item, only it's <b>position</b>!</li>
+    <li>
+      Indexes are not bound to the item, only it's{" "}
+      <b>position</b>!
+    </li>
   </Appear>
 </ul>
 
 ---
 
-# Using `ref` to reference native elements ⤵️
+# Using `ref` to reference native elements ⏩
 
 ---
 
@@ -165,9 +208,11 @@ by Jeppe Reinhold and Gustav Wengel
 
 You want to do something with the actual DOM element
 
-<ul style={{textAlign: 'left',fontSize: '1.5em'}}>
+<ul style={{ fontSize: "1.5em" }}>
   <Appear>
-  	<li>Managing focus, text selection, or media playback</li>
+    <li>
+      Managing focus, text selection, or media playback
+    </li>
     <li>Triggering imperative animations</li>
     <li>Integrating with third-party DOM libraries</li>
   </Appear>
@@ -181,25 +226,49 @@ You want to do something with the actual DOM element
   lang="jsx"
   showNumbers={true}
   theme={nightOwl}
-  steps={[
-	  {},
-	  { range: [6, 14] },
-	  { range: [2, 4]}
-	]}
+  steps={[{}, { range: [6, 14] }, { range: [4, 6] }]}
 />
+
+---
+
+# Do it like we always do?
+
+<ul style={{ fontSize: "1.5em" }}>
+  <Appear>
+    <li>
+      <code>document.getElementById('id');</code>
+    </li>
+    <li>
+      <code>document.querySelector('.theClass');</code>
+    </li>
+    <li>It's not the React way</li>
+    <li>
+      React works on the DOM, so you don't have to (and
+      shouldn't)
+    </li>
+    <li>
+      We don't know what happens in the DOM, so it's
+      dangerous to interact with it directly
+    </li>
+  </Appear>
+</ul>
 
 ---
 
 # `ref` to the rescue!
 
-<ul style={{textAlign: 'left',fontSize: '1.5em'}}>
+<ul style={{ fontSize: "1.5em" }}>
   <Appear>
-  	<li>Reference the native element from a class variable</li>
-    <li>The class variable is now a "DOM element", like any vanilla JS</li>
-	<li>Now we can do anything with it, within React!</li>
+    <li>
+      Reference the native element from a class variable
+    </li>
+    <li>
+      The class variable is now a "DOM element" given to you
+      by React
+    </li>
+    <li>Now we can do anything with it, within React!</li>
   </Appear>
 </ul>
-
 
 ---
 
@@ -209,11 +278,8 @@ You want to do something with the actual DOM element
   lang="diff"
   showNumbers={true}
   theme={nightOwl}
-  steps={[
-	  {},
-	]}
+  steps={[{}]}
 />
-
 
 ---
 
@@ -223,9 +289,7 @@ You want to do something with the actual DOM element
   lang="diff"
   showNumbers={true}
   theme={nightOwl}
-  steps={[
-	  {},
-	]}
+  steps={[{}]}
 />
 
 ---
@@ -236,9 +300,7 @@ You want to do something with the actual DOM element
   lang="diff"
   showNumbers={true}
   theme={nightOwl}
-  steps={[
-	  {},
-	]}
+  steps={[{}]}
 />
 
 ---
@@ -249,66 +311,335 @@ You want to do something with the actual DOM element
   lang="diff"
   showNumbers={true}
   theme={nightOwl}
-  steps={[
-	  {},
-	]}
+  steps={[{}]}
 />
 
 ---
 
 <CodeSurfer
   title="Adding a ref"
-  code={require("!raw-loader!./examples2/ref-base.js")}
+  code={require("!raw-loader!./examples/ref-final.js")}
   lang="jsx"
   showNumbers={true}
   theme={nightOwl}
   steps={[
-	  {},
-	]}
-/>
-
-
----
-
-<CodeSurfer
-  title="Adding a ref"
-  code={require("!raw-loader!./examples2/ref-1.js")}
-  lang="jsx"
-  showNumbers={true}
-  theme={nightOwl}
-  steps={[
-	  {lines: [2]},
-	]}
+    { lines: [2] },
+    { tokens: { 11: [10, 11, 12, 13, 14, 15, 16] } },
+    { lines: [11] },
+    { lines: [5] }
+  ]}
 />
 
 ---
 
+# Controlled components 🎛
+
+### How we get user input into our React world
+
+#### (... how to do forms, baiscally)
+
+---
+
+# The problem
+
+You want read the value from an `<input/>` element and do stuff with it
+
+<ul style={{ fontSize: "1.5em" }}>
+  <Appear>
+    <li>Submit form to backend</li>
+    <li>Validation</li>
+    <li>Conditional rendering</li>
+    <li>Conditional styles</li>
+  </Appear>
+</ul>
+
+---
+
 <CodeSurfer
-  title="Adding a ref"
-  code={require("!raw-loader!./examples2/ref-2.js")}
+  title="Controlled components"
+  code={require("!raw-loader!./examples/controlled-base.js")}
   lang="jsx"
   showNumbers={true}
   theme={nightOwl}
   steps={[
-	  {tokens: {11: [10,11,12,13,14,15,16]}},
-	]}
+    { range: [1, 17] },
+    { range: [9, 14] },
+    { range: [2, 5] }
+  ]}
+/>
+
+---
+
+# We must control it!
+
+Pulling the `value` of the `<input/>` out to the component `state`
+
+<ol>
+  <Appear>
+    <li>
+      Create a component <code>state</code> that will hold
+      the <code>value</code>
+    </li>
+    <li>
+      Set the <code>value</code> to be that{" "}
+      <code>state</code>
+    </li>
+    <li>
+      Listen for changes on the input (<code>onChange</code>)
+    </li>
+    <li>
+      Update the <code>state</code> on each change
+    </li>
+  </Appear>
+</ol>
+
+---
+
+<CodeSurfer
+  title="Controlled components"
+  code={require("!raw-loader!./examples/controlled-final.js")}
+  lang="jsx"
+  showNumbers={true}
+  theme={nightOwl}
+  steps={[
+    {
+      range: [2, 4],
+      notes:
+        "Create a component state that will hold the value"
+    },
+    {
+      lines: [18, 19, 20, 22],
+      notes: "Set the value to be that state"
+    },
+    {
+      range: [18, 22],
+      notes: "Listen for changes on the input"
+    },
+    {
+      range: [6, 8],
+      notes: "Update the state on each change"
+    },
+    {
+      range: [10, 13],
+      notes: "Now we can access the value from anywhere"
+    }
+  ]}
+/>
+
+---
+
+JEPPE
+show it in action here, live.
+show what happens if we don't do onChange
+this would actually be great to answer any questions - always have a live example ready
+
+---
+
+Maybe show flow diagram of value traveling through state
+
+---
+
+# Assignments - Part 2
+
+1. Setup the 'Part 2' project and add `keys` to lists
+2. Managing focus with `refs`
+3. Building a form using the Controlled Component technique
+4. 🏖
+
+---
+
+# Higher order Components
+
+## Part 3
+
+---
+
+# The problem
+
+We want to share behavior between components
+
+<ul style={{ fontSize: "1.5em" }}>
+  <Appear>
+    <li>Subscribing to same data sources</li>
+    <li>React to same events (scroll, resize, etc.)</li>
+    <li>Read from the Location (URL)</li>
+    <li>Interact with global theme or state</li>
+  </Appear>
+</ul>
+
+---
+
+# The solutions
+
+## Composition 🥰 vs. inheritance 🤕
+
+<ul style={{ fontSize: "1.5em" }}>
+  <Appear>
+    <li>React is build around composition 💪</li>
+    <li>
+      Inheritance in JavaScript <em>is</em> tecknically
+      possible, but not favorable
+    </li>
+    <li>Extending a class component? 🙅‍♀️</li>
+    <li>Manipulating the prototype? 🙅‍♂️</li>
+  </Appear>
+</ul>
+
+---
+
+<blockquote style={{ fontSize: "1.5em" }}>
+  <i>
+    "We haven’t found any use cases where we would recommend
+    creating component inheritance hierarchies."
+  </i>
+  <p>- Facebook, maintains over 30.000 components</p>
+</blockquote>
+
+---
+
+# HoC
+
+## Component Pattern 1
+
+<ul style={{ fontSize: "1.5em" }}>
+  <Appear>
+    <li>
+      Wrap a component in a HoC, that passes functionality
+      via <code>props</code>
+    </li>
+    <li>
+      HoCs are just function that takes in any component,
+      and returns an <em>enhanced component</em>
+    </li>
+  </Appear>
+</ul>
+
+---
+
+do we need some diagram here, showing a HOC wrapping to components, to give them functionality?
+boxes containing other boxes
+
+---
+
+<CodeSurfer
+  title="Using a HoC"
+  code={require("!raw-loader!./examples/basic-hoc-usage.js")}
+  lang="jsx"
+  showNumbers={true}
+  theme={nightOwl}
+  steps={[
+    {
+      range: [1, 7],
+      notes: "A network aware Order button"
+    },
+    { lines: [1], notes: "Basic order button" },
+    {
+      range: [4, 6],
+      notes: "Disable button if there is no network"
+    },
+    {
+      lines: [2],
+      notes: "Get current network status from prop"
+    },
+    {
+      range: [9, 11],
+      notes: "Wrap with HoC to enhance component"
+    }
+  ]}
 />
 
 ---
 
 <CodeSurfer
-  title="Adding a ref"
-  code={require("!raw-loader!./examples2/ref-3.js")}
+  title="Building a withNetwork HoC"
+  code={require("!raw-loader!./examples/with-network-hoc.js")}
   lang="jsx"
   showNumbers={true}
   theme={nightOwl}
   steps={[
-	  	  {lines: [5]},
-	]}
+    {
+      range: [1, 24],
+      notes: "the withNetwork HoC"
+    },
+    {
+      lines: [1],
+      notes: () => (
+        <p>
+          Take in any WrappedComponent -{" "}
+          <code>withNetwork(MyComponent)</code>
+        </p>
+      )
+    },
+    {
+      lines: [2],
+      notes:
+        "Build a HoC component - only nescessary because we have state changes"
+    },
+    {
+      lines: [3],
+      notes:
+        "Set initial state of HoC to current network status"
+    },
+    {
+      range: [15, 22],
+      notes: "Render WrappedComponent with online status"
+    },
+    {
+      lines: [19],
+      notes:
+        "Remember to pass all other props along to the WrappedComponent"
+    },
+    {
+      range: [5, 8],
+      notes:
+        "When HoC mount, listen for network changes and set state"
+    },
+    {
+      range: [5, 13],
+      notes:
+        "When HoC mount, listen for network changes and set state"
+    },
+    {
+      range: [1, 24],
+      notes: "Done! 🥳"
+    }
+  ]}
 />
+
+---
+
+LIVE EXAMPLE OF IT WORKING
+
+---
+
+## Higher Order Components
+
+<ul style={{ fontSize: "1.5em" }}>
+  <Appear>
+    <li>
+      HoCs are just function that takes in any component,
+      and returns an <em>enhanced component</em>
+    </li>
+    <li>
+      We've never written our own HoC before, only used
+      libraries with HoCs
+    </li>
+    <li>Always beware of premature composition 🤓</li>
+  </Appear>
+</ul>
+
+---
+
+# Assignments - Part 3
+
+1. ????
+2. 🏖
 
 ---
 
 # The end - Testing stuff
 
-<Tester/>
+- add "Read More" links everywhere
+- probably test that examples actually works (the do at least prettify)
+
+<Tester />

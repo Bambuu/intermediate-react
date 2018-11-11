@@ -1,3 +1,7 @@
 code {
 	color: rgb(199, 146, 234);
 }
+
+ul, ol {
+	text-align: left;
+}
