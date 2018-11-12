@@ -26,7 +26,7 @@ Part 3 time (Jeppe)
 
 - Extra Assignment height ???
 
-
+- Consider running setupAll in parallel
 
 FINAL CHECKLIST:
     - Ensure not-important directory are the same throughout exercises
