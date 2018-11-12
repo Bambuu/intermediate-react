@@ -5,3 +5,14 @@ code {
 ul, ol {
 	text-align: left;
 }
+
+.stacked {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.stacked-container {
+	position:relative;
+	display: flex;
+}

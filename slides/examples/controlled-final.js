@@ -4,10 +4,8 @@ class AddHero extends React.Component {
   };
 
   onValueChange = event => {
-    const nextState = {
-      value: event.target.value
-    };
-    this.setState(nextState);
+    const nextValue = event.target.value;
+    this.setState({ value: nextValue });
   };
 
   submitToBackend = () => {
