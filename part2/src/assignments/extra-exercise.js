@@ -33,8 +33,8 @@ EXERCISE C:
 Let's make sure to export the HOC component.
 - Rename ExtraAssignment to BaseExtraAssignment
 - Remove the export in front of the class
-- To the end, add:
-  const = withScroll(BaseExtraAssignment)
+- Below everything, add:
+  export const ExtraAssignment = withScroll(BaseExtraAssignment)
 */
 
 /*
@@ -47,8 +47,9 @@ The answer is - we don't! We return a *new* component that
 wraps the old one.
 
 EXERCISE D:
+GUSTAV: MAYBE TOO CONVOLUTED??!
 From your withScroll return an arrow function, that returns
-the JSX(!) for the Component, surrounded with a
+the WrappedComponent as JSX(!), surrounded with a
 <div>
 
 Use inline styles to give the div a backgroundColor,
@@ -85,14 +86,14 @@ this allows us to use this HOC, just like we would the BaseExtraAssignment, givi
 
 EXERCISE E:
 Rewrite our HOC to pass down props as well. Have the function you return take in props, and use
-the spread operator to pass them all to the BaseExtraAssignment.
-Ensure the component still works, and the props are now displayed. Notice that to the rest of the world,
+the spread operator to pass them all to the WrappedComponent.
+Ensure the component still works, and the props are now displayed. Notice that to the rest of the world (ie. in App),
 they can't tell this is a HOC at all!
 */
 
 /*
 EXERCISE F:
-We want our HOC component to have State though, so we'll need to export a class
+We want our HOC component to have state though, so we'll need to export a class
 based component!
 
 Luckily JavaScript lets us define classes dynamically.
@@ -104,8 +105,8 @@ Tip: If you're confused, just define it exactly the way BaseExtraAssignment is
 defined below.
 
 Return this class you've just created.
+GUSTAV CONFUSING TO IGNORE WHAT WEVE ALREADY DONE? MAYBE JUST CLASS FROM THE BEGINNING
 */
-
 
 /*
 EXERCISE G:
@@ -128,7 +129,7 @@ EXERCISE H:
 Render the WrappedComponent like this:
 <WrappedComponent x={0} y={0} {...props} />
 
-Display both the x and the y prop inside the ExtraAssignment
+Display both the x and the y prop inside the BaseExtraAssignment
 */
 
 /*
@@ -137,6 +138,7 @@ EXERCISE I:
 Now all that's left to do, is get the scroll position into the state, and pass that as the x and y
 props. This is exactly like we implemented it in part 1
 
+In the OuterComponent:
 - Create x and y in the state, set them to 0 to start
 - Create a scrollHandle function inside the class.
 - Have the scrollHandle function, set the state to window.scrollX and window.scrollY
@@ -150,21 +152,43 @@ Now you've (basically) implemented the withScroll component of react-fns.
 If you want, you can try using your withScroll on the HeroList, to see if it works.
  */
 
-
 import * as React from "react";
 
-const withScroll = (WrappedComponent) => {
-  // How to do this..??
+const withScroll = WrappedComponent => {
+	return class OuterComponent extends React.Component {
+		state = {
+			x: 0,
+			y: 0
+		}
+		scrollHandle = () => {
+			this.setState({x: window.scrollX, y: window.scrollY})
+		}
+		componentDidMount() {
+			window.addEventListener('scroll', this.scrollHandle)
+		}
+		componentWillUnmount() {
+			window.removeEventListener('scroll', this.scrollHandle)
+		}
+		render() {
+			return <WrappedComponent x={this.state.x} y={this.state.y} {...this.props}/>
+		}
+	}
 };
 
-export class BaseExtraAssignment extends React.Component {
-
+class BaseExtraAssignment extends React.Component {
   render() {
-    return <div>
-      <h1>Extra Assignment 2: Build-a-HOC</h1>
-      <p>I've got some props: {this.props.x} {this.props.y} </p>
-    </div>;
+    return (
+      <div style={{height: '2000px', width: '2000px'}}>
+        <h1>Extra Assignment 2: Build-a-HOC</h1>
+        <p>
+          I've got some props: {this.props.x}{" "}
+          {this.props.y}{" "}
+        </p>
+      </div>
+    );
   }
 }
 
-export const ExtraAssignment = withScroll(BaseExtraAssignment);
+export const ExtraAssignment = withScroll(
+  BaseExtraAssignment
+);
