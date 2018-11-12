@@ -2,7 +2,7 @@ class AddHeroForm extends React.Component {
   inputRef = React.createRef();
 
   componentDidMount() {
-    this.inputRef.focus();
+    this.inputRef.current.focus();
   }
 
   render() {

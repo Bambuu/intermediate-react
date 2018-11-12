@@ -1,8 +1,8 @@
+import "./scripts.js";
 export { default as theme } from "./theme";
 import { Appear } from "mdx-deck";
 import { Head, Image } from "mdx-deck";
 import nightOwl from "prism-react-renderer/themes/nightOwl";
-import "./styles.css";
 import { CodeSurfer } from "mdx-deck-code-surfer";
 import { Tester } from "./tester";
 
@@ -51,7 +51,7 @@ by Jeppe Reinhold and Gustav Wengel
   <Appear>
     <li>Introduction and setup</li>
     <li>Lists and forms</li>
-    <li>Component Patterns 1: Higher order Components</li>
+    <li>Component Patterns 1: Higher-Order Components</li>
     <li>Routing and the location</li>
     <li>Component Patterns 2: Render Props</li>
     <li>Global state with the Context API</li>
@@ -108,7 +108,7 @@ by Jeppe Reinhold and Gustav Wengel
 
 ---
 
-# Working with lists
+# Working with forms and lists
 
 ## Part 2
 
@@ -117,8 +117,10 @@ by Jeppe Reinhold and Gustav Wengel
 # Component keys 🔑
 
 <ul style={{ fontSize: "1.5em" }}>
-  <li>React needs a way to uniquely identify components</li>
   <Appear>
+    <li>
+      React needs a way to uniquely identify components
+    </li>
     <li>Usually this is handled by React</li>
     <li>
       But when you <b>dynamically render lists</b>, React
@@ -173,7 +175,7 @@ by Jeppe Reinhold and Gustav Wengel
   theme={nightOwl}
   steps={[
     {
-      tokens: { 4: [4, 5, 6, 7, 8] },
+      range: [3, 5],
       notes: "adding 'key' prop to element"
     },
     { range: [10, 16], notes: "output" }
@@ -192,11 +194,89 @@ by Jeppe Reinhold and Gustav Wengel
     </li>
     <li>Or added?</li>
     <li>
-      Indexes are not bound to the item, only it's{" "}
+      Indexes are not bound to the item, only its{" "}
       <b>position</b>!
     </li>
   </Appear>
 </ul>
+
+---
+
+# Controlled components 🎛
+
+### How we get user input into our React world
+
+#### (... how to do forms, baiscally)
+
+---
+
+# The problem
+
+You want read the value from an `<input/>` element and do stuff with it
+
+<ul style={{ fontSize: "1.5em" }}>
+  <Appear>
+    <li>Submit form to backend</li>
+    <li>Validation</li>
+    <li>Conditional rendering</li>
+  </Appear>
+</ul>
+
+---
+
+<CodeSurfer
+  title="Controlled components"
+  code={require("!raw-loader!./examples/controlled-base.js")}
+  lang="jsx"
+  showNumbers={true}
+  theme={nightOwl}
+  steps={[
+    { range: [1, 17] },
+    { range: [9, 14] },
+    { range: [2, 5] }
+  ]}
+/>
+
+---
+
+## We must control it!
+
+Pulling the `value` of the `<input/>` up to the component `state`
+<img style={{width: '700px'}} src="./public/controlled-component-flow.svg" />
+
+---
+
+<CodeSurfer
+  title="Controlled components"
+  code={require("!raw-loader!./examples/controlled-final.js")}
+  lang="jsx"
+  showNumbers={true}
+  theme={nightOwl}
+  steps={[
+    {
+      range: [2, 4],
+      notes:
+        "Create a component state that will hold the value"
+    },
+    {
+      lines: [21, 22, 23, 25],
+      notes: "Set the value to be that state"
+    },
+    {
+      range: [21, 25],
+      notes: "Listen for changes on the input"
+    },
+    {
+      range: [6, 11],
+      notes: "Update the state on each change"
+    },
+    {
+      range: [13, 16],
+      notes: "Now we can access the value from anywhere"
+    },
+    { notes: "Done! 🥳" }
+  ]}
+/>
 
 ---
 
@@ -213,7 +293,6 @@ You want to do something with the actual DOM element
     <li>
       Managing focus, text selection, or media playback
     </li>
-    <li>Triggering imperative animations</li>
     <li>Integrating with third-party DOM libraries</li>
   </Appear>
 </ul>
@@ -226,7 +305,7 @@ You want to do something with the actual DOM element
   lang="jsx"
   showNumbers={true}
   theme={nightOwl}
-  steps={[{}, { range: [6, 14] }, { range: [4, 6] }]}
+  steps={[{}, { range: [6, 13] }, { range: [2, 4] }]}
 />
 
 ---
@@ -274,181 +353,26 @@ You want to do something with the actual DOM element
 
 <CodeSurfer
   title="Adding a ref"
-  code={require("!raw-loader!./examples/ref-base.js")}
-  lang="diff"
-  showNumbers={true}
-  theme={nightOwl}
-  steps={[{}]}
-/>
-
----
-
-<CodeSurfer
-  title="Adding a ref"
-  code={require("!raw-loader!./examples/ref-1.js")}
-  lang="diff"
-  showNumbers={true}
-  theme={nightOwl}
-  steps={[{}]}
-/>
-
----
-
-<CodeSurfer
-  title="Adding a ref"
-  code={require("!raw-loader!./examples/ref-2.js")}
-  lang="diff"
-  showNumbers={true}
-  theme={nightOwl}
-  steps={[{}]}
-/>
-
----
-
-<CodeSurfer
-  title="Adding a ref"
-  code={require("!raw-loader!./examples/ref-3.js")}
-  lang="diff"
-  showNumbers={true}
-  theme={nightOwl}
-  steps={[{}]}
-/>
-
----
-
-<CodeSurfer
-  title="Adding a ref"
   code={require("!raw-loader!./examples/ref-final.js")}
   lang="jsx"
   showNumbers={true}
   theme={nightOwl}
-  steps={[
-    { lines: [2] },
-    { tokens: { 11: [10, 11, 12, 13, 14, 15, 16] } },
-    { lines: [11] },
-    { lines: [5] }
-  ]}
+  steps={[{ lines: [2] }, { lines: [11] }, { lines: [5] }]}
 />
-
----
-
-# Controlled components 🎛
-
-### How we get user input into our React world
-
-#### (... how to do forms, baiscally)
-
----
-
-# The problem
-
-You want read the value from an `<input/>` element and do stuff with it
-
-<ul style={{ fontSize: "1.5em" }}>
-  <Appear>
-    <li>Submit form to backend</li>
-    <li>Validation</li>
-    <li>Conditional rendering</li>
-    <li>Conditional styles</li>
-  </Appear>
-</ul>
-
----
-
-<CodeSurfer
-  title="Controlled components"
-  code={require("!raw-loader!./examples/controlled-base.js")}
-  lang="jsx"
-  showNumbers={true}
-  theme={nightOwl}
-  steps={[
-    { range: [1, 17] },
-    { range: [9, 14] },
-    { range: [2, 5] }
-  ]}
-/>
-
----
-
-# We must control it!
-
-Pulling the `value` of the `<input/>` out to the component `state`
-
-<ol>
-  <Appear>
-    <li>
-      Create a component <code>state</code> that will hold
-      the <code>value</code>
-    </li>
-    <li>
-      Set the <code>value</code> to be that{" "}
-      <code>state</code>
-    </li>
-    <li>
-      Listen for changes on the input (<code>onChange</code>)
-    </li>
-    <li>
-      Update the <code>state</code> on each change
-    </li>
-  </Appear>
-</ol>
-
----
-
-<CodeSurfer
-  title="Controlled components"
-  code={require("!raw-loader!./examples/controlled-final.js")}
-  lang="jsx"
-  showNumbers={true}
-  theme={nightOwl}
-  steps={[
-    {
-      range: [2, 4],
-      notes:
-        "Create a component state that will hold the value"
-    },
-    {
-      lines: [18, 19, 20, 22],
-      notes: "Set the value to be that state"
-    },
-    {
-      range: [18, 22],
-      notes: "Listen for changes on the input"
-    },
-    {
-      range: [6, 8],
-      notes: "Update the state on each change"
-    },
-    {
-      range: [10, 13],
-      notes: "Now we can access the value from anywhere"
-    }
-  ]}
-/>
-
----
-
-JEPPE
-show it in action here, live.
-show what happens if we don't do onChange
-this would actually be great to answer any questions - always have a live example ready
-
----
-
-Maybe show flow diagram of value traveling through state
 
 ---
 
 # Assignments - Part 2
 
-1. Setup the 'Part 2' project and add `keys` to lists
-2. Managing focus with `refs`
+1. Setup the 'Part 2' project
+2. Add `keys` to lists
 3. Building a form using the Controlled Component technique
-4. 🏖
+4. Managing focus with `refs`
+5. 🏖
 
 ---
 
-# Higher order Components
+# Higher-Order Components
 
 ## Part 3
 
@@ -475,13 +399,12 @@ We want to share behavior between components
 
 <ul style={{ fontSize: "1.5em" }}>
   <Appear>
-    <li>React is build around composition 💪</li>
+    <li>React is built around composition 💪</li>
     <li>
-      Inheritance in JavaScript <em>is</em> tecknically
+      Inheritance in JavaScript <em>is</em> technically
       possible, but not favorable
     </li>
     <li>Extending a class component? 🙅‍♀️</li>
-    <li>Manipulating the prototype? 🙅‍♂️</li>
   </Appear>
 </ul>
 
@@ -497,19 +420,23 @@ We want to share behavior between components
 
 ---
 
-# HoC
+# HOC
 
 ## Component Pattern 1
 
 <ul style={{ fontSize: "1.5em" }}>
   <Appear>
     <li>
-      Wrap a component in a HoC, that passes functionality
+      Wrap a component in a HOC, that passes functionality
       via <code>props</code>
     </li>
     <li>
-      HoCs are just function that takes in any component,
+      HOCs are just function that takes in any component,
       and returns an <em>enhanced component</em>
+    </li>
+    <li>
+      We've never written our own HOC before, only used
+      libraries with HOCs
     </li>
   </Appear>
 </ul>
@@ -522,28 +449,28 @@ boxes containing other boxes
 ---
 
 <CodeSurfer
-  title="Using a HoC"
+  title="Using a HOC"
   code={require("!raw-loader!./examples/basic-hoc-usage.js")}
   lang="jsx"
   showNumbers={true}
   theme={nightOwl}
   steps={[
     {
-      range: [1, 7],
+      range: [1, 10],
       notes: "A network aware Order button"
     },
     { lines: [1], notes: "Basic order button" },
     {
-      range: [4, 6],
+      range: [5, 9],
       notes: "Disable button if there is no network"
     },
     {
-      lines: [2],
+      lines: [2, 3],
       notes: "Get current network status from prop"
     },
     {
-      range: [9, 11],
-      notes: "Wrap with HoC to enhance component"
+      range: [12, 14],
+      notes: "Wrap with HOC to enhance component"
     }
   ]}
 />
@@ -551,7 +478,7 @@ boxes containing other boxes
 ---
 
 <CodeSurfer
-  title="Building a withNetwork HoC"
+  title="Building a withNetwork HOC"
   code={require("!raw-loader!./examples/with-network-hoc.js")}
   lang="jsx"
   showNumbers={true}
@@ -559,7 +486,7 @@ boxes containing other boxes
   steps={[
     {
       range: [1, 24],
-      notes: "the withNetwork HoC"
+      notes: "the withNetwork HOC"
     },
     {
       lines: [1],
@@ -572,13 +499,22 @@ boxes containing other boxes
     },
     {
       lines: [2],
-      notes:
-        "Build a HoC component - only nescessary because we have state changes"
+      notes: "Build the wrapping component"
     },
     {
       lines: [3],
       notes:
-        "Set initial state of HoC to current network status"
+        "Set initial state of HOC to current network status"
+    },
+    {
+      range: [5, 8],
+      notes:
+        "When HOC mount, listen for network changes and set state"
+    },
+    {
+      range: [5, 13],
+      notes:
+        "When HOC mount, listen for network changes and set state"
     },
     {
       range: [15, 22],
@@ -590,16 +526,6 @@ boxes containing other boxes
         "Remember to pass all other props along to the WrappedComponent"
     },
     {
-      range: [5, 8],
-      notes:
-        "When HoC mount, listen for network changes and set state"
-    },
-    {
-      range: [5, 13],
-      notes:
-        "When HoC mount, listen for network changes and set state"
-    },
-    {
       range: [1, 24],
       notes: "Done! 🥳"
     }
@@ -608,21 +534,13 @@ boxes containing other boxes
 
 ---
 
-LIVE EXAMPLE OF IT WORKING
-
----
-
-## Higher Order Components
+## Higher-Order Components
 
 <ul style={{ fontSize: "1.5em" }}>
   <Appear>
     <li>
-      HoCs are just function that takes in any component,
+      HOCs are just function that takes in any component,
       and returns an <em>enhanced component</em>
-    </li>
-    <li>
-      We've never written our own HoC before, only used
-      libraries with HoCs
     </li>
     <li>Always beware of premature composition 🤓</li>
   </Appear>
@@ -641,5 +559,8 @@ LIVE EXAMPLE OF IT WORKING
 
 - add "Read More" links everywhere
 - probably test that examples actually works (the do at least prettify)
+- stream line codes using prettier ignore
+- parantheses around all arguments
+- copy "public" folder after build
 
 <Tester />
