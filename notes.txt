@@ -26,3 +26,5 @@ Make herodiv tall! How>??
 Styling to the edge (golden)
 
 Give the header a border?
+
+dont have extra assignment components in the assignment file, have them along with the others

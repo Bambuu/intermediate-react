@@ -1,7 +1,8 @@
 // ASSIGNMENT 2 - HIGHER-ORDER COMPONENTS
 
 /*
-Let's look at incorporating a Higher-Order Component that keeps track of the scroll position for us.
+Let's look at using a Higher-Order Component that keeps track of the scroll position for us.
+GUSTAV: WRITE THAT WE WONT BE BUILDING ONE HERE; JUST USING ONE
 */
 
 /*
@@ -25,16 +26,17 @@ at the top of your HeroList.
 EXERCISE C:
 HOCs are functions that take in a component, and returns an enhanced component.
 The syntax is
-EnhancedComponent = withSomeExtraFunctionality(OriginalComponent)
+const EnhancedComponent = withSomeExtraFunctionality(OriginalComponent)
 
 We can wrap and export our HeroList like this.
 export const HeroListWithScroll = withScroll(HeroList);
 
-We'd prefer not to change the name, so let's not:
-- Change the "HeroList" name to BaseHeroList
+We'd prefer not to change the name, so let's not do that. Instead:
+- Change the "HeroList" name to "BaseHeroList"
 - Remove the export statement in front of "BaseHeroList"
 - Change the export const line to:
 export const HeroList = withScroll(BaseHeroList)
+GUSTAV!!!! LINE WHAT??
 
 Check to see if the app still runs.
 */
@@ -45,7 +47,7 @@ The withScroll HOC, keeps track of the scroll position,
 and passes them to the HeroList component through props.
 You can access them through the "x" and "y" props
 
-Try console.logging(this.props.y) inside your render method, and see it work!
+Try console.log(this.props.y) inside your render method, and see it work!
 */
 
 /*
@@ -71,7 +73,7 @@ one is an object, in this case the object:
 }
 
 Style the root <div> in your HeroList.
-Use the calculateBackgroundColor function instead of "red" in the example above.
+Use the calculateBackgroundColor function instead of "red" in the example above, to set the backgroundColor.
 */
 
 /*
