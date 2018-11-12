@@ -104,8 +104,8 @@ by Jeppe Reinhold and Gustav Wengel
 2. Open the project with your favorite editor
 3. Run `npm run setupAll`
 4. Installing all parts might take some time, grab some coffee. ☕️
-4. Run `npm run part1`
-5. Make sure it works by visiting [localhost:3000](http://localhost:3000)
+5. Run `npm run part1`
+6. Make sure it works by visiting [localhost:3000](http://localhost:3000)
 
 ---
 
@@ -243,7 +243,22 @@ You want read the value from an `<input/>` element and do stuff with it
 ## We must control it!
 
 Pulling the `value` of the `<input/>` up to the component `state`
-<img style={{width: '700px'}} src="./public/controlled-component-flow.svg" />
+
+<div
+  className="stacked-container"
+  style={{ width: "80vw", height: "50vh" }}
+>
+  <img
+    src="./public/controlled-component-flow-1.svg"
+    className="stacked"
+  />
+  <Appear>
+    <img
+      src="./public/controlled-component-flow-2.svg"
+      className="stacked"
+    />
+  </Appear>
+</div>
 
 ---
 
@@ -260,19 +275,19 @@ Pulling the `value` of the `<input/>` up to the component `state`
         "Create a component state that will hold the value"
     },
     {
-      lines: [21, 22, 23, 25],
+      lines: [19, 20, 21, 23],
       notes: "Set the value to be that state"
     },
     {
-      range: [21, 25],
+      range: [19, 23],
       notes: "Listen for changes on the input"
     },
     {
-      range: [6, 11],
+      range: [6, 9],
       notes: "Update the state on each change"
     },
     {
-      range: [13, 16],
+      range: [11, 14],
       notes: "Now we can access the value from anywhere"
     },
     { notes: "Done! 🥳" }
@@ -444,11 +459,6 @@ We want to share behavior between components
 
 ---
 
-do we need some diagram here, showing a HOC wrapping to components, to give them functionality?
-boxes containing other boxes
-
----
-
 <CodeSurfer
   title="Using a HOC"
   code={require("!raw-loader!./examples/basic-hoc-usage.js")}
@@ -551,8 +561,9 @@ boxes containing other boxes
 
 # Assignments - Part 3
 
-1. ????
-2. 🏖
+1. Listen for scrolling events in the `<HeroList/>`
+2. Use a `withScroll()` HOC to do it instead
+3. 🏝
 
 ---
 
