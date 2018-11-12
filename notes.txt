@@ -11,21 +11,15 @@ Part 2 time (Gustav):
     Manual scrolling: 20min
     HOC: 11min
 
-FIX PART NUMBERS - part 1 is actually part 2 (part 1 in slides is welcome)
 
-Should we reorder the methods in controlled-final.js, so they are in order of appearance instead of the "correct" order?
+TODO:
+- FIX PART NUMBERS - part 1 is actually part 2 (part 1 in slides is welcome)
 
-Ensure not-important are the same throughout exercises
+- Should we reorder the methods in controlled-final.js, so they are in order of appearance instead of the "correct" order?
 
-Add more superheroes
+- dont have extra assignment components in the assignment file, have them along with the others
 
-hero height using vh
+- Extra Assignment height ???
 
-Make herodiv tall! How>??
-
-Styling to the edge (golden)
-
-Give the header a border?
-
-dont have extra assignment components in the assignment file, have them along with the others
-Extra Assignment height
+FINAL CHECKLIST:
+    Ensure not-important directory are the same throughout exercises
