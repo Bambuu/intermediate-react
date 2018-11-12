@@ -9,7 +9,7 @@ Part 1 time (Jeppe):
 
 Part 2 time (Gustav):
     Manual scrolling: 20min
-    HOC:
+    HOC: 11min
 
 FIX PART NUMBERS - part 1 is actually part 2 (part 1 in slides is welcome)
 
@@ -21,4 +21,8 @@ Add more superheroes
 
 hero height using vh
 
-Make herodiv tall!
+Make herodiv tall! How>??
+
+Styling to the edge (golden)
+
+Give the header a border?

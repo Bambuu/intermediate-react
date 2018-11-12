@@ -26,111 +26,18 @@ export const initialHeroes = [
 	},
 	{
 		name: 'Deadpool',
-		awesome: 45
+		awesome: 60
 	},
 	{
-		name: 'Deadpool2',
-		awesome: 45
+		name: "Aquaman",
+		awesome: -5
 	},
 	{
-		name: 'Deadpool3',
-		awesome: 45
+		name: "Hulk",
+		awesome: 30
 	},
 	{
-		name: 'Deadpool4',
-		awesome: 45
-	},
-	{
-		name: 'Deadpool5',
-		awesome: 45
-	},
-	{
-		name: 'Deadpool6',
-		awesome: 45
-	},
-	{
-		name: 'Deadpool7',
-		awesome: 45
-	},
-	{
-		name: 'Deadpool8',
-		awesome: 45
-	},
-	{
-		name: 'Deadpool9',
-		awesome: 45
-	},
-	{
-		name: 'Deadpool10',
-		awesome: 45
-	},
-	{
-		name: 'Deadpool11',
-		awesome: 45
-	},
-	{
-		name: 'Deadpool12',
-		awesome: 45
-	},
-	{
-		name: 'Deadpool34327',
-		awesome: 45
-	},
-  {
-    name: 'Deadpool7',
-    awesome: 45
-  },
-  {
-    name: 'Deadpool8',
-    awesome: 45
-  },
-  {
-    name: 'Deadpool9',
-    awesome: 45
-  },
-  {
-    name: 'Deadpool10',
-    awesome: 45
-  },
-  {
-    name: 'Deadpool11',
-    awesome: 45
-  },
-  {
-    name: 'Deadpool12',
-    awesome: 45
-  },
-  {
-    name: 'Deadpool34327',
-    awesome: 45
-  },,
-  {
-    name: 'Deadpool7',
-    awesome: 45
-  },
-  {
-    name: 'Deadpool8',
-    awesome: 45
-  },
-  {
-    name: 'Deadpool9',
-    awesome: 45
-  },
-  {
-    name: 'Deadpool10',
-    awesome: 45
-  },
-  {
-    name: 'Deadpool11',
-    awesome: 45
-  },
-  {
-    name: 'Deadpool12',
-    awesome: 45
-  },
-  {
-    name: 'Deadpool34327',
-    awesome: 45
-  },
-	
+		name: "Xavier",
+		awesome: 40
+	}
 ];
