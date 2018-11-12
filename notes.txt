@@ -11,11 +11,16 @@ Part 2 time (Gustav):
     Manual scrolling: 20min
     HOC: 11min
 
+
 FIX PART NUMBERS - part 1 is actually part 2 (part 1 in slides is welcome)
+
 
 Should we reorder the methods in controlled-final.js, so they are in order of appearance instead of the "correct" order?
 
-Ensure not-important are the same throughout exercises
+
+
+
+
 
 Add more superheroes
 
@@ -28,3 +33,7 @@ Styling to the edge (golden)
 Give the header a border?
 
 Extra Assignment height
+
+
+FINAL CHECKLIST:
+    Ensure not-important are the same throughout exercises

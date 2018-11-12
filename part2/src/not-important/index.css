@@ -40,8 +40,15 @@ code {
 .content {
   flex: 1;
   margin-left: 120px;
-  padding-left: 10px;
   background-origin: content-box;
+}
+
+.tall-div {
+    height: 120vh
+}
+
+.hero-list div {
+  height: 120vh
 }
 
 .hero-list-item {
