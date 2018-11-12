@@ -26,8 +26,12 @@ Part 3 time (Jeppe)
 
 - Extra Assignment height ???
 
+- Consider running setupAll in parallel
+
+- classnames inside HeroList or not?
 
 
 FINAL CHECKLIST:
     - Ensure not-important directory are the same throughout exercises
     - Synchronize so app is the same component everywhere
+    - streamline npm run vs npm run partX

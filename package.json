@@ -17,12 +17,12 @@
     }
   },
   "scripts": {
-	"setupAll": "cd part1 && npm install && cd ../part2 && npm install && cd ../part3 && npm install && cd ../part4 && npm install && cd ../part5 && npm install && cd ../part6 && npm install && cd ../final && npm install && cd ../slides && npm install",
-	"part1": "cd part1 && npm run start",
-	"part2": "cd part2 && npm run start",
-	"part3": "cd part3 && npm run start",
-	"part4": "cd part4 && npm run start",
-	"part5": "cd part5 && npm run start",
-	"part6": "cd part6 && npm run start"
+    "setupAll": "cd part1 && npm install && cd ../part2 && npm install && cd ../part3 && npm install && cd ../part4 && npm install && cd ../part5 && npm install && cd ../part6 && npm install && cd ../final && npm install && cd ../slides && npm install",
+    "part1": "cd part1 && npm run start",
+    "part2": "cd part2 && npm run start",
+    "part3": "cd part3 && npm run start",
+    "part4": "cd part4 && npm run start",
+    "part5": "cd part5 && npm run start",
+    "part6": "cd part6 && npm run start"
   }
 }

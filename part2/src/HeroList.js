@@ -14,7 +14,7 @@ export class HeroList extends Component {
       .map(hero => <li className="hero-list-item">{hero.awesome} - {hero.name}</li>);
 
     return (
-      <div>
+      <div className="tall-div">
         <ul>
           <li className="hero-list-item hero-list-header">Awesome score - Hero name</li>
           {heroComponents}

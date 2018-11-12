@@ -2,7 +2,7 @@
 
 /*
 Let's look at using a Higher-Order Component that keeps track of the scroll position for us.
-We're not going to be building one in this exercise, simply using one.
+GUSTAV: WRITE THAT WE WONT BE BUILDING ONE HERE; JUST USING ONE
 */
 
 /*
@@ -34,8 +34,9 @@ export const HeroListWithScroll = withScroll(HeroList);
 We'd prefer not to change the name, so let's not do that. Instead:
 - Change the "HeroList" name to "BaseHeroList"
 - Remove the export statement in front of "BaseHeroList"
-- At the bottom of the file, export the enhanced component. Use the line below:
+- Change the export const line to:
 export const HeroList = withScroll(BaseHeroList)
+GUSTAV!!!! LINE WHAT??
 
 Check to see if the app still runs.
 */

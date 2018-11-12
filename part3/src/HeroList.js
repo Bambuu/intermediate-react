@@ -1,22 +1,20 @@
 import React, { Component } from "react";
 import { initialHeroes } from "./not-important/heroes";
-import {withScroll} from 'react-fns'
-import { calculateBackgroundColor } from './not-important/utils';
 
-class BaseHeroList extends Component {
+export class HeroList extends Component {
   state = {
     heroes: initialHeroes,
     awesomeInputValue: 0,
-    nameInputValue: ""
+    nameInputValue: '',
   };
 
   ref = React.createRef();
 
-  componentDidMount() {
+  componentDidMount(){
     this.ref.current.focus();
   }
 
-  addSuperHero = event => {
+  addSuperHero = (event) => {
     event.preventDefault();
 
     const newSuperHero = {
@@ -26,63 +24,45 @@ class BaseHeroList extends Component {
 
     this.setState({
       heroes: this.state.heroes.concat(newSuperHero),
-      nameInputValue: "",
-      awesomeInputValue: 0
+      nameInputValue: '',
+      awesomeInputValue: 0,
     });
 
     this.ref.current.focus();
   };
 
-  onAwesomeInputChange = event => {
+  onAwesomeInputChange = (event) => {
     this.setState({
-      awesomeInputValue: event.target.value
-    });
+      awesomeInputValue: event.target.value,
+    })
   };
 
-  onNameInputChange = event => {
+  onNameInputChange = (event) => {
     this.setState({
-      nameInputValue: event.target.value
-    });
+      nameInputValue: event.target.value,
+    })
   };
 
   render() {
-	const copyOfHeroArray = this.state.heroes.slice();
-    const sortedHeroes = copyOfHeroArray.sort(
-      (hero, secondHero) =>
-        hero.awesome - secondHero.awesome
-    );
 
-    const heroComponents = sortedHeroes.map(hero => (
-      <li className="hero-list-item" key={hero.name}>
-        {hero.awesome} - {hero.name}
-      </li>
-    ));
+    const copyOfHeroArray = this.state.heroes.slice();
+    const sortedHeroes = copyOfHeroArray.sort((hero, secondHero) => hero.awesome - secondHero.awesome);
+
+    const heroComponents = sortedHeroes
+      .map(hero => <li className="hero-list-item" key={hero.name}>{hero.awesome} - {hero.name}</li>);
 
     return (
-      <div style={{backgroundColor: calculateBackgroundColor(this.props.y)}}>
+      <div className="tall-div">
         <ul>
-          <li className="hero-list-item hero-list-header">
-            Awesome score - Hero name
-          </li>
+          <li className="hero-list-item hero-list-header">Awesome score - Hero name</li>
           {heroComponents}
         </ul>
         <form onSubmit={this.addSuperHero}>
-          <input
-            ref={this.ref}
-            value={this.state.awesomeInputValue}
-            onChange={this.onAwesomeInputChange}
-            type="number"
-          />
-          <input
-            value={this.state.nameInputValue}
-            onChange={this.onNameInputChange}
-            type="text"
-          />
+          <input ref={this.ref} value={this.state.awesomeInputValue} onChange={this.onAwesomeInputChange} type="number" />
+          <input value={this.state.nameInputValue} onChange={this.onNameInputChange} type="text"/>
           <button>Submit</button>
         </form>
       </div>
     );
   }
 }
-
-export const HeroList = withScroll(BaseHeroList);
