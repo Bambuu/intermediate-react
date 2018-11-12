@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { SideBar } from './SideBar';
 import { Header } from './Header';
-import { HeroList } from './HeroList';
+import { HeroList } from '../src/HeroList';
 
 class App extends Component {
 	state = {

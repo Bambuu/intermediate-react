@@ -7,15 +7,8 @@
 
 /*
 EXERCISE A
-Go into the App.js file. At the top, import the ExtraAssignment component from this file.
-
-Inside the render method, if "this.state.currentPage === '/extra'" is true, then render the <ExtraAssignment/>
-component.
-
-It expects two props: 'prop1' and 'prop2' - feel free to give them any value you want.
-
-Now if you click the "Extra Exercise" on the sidebar, the component below should show up.
-Make sure that both props are displayed.
+Click the "Extra Exercise" on the sidebar.
+Check that the component in ExtraAssignment.js is displayed
 */
 
 /*
@@ -117,24 +110,4 @@ In the OuterComponent:
 /*
 Now you've (basically) implemented the withScroll component of react-fns.
 If you want, you can try using your withScroll on the HeroList, to see if it works.
- */
-
-import * as React from "react";
-
-const withScroll = () => {
-	// How does this thing work..?
-};
-
-export class ExtraAssignment extends React.Component {
-  render() {
-    return (
-      <div className="tall-div">
-        <h1>Extra Assignment 2: Build-a-HOC</h1>
-        <p>
-          I've got some props: {this.props.prop1}{" "}
-          {this.props.prop2}{" "}
-        </p>
-      </div>
-    );
-  }
-}
+*/
