@@ -1,18 +1,16 @@
 // ASSIGNMENT 2 - HIGHER ORDER COMPONENTS
 
 /*
-Now we've tried manually keeping track of a scroll position.
-let's use a Higher Order Component to do this for us.
-A HOC is a React component that wraps our component, and provides
-us with something extra through "props"
-
 Let's look at incorporating a Higher Order Component that keeps track of the scroll position for us.
 */
 
 /*
 EXERCISE A:
-Delete all the code related to scrolling. Adding and removing eventListeners, the "onScroll" method,
-and the key in state.
+Delete all the code related to scrolling.
+- Adding and removing eventListeners
+- the "onScroll" method,
+- displaying the scroll position in render
+- the key in state.
 */
 
 /*

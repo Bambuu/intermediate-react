@@ -13,17 +13,20 @@ export class HeroList extends Component {
 
   componentDidMount(){
     this.ref.current.focus();
-    window.addEventListener('scroll', this.onScroll)
+    window.addEventListener('scroll', this.onScroll);
   }
 
   onScroll = (event) => {
-    console.log(event.pageY)
-    this.setState({scrollPosition: event.pageY})
+    console.log(event)
+    this.setState({
+      scrollPosition: event.pageY
+    })
   };
 
   componentWillUnmount(){
-    console.log("Goodbye");
+    console.log("goodbye");
     window.removeEventListener('scroll', this.onScroll)
+
   }
 
   addSuperHero = (event) => {
@@ -56,7 +59,6 @@ export class HeroList extends Component {
   };
 
   render() {
-
     const copyOfHeroArray = this.state.heroes.slice();
     const sortedHeroes = copyOfHeroArray.sort((hero, secondHero) => hero.awesome - secondHero.awesome);
 
@@ -65,7 +67,7 @@ export class HeroList extends Component {
 
     return (
       <div>
-        {this.state.scrollPosition}
+        <h1 style={{position: "fixed"}}>{this.state.scrollPosition}</h1>
         <ul>
           <li className="hero-list-item hero-list-header">Awesome score - Hero name</li>
           {heroComponents}
