@@ -2,7 +2,9 @@
 
 export const calculateBackgroundColor = (scrollPosition) => {
   const percentageScrolled = scrollPosition * 1.5 / window.innerHeight;
-  return `rgb(255, 215, 0, ${percentageScrolled})`
+  return {
+    backgroundColor: `rgb(255, 215, 0, ${percentageScrolled})`
+  };
 };
 
 /**

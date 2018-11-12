@@ -16,7 +16,7 @@ class App extends Component {
 		// Default component is HeroList
 		let mainComponent = <HeroList/>;
 		if (this.state.currentPage === '/movies'){
-			mainComponent = <div style={{height:"1500px"}}>Here's a fun list of superhero movies.. to be implemented later..</div>
+			mainComponent = <div>Here's a fun list of superhero movies.. to be implemented later..</div>
 		} else if (this.state.currentPage === '/theming'){
 			mainComponent = <div>Here we'll end up changing the theme of our app.. later</div>
 		} else if (this.state.currentPage === '/extra'){

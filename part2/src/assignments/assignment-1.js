@@ -1,77 +1,66 @@
-// ASSIGNMENT 1 - LISTENING FOR THE SCROLLS
-
-/*
-React lets us reuse both visual components, but also
-logic.  In this exercise we'll try implementing some
-behaviour, and then using a Higher-Order Component (HOC)
-to achieve the same result.
-*/
+// ASSIGNMENT ONE - LISTS AND KEYS
 
 /*
 EXERCISE A:
-Switch to the part 2 directory in your console and run "npm start"
-(If you get a ENOENT error, try running "npm install" first)
+Inside your terminal, navigate to the "/part2" directory and type "npm run start"
+
+You should see a list of superheroes pop up in your browser at localhost:3000
+
+Tip: You might have to run "npm install" inside this directory if you get an error that packages are missing.
 */
 
 /*
 EXERCISE B:
-We want to make the background of the document
-more golden the further down the user scrolls.
-More awesome heroes = more gold!
+We're missing a key in our list!
+React warns you of this with a message like this:
+    "Warning: Each child in an array or iterator should have a unique "key" prop.
+    Check the render method of `HeroList`"
 
-We need to listen to the scroll event.
-Inside the componentDidMount of your HeroList add the following line:
-window.addEventListener('scroll', console.log);
-
-Now go to your HeroList and scroll.
-Make sure you can see the scroll event in the console,
-when you scroll up and down.
+Open up your Developer Tools and make sure you can see the warning in the console.
 */
 
 /*
-EXERCISE C
-Let's create a function to handle the scrolling part. Create a new function inside your HeroList
-called "onScroll". Have this function take in "event" as a parameter, and console.log the event.
+EXERCISE C:
 
-Change the "addEventListener" call, to instead of "console.log", say: "this.onScroll"
-Ensure it still works.
-*/
+Let's try to go through the render() method of the HeroList. Spend a few minutes trying to understand what's
+going on. you can find it in the file src/HeroList.js
+When you're done, there's a step-by-step walkthrough just below:
+ */
+render() {
+  // Here we create a copy of the array in state, using slice(). Normally this is not needed but..
+  const copyOfHeroArray = this.state.heroes.slice();
+  // We want to sort the array! The JavaScript .sort() method does not return a new array
+  // but changes the old one. As we're not allowed to modify state, we need the copy for above.
+  // The specifics of sort isn't important - but it sorts the hero after their awesome score.
+  const sortedHeroes = copyOfHeroArray.sort((hero, secondHero) => hero.awesome - secondHero.awesome);
+
+  // Here we use map to turn our array of heroes, into an array of React Components!
+  // Which we can then render in the JSX using {}'s
+  const heroComponents = sortedHeroes
+    .map(hero => <li className="hero-list-item">{hero.awesome} - {hero.name}</li>);
+
+  // Here we return some JSX.
+  return (
+	<div>
+	  <ul>
+		{/* This first list element is just to create a header for the list */}
+		<li className="hero-list-item hero-list-header">Awesome score - Hero name</li>
+		{/* Here we render our list of heroes */}
+		{heroComponents}
+	  </ul>
+	</div>
+  );
+}
 
 /*
 EXERCISE D:
-Now, try to go to the "Movies" part, and scroll down. In your console you will
-still see new scroll events.
-GUSTAV EXPAND
-When using eventListeners on DOM elements, you have to unsubscribe
-manually, as they don't know anything about the React lifecycle.
+  You need to add a "key" property to the <li> elements returned by our .map() function.
+  A key should be unique. In our case, we can use the name of the hero, assuming nobody adds the same hero twice.
+  When you add the key, the warning should disappear in your console.
+  GUSTAV: WHERE TO DO THE CHANGE?
 
-We can do this in the lifecycle method "componentWillUnmount"
-Implement "componentWillUnmount()" and have it console.log("Goodbye")
-Click around to get a feel for when it is called.
+  An example of adding a key to a <li> element is below:
  */
 
-/*
-EXERCISE E:
-Now let's unsubscribe from scroll events,  in our componentWillUnmount()
-You can do that by calling:
-window.removeEventListener('scroll', this.onScroll)
-
-Check to see that now we get the scroll events inside our "HeroList", but not when we go to the "Movies" tab
-*/
-
-/*
-EXERCISE F:
-We need to use the scroll position in the render method to change the background color.
-That means we need to get it into state.
-
-- Add a "scrollPosition" key to the state. Have it be 0 as a default.
-- Inside your onScroll function, call setState with the new scroll position. You can access it through "event.pageY'
-- Anywhere inside your render method, display the scrollPosition from state.
-
-The position can be a little tricky to read when you're scrolling away from it.
-You can use this JSX snippet to make sure it stays in sight:
-<h1 style={{position: "fixed"}}>{this.state.scrollPosition}</h1>
-
-*/
-
-// Good job, now let's see how we can do this with a HOC
+const animalElements = ['elephant', 'zebra', 'giraffe']
+  .map(animal => <li key={animal}>This animal is a {animal}</li>);

@@ -8,7 +8,7 @@ export const SideBar = (props) => {
 			<a onClick={() => props.changePage('/')}>Heroes</a>
 			<a onClick={() => props.changePage('/movies')}>Movies</a>
       <a onClick={() => props.changePage('/theming')}>Theming</a>
-      <a onClick={() => props.changePage('/extra')}>Extra Exercise</a>
+      <a onClick={() => props.changePage('/extra')}>Extra Exercise 1</a>
 		</div>)
 };
 
