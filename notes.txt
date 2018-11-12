@@ -11,9 +11,15 @@ Part 2 time (Gustav):
     Manual scrolling: 20min
     HOC: 11min
 
+Part 3 time (Jeppe)
+    Manual scrolling: 8.5min
+    HOC: 7min
+    Extra: 17min
 
-TODO:
+
 - FIX PART NUMBERS - part 1 is actually part 2 (part 1 in slides is welcome)
+
+- Synchronize so app is the same component everywhere
 
 - Should we reorder the methods in controlled-final.js, so they are in order of appearance instead of the "correct" order?
 
@@ -21,5 +27,8 @@ TODO:
 
 - Extra Assignment height ???
 
+
+
 FINAL CHECKLIST:
     Ensure not-important directory are the same throughout exercises
+    - Synchronize so app is the same component everywhere
