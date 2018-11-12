@@ -21,7 +21,7 @@ class App extends Component {
 		} else if (this.state.currentPage === '/theming'){
 			mainComponent = <div>Here we'll end up changing the theme of our app.. later</div>
 		} else if (this.state.currentPage === '/extra'){
-			mainComponent = <ExtraAssignment prop1={"foo"} prop2={"bar"}/>
+			mainComponent = <div><ExtraAssignment/></div>
 		}
 		return (
 			<div className="root">
