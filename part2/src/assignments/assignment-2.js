@@ -47,6 +47,32 @@ Try console.logging(this.props.y) inside your render method, and see it work!
 */
 
 /*
+EXERCISE E:
+Alright, now we have the scroll position, let's use it to color the background.
+We've created a calculateBackgroundColor inside not-important/utils.js
+
+Import it, and inside the render() method, call it with the current y position.
+Log the result to make sure it changes.
+ */
+
+/*
+EXERCISE F:
+Style the <div> with an inline style. Calculate the backgroundColor, using the
+calculateBackgroundColor function you just imported.
+
+You style a div using inline styles, by setting the style property to an object
+containing styles. E.g.
+
+<div style={{backgroundColor: "red"}}></div>
+
+Note the double curly braces - the first one is to tell React that we're writing some JavaScript, and the second
+one is an object, in this case the object:
+{
+  backgroundColor: "red"
+}
+*/
+
+/*
 Now you've learned how to use a HoC - they're very simple to use. You wrap your component in them, and they're responsible
 for keeping track of some sort of logic. That's all there is to it!
 */
