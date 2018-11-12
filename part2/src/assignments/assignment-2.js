@@ -1,7 +1,7 @@
-// ASSIGNMENT 2 - HIGHER ORDER COMPONENTS
+// ASSIGNMENT 2 - HIGHER-ORDER COMPONENTS
 
 /*
-Let's look at incorporating a Higher Order Component that keeps track of the scroll position for us.
+Let's look at incorporating a Higher-Order Component that keeps track of the scroll position for us.
 */
 
 /*
@@ -75,6 +75,6 @@ Use the calculateBackgroundColor function instead of "red" in the example above.
 */
 
 /*
-Now you've learned how to use a HoC - they're very simple to use. You wrap your component in them, and they're responsible
+Now you've learned how to use a HOC - they're very simple to use. You wrap your component in them, and they're responsible
 for keeping track of some sort of logic. That's all there is to it!
 */

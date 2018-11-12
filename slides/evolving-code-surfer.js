@@ -9,7 +9,7 @@ export class EvolvingCodeSurfer extends React.Component {
     return (
       <CodeSurfer
         title="Adding a ref"
-        code={require("!raw-loader!./examples2/ref-3.js")}
+        code={require("!raw-loader!./examples/ref-3.js")}
         lang="jsx"
         showNumbers={true}
         theme={nightOwl}
