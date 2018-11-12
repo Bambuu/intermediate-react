@@ -76,5 +76,61 @@ export const initialHeroes = [
 		name: 'Deadpool34327',
 		awesome: 45
 	},
+  {
+    name: 'Deadpool7',
+    awesome: 45
+  },
+  {
+    name: 'Deadpool8',
+    awesome: 45
+  },
+  {
+    name: 'Deadpool9',
+    awesome: 45
+  },
+  {
+    name: 'Deadpool10',
+    awesome: 45
+  },
+  {
+    name: 'Deadpool11',
+    awesome: 45
+  },
+  {
+    name: 'Deadpool12',
+    awesome: 45
+  },
+  {
+    name: 'Deadpool34327',
+    awesome: 45
+  },
+  {
+    name: 'Deadpool7',
+    awesome: 45
+  },
+  {
+    name: 'Deadpool8',
+    awesome: 45
+  },
+  {
+    name: 'Deadpool9',
+    awesome: 45
+  },
+  {
+    name: 'Deadpool10',
+    awesome: 45
+  },
+  {
+    name: 'Deadpool11',
+    awesome: 45
+  },
+  {
+    name: 'Deadpool12',
+    awesome: 45
+  },
+  {
+    name: 'Deadpool34327',
+    awesome: 45
+  },
 	
 ];

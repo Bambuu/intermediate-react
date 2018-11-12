@@ -7,8 +7,18 @@ Part 1 time (Jeppe):
     Controlled components: 15min
     Refs: 5min
 
+Part 2 time (Gustav):
+    Manual scrolling: 20min
+    HOC:
+
 FIX PART NUMBERS - part 1 is actually part 2 (part 1 in slides is welcome)
 
 Should we reorder the methods in controlled-final.js, so they are in order of appearance instead of the "correct" order?
 
 Ensure not-important are the same throughout exercises
+
+Add more superheroes
+
+hero height using vh
+
+Make herodiv tall!
