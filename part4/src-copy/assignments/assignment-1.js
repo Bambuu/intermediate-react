@@ -31,7 +31,7 @@ when you scroll up and down.
 /*
 EXERCISE C
 Let's create a function to handle the scrolling part. Create a new function inside your HeroList
-called "onScroll". Have this function console.log("Scrolled")
+called "onScroll". Have this function take in "event" as a parameter, and console.log the event.
 
 Change the "addEventListener" call, to instead of "console.log", say: "this.onScroll"
 Ensure it still works.
@@ -41,9 +41,9 @@ Ensure it still works.
 EXERCISE D:
 Now, try to go to the "Movies" part, and scroll down. In your console you will
 still see new scroll events.
-When using addEventListener() in JavaScript, the eventListener,
-stay on until either the page is changed or closed.
-As React never "changes" the page, we have to remove the eventListener manually
+GUSTAV EXPAND
+When using eventListeners on DOM elements, you have to unsubscribe
+manually, as they don't know anything about the React lifecycle.
 
 We can do this in the lifecycle method "componentWillUnmount"
 Implement "componentWillUnmount()" and have it console.log("Goodbye")
@@ -65,9 +65,13 @@ We need to use the scroll position in the render method to change the background
 That means we need to get it into state.
 
 - Add a "scrollPosition" key to the state. Have it be 0 as a default.
-- Inside your onScroll function, call setState with the new scroll position.
-    - You can access the position through window.scrollY
-- Below your list, display the scrollPosition from state.
+- Inside your onScroll function, call setState with the new scroll position. You can access it through "event.pageY'
+- Anywhere inside your render method, display the scrollPosition from state.
+
+The position can be a little tricky to read when you're scrolling away from it.
+You can use this JSX snippet to make sure it stays in sight:
+<h1 style={{position: "fixed"}}>{this.state.scrollPosition}</h1>
+
 */
 
 // Good job, now let's see how we can do this with a HOC

@@ -46,78 +46,45 @@ However, how do we *do* something with the component?
 The answer is - we don't! We return a *new* component that
 wraps the old one.
 
+/*
 EXERCISE D:
-GUSTAV: MAYBE TOO CONVOLUTED??!
-From your withScroll return an arrow function, that returns
-the WrappedComponent as JSX(!), surrounded with a
-<div>
+So let's try returning a Class-Based Component instead!
 
-Use inline styles to give the div a backgroundColor,
-just to convince yourself it's actually there.
-
-(You'll notice that the props have disappeared, we'll deal with them later)
-*/
-
-/*
-What you've done here is exactly the same as creating the functional component:
-const MyHOC = () => {
-  return <div><BaseExtraAssignment/></div>
-}
-
-However, the HOC you've written works for any
-component!
-
-Notice that the component we've outlined above doesn't take in any props,
-nor does it pass props to the <BaseExtraAssignment>
-
-The correct component we want to define is this:
-const MyHOC = (props) => {
-  return <div><BaseExtraAssignment {...props} /></div>
-}
-
-Notice we take in props, and pass in all the props we're given to the BaseExtraAssignment,
-this allows us to use this HOC, just like we would the BaseExtraAssignment, giving it the same props and all
-(
-  If you're confused by the {...props} line, it's a spread operator.
-  Feel free to ask about it - you can also read more info here:
-  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
-)
-
-
-EXERCISE E:
-Rewrite our HOC to pass down props as well. Have the function you return take in props, and use
-the spread operator to pass them all to the WrappedComponent.
-Ensure the component still works, and the props are now displayed. Notice that to the rest of the world (ie. in App),
-they can't tell this is a HOC at all!
-*/
-
-/*
-EXERCISE F:
-We want our HOC component to have state though, so we'll need to export a class
-based component!
-
-Luckily JavaScript lets us define classes dynamically.
-
-Let's ignore the WrappedComponent for now.
 Inside your withScroll function define a class, call it "OuterComponent":
+
+Return some random text from the render method.
 
 Tip: If you're confused, just define it exactly the way BaseExtraAssignment is
 defined below.
 
 Return this class you've just created.
-GUSTAV CONFUSING TO IGNORE WHAT WEVE ALREADY DONE? MAYBE JUST CLASS FROM THE BEGINNING
 */
 
 /*
-EXERCISE G:
-Now, let's do something with the WrappedComponent inside our HOC.
+EXERCISE E
+Now, let's return the <WrappedComponent/> from our render method()
+You can use the <WrappedComponent/> you get as a parameter, just like any other Component
+you would import from somewhere.
 
-Inside the render method of our OuterComponent, render the <WrappedComponent/>
-
-Make sure to pass {...this.props} to it.
-
-Ensure it works.
+You will notice the props are missing from the component
 */
+
+/*
+EXERCISE F:
+We need to pass down props to the <WrappedComponent />
+
+We can do it by writing like this in the render method:
+<WrappedComponent {...this.props} />
+
+This takes all the props the HOC was given, and passes them to the WrappedComponent.
+
+Pass down the props to the WrappedComponent, and ensure they're displayed.
+
+
+  Tip: If you're confused by the {...props} line, it's a spread operator.
+  Feel free to ask about it - you can also read more info here:
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+ */
 
 /*
 Now we've actually got a proper class-based Higher-Order Component. We can do anything with this
@@ -154,41 +121,20 @@ If you want, you can try using your withScroll on the HeroList, to see if it wor
 
 import * as React from "react";
 
-const withScroll = WrappedComponent => {
-	return class OuterComponent extends React.Component {
-		state = {
-			x: 0,
-			y: 0
-		}
-		scrollHandle = () => {
-			this.setState({x: window.scrollX, y: window.scrollY})
-		}
-		componentDidMount() {
-			window.addEventListener('scroll', this.scrollHandle)
-		}
-		componentWillUnmount() {
-			window.removeEventListener('scroll', this.scrollHandle)
-		}
-		render() {
-			return <WrappedComponent x={this.state.x} y={this.state.y} {...this.props}/>
-		}
-	}
+const withScroll = () => {
+	// How does this thing work..?
 };
 
-class BaseExtraAssignment extends React.Component {
+export class ExtraAssignment extends React.Component {
   render() {
     return (
-      <div style={{height: '2000px', width: '2000px'}}>
+      <div className="tall-div">
         <h1>Extra Assignment 2: Build-a-HOC</h1>
         <p>
-          I've got some props: {this.props.x}{" "}
-          {this.props.y}{" "}
+          I've got some props: {this.props.prop1}{" "}
+          {this.props.prop2}{" "}
         </p>
       </div>
     );
   }
 }
-
-export const ExtraAssignment = withScroll(
-  BaseExtraAssignment
-);
