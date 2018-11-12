@@ -59,7 +59,7 @@ class BaseHeroList extends Component {
     ));
 
     return (
-      <div style={{backgroundColor: calculateBackgroundColor(this.props.y)}}>
+      <div className="tall-div" style={{backgroundColor: calculateBackgroundColor(this.props.y)}}>
         <ul>
           <li className="hero-list-item hero-list-header">
             Awesome score - Hero name
