@@ -3,7 +3,7 @@ import { FormController } from "./not-important/FormController";
 
 export class FormExample1 extends React.Component {
 
-  lo
+
   render() {
     <FormController initialState={myInputValue: ''} onSubmit={}/>
     <div>
