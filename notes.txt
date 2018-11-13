@@ -21,8 +21,6 @@ Part 4 time (Gustav)
     withRouter: 5min
     extra: 10min~
 
-- FIX PART NUMBERS - part 1 is actually part 2 (part 1 in slides is welcome)
-
 
 - Should we reorder the methods in controlled-final.js, so they are in order of appearance instead of the "correct" order?
 
