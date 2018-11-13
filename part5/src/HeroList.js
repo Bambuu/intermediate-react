@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { initialHeroes } from "./not-important/heroes";
 import {withScroll} from 'react-fns'
-import { calculateBackgroundColor } from './not-important/utils';
+import { calculateBackgroundColor, TestRenderProp } from "./not-important/utils";
+import { FormController } from "./not-important/FormController";
 
 class BaseHeroList extends Component {
   state = {
@@ -16,9 +17,7 @@ class BaseHeroList extends Component {
     this.ref.current.focus();
   }
 
-  addSuperHero = event => {
-    event.preventDefault();
-
+  addSuperHero = () => {
     const newSuperHero = {
       name: this.state.nameInputValue,
       awesome: this.state.awesomeInputValue
@@ -66,6 +65,16 @@ class BaseHeroList extends Component {
           </li>
           {heroComponents}
         </ul>
+        <TestRenderProp>
+          {props => console.log(props)}
+        </TestRenderProp>
+        <FormController initialState={{awesome: 0, name: ''}} onSubmit={this.addSuperHero}>
+          {
+            props => {
+              console.log(props)
+            }
+          }
+        </FormController>
         <form onSubmit={this.addSuperHero}>
           <input
             ref={this.ref}
