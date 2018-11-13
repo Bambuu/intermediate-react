@@ -29,7 +29,9 @@ Inside Header.js import the "withRouter" HOC
 
 /*
 EXERCISE C
+
 Let's export the Header with the withRouter Higher Order Component.
+
 We've only done this with class based components before, but it works exactly the same
 way with a functional component.
 
@@ -45,8 +47,8 @@ As a reminder, this involves
 EXERCISE D
 We get the location info inside props in the Header.
 
-Have the Header take in props as a parameter
-console.log() the props.
+- Have the Header take in props as a parameter
+- console.log() the props.
 
 Try navigating around - you'll see the Header gets new props
 whenever a link is clicked.

@@ -27,7 +27,7 @@ Your app should run like normally
 /*
 EXERCISE B:
 Let's look at making some proper links in the SideBar.
-React-Router uses A "Link" component, that acts like <a> tags.
+React Router uses a <Link/> component, that acts like <a> tags.
 
 Inside SideBar.js, import Link from "react-router-dom"
 It is also a named export
@@ -40,7 +40,7 @@ Link takes a "to" prop, that will set the url.
 Give the different pages different urls like this schema:
   Heroes page: "/heroes"
   Theming page: "/theming"
-  Extra Exercise: "extra"
+  Extra Exercise: "/extra"
 
 When this exercise is finished, you'll see that when you click a link,
 the url changes - but the UI does not!
@@ -51,8 +51,9 @@ EXERCISE C:
 Let's make our app display different components depending on the url.
 Currently we use a Conditional Rendering approach. We'll replace this with Routes
 
-Comment out the large if-else block at the start of the render() method.
-Remove {mainComponent} inside the JSX
+In the App component:
+- Comment out the large if-else block at the start of the render() method.
+- Remove {mainComponent} inside the JSX
 
 Your app should now show nothing but a sidebar and a header, but otherwise compile fine
 */
@@ -66,16 +67,16 @@ Import it inside App.js
 A Route takes a path, and a component to display. The syntax is like this:
 <Route path="/mySuperCoolPath" component={MySuperCoolComponent} />
 
-Place a Route underneath the <Header/> component, that will render your HeroList,
-if the correct path is specified.
+- Place a Route underneath the <Header/> component, that will render your HeroList,
+  if the correct path is specified.
+- Click the "Heroes" link in the sidebar, to see if it works.
 
-Click the "Heroes" link in the sidebar, to see if it works.
 Note: Currently it will not work with the index url "/" - which will still show nothing.
 */
 
 /*
 EXERCISE E:
-Implement the rest of the Routes, just like you did with the "/heroes" route
+Implement the two other Routes (theming, extra), just like you did with the "/heroes" route
 
 Test to see if all routes work.
 */
