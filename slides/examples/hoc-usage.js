@@ -1,4 +1,5 @@
 const BaseOrderPizzaButton = props => {
+	const BaseOrderPizzaButton = props => {
   const isConnected = props.online; // boolean
   const amount = props.amount; // number
 

@@ -258,6 +258,7 @@ Pulling the `value` of the `<input/>` up to the component `state`
       src="./public/controlled-component-flow-2.svg"
       className="stacked"
     />
+    <div />
   </Appear>
 </div>
 
@@ -462,7 +463,7 @@ We want to share behavior between components
 
 <CodeSurfer
   title="Using a HOC"
-  code={require("!raw-loader!./examples/basic-hoc-usage.js")}
+  code={require("!raw-loader!./examples/hoc-usage.js")}
   lang="jsx"
   showNumbers={true}
   theme={nightOwl}
@@ -875,32 +876,198 @@ Problems:
 
 # Assignments - Part 4
 
-1. 
-2. ⛱
+1. Implement routing in the Heroes app
+2. Show the current location in the header using the `withRouter()` HOC
+3. ⛱
 
 ---
 
 # Render props 🎥
+
 ## Part 5
 
-- another pattern that solves the same problem as HOCs
-- still composition, just a bit different
-- instead of wrapping our component with behavior
-- we put the behavior *inside* our render(), 
+---
+
+## 'Render props' is a component pattern, like HOC
+
+<ul style={{ fontSize: "1.2em" }}>
+  <Appear>
+    <li>
+      It solves the same problem as HOCs: sharing common
+      behavior 🤝
+    </li>
+    <li>
+      HOCs wrap a component and{" "}
+      <em>inject behavior via props</em>
+    </li>
+    <li>
+      Render props instead render a component, that passes
+      the behavior to the component{" "}
+      <em>
+        from within the <Code code="render()" /> method
+      </em>
+    </li>
+    <li>
+      Render props are sometimes refered to as{" "}
+      <em>"function as a child"</em>
+    </li>
+  </Appear>
+</ul>
+
+---
+
+# 🤨
+
+Don't worry if it doesn't make sense, it's easier to understand when you try it.
+
+---
+
+# 👍
+
+We teach you both patterns because you will most likely use both when you start using libraries.
+
+---
+
+<CodeSurfer
+  title="Using a Network render prop"
+  code={require("!raw-loader!./examples/render-prop-usage.js")}
+  lang="jsx"
+  showNumbers={true}
+  theme={nightOwl}
+  steps={[
+    {
+      notes: "Our network aware OrderPizzaButton"
+    },
+    {
+      range: [1, 2],
+      notes: "The basics"
+    },
+    {
+      range: [7, 11],
+      notes: "The usual JSX"
+    },
+    {
+      lines: [5, 13],
+      notes: "Render an outer <Network/> component"
+    },
+    {
+      lines: [5, 6, 12, 13],
+      notes:
+        'Child of <Network/> component is a function - "function as a child"'
+    },
+    {
+      tokens: { 6: [2, 3, 4, 5, 6] },
+      notes: "Child function gets behavior as arguments"
+    },
+    {
+      range: [6, 12],
+      notes: "Use arguments to return final result"
+    },
+    {
+      range: [4, 14],
+      notes:
+        "In short, the Render prop component is added inside our JSX"
+    }
+  ]}
+/>
+
+---
+
+As soon as you understand,
+that you are _just_ passing a function as the child to `<Network/>`,
+it becomes trivial to understand 😇
+
+---
+
+Lets see how the Network Render prop component is implemented
+
+---
+
+<CodeSurfer
+  title="Building the Network render prop"
+  code={require("!raw-loader!./examples/network-render-prop.js")}
+  lang="jsx"
+  showNumbers={true}
+  theme={nightOwl}
+  steps={[
+    {},
+    {
+      lines: [1],
+      notes: "Directly exporting a class component, no class within a function or anything like the HOC"
+    },
+    {
+      range: [2, 12],
+      notes: "Same as before - in the withNetwork() HOC"
+    },
+    {
+      range: [14,16],
+      notes: "Render the 'children' prop, and run it as a function. Pass relevant arguments"
+    },
+	{ notes: 'Done! 🥳'}
+  ]}
+/>
+
+---
+
+## Render prop vs HOC - When to use what?
+
+<ul style={{ fontSize: "1.5em" }}>
+  <Appear>
+    <li>As you see, they solve the same problem</li>
+    <li>
+		It often comes down to a matter of taste, or what the library exposes
+    </li>
+    <li>
+		(as we'll see first hand in the final part)
+    </li>
+  </Appear>
+</ul>
+
+---
+
+title: Render props are more explicit about behavior 
+
+demo
+
+---
+
+title: HOCs tend to "hide" the enhancement = harder to understand Component
+
+demo
+
+---
+
+Render props are a pain to combine
+
+demo render prop
+
+---
+
+demo combining hoc
+
+---
+
+render props and lifecycles
+
+demo
+
+---
+
+# Personal rule of thumb guides
+
+1. Use render props where you can
+2. Use HOCs if you have to combine multiple in *same* component
+3. Use HOCs if you have to access enhancement in lifecycle methods
+
+---
+
 - also called children as function
 - see https://cdb.reacttraining.com/use-a-render-prop-50de598f11ce for origins
 
-- arguments
-- typescript
-- no indirection - also last line export
-- no renaming (Base)
-
-- nemmere at st{te} flere sammen
-- forces logic into return instead of base
-- lifecycles
-
-- viser kun children functions
-- implementer Network fra HOC
+- GUSTAV: DESTRUCTURE PROPS IN FUNCTION???
+- FIX HOC USAGE FILE!!!
+- GUSTAV: WRITE AN ASSIGNMENT THAT TELLS THEM TO COMPARE MY TWO HOC AND RENDER PROPS EXAMPLES
+- GUSTAV: WHAT TO DO WITH SPECIAL CHILDREN PROP?!?! WE USE IT IN OUR IMPLEMENTATION
 
 ---
 
