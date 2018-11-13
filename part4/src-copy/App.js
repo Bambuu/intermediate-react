@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { SideBar } from './SideBar';
 import { Header } from './Header';
 import { HeroList } from './HeroList';
-import { ExtraAssignment } from "./assignments/extra-exercise";
+import { ExtraAssignment } from "./ExtraAssignment";
 
 class App extends Component {
 	state = {

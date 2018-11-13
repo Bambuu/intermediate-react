@@ -1,10 +1,11 @@
 // ASSIGNMENT 1 - Routing and the sidebar
 
 /*
-  Let's add some routing. We've installed "react-router" for you.
+Let's add some routing. We've installed "react-router" for you.
+You will be importing the things from it through "react-router-dom"
 
-  The first thing we need to do is add a top-level Router, that will help us
-  keep our UI in sync with our URL.
+The first thing we need to do is add a top-level Router, that will help us
+keep our UI in sync with our URL.
 */
 
 /*
