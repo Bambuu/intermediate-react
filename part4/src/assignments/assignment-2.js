@@ -8,17 +8,18 @@ Remove everything related to the old way of managing links
  - The commented out if-statements in App
  - The changePage function in app
  - The changePage props passed down to SideBar
+ - The propType in SideBar
 */
 
 /*
-You should now be left with a fully functioning navigation.
-The index route at '/' probably still doesn't work, but we'll
-look at that in the extra exercsies.
+After this, you should have a functional navigation, with
+routes and links.
+The index route at '/' still doesn't work, but we'll
+look at that in the extra exercises.
 */
 
 /*
 EXERCISE B:
-
 Let's look at the Header. We want it to show the current url.
 
 Luckily we can tap into this information, with a Higher-Order Component!

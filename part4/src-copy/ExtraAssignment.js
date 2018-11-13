@@ -1,9 +1,5 @@
 import * as React from "react";
 
-const withScroll = () => {
-  // How does this thing work..?
-};
-
 export class ExtraAssignment extends React.Component {
   render() {
     return (

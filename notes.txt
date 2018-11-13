@@ -16,6 +16,9 @@ Part 3 time (Jeppe)
     HOC: 7min
     Extra: 17min
 
+Part 4 time (Gustav)
+    Links and Routes: 8.5min
+
 
 - FIX PART NUMBERS - part 1 is actually part 2 (part 1 in slides is welcome)
 
