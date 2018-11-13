@@ -1,17 +1,17 @@
-Part 1 time (Gustav):
+Part 2 time (Gustav):
     Lists and keys: 5min
     Controlled components: 25min
 
-Part 1 time (Jeppe):
+Part 2 time (Jeppe): (23min / 28min)
     Keys: 8min
     Controlled components: 15min
     Refs: 5min
 
-Part 2 time (Gustav):
+Part 3 time (Gustav):
     Manual scrolling: 20min
     HOC: 11min
 
-Part 3 time (Jeppe)
+Part 3 time (Jeppe): (15.5min / 32min)
     Manual scrolling: 8.5min
     HOC: 7min
     Extra: 17min
@@ -21,10 +21,14 @@ Part 4 time (Gustav)
     withRouter: 5min
     extra: 10min~
 
-Part 4 time (Jeppe)
+Part 4 time (Jeppe) (11min / 20min)
     Links and Routes: 7min
     withRouter: 4min
     extra: 10min
+
+
+20 min prez per emne udover det foerste
+20 * 5 + 10 = 110 = 2h
 
 
 - Should we reorder the methods in controlled-final.js, so they are in order of appearance instead of the "correct" order?
