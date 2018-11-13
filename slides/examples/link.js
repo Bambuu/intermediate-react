@@ -2,16 +2,10 @@ import { Link } from "react-router-dom";
 
 const SideBar = () => {
   return (
-    <ul>
-      <li>
-        <Link to="/">Home</Link>
-      </li>
-      <li>
-        <Link to="/heroes">Heroes</Link>
-      </li>
-      <li>
-        <Link to="/villains">Villains</Link>
-      </li>
-    </ul>
+    <nav>
+      <Link to="/">Home</Link>
+      <Link to="/heroes">Heroes</Link>
+      <Link to="/villains">Villains</Link>
+    </nav>
   );
 };
