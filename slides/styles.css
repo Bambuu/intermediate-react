@@ -16,3 +16,7 @@ ul, ol {
 	position:relative;
 	display: flex;
 }
+
+a {
+	color: inherit;
+}
