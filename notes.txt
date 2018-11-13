@@ -30,8 +30,11 @@ Part 3 time (Jeppe)
 
 - classnames inside HeroList or not?
 
+    - Movies component says it'll be implemented later..?
 
 FINAL CHECKLIST:
     - Ensure not-important directory are the same throughout exercises
     - Synchronize so app is the same component everywhere
     - streamline npm run vs npm run partX
+    - add react routing to all package.json
+    - make
