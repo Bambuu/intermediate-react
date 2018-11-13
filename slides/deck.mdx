@@ -593,11 +593,11 @@ Show implementation in part4
   theme={nightOwl}
   steps={[
     {
-      range: [7, 36],
+      range: [8, 39],
       notes: "The App.js in part 4"
     },
     {
-      range: [44, 52],
+      range: [29, 37],
       notes: "Returned from render()"
     },
     {
@@ -605,13 +605,12 @@ Show implementation in part4
       notes: "default mainComponent"
     },
     {
-      range: [23, 29],
-      notes: "mainComponent if currentPage === /movies"
+      range: [24, 25],
+      notes: "mainComponent if currentPage === /theming"
     },
-    { lines: [30] },
-    { lines: [37] },
+    { range: [26, 28] },
     {
-      range: [8, 14],
+      range: [9, 15],
       notes: "the currentPage state"
     }
   ]}
@@ -673,7 +672,7 @@ Problems:
 
 ---
 
-# The three concepts of React Router
+## The three main concepts of React Router
 
 <ul style={{ fontSize: "1.5em" }}>
   <Appear>
@@ -709,15 +708,15 @@ Problems:
       notes: "Import Link"
     },
     {
-      lines: [7],
+      lines: [6],
       notes: "Link to / (root)"
     },
     {
-      lines: [10],
+      lines: [7],
       notes: "Link to /heroes"
     },
     {
-      lines: [13],
+      lines: [8],
       notes: "Link to /villains"
     }
   ]}
@@ -772,12 +771,12 @@ Problems:
       notes: "Import BrowserRouter"
     },
     {
-      lines: [5, 8],
+      lines: [5, 10],
       notes:
         "The BrowserRouter needs to be above all your <Link/> and <Route/>"
     },
     {
-      range: [5, 8],
+      range: [5, 10],
       notes:
         "Can contain any components, with deeply nested <Link/> and <Route/>"
     }
@@ -808,7 +807,10 @@ Problems:
 
 ---
 
-DEMONSTRATE IT WORKING???
+<img
+  src="./public/is-it-working.jpg"
+  style={{ height: "70vh" }}
+/>
 
 ---
 
@@ -871,17 +873,34 @@ DEMONSTRATE IT WORKING???
 
 ---
 
-DONE
+# Assignments - Part 4
+
+1. 
+2. ⛱
 
 ---
 
-- solution
-  - there are many, but use react-router
-  - explain that there are differences in v3 and v4
-- the concepts - link - route - router
-- show example where it all fits together
-- withRouter
-- get current route anywhere in your app
+# Render props 🎥
+## Part 5
+
+- another pattern that solves the same problem as HOCs
+- still composition, just a bit different
+- instead of wrapping our component with behavior
+- we put the behavior *inside* our render(), 
+- also called children as function
+- see https://cdb.reacttraining.com/use-a-render-prop-50de598f11ce for origins
+
+- arguments
+- typescript
+- no indirection - also last line export
+- no renaming (Base)
+
+- nemmere at st{te} flere sammen
+- forces logic into return instead of base
+- lifecycles
+
+- viser kun children functions
+- implementer Network fra HOC
 
 ---
 
