@@ -1,5 +1,3 @@
-// EXTRA ASSIGNMENT - SWITCHES AND REDIRECTS
-
 /*
 EXTRA EXERCISE A:
 
@@ -8,8 +6,7 @@ We need to learn the difference between a <Switch> and a <Route>
 Try changing the "path" of all the Routes inside App.js to "heroes"
 
 Now go to the Heroes page and see what's rendered.
-
-*/
+ */
 
 /*
 All of the components are rendered!
@@ -25,7 +22,7 @@ EXTRA EXERCISE B
 Import Switch inside App.js
 Surround your Routes with <Switch> ...routes... </Switch>
 
-Now look at your app in the browser and see what happens.
+Now try to see what happens.
 */
 
 /*
@@ -34,14 +31,14 @@ EXTRA EXERCISE C
 You'll see that Switch only renders one component, more specifically it renders
 the first matching component.
 
-Move the order of the components around, to make sure that only the first one is rendered.
+Move the order of the components around, to see that only the first one is rendered.
+
 */
 
 
 /*
-Now that we know how a Switch works, we can implement the following redirect:
-
-We want the index route '/' to redirect to the '/heroes' page.
+Let's have the default route of localhost:3000 show the heroes
+page.
 
 We can redirect things in React-Router by rendering the <Redirect> component.
 */
@@ -59,22 +56,14 @@ Redirect takes several props. It takes (among others):
     otherwise "/" will also match "/ilikeapples"
 
 Use a Redirect inside your Switch, to make sure that the index page "/" is redirected to the heroes url.
-
-Things to test, to make sure you've gotten it right:
-  - All pages should still work
-  - Reloading the /theming and /extra page should not redirect
-  - When loading the page at localhost:3000 , it should redirect to localhost:3000/heroes
-  - If you manually enter the path "/foo" - it should NOT redirect to /heroes
 */
 
 /*
 EXTRA EXERCISE E
-Let's look at adding a little style.
+Let's look at adding a little more sexy.
 
-Instead of <Link> in our SideBar, we can use a NavLink.
-A NavLink allows us to style a Link, if the path matches the one the link
-has. So we can style the link, if it represents the page we're currently on.
-We call a link like this "active"
+Instead of <Link> in our SideBar, we can use a NavLink,
+this is a link that allow us to style it, if the link is active.
 
 Replace all the <Link> components in the SideBar with <NavLink>
 No need to change anything but the type.
@@ -84,6 +73,9 @@ Make sure to import NavLink
 
 /*
 EXTRA EXERCISE F
+NavLink allows us to style a Link, if the path matches the one the link
+has. So we can style the link, if it represents the page we're currently on.
+We call a link like this "active"
 
 You can style it via the 'activeStyle' prop, which takes in an object of styles to apply,
 if the link is "active"
