@@ -27,7 +27,7 @@ Your app should run like normally
 /*
 EXERCISE B:
 Let's look at making some proper links in the SideBar.
-React-Router uses A "Link" component, that acts as a link.
+React-Router uses A "Link" component, that acts like <a> tags.
 
 Inside SideBar.js, import Link from "react-router-dom"
 It is also a named export
