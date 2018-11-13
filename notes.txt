@@ -16,8 +16,10 @@ Part 3 time (Jeppe)
     HOC: 7min
     Extra: 17min
 
-
-- FIX PART NUMBERS - part 1 is actually part 2 (part 1 in slides is welcome)
+Part 4 time (Gustav)
+    Links and Routes: 8.5min
+    withRouter: 5min
+    extra: 10min~
 
 
 - Should we reorder the methods in controlled-final.js, so they are in order of appearance instead of the "correct" order?
@@ -31,6 +33,8 @@ Part 3 time (Jeppe)
 - classnames inside HeroList or not?
 
     - Movies component says it'll be implemented later..?
+
+- Refactor components from "App" out into seperate components
 
 FINAL CHECKLIST:
     - Ensure not-important directory are the same throughout exercises
