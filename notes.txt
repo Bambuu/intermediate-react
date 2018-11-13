@@ -35,3 +35,5 @@ FINAL CHECKLIST:
     - Ensure not-important directory are the same throughout exercises
     - Synchronize so app is the same component everywhere
     - streamline npm run vs npm run partX
+    - add react routing to all package.json
+    - make
