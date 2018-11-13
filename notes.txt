@@ -30,6 +30,7 @@ Part 3 time (Jeppe)
 
 - classnames inside HeroList or not?
 
+    - Movies component says it'll be implemented later..?
 
 FINAL CHECKLIST:
     - Ensure not-important directory are the same throughout exercises
