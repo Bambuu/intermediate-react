@@ -5,6 +5,7 @@ import { Head, Image } from "mdx-deck";
 import nightOwl from "prism-react-renderer/themes/nightOwl";
 import { CodeSurfer } from "mdx-deck-code-surfer";
 import { Tester } from "./tester";
+import { Code } from "./components/code";
 
 <Head>
   <title>bambuu React Intermediate slides</title>
@@ -564,6 +565,323 @@ We want to share behavior between components
 1. Listen for scrolling events in the `<HeroList/>`
 2. Use a `withScroll()` HOC to do it instead
 3. 🏝
+
+---
+
+# Routing 🛣
+
+## Part 4
+
+---
+
+# The Problem
+
+.. is easier to show than tell
+
+```notes
+Show implementation in part4
+-
+```
+
+---
+
+<CodeSurfer
+  title="Managing pages in React state 😔"
+  code={require("!raw-loader!../part4/src/App.js")}
+  lang="jsx"
+  showNumbers={true}
+  theme={nightOwl}
+  steps={[
+    {
+      range: [7, 36],
+      notes: "The App.js in part 4"
+    },
+    {
+      range: [44, 52],
+      notes: "Returned from render()"
+    },
+    {
+      range: [17, 22],
+      notes: "default mainComponent"
+    },
+    {
+      range: [23, 29],
+      notes: "mainComponent if currentPage === /movies"
+    },
+    { lines: [30] },
+    { lines: [37] },
+    {
+      range: [8, 14],
+      notes: "the currentPage state"
+    }
+  ]}
+/>
+
+---
+
+<img
+  src="./public/fascinating-meme.jpg"
+  style={{ height: "90vh" }}
+/>
+
+```notes
+Open new tab
+Problems:
+- URL doesn't change
+- Browser history doesn't change
+- Reload
+- Share location
+- Press back
+- New tab
+```
+
+---
+
+### All the things you expect from a traditional website, you have to implement yourself in a single-page application
+
+---
+
+# The solution 🛣
+
+<ul style={{ fontSize: "1.5em" }}>
+  <Appear>
+    <li>Use a routing library</li>
+    <li>
+      There are <em>many</em> to choose from, just go with{" "}
+      <code>
+        <a
+          target="_blank"
+          href="https://reacttraining.com/react-router/web"
+        >
+          React Router
+        </a>
+      </code>
+    </li>
+    <li>
+      Manages location (URL) and browser history for you
+    </li>
+    <li>
+      Always shows the correct component, based on the
+      current location
+    </li>
+    <li>
+      Beware: There is a big difference with React Router v3
+      and v4
+    </li>
+  </Appear>
+</ul>
+
+---
+
+# The three concepts of React Router
+
+<ul style={{ fontSize: "1.5em" }}>
+  <Appear>
+    <li>
+      <Code code="<Link/>" /> - To navigate between pages
+      (replaces <Code code="<a>" /> tags)
+    </li>
+    <li>
+      <Code code="<Route/>" /> - To configure which route
+      must render which component
+    </li>
+    <li>
+      <Code code="<BrowserRouter/>" /> - Handles updating
+      the location
+    </li>
+  </Appear>
+</ul>
+
+---
+
+<CodeSurfer
+  title="Using the <Link/> component"
+  code={require("!raw-loader!./examples/link.js")}
+  lang="jsx"
+  showNumbers={true}
+  theme={nightOwl}
+  steps={[
+    {
+      notes: "A simple sidebar navigation"
+    },
+    {
+      lines: [1],
+      notes: "Import Link"
+    },
+    {
+      lines: [7],
+      notes: "Link to / (root)"
+    },
+    {
+      lines: [10],
+      notes: "Link to /heroes"
+    },
+    {
+      lines: [13],
+      notes: "Link to /villains"
+    }
+  ]}
+/>
+
+---
+
+<CodeSurfer
+  title="Using the <Route/> component"
+  code={require("!raw-loader!./examples/routes.js")}
+  lang="jsx"
+  showNumbers={true}
+  theme={nightOwl}
+  steps={[
+    {
+      notes: "Simple route container"
+    },
+    {
+      lines: [1],
+      notes: "Import Route"
+    },
+    {
+      lines: [6],
+      notes: "Show Heroes component when route is /heroes"
+    },
+    {
+      lines: [7],
+      notes:
+        "Show Villains component when route is /villains"
+    },
+    {
+      lines: [8],
+      notes: "Show Home component when route is /"
+    }
+  ]}
+/>
+
+---
+
+<CodeSurfer
+  title="Using the <BrowserRouter/> component"
+  code={require("!raw-loader!./examples/router.js")}
+  lang="jsx"
+  showNumbers={true}
+  theme={nightOwl}
+  steps={[
+    {
+      notes: "Simple routed app"
+    },
+    {
+      lines: [1],
+      notes: "Import BrowserRouter"
+    },
+    {
+      lines: [5, 8],
+      notes:
+        "The BrowserRouter needs to be above all your <Link/> and <Route/>"
+    },
+    {
+      range: [5, 8],
+      notes:
+        "Can contain any components, with deeply nested <Link/> and <Route/>"
+    }
+  ]}
+/>
+
+---
+
+# Using React Router
+
+<ol>
+  <Appear>
+    <li>
+      Have a top-level <Code code="<BrowserRouter/>" /> in
+      your app
+    </li>
+    <li>
+      Navigate between pages with
+      <Code code="<Link to='/location'/>" />
+    </li>
+    <li>
+      Map routes to components with
+      <br />
+      <Code code="<Route path='/location' component={Component}/>" />
+    </li>
+  </Appear>
+</ol>
+
+---
+
+DEMONSTRATE IT WORKING???
+
+---
+
+## What if we want to read from the location within any component? 🤔
+
+<ul style={{ fontSize: "1.5em" }}>
+  <Appear>
+    <li>Show information based on current location</li>
+    <li>Header showing current page</li>
+    <li>Log location to backend</li>
+  </Appear>
+</ul>
+
+---
+
+# `withRouter()` HOC to the rescue 💪
+
+<ul style={{ fontSize: "1.5em" }}>
+  <Appear>
+    <li>
+      Wrap any component in <Code code="withRouter()" />
+    </li>
+    <li>
+      Get <Code code="location" /> and{" "}
+      <Code code="history" /> as props
+    </li>
+  </Appear>
+</ul>
+
+---
+
+<CodeSurfer
+  title="Using the withRouter() HOC"
+  code={require("!raw-loader!./examples/with-router.js")}
+  lang="jsx"
+  showNumbers={true}
+  theme={nightOwl}
+  steps={[
+    {
+      range: [1, 4],
+      notes: "Simple routing aware Header"
+    },
+    {
+      range: [1, 6],
+      notes: "Wrap in withRouter()"
+    }
+  ]}
+/>
+
+---
+
+## When to route - and when to just conditionally render? 🧐
+
+<ul style={{ fontSize: "1.5em" }}>
+  <Appear>
+    <li>Do you want the view to be deep linkable?</li>
+    <li>... the back button to change view?</li>
+  </Appear>
+</ul>
+
+---
+
+DONE
+
+---
+
+- solution
+  - there are many, but use react-router
+  - explain that there are differences in v3 and v4
+- the concepts - link - route - router
+- show example where it all fits together
+- withRouter
+- get current route anywhere in your app
 
 ---
 
