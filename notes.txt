@@ -32,6 +32,8 @@ Part 3 time (Jeppe)
 
     - Movies component says it'll be implemented later..?
 
+- Refactor components from "App" out into seperate components
+
 FINAL CHECKLIST:
     - Ensure not-important directory are the same throughout exercises
     - Synchronize so app is the same component everywhere
