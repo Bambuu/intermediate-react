@@ -21,6 +21,11 @@ Part 4 time (Gustav)
     withRouter: 5min
     extra: 10min~
 
+Part 4 time (Jeppe)
+    Links and Routes: 7min
+    withRouter: 4min
+    extra: 10min
+
 
 - Should we reorder the methods in controlled-final.js, so they are in order of appearance instead of the "correct" order?
 
@@ -35,6 +40,10 @@ Part 4 time (Gustav)
     - Movies component says it'll be implemented later..?
 
 - Refactor components from "App" out into seperate components
+
+- change assignments to markdown
+
+- still unresolved comments in part2
 
 FINAL CHECKLIST:
     - Ensure not-important directory are the same throughout exercises
