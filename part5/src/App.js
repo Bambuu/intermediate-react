@@ -14,11 +14,13 @@ class App extends Component {
         <SideBar changePage={this.changePage} />
         <div className="content">
           <Header />
-          <Route path="/heroes" component={HeroList} />
+          <Route exact path="/" component={HeroList} />
           <Route path="/theming" component={Theming} />
           <Route path="/extra" component={ExtraAssignment} />
         </div>
       </div>
+
+
       </BrowserRouter>
     );
   }

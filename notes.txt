@@ -19,6 +19,7 @@ Part 3 time (Jeppe)
 Part 4 time (Gustav)
     Links and Routes: 8.5min
     withRouter: 5min
+    extra: 10min~
 
 - FIX PART NUMBERS - part 1 is actually part 2 (part 1 in slides is welcome)
 
