@@ -66,6 +66,10 @@ run prettier on the whole shebang
 
 Talk markdown syntax
 
+Render markdown into html..?
+
+mAybe make 2-3 (refs) an extra assignment
+
 FINAL CHECKLIST:
     - Ensure not-important directory are the same throughout exercises
     - Synchronize so app is the same component everywhere
