@@ -20,6 +20,8 @@ export function shuffle(a) {
 
 
 export class TestRenderProp extends React.Component {
+
+
   render(){
     return (<div style={{border: 'solid 2px red'}}>
       {this.props.children("Hello from RenderProp")}

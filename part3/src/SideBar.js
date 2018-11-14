@@ -5,10 +5,9 @@ import PropTypes from "prop-types";
 export const SideBar = (props) => {
 	return (
 		<div className="sidebar">
-			<a onClick={() => props.changePage('/')}>Heroes</a>
-			<a onClick={() => props.changePage('/movies')}>Movies</a>
-      <a onClick={() => props.changePage('/theming')}>Theming</a>
-      <a onClick={() => props.changePage('/extra')}>Extra Exercise</a>
+			<a href="javascript:void(0)" onClick={() => props.changePage('/')}>Heroes</a>
+      <a href="javascript:void(0)" onClick={() => props.changePage('/theming')}>Theming</a>
+      <a href="javascript:void(0)" onClick={() => props.changePage('/extra')}>Extra Exercise</a>
 		</div>)
 };
 

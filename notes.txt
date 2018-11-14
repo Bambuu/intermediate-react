@@ -1,3 +1,5 @@
+------- EXERCISES ------
+
 Part 2 time (Gustav):
     Lists and keys: 5min
     Controlled components: 25min
@@ -26,6 +28,17 @@ Part 4 time (Jeppe) (11min / 20min)
     withRouter: 4min
     extra: 10min
 
+Part 5 time (Jeppe)
+    Function-as-child: 8min
+    ex2: 9min
+    ex3: 10min
+
+
+-----  Slides -----
+Part 1: 8.5
+Part 2: 24
+
+
 
 20 min prez per emne udover det foerste
 20 * 5 + 10 = 110 = 2h
@@ -48,6 +61,14 @@ Part 4 time (Jeppe) (11min / 20min)
 - change assignments to markdown
 
 - still unresolved comments in part2
+
+run prettier on the whole shebang
+
+Talk markdown syntax
+
+Render markdown into html..?
+
+mAybe make 2-3 (refs) an extra assignment
 
 FINAL CHECKLIST:
     - Ensure not-important directory are the same throughout exercises
