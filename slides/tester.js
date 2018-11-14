@@ -1,10 +1,8 @@
 import React from "react";
 
 export const Tester = props => {
-  const animals = ["elephant", "lion", "giraffe"];
-  const animalElements = animals.map(animal => (
-    <li>{animal}</li>
-  ));
+  const amount = props.amount; // number
 
-  return <ul>{animalElements}</ul>;
+  return ("nice"
+  );
 };
