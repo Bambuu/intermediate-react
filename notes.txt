@@ -29,6 +29,7 @@ Part 4 time (Jeppe) (11min / 20min)
 Part 5 time (Jeppe)
     Function-as-child: 8min
     ex2: 9min
+    ex3: 10min
 
 
 20 min prez per emne udover det foerste
