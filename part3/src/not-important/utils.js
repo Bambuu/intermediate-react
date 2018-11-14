@@ -1,4 +1,5 @@
-
+import PropTypes from 'prop-types'
+import * as React from "react";
 
 export const calculateBackgroundColor = (scrollPosition) => {
   const percentageScrolled = scrollPosition * 1.5 / window.innerHeight;
@@ -15,4 +16,17 @@ export function shuffle(a) {
     [a[i], a[j]] = [a[j], a[i]];
   }
   return a;
+}
+
+
+export class TestRenderProp extends React.Component {
+  render(){
+    return (<div style={{border: 'solid 2px red'}}>
+      {this.props.children("Hello from RenderProp")}
+    </div>)
+  }
+
+  static propTypes = {
+    children: PropTypes.func.isRequired
+  }
 }
