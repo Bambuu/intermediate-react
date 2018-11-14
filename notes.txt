@@ -62,6 +62,10 @@ Part 2: 24
 
 - still unresolved comments in part2
 
+run prettier on the whole shebang
+
+Talk markdown syntax
+
 FINAL CHECKLIST:
     - Ensure not-important directory are the same throughout exercises
     - Synchronize so app is the same component everywhere
