@@ -34,10 +34,15 @@ Part 5 time (Jeppe)
     ex3: 10min
 
 
------  Slides -----
+-----  SLIDES -----
 Part 1: 8.5
 Part 2: 24
 
+
+----- EXERCISE SIGNOFF ----
+Part 1 - Check
+Part 2 - Check
+Part 3 - ...??!?!
 
 
 20 min prez per emne udover det foerste
