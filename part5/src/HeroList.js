@@ -2,12 +2,12 @@ import React, { Component } from "react";
 import { initialHeroes } from "./not-important/heroes";
 import {withScroll} from 'react-fns'
 import { calculateBackgroundColor } from './not-important/utils';
-import { TestRenderProp } from "./not-important/utils";
-import { FormController } from "./not-important/FormController";
 
 class BaseHeroList extends Component {
   state = {
     heroes: initialHeroes,
+    awesomeInputValue: 0,
+    nameInputValue: ""
   };
 
   ref = React.createRef();
@@ -16,17 +16,33 @@ class BaseHeroList extends Component {
     this.ref.current.focus();
   }
 
-  addSuperHero = (formValues) => {
+  addSuperHero = event => {
+    event.preventDefault();
+
     const newSuperHero = {
-      name: formValues.name,
-      awesome: formValues.awesome,
+      name: this.state.nameInputValue,
+      awesome: this.state.awesomeInputValue
     };
 
     this.setState({
-      heroes: this.state.heroes.concat(newSuperHero)
+      heroes: this.state.heroes.concat(newSuperHero),
+      nameInputValue: "",
+      awesomeInputValue: 0
     });
 
     this.ref.current.focus();
+  };
+
+  onAwesomeInputChange = event => {
+    this.setState({
+      awesomeInputValue: event.target.value
+    });
+  };
+
+  onNameInputChange = event => {
+    this.setState({
+      nameInputValue: event.target.value
+    });
   };
 
   render() {
@@ -50,17 +66,20 @@ class BaseHeroList extends Component {
           </li>
           {heroComponents}
         </ul>
-
-        <FormController initialValues={{name: '', awesome: 0}} onSubmit={this.addSuperHero}>
-          {(formValues) => {
-            return (<div>
-                <input ref={this.ref} value={formValues.name.value} onChange={formValues.name.onChange}/>
-                <input value={formValues.awesome.value} onChange={formValues.awesome.onChange} type="number"/>
-                <button>Submit</button>
-            </div>
-            )
-          }}
-        </FormController>
+        <form onSubmit={this.addSuperHero}>
+          <input
+            ref={this.ref}
+            value={this.state.awesomeInputValue}
+            onChange={this.onAwesomeInputChange}
+            type="number"
+          />
+          <input
+            value={this.state.nameInputValue}
+            onChange={this.onNameInputChange}
+            type="text"
+          />
+          <button>Submit</button>
+        </form>
       </div>
     );
   }
