@@ -928,6 +928,73 @@ We teach you both patterns because you will most likely use both when you start 
 
 ---
 
+## Child components and the `children` prop
+
+<ul style={{ fontSize: "1.2em" }}>
+  <Appear>
+    <li>
+      The special <Code code="props.children" /> prop can be
+      used to render all children of a component
+    </li>
+    <li>
+      Then we can have "containing" components that wraps
+      whatever their children are
+    </li>
+    <li>
+      Child components are defined in JSX like regular HTML
+    </li>
+  </Appear>
+</ul>
+
+---
+
+<CodeSurfer
+  title="The children prop"
+  code={require("!raw-loader!./examples/children-prop.js")}
+  lang="jsx"
+  showNumbers={true}
+  theme={nightOwl}
+  steps={[
+    {
+      range: [1, 9],
+      notes:
+        "Putting HeroList inside the FancyBorder component, as a child",
+    },
+    {
+      range: [11, 18],
+      notes: "Rendering children inside the FancyBorder"
+    },
+	{}
+  ]}
+/>
+
+---
+
+<CodeSurfer
+  title="child as a function"
+  code={require("!raw-loader!./examples/children-prop-function.js")}
+  lang="jsx"
+  showNumbers={true}
+  theme={nightOwl}
+  steps={[
+    {
+      range: [1, 12],
+      notes:
+        "Giving a function as a child to FancyBorder",
+    },
+    {
+      range: [5,8]
+	},
+    {
+      range: [14, 21],
+      notes: "props.children() is now invoked as a function"
+    },
+	{}
+  ]}
+/>
+
+---
+
 <CodeSurfer
   title="Using a Network render prop"
   code={require("!raw-loader!./examples/render-prop-usage.js")}
@@ -956,7 +1023,7 @@ We teach you both patterns because you will most likely use both when you start 
         'Child of <Network/> component is a function - "function as a child"'
     },
     {
-      tokens: { 6: [2, 3, 4, 5, 6] },
+      tokens: { 6: [2, 3, 4, 5, 6, 7, 8] },
       notes: "Child function gets behavior as arguments"
     },
     {
@@ -973,9 +1040,8 @@ We teach you both patterns because you will most likely use both when you start 
 
 ---
 
-As soon as you understand,
-that you are _just_ passing a function as the child to `<Network/>`,
-it becomes trivial to understand 😇
+As soon as you get that you are _"just"_ passing a function as the child to `<Network/>`,
+it becomes easier to understand 😇
 
 ---
 
@@ -993,17 +1059,19 @@ Lets see how the Network Render prop component is implemented
     {},
     {
       lines: [1],
-      notes: "Directly exporting a class component, no class within a function or anything like the HOC"
+      notes:
+        "Directly exporting a class component, no class within a function or anything like the HOC"
     },
     {
       range: [2, 12],
       notes: "Same as before - in the withNetwork() HOC"
     },
     {
-      range: [14,16],
-      notes: "Render the 'children' prop, and run it as a function. Pass relevant arguments"
+      range: [14, 16],
+      notes:
+        "Render the 'children' prop, and run it as a function. Pass relevant arguments"
     },
-	{ notes: 'Done! 🥳'}
+    { notes: "Done! 🥳" }
   ]}
 />
 
@@ -1015,17 +1083,16 @@ Lets see how the Network Render prop component is implemented
   <Appear>
     <li>As you see, they solve the same problem</li>
     <li>
-		It often comes down to a matter of taste, or what the library exposes
+      It often comes down to a matter of taste, or what the
+      library exposes
     </li>
-    <li>
-		(as we'll see first hand in the final part)
-    </li>
+    <li>(as we'll see first hand in the final part)</li>
   </Appear>
 </ul>
 
 ---
 
-title: Render props are more explicit about behavior 
+title: Render props are more explicit about behavior
 
 demo
 
@@ -1056,18 +1123,34 @@ demo
 # Personal rule of thumb guides
 
 1. Use render props where you can
-2. Use HOCs if you have to combine multiple in *same* component
+2. Use HOCs if you have to combine multiple in _same_ component
 3. Use HOCs if you have to access enhancement in lifecycle methods
 
 ---
 
-- also called children as function
-- see https://cdb.reacttraining.com/use-a-render-prop-50de598f11ce for origins
+If you want to see a deeper comparison, check out ["Use A Render Prop!" by Michael Jackson](https://cdb.reacttraining.com/use-a-render-prop-50de598f11ce)
 
-- GUSTAV: DESTRUCTURE PROPS IN FUNCTION???
-- FIX HOC USAGE FILE!!!
-- GUSTAV: WRITE AN ASSIGNMENT THAT TELLS THEM TO COMPARE MY TWO HOC AND RENDER PROPS EXAMPLES
-- GUSTAV: WHAT TO DO WITH SPECIAL CHILDREN PROP?!?! WE USE IT IN OUR IMPLEMENTATION
+---
+
+Assignments
+
+---
+
+Context
+problem:
+- passing information between components is done with direct props
+- this is a problem when you want information from high level App, that is needed in a deeply nested component
+- the components between also need to know about the info, even though they dont use it
+- so every time you have global state in App, you have a problem with passing props
+solution: the official Context API
+- a provider in the react tree, that makes the info available to any decending component that consumes for it
+
+- how to build a provider - WITHOUT STATE (own file)
+- how to build a consumer
+- how to change provided value
+- how to put provided value in state
+
+- unneccessary rerenders, dont inline value
 
 ---
 
