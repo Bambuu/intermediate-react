@@ -1,3 +1,5 @@
+------- EXERCISES ------
+
 Part 2 time (Gustav):
     Lists and keys: 5min
     Controlled components: 25min
@@ -30,6 +32,12 @@ Part 5 time (Jeppe)
     Function-as-child: 8min
     ex2: 9min
     ex3: 10min
+
+
+-----  Slides -----
+Part 1: 8.5
+Part 2: 24
+
 
 
 20 min prez per emne udover det foerste
