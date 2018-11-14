@@ -1,13 +1,12 @@
 # ASSIGNMENT 1 - LISTENING FOR THE SCROLLS
 
-React lets us reuse both visual components, but also
-logic.  In this exercise we'll try implementing some
-behaviour, and then using a Higher-Order Component (HOC)
+In this exercise we'll try implementing some
+behaviour, and next exercise we'll use a HOC
 to achieve the same result.
 
 ## EXERCISE A:
 Switch to the part 2 directory in your console and run "npm start"
-(If you get a ENOENT error, try running "npm install" first)
+*If you get a `ENOENT` error, try running "npm install" first*
 
 ## EXERCISE B:
 We want to make the background of the document
@@ -15,8 +14,8 @@ more golden the further down the user scrolls.
 More awesome heroes = more gold!
 
 We need to listen to the scroll event.
-Inside the componentDidMount of your HeroList add the following line:
-window.addEventListener('scroll', console.log);
+Inside the `componentDidMount` of your HeroList add the following line:
+`window.addEventListener('scroll', console.log);`
 
 Now go to your HeroList and scroll.
 Make sure you can see the scroll event in the console,
@@ -24,20 +23,20 @@ when you scroll up and down.
 
 ## EXERCISE C
 Let's create a function to handle the scrolling part. Create a new function inside your HeroList
-called "onScroll". Have this function console.log("Scrolled")
+called `onScroll`. Have this function `console.log("Scrolled")`
 
-Change the "addEventListener" call, to instead of "console.log", say: "this.onScroll"
+Change the `addEventListener` call, from `console.log`, to `this.onScroll`
 Ensure it still works.
 
 ## EXERCISE D:
-Now, try to go to the "Movies" part, and scroll down. In your console you will
-still see new scroll events.
-When using addEventListener() in JavaScript, the eventListener,
+Now, try to go to the **Theming** page, and scroll down.
+In your console you will still see new scroll events..!
+When using `addEventListener()` in JavaScript, the eventListener,
 stay on until either the page is changed or closed.
-As React never "changes" the page, we have to remove the eventListener manually
+As React never "changes" the page, we have to remove the `eventListener` manually
 
-We can do this in the lifecycle method "componentWillUnmount"
-Implement "componentWillUnmount()" and have it console.log("Goodbye")
+We can do this in the lifecycle method `componentWillUnmount`
+Implement `componentWillUnmount()` and have it `console.log("Goodbye")`
 Click around to get a feel for when it is called.
 
 ## EXERCISE E:

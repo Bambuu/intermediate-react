@@ -28,16 +28,25 @@ Part 4 time (Jeppe) (11min / 20min)
     withRouter: 4min
     extra: 10min
 
-Part 5 time (Jeppe)
+Part 5 time (Gustav) (27min)
     Function-as-child: 8min
     ex2: 9min
     ex3: 10min
+
+Dinner: 30 min
+Exercises total: part1?? + 23 + 15 + 11 + 27(G)+ = 91 min
+Plus buffer: 91 * 2 = 182
+Total : 297min
 
 
 -----  SLIDES -----
 Part 1: 8.5
 Part 2: 24
+Part 3: 16
+Part 4: 19
+Part 5: 13.5 + 4.5 (18)
 
+TOTAL: 85min (not updated w part6)
 
 ----- EXERCISE SIGNOFF ----
 Part 1 - Check
@@ -47,6 +56,11 @@ Part 3 - ...??!?!
 
 20 min prez per emne udover det foerste
 20 * 5 + 10 = 110 = 2h
+
+----
+potential extra
+    - refs
+    - withRouter
 
 
 - Should we reorder the methods in controlled-final.js, so they are in order of appearance instead of the "correct" order?
