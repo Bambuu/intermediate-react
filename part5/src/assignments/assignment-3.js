@@ -5,17 +5,17 @@
 /*
 EXERCISE A:
 Create a <button> inside the FormController, and click it.
-This will submit the form, and you will get an error.
+Buttons inside form submit the form by default.
+When you do this, you will get an error.
 */
 
 /*
 EXERCISE B:
 This is because the FormController requires the prop "onSubmit" to be a function.
 
-Create a function called "handleFormSubmit" - have it take in one parameter,
-and console.log it.
-
-Set onSubmit to be this.handleFormSubmit
+- Create a function called "handleFormSubmit" - have it take in one parameter,
+  and console.log it.
+- Set onSubmit to be "this.handleFormSubmit"
 
 When you click your button, you should see the value of the input fields
 in your console.
@@ -31,13 +31,12 @@ we can create a new Superhero!
 
 Rewrite "handleFormSubmit" to create a new superhero. Take inspiration
 in "addSuperHero", but notice you don't manually need to keep track of
-"nameInputValue" and "awesomeInputValue"
+the "nameInputValue" and "awesomeInputValue" parts of the state
 */
-
 
 /*
 EXERCISE D
-Notice how we've actually replicated all of the behaviour of our previous form, with this new FormController..
+Notice how we've actually replicated all of the behaviour of our previous form, with this new FormController.
 Except for the refs!
 
   - Attach "this.ref" to the first <input> field of the new form instead.
@@ -46,6 +45,12 @@ Except for the refs!
 
 /*
 EXERCISE E:
+Let's set the initialValues to something more sensible than "MyHeroName" and 999.
+Set the initial name of a superhero to an empty string, and the initial awesome to 0
+*/
+
+/*
+EXERCISE F:
 Alright! Now let's clean up our old form behaviour.
 
 - Remove the old form from the render method

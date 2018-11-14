@@ -26,6 +26,10 @@ Part 4 time (Jeppe) (11min / 20min)
     withRouter: 4min
     extra: 10min
 
+Part 5 time (Jeppe)
+    Function-as-child: 8min
+    ex2: 9min
+
 
 20 min prez per emne udover det foerste
 20 * 5 + 10 = 110 = 2h

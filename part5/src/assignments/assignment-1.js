@@ -1,5 +1,7 @@
 // ASSIGNMENT 1 - FUNCTION AS A CHILD
 
+
+// TODO: JEPPE REMOVE EXPLANATION?
 /*
 Let's take a look at the pattern called "function-as-a-child'
 In React, a child is what's nested inside another element, e.g.
@@ -10,6 +12,11 @@ In React, a child is what's nested inside another element, e.g.
 </div>
 
 However..! The child of an element can also be a function, if the element expects it. An example.
+<ComponentExpectingAFunctionAsChild>
+  { () => { ...Your function in here...  } }
+</ComponentExpectingAFunctionAsChild>
+
+These functions can be multi-line, and often returns JSX, like below.
 
 <ComponentExpectingAFunctionAsChild>
   { (value) => {
@@ -18,8 +25,7 @@ However..! The child of an element can also be a function, if the element expect
   }
 </ComponentExpectingAFunctionAsChild>
 
-It's a normal ES6 arrow function that returns some JSX.
-It's usually passed down a parameter of some kind from its parent.
+Functions like this are usually passed down a parameter of some kind from its parent.
 */
 
 /*
@@ -31,11 +37,12 @@ inside 'not-important/utils'
 
  - Import it somewhere inside your HeroList.
  - Use it somewhere inside your render JSX.
- - Have it take the following function as a child.
-    {props => console.log(props)}
+ - Copy-paste the following code in, as the child:
+    {params => {console.log(params)}}
 
 You're done when you see "Hello from RenderProp" in your console.
- */
+(You might see it multiple times, don't worry about that)
+*/
 
 
 /*
@@ -43,7 +50,7 @@ EXERCISE B:
 Let's change our function, to instead of logging to the console,
 return some JSX.
 
-Have your function as a child return a <p></p> with the props it received from the
+Have your function as a child return a <p></p> with the parameter it received from the
 render prop component.
 You're done when you see the text "Hello from RenderProp" in the browser window.
  */
