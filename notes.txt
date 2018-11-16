@@ -64,12 +64,7 @@ Part 3 - ...??!?!
 ----
 
 Decision points:
-- Should we remove the withRouter functionality post-part4?
 - Should we reorder the methods in controlled-final.js, so they are in order of appearance instead of the "correct" order?
-- Refactor components from "App" out into separate components
-
-- Extra Assignment height ???
-
 
 Work to be done:
 - Consider running setupAll in parallel
