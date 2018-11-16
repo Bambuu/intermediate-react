@@ -1,11 +1,11 @@
 # ASSIGNMENT 1 - LISTENING FOR THE SCROLLS
 
 In this exercise we'll try implementing some
-behaviour, and next exercise we'll use a
+behaviour, and in the next exercise we'll use a
 Higher-Order Component to achieve the same result.
 
 ## EXERCISE A:
-Switch to the part 2 directory in your console and run "npm start"
+Switch to the part 2 directory in your terminal and run "npm start"
 *If you get a `ENOENT` error, try running "npm install" first*
 
 ## EXERCISE B:
