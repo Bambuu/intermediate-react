@@ -1,5 +1,3 @@
-import { dark } from "mdx-deck/themes";
-import okaidia from "react-syntax-highlighter/styles/prism/okaidia";
 import baseTheme from "mdx-deck/themes";
 
 export default {
@@ -12,9 +10,3 @@ export default {
     code: "rgb(199, 146, 234)"
   }
 };
-// export default {
-// 	...dark,
-// 	prism: {
-// 		style: okaidia
-// 	}
-// }

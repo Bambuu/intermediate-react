@@ -5,7 +5,7 @@ const MainView = () => {
     <div>
       <Route path="/heroes" component={Heroes} />
       <Route path="/villains" component={Villains} />
-      <Route path="/" component={Home} />
+      <Route path="/" exact component={Home} />
     </div>
   );
 };

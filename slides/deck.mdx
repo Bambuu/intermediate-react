@@ -4,8 +4,8 @@ import { Appear } from "mdx-deck";
 import { Head, Image } from "mdx-deck";
 import nightOwl from "prism-react-renderer/themes/nightOwl";
 import { CodeSurfer } from "mdx-deck-code-surfer";
-import { Tester } from "./tester";
 import { Code } from "./components/code";
+import { ReadMore } from "./components/read-more";
 
 <Head>
   <title>bambuu React Intermediate slides</title>
@@ -73,10 +73,7 @@ by Jeppe Reinhold and Gustav Wengel
 
 <ul style={{ fontSize: "1.5em" }}>
   <Appear>
-    <li>
-      We have a git repository with all exercises (and
-      slides)
-    </li>
+    <li>Git repository with all exercises (and slides)</li>
     <li>
       Each part has its own directory with assignments
     </li>
@@ -85,7 +82,7 @@ by Jeppe Reinhold and Gustav Wengel
       the workshop
     </li>
     <li>
-      So you can always see the solution, by peaking in the
+      You can always see the solution, by peaking in the
       directory for the next part
     </li>
   </Appear>
@@ -129,8 +126,8 @@ by Jeppe Reinhold and Gustav Wengel
       can't do that automatically
     </li>
     <li>
-      Therefore we have to add a <code>key</code> prop to
-      each element in our list
+      We have to add a <code>key</code> prop to each element
+      in our list
     </li>
   </Appear>
 </ul>
@@ -139,7 +136,7 @@ by Jeppe Reinhold and Gustav Wengel
 
 # Dynamically rendering lists? 🤔
 
-- When you have an array of items that you use to build JSX elements with
+- You have an array of items that you use to build JSX elements with
 - 99 % of the time you use `array.map()` to do this
 
 ---
@@ -192,9 +189,9 @@ by Jeppe Reinhold and Gustav Wengel
   <Appear>
     <li>What happens if the array gets reordered?</li>
     <li>
-      Or if an item in the middle of the array is removed?
+      Or if an item in the middle of the array is added?
     </li>
-    <li>Or added?</li>
+    <li>Or removed?</li>
     <li>
       Indexes are not bound to the item, only its{" "}
       <b>position</b>!
@@ -298,95 +295,16 @@ Pulling the `value` of the `<input/>` up to the component `state`
 
 ---
 
-# Using `ref` to reference native elements ⏩
-
----
-
-# The problem
-
-You want to do something with the actual DOM element
-
-<ul style={{ fontSize: "1.5em" }}>
-  <Appear>
-    <li>
-      Managing focus, text selection, or media playback
-    </li>
-    <li>Integrating with third-party DOM libraries</li>
-  </Appear>
-</ul>
-
----
-
-<CodeSurfer
-  title="How do we do that within React?"
-  code={require("!raw-loader!./examples/ref-base.js")}
-  lang="jsx"
-  showNumbers={true}
-  theme={nightOwl}
-  steps={[{}, { range: [6, 13] }, { range: [2, 4] }]}
-/>
-
----
-
-# Do it like we always do?
-
-<ul style={{ fontSize: "1.5em" }}>
-  <Appear>
-    <li>
-      <code>document.getElementById('id');</code>
-    </li>
-    <li>
-      <code>document.querySelector('.theClass');</code>
-    </li>
-    <li>It's not the React way</li>
-    <li>
-      React works on the DOM, so you don't have to (and
-      shouldn't)
-    </li>
-    <li>
-      We don't know what happens in the DOM, so it's
-      dangerous to interact with it directly
-    </li>
-  </Appear>
-</ul>
-
----
-
-# `ref` to the rescue!
-
-<ul style={{ fontSize: "1.5em" }}>
-  <Appear>
-    <li>
-      Reference the native element from a class variable
-    </li>
-    <li>
-      The class variable is now a "DOM element" given to you
-      by React
-    </li>
-    <li>Now we can do anything with it, within React!</li>
-  </Appear>
-</ul>
-
----
-
-<CodeSurfer
-  title="Adding a ref"
-  code={require("!raw-loader!./examples/ref-final.js")}
-  lang="jsx"
-  showNumbers={true}
-  theme={nightOwl}
-  steps={[{ lines: [2] }, { lines: [11] }, { lines: [5] }]}
-/>
-
----
-
 # Assignments - Part 2
 
 1. Setup the 'Part 2' project
 2. Add `keys` to lists
 3. Building a form using the Controlled Component technique
-4. Managing focus with `refs`
-5. 🏖
+4. 🏖
+
+<ReadMore link="reactjs.org/docs/lists-and-keys"/>
+<br/>
+<ReadMore link="reactjs.org/docs/forms"/>
 
 ---
 
@@ -565,6 +483,8 @@ We want to share behavior between components
 1. Listen for scrolling events in the `<HeroList/>`
 2. Use a `withScroll()` HOC to do it instead
 3. 🏝
+
+<ReadMore link="reactjs.org/docs/higher-order-components"/>
 
 ---
 
@@ -803,54 +723,6 @@ Problems:
 
 ---
 
-## What if we want to read from the location within any component? 🤔
-
-<ul style={{ fontSize: "1.5em" }}>
-  <Appear>
-    <li>Show information based on current location</li>
-    <li>Header showing current page</li>
-    <li>Log location to backend</li>
-  </Appear>
-</ul>
-
----
-
-# `withRouter()` HOC to the rescue 💪
-
-<ul style={{ fontSize: "1.5em" }}>
-  <Appear>
-    <li>
-      Wrap any component in <Code code="withRouter()" />
-    </li>
-    <li>
-      Get <Code code="location" /> and{" "}
-      <Code code="history" /> as props
-    </li>
-  </Appear>
-</ul>
-
----
-
-<CodeSurfer
-  title="Using the withRouter() HOC"
-  code={require("!raw-loader!./examples/with-router.js")}
-  lang="jsx"
-  showNumbers={true}
-  theme={nightOwl}
-  steps={[
-    {
-      range: [1, 4],
-      notes: "Simple routing aware Header"
-    },
-    {
-      range: [1, 6],
-      notes: "Wrap in withRouter()"
-    }
-  ]}
-/>
-
----
-
 ## When to route - and when to just conditionally render? 🧐
 
 <ul style={{ fontSize: "1.5em" }}>
@@ -868,6 +740,8 @@ Problems:
 2. Show the current location in the header using the `withRouter()` HOC
 3. ⛱
 
+<ReadMore link="https://reacttraining.com/react-router/web"/>
+
 ---
 
 # Render props 🎥
@@ -881,7 +755,7 @@ Problems:
 <ul style={{ fontSize: "1.2em" }}>
   <Appear>
     <li>
-      It solves the same problem as HOCs: sharing common
+      Solves the same problem as HOCs: sharing common
       behavior 🤝
     </li>
     <li>
@@ -1027,12 +901,12 @@ We teach you both patterns because you will most likely use both when you start 
 
 ---
 
-As soon as you get that you are _"just"_ passing a function as the child to `<Network/>`,
+When you get that you are _"just"_ passing a function as the child to `<Network/>`,
 it becomes easier to understand 😇
 
 ---
 
-Lets see how the Network Render prop component is implemented
+Let us see how the Network Render prop component is implemented
 
 ---
 
@@ -1079,34 +953,6 @@ Lets see how the Network Render prop component is implemented
 
 ---
 
-title: Render props are more explicit about behavior
-
-demo
-
----
-
-title: HOCs tend to "hide" the enhancement = harder to understand Component
-
-demo
-
----
-
-Render props are a pain to combine
-
-demo render prop
-
----
-
-demo combining hoc
-
----
-
-render props and lifecycles
-
-demo
-
----
-
 # Personal rule of thumb guides
 
 1. Use render props where you can
@@ -1126,6 +972,8 @@ If you want to see a deeper comparison, check out ["Use A Render Prop!" by Micha
 3. Submit new heroes using the new render prop
 4. 🏕
 
+<ReadMore link="reactjs.org/docs/render-props" />
+
 ---
 
 # React Context API
@@ -1143,9 +991,7 @@ If you want to see a deeper comparison, check out ["Use A Render Prop!" by Micha
       <em>direct props</em>
     </li>
     <li>
-      This is cumbersome for information that is held higher
-      up the component tree and needed in a deeply nested
-      component
+      Cumbersome when passing through multiple components
     </li>
     <li>
       We have to pass it down via each component in between
@@ -1186,14 +1032,9 @@ If you want to see a deeper comparison, check out ["Use A Render Prop!" by Micha
 
 <ul style={{ fontSize: "1.2em" }}>
   <Appear>
-    <li>Only works if the information is constant </li>
+    <li>Only works if the information is constant</li>
     <li>
-      This is cumbersome for information that is held higher
-      up the component tree and needed in a deeply nested
-      component
-    </li>
-    <li>
-      Declare constant as an object in a separate file{" "}
+      Declare constant as an object in a separate file
     </li>
     <li>Import it directly whereever it is needed</li>
   </Appear>
@@ -1207,10 +1048,6 @@ If you want to see a deeper comparison, check out ["Use A Render Prop!" by Micha
   src="./public/context-constant.svg"
   style={{ width: "90vw", height: "80vh" }}
 />
-
----
-
-do we need code here?
 
 ---
 
@@ -1382,14 +1219,16 @@ But we aren't actually changing the theme? 🤔
       and change the state manually
     </li>
     <li>
-      It just enables you to pass props down, without touch
-      all the components in between
+      It just enables you to pass props down, without
+      touching all the components in between
     </li>
     <li>
       The Provider doesn't have to be top level, it just
       have to be above all consumers
     </li>
-    <li><b>Don't define the Provider value object inline</b></li>
+    <li>
+      <b>Don't define the Provider value object inline</b>
+    </li>
   </Appear>
 </ul>
 
@@ -1397,14 +1236,19 @@ But we aren't actually changing the theme? 🤔
 
 <CodeSurfer
   title="Dangerous object inline"
-  code={`<Provider value={{something: 'hello'}}>
+  code={`<Provider value={ {something: 'hello'} }>
   <SideBar/>
   <Main/>
 </Provider>`}
   lang="jsx"
   showNumbers={true}
   theme={nightOwl}
-  steps={[{notes: 'The value in the Provider is now rebuilt every time, causing all consumers to re-render'}]}
+  steps={[
+    {
+      notes:
+        "The value in the Provider is now rebuilt every time, causing all consumers to re-render"
+    }
+  ]}
 />
 
 ---
@@ -1412,16 +1256,12 @@ But we aren't actually changing the theme? 🤔
 # Assignments - Part 6
 
 1. be cool
-4. 🏕
+2. 🏕
+
+<ReadMore link="reactjs.org/docs/context" />
 
 ---
 
 # The end - Testing stuff
 
-- add "Read More" links everywhere
 - probably test that examples actually works (the do at least prettify)
-- stream line codes using prettier ignore
-- parantheses around all arguments
-- copy "public" folder after build
-
-<Tester />

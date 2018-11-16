@@ -17,7 +17,7 @@ import {
 
 class App extends React.Component {
   state = {
-    theme: redTheme, //GUSTAV: USE TOGGLETHEME BEFORE DEFINE?
+    theme: redTheme,
     toggleTheme: this.toggleTheme
   };
 
@@ -45,7 +45,7 @@ import { ThemeContext } from "./theme-context";
 const NavLink = () => {
   return (
     <ThemeContext.Consumer>
-      {context => {
+      {(context) => {
         const theme = context.theme;
         return (
           <Link
@@ -66,7 +66,7 @@ import { ThemeContext } from "./theme-context";
 const ThemeButton = () => {
   return (
     <ThemeContext.Consumer>
-      {context => {
+      {(context) => {
         const toggleTheme = context.toggleTheme;
         return (
           <button onClick={toggleTheme}>
