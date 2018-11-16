@@ -10,12 +10,6 @@ class BaseHeroList extends Component {
     heroes: initialHeroes,
   };
 
-  ref = React.createRef();
-
-  componentDidMount() {
-    this.ref.current.focus();
-  }
-
   addSuperHero = (formValues) => {
     const newSuperHero = {
       name: formValues.name,
@@ -25,8 +19,6 @@ class BaseHeroList extends Component {
     this.setState({
       heroes: this.state.heroes.concat(newSuperHero)
     });
-
-    this.ref.current.focus();
   };
 
   render() {
@@ -54,7 +46,7 @@ class BaseHeroList extends Component {
         <FormController initialValues={{name: '', awesome: 0}} onSubmit={this.addSuperHero}>
           {(formValues) => {
             return (<div>
-                <input ref={this.ref} value={formValues.name.value} onChange={formValues.name.onChange}/>
+                <input value={formValues.name.value} onChange={formValues.name.onChange}/>
                 <input value={formValues.awesome.value} onChange={formValues.awesome.onChange} type="number"/>
                 <button>Submit</button>
             </div>

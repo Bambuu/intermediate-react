@@ -1,25 +1,7 @@
-// ASSIGNMENT 2 - DEFAULT ROUTES AND HIGHER ORDER COMPONENTS
+// EXTRA ASSIGNMENT 1 - DEFAULT ROUTES AND HIGHER ORDER COMPONENTS
 
 /*
-EXERCISE A
-It's time for a little spring cleaning.
-Remove everything related to the old way of managing links
- - The state key in App
- - The commented out if-statements in App
- - The changePage function in app
- - The changePage props passed down to SideBar
- - The propType in SideBar
-*/
-
-/*
-After this, you should have a functional navigation, with
-routes and links.
-The index route at '/' still doesn't work, but we'll
-look at that in the extra exercises.
-*/
-
-/*
-EXERCISE B:
+EXERCISE A:
 Let's look at the Header. We want it to show the current url.
 
 Luckily we can tap into this information, with a Higher-Order Component!
@@ -28,7 +10,7 @@ Inside Header.js import the "withRouter" HOC
 */
 
 /*
-EXERCISE C
+EXERCISE B
 
 Let's export the Header with the withRouter Higher Order Component.
 
@@ -44,7 +26,7 @@ As a reminder, this involves
 */
 
 /*
-EXERCISE D
+EXERCISE C
 We get the location info inside props in the Header.
 
 - Have the Header take in props as a parameter
@@ -55,7 +37,7 @@ whenever a link is clicked.
 */
 
 /*
-EXERCISE E
+EXERCISE D
 Let's have the header display our current relative position.
 (So if we're at "localhost:3000/heroes" it should display "/heroes")
 

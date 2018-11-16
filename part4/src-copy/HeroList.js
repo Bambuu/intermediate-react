@@ -10,12 +10,6 @@ class BaseHeroList extends Component {
     nameInputValue: ""
   };
 
-  ref = React.createRef();
-
-  componentDidMount() {
-    this.ref.current.focus();
-  }
-
   addSuperHero = event => {
     event.preventDefault();
 
@@ -29,8 +23,6 @@ class BaseHeroList extends Component {
       nameInputValue: "",
       awesomeInputValue: 0
     });
-
-    this.ref.current.focus();
   };
 
   onAwesomeInputChange = event => {
@@ -68,7 +60,6 @@ class BaseHeroList extends Component {
         </ul>
         <form onSubmit={this.addSuperHero}>
           <input
-            ref={this.ref}
             value={this.state.awesomeInputValue}
             onChange={this.onAwesomeInputChange}
             type="number"

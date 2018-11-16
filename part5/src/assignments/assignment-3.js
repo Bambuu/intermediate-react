@@ -35,24 +35,13 @@ the "nameInputValue" and "awesomeInputValue" parts of the state
 */
 
 /*
-GUSTAV: COULD BE EXTRA
-EXERCISE D
-Notice how we've actually replicated all of the behaviour of our previous form, with this new FormController.
-Except for the refs!
-
-GUSTAV: ALSO REMOVE IT FROM THE ORIGINAL?
-  - Attach "this.ref" to the first <input> field of the new form instead.
-  - Make sure to call this.ref.current.focus() inside handleFormSubmit
-*/
-
-/*
-EXERCISE E:
+EXERCISE D:
 Let's set the initialValues to something more sensible than "MyHeroName" and 999.
 Set the initial name of a superhero to an empty string, and the initial awesome to 0
 */
 
 /*
-EXERCISE F:
+EXERCISE E:
 Alright! Now let's clean up our old form behaviour.
 
 - Remove the old form from the render method
