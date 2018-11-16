@@ -1,6 +1,7 @@
 # ASSIGNMENT 2 - Theme-togglin'
 
 ## Exercise A:
+GUSTAV: TYPO BENEITH!
 To change the theme that, we'll need two themes.
 Change our `theme` object to look like this:
 ```js

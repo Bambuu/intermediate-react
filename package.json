@@ -23,7 +23,8 @@
     "part3": "cd part3 && npm run start",
     "part4": "cd part4 && npm run start",
     "part5": "cd part5 && npm run start",
-    "part6": "cd part6 && npm run start"
+	"part6": "cd part6 && npm run start",
+	"final": "cd final && npm run start"
   },
   "devDependencies": {
     "markdown-to-html": "0.0.13"
