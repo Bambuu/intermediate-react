@@ -13,8 +13,7 @@
   "scripts": {
     "start": "mdx-deck deck.mdx",
     "prebuild": "rimraf build",
-    "build": "npm run build:site && npm run build:pdf",
-    "build:site": "mdx-deck build --no-html deck.mdx -d build",
+    "build": "mdx-deck build --no-html deck.mdx -d build",
     "build:pdf": "mdx-deck pdf deck.mdx -d build",
     "postbuild": "copyfiles ./public/* build"
   },
