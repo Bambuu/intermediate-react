@@ -2,6 +2,7 @@ import "./scripts.js";
 export { default as theme } from "./theme";
 import { Appear } from "mdx-deck";
 import { Head, Image } from "mdx-deck";
+import { Split } from "mdx-deck/layouts";
 import nightOwl from "prism-react-renderer/themes/nightOwl";
 import { CodeSurfer } from "mdx-deck-code-surfer";
 import { Code } from "./components/code";
@@ -484,7 +485,7 @@ We want to share behavior between components
 2. Use a `withScroll()` HOC to do it instead
 3. 🏝
 
-<ReadMore link="reactjs.org/docs/higher-order-components"/>
+<ReadMore link="reactjs.org/docs/higher-order-components" />
 
 ---
 
@@ -740,7 +741,7 @@ Problems:
 2. Show the current location in the header using the `withRouter()` HOC
 3. ⛱
 
-<ReadMore link="reacttraining.com/react-router/web"/>
+<ReadMore link="reacttraining.com/react-router/web" />
 
 ---
 
@@ -1168,40 +1169,40 @@ But we aren't actually changing the theme? 🤔
         "Import ThemeContext and themes to the component that provides it"
     },
     {
-      lines: [19, 20, 22],
+      lines: [28, 29, 31],
       notes:
         "Put current theme in state of providing component"
     },
     {
-      lines: [34],
+      lines: [35],
       notes:
         "Set value to this.state instead of theme directly"
     },
     {
-      range: [24, 30],
+      range: [20, 26],
       notes:
         "function that changes the state in the providing component"
     },
     {
-      range: [19, 22],
+      range: [28, 31],
       notes:
         "put toggleTheme function in state, so it is part of context as well"
     },
     {
-      range: [42, 61],
+      range: [43, 62],
       notes: "The theme consuming component"
     },
     {
-      range: [47, 49],
+      range: [48, 50],
       notes: "theme is now an object INSIDE the context"
     },
     {
-      range: [63, 79],
+      range: [64, 80],
       notes:
         "The button to change the theme, also a consumer"
     },
     {
-      range: [68, 77],
+      range: [69, 78],
       notes:
         "use the toggleTheme function from the context, to change the state higher up"
     }
@@ -1262,6 +1263,52 @@ But we aren't actually changing the theme? 🤔
 
 ---
 
-# The end - Testing stuff
+export default Split;
 
-- probably test that examples actually works (the do at least prettify)
+<div
+  style={{
+    display: "flex",
+    flexDirection: "column",
+    fontSize: "2em"
+  }}
+>
+  🙋‍♂️
+  <a
+    href="https://twitter.com/drreinhold"
+    target="_blank"
+    className="link"
+  >
+    @DrReinhold
+  </a>
+  <a
+    href="mailto:jeppe@bambuu.dk"
+    target="_blank"
+    className="link"
+  >
+    jeppe@bambuu.dk
+  </a>
+</div>
+
+<div
+  style={{
+    display: "flex",
+    flexDirection: "column",
+    fontSize: "2em"
+  }}
+>
+  🙋‍♂️
+  <a
+    href="https://twitter.com/geewengel"
+    target="_blank"
+    className="link"
+  >
+    @GeeWengel
+  </a>
+  <a
+    href="mailto:gustav@bambuu.dk"
+    target="_blank"
+    className="link"
+  >
+    gustav@bambuu.dk
+  </a>
+</div>

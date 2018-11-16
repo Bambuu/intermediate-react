@@ -16,17 +16,18 @@ import {
 } from "./theme-context";
 
 class App extends React.Component {
-  state = {
-    theme: redTheme,
-    toggleTheme: this.toggleTheme
-  };
-
+	
   toggleTheme = () => {
     if (this.state.theme === redTheme) {
       this.setState({ theme: orangeTheme });
     } else {
       this.setState({ theme: redTheme });
     }
+  };
+
+  state = {
+    theme: redTheme,
+    toggleTheme: this.toggleTheme
   };
 
   render() {

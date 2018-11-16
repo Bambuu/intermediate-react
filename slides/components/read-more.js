@@ -6,7 +6,8 @@ export const ReadMore = ({ link }) => {
     <a
       href={href}
       target="_blank"
-      style={{ color: "#addb67", fontSize: '1.5em' }}
+	  style={{fontSize: '1.5em' }}
+	  className="link"
     >
       📖 {link}
     </a>
