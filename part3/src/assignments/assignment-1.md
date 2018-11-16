@@ -1,66 +1,52 @@
-// ASSIGNMENT 1 - LISTENING FOR THE SCROLLS
+# ASSIGNMENT 1 - LISTENING FOR THE SCROLLS
 
-/*
-React lets us reuse both visual components, but also
-logic.  In this exercise we'll try implementing some
-behaviour, and then using a Higher-Order Component (HOC)
+In this exercise we'll try implementing some
+behaviour, and next exercise we'll use a HOC
 to achieve the same result.
-*/
 
-/*
-EXERCISE A:
+## EXERCISE A:
 Switch to the part 2 directory in your console and run "npm start"
-(If you get a ENOENT error, try running "npm install" first)
-*/
+*If you get a `ENOENT` error, try running "npm install" first*
 
-/*
-EXERCISE B:
+## EXERCISE B:
 We want to make the background of the document
 more golden the further down the user scrolls.
 More awesome heroes = more gold!
 
 We need to listen to the scroll event.
-Inside the componentDidMount of your HeroList add the following line:
-window.addEventListener('scroll', console.log);
+Inside the `componentDidMount` of your HeroList add the following line:
+`window.addEventListener('scroll', console.log);`
 
 Now go to your HeroList and scroll.
 Make sure you can see the scroll event in the console,
 when you scroll up and down.
-*/
 
-/*
-EXERCISE C
+## EXERCISE C
 Let's create a function to handle the scrolling part. Create a new function inside your HeroList
-called "onScroll". Have this function console.log("Scrolled")
+called `onScroll`. Have this function `console.log("Scrolled")`
 
-Change the "addEventListener" call, to instead of "console.log", say: "this.onScroll"
+Change the `addEventListener` call, from `console.log`, to `this.onScroll`
 Ensure it still works.
-*/
 
-/*
-EXERCISE D:
-Now, try to go to the "Movies" part, and scroll down. In your console you will
-still see new scroll events.
-When using addEventListener() in JavaScript, the eventListener,
+## EXERCISE D:
+Now, try to go to the **Theming** page, and scroll down.
+In your console you will still see new scroll events..!
+When using `addEventListener()` in JavaScript, the eventListener,
 stay on until either the page is changed or closed.
-As React never "changes" the page, we have to remove the eventListener manually
+As React never "changes" the page, we have to remove the `eventListener` manually
 
-We can do this in the lifecycle method "componentWillUnmount"
-Implement "componentWillUnmount()" and have it console.log("Goodbye")
+We can do this in the lifecycle method `componentWillUnmount`
+Implement `componentWillUnmount()` and have it `console.log("Goodbye")`
 Click around to get a feel for when it is called.
- */
 
-/*
-EXERCISE E:
+## EXERCISE E:
 Now let's unsubscribe from scroll events,  in our componentWillUnmount()
 You can do that by calling:
 window.removeEventListener('scroll', this.onScroll)
 
 Check to see that now we get the scroll events inside our "HeroList", but not when we go to the "Movies" tab
-*/
 
-/*
-EXERCISE F:
+## EXERCISE F:
 We need to use the scroll position in the render method to change the background color.
 That means we need to get it into state.
 
@@ -68,6 +54,5 @@ That means we need to get it into state.
 - Inside your onScroll function, call setState with the new scroll position.
     - You can access the position through window.scrollY
 - Below your list, display the scrollPosition from state.
-*/
 
-// Good job, now let's see how we can do this with a HOC
+Good job, now let's see how we can do this with a HOC

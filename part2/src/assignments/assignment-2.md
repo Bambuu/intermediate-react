@@ -1,14 +1,10 @@
 ## ASSIGNMENT TWO - FORMS AND CONTROLLED COMPONENTS
 
-
 ## EXERCISE A:
-Let's make a form so we can add superheros! We want to be able to specify how
+Let's make a form so we can add superheroes!
 
-Find the render() function inside the HeroList. Inside the JSX, below the </ul>,
-add a `<form>` element.
-
-Inside the `<form>` element, add two <input> elements. The first one with `type="number"` and the second with `type="text"`
-Like below:
+Find the render() function inside the HeroList. Inside the JSX, below the `</ul>`,
+add a `<form>` element with two `<input>` elements, like below.
 
 ```html
 <form>
@@ -17,71 +13,66 @@ Like below:
 </form>
 ```
 
+## CONTROLLED COMPONENTS:
+How do we access the values of these input fields?
 
-## EXERCISE B:
-You should now have two input elements, where you can enter things.
-Let's make a button so we can submit our form.
-Add a `<button>` inside the form.
-If you click the button you will notice something strange - the page reloads!
-
-
-## EXERCISE C:
-React forms behave like normal HTML forms, which submits some data
-and then loads a new page. We'll want to implement our custom logic.
-
-Create a function inside HeroList that's called `addSuperhero`, it will take in an `event` as parameter.
-To stop the default behaviour call 'event.preventDefault()' on the event parameter.
-
-Add `this.addSuperHero` to the `onSubmit` attribute on the form element.
-
-Ensure that when you submit your form now, nothing happens.
-
-
-
-## EXERCISE D:
-To create the hero, we need to get the values the user type, into our state.
-
-We do this by making our <input> components into 'controlled components'
+We do this by making our `<input>` components into 'controlled components'
 This means two things:
 1. We keep their value inside the state of the component above them.
-2. We update the value, when it's needed (by updating the state)
+2. When the user types, we update the state. This causes the input component to update its value
 
+## EXERCISE B:
 Add two new keys to the state, call them `awesomeInputValue` and `nameInputValue`.
-Have awesomeInputValue start as 0, and nameInputValue start as an empty string ""
+Have `awesomeInputValue` start as 0, and `nameInputValue` start as an empty string ""
 
 Set the `value` prop of the `<input/>` element to the value of the new state you just created,
 like this:
 ```js
 value={this.state.awesomeInputValue}
 ```
-
 Now the value is always the value in state. But as we never change the state, the value never changes.
-Try typing in the <input> component - nothing happens.
+Try typing in the `<input>` component - nothing happens.
 
-Let's update our state when the user types something. We'll need to add onChange handlers to our input fields.
-onChange handlers take in an event, and update the state with the new value. The below is an onChange handler
-that updates the awesomeInputValue value in the state:
+## EXERCISE C:
+Let's update our state when the user types something.
+We'll need to add onChange handlers to our input fields.
+onChange handlers receive an event. They can read the current value of the input field via
+`event.target.value`
+
+Below is an example of an onChange handler that updates `awesomeInputChange`
 ```js
 onAwesomeInputChange = (event) => {
   this.setState({awesomeInputValue: event.target.value})
 };
 ```
 
-## EXERCISE E:
 Implement an `onAwesomeInputChange` function like the one above, in your HeroList.
-Pass it to the `onChange` attribute inside the first `<input>` element.
+Pass it to the `onChange` attribute inside the first ``<input>`` element.
 
 Ensure that your input field works when typing.
 
+## EXERCISE D
+Implement the same thing for the other `<input>` component that corresponds to the `nameInputValue` as well.
+
+## EXERCISE E:
+You should now have two controlled input elements.
+Let's make a button so we can submit our form.
+Add a `<button>` inside the form.
+If you click the button you will notice something strange - the page reloads!
 
 ## EXERCISE F:
-Implement the exact same thing for the other `<input>` component that corresponds to the `nameInputValue` as well.
+React forms behave like normal HTML forms, which submits some data
+and then loads a new page. We'll want to implement our custom logic.
 
-Now we have two controlled components!
-Every time the user types something, the onChange handler is called, and that updates
-the state. Updating the state in turn, updates the text in the <input> component.
+Create a function inside HeroList that's called `addSuperhero`, it will take in an `event` as parameter.
+To stop the default behaviour call `event.preventDefault()` on the event parameter.
 
-Now we can create a Superhero inside your addSuperHero method!
+Add `this.addSuperHero` to the `onSubmit` attribute on the form element.
+
+Ensure that when you submit your form now, nothing happens.
+
+## EXERCISE G:
+Let's create a superhero inside our `addSuperHero` method
 
 We can use `setState` to update the heroes array. Remember that you must never mutate the state directly.
 We can create a new hero array using `concat()` with an object like this:
@@ -96,18 +87,17 @@ addSuperHero = (event) => {
     awesome: "40"
   };
 
-  // Concat takes an array and a value, and merges them into a new array.
+  // concat takes an array and a value, and merges them into a new array.
   this.setState({
     heroes: this.state.heroes.concat(newSuperHero)
   })
 };
 ```
 
-## EXERCISE G:
+## EXERCISE H:
 Implement your addSuperHero, so that when the form is submitted, it will create a new SuperHero!
-Make sure it appears on the list!
+Check that it appears on the list!
 
-
-## EXERCISE H
+## EXERCISE I:
 We don't want to accidentally add the same SuperHero twice! Inside addSuperHero, reset the `awesomeInputValue` and `nameInputValue`
-parts of the state, to their starting values: The number 0, and an empty string.
+parts of the state, to their starting values.

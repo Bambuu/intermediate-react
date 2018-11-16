@@ -1,27 +1,27 @@
 # ASSIGNMENT ONE - LISTS AND KEYS
 
 ## EXERCISE A:
-Inside your terminal, navigate to the "/part2" directory and type "npm run start"
+Inside your terminal, navigate to the "/part2" directory and type `npm run start`
 
 You should see a list of superheroes pop up in your browser at localhost:3000
 
-Tip: You might have to run "npm install" inside this directory if you get an error that packages are missing.
+Tip: You might have to run `npm install` inside this directory if you get an error that packages are missing.
 
 ## EXERCISE B:
 We're missing a key in our list!
 React warns you of this with a message like this:
-    "Warning: Each child in an array or iterator should have a unique "key" prop.
-    Check the render method of `HeroList`"
+```
+"Warning: Each child in an array or iterator should have a unique "key" prop.
+Check the render method of `HeroList`"
+```
 
 Open up your Developer Tools and make sure you can see the warning in the console.
 
 ## EXERCISE C:
-
-Let's try to go through the render() method of the HeroList. Spend a few minutes trying to understand what's
-going on. you can find it in the file src/HeroList.js
-When you're done, there's a step-by-step walkthrough just below:
-
-
+Let's try to go through the `render()` method of the HeroList. Spend a few minutes trying to understand what's
+going on.
+You can find it in the file `src/HeroList.js`
+If you need it, there's a walkthrough just below.
 ```js
 render() {
   // Here we create a copy of the array in state, using slice(). Normally this is not needed but..
@@ -51,10 +51,10 @@ render() {
 ```
 
 ## EXERCISE D:
-  You need to add a "key" property to the <li> elements returned by our .map() function.
-  A key should be unique. In our case, we can use the name of the hero, assuming nobody adds the same hero twice.
+  You need to add a "key" property to the `<li>` elements returned by our `.map()` function.
+  A key should be unique.
+  In our case, we can use the name of the hero, assuming nobody adds the same hero twice.
   When you add the key, the warning should disappear in your console.
-  GUSTAV: WHERE TO DO THE CHANGE?
 
   An example of adding a key to a <li> element is below:
 
