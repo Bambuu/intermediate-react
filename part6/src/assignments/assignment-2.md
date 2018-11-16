@@ -1,6 +1,6 @@
 # ASSIGNMENT 2 - Theme-togglin'
 
-## Exercise A:
+## EXERCISE A:
 To change the theme, we'll need two themes.
 Change our `theme` object to look like this:
 ```js

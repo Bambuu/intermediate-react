@@ -1,3 +1,22 @@
+---- TODOS ----
+
+Decision points:
+
+
+Work to be done:
+- Consider running setupAll in parallel
+- run prettier on the whole shebang - BUT NOT SLIDES! (it removes () around function parameters)
+- Maybe pick some nicer colors?
+
+Potential things to cut:
+  - Manual implementation of scrolling
+
+FINAL CHECKLIST:
+    - NOTHING BABYYYYY
+
+
+---- TIME ----
+
 ------- EXERCISES ------
 
 Part 2 time (Gustav):
@@ -58,36 +77,3 @@ Part 4: 19
 Part 5: 13.5 + 4.5 (18)
 
 TOTAL: 85min (not updated w part6)
-
------ EXERCISE SIGNOFF ----
-Part 1 - Check
-Part 2 - Check
-Part 3 - Check
-Part 4 - ???!!
-
-
-20 min prez per emne udover det foerste
-20 * 5 + 10 = 110 = 2h
-
-----
-
-Decision points:
-Don't manually implement scrolling?
-
-Work to be done:
-- Consider running setupAll in parallel
-- change assignments to markdown
-- run prettier on the whole shebang - BUT NOT SLIDES! (it removes () around function parameters)
-- Maybe pick some nicer colors?
-
-FINAL CHECKLIST:
-    - Tjek at refs er væk alle steder
-    - Last proofread
-    - Ensure not-important directory are the same throughout exercises
-    - Synchronize so app is the same component everywhere
-    - streamline npm run vs npm run partX
-    - add react routing to all package.json
-	- delete src-copy folders
-    - check no lint errors
-    - Streamline assignment / exercise capitalization
-    - make
