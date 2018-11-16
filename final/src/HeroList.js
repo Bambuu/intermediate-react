@@ -1,58 +1,60 @@
-import React, { Component } from 'react';
-import { initialHeroes } from './not-important/heroes';
-import { withScroll } from 'react-fns';
+import React, { Component } from "react";
+import { initialHeroes } from "./not-important/heroes";
+import {withScroll} from 'react-fns'
 import { calculateBackgroundColor } from './not-important/utils';
-import { FormController } from './not-important/FormController';
+import { FormController } from "./not-important/FormController";
 
-class HeroListClass extends Component {
-	state = {
-		heroes: initialHeroes
-	};
-	
-	ref = React.createRef();
-	
-	componentDidMount(){
-		this.ref.current.focus();
-	}
-	
-	createSuperHero = (values) => {
-		const newHero = {
-			name: values.name,
-			evil: values.evil,
-		};
-		this.setState({
-			heroes: [...this.state.heroes, newHero],
-		});
-		
-		// Focus back on the evil input
-		this.ref.current.focus();
-	};
-	
-	
-	render() {
-		const heroList = [... this.state.heroes]
-			.sort((hero, secondHero) => hero.evil - secondHero.evil)
-			.map(hero => <li className="hero-list-item" key={hero.name}>{hero.evil} - {hero.name}</li>)
-		
-		return (
-				<div style={calculateBackgroundColor(document.body.clientHeight, this.props.y)}>
-					<ul>
-						<li className="hero-list-item hero-list-header">Evil score - Hero name</li>
-						{heroList}
-					</ul>
-					<FormController initialState={{evil: 0, name: ''}} onSubmit={this.createSuperHero}>
-						{ form => (
-							<div>
-								<input ref={this.ref} value={form.evil.value} onChange={form.evil.onChange} type="number"/>
-								<input value={form.name.value} onChange={form.name.onChange} type="text" />
-								<button>Create</button>
-							</div>
-						)
-						}
-					</FormController>
-				</div>
-			);
-	}
+class BaseHeroList extends Component {
+  state = {
+    heroes: initialHeroes,
+  };
+
+  addSuperHero = (formValues) => {
+    const newSuperHero = {
+      name: formValues.name,
+      awesome: formValues.awesome,
+    };
+
+    this.setState({
+      heroes: this.state.heroes.concat(newSuperHero)
+    });
+  };
+
+  render() {
+    const copyOfHeroArray = this.state.heroes.slice();
+    const sortedHeroes = copyOfHeroArray.sort(
+      (hero, secondHero) =>
+        hero.awesome - secondHero.awesome
+    );
+
+    const heroComponents = sortedHeroes.map(hero => (
+      <li className="hero-list-item" key={hero.name}>
+        {hero.awesome} - {hero.name}
+      </li>
+    ));
+
+    return (
+      <div className="tall-div" style={{backgroundColor: calculateBackgroundColor(this.props.y)}}>
+        <ul>
+          <li className="hero-list-item hero-list-header">
+            Awesome score - Hero name
+          </li>
+          {heroComponents}
+        </ul>
+
+        <FormController initialValues={{name: '', awesome: 0}} onSubmit={this.addSuperHero}>
+          {(formValues) => {
+            return (<div>
+                <input value={formValues.name.value} onChange={formValues.name.onChange}/>
+                <input value={formValues.awesome.value} onChange={formValues.awesome.onChange} type="number"/>
+                <button>Submit</button>
+            </div>
+            )
+          }}
+        </FormController>
+      </div>
+    );
+  }
 }
 
-export const HeroList = withScroll(HeroListClass);
+export const HeroList = withScroll(BaseHeroList);

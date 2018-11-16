@@ -2,15 +2,15 @@ body {
   margin: 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  monospace;
 }
 
 .root {
@@ -35,22 +35,29 @@ code {
   text-decoration: none;
   font-size: 1.2em;
   padding: 0.5em 0.5em 0.5em;
-
 }
 
 .content {
   flex: 1;
   margin-left: 120px;
-  padding-left: 10px;
   background-origin: content-box;
+}
+
+.tall-div {
+  height: 120vh
 }
 
 .hero-list-item {
   font-size: 2em;
   margin: 0.5em 0;
+  height: 6vh;
 }
 
 .hero-list-header {
   color: #666666;
   text-decoration: underline;
+}
+
+.header {
+  background-color: #68a9b3;
 }
