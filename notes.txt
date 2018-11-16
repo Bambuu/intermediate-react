@@ -41,6 +41,10 @@ Part 6 time (Gustav)
   - Static Context: 12.5min
   - Changing theme. 4.5 min
 
+Part 6 time (Jeppe)
+  - Static: 9min
+  - Changing the theme: 5min
+
 Dinner: 30 min
 Exercises total: part1?? + 23 + 15 + 11 + 27(G)+ = 91 min
 Plus buffer: 91 * 2 = 182
@@ -58,7 +62,8 @@ TOTAL: 85min (not updated w part6)
 ----- EXERCISE SIGNOFF ----
 Part 1 - Check
 Part 2 - Check
-Part 3 - ...??!?!
+Part 3 - Check
+Part 4 - ???!!
 
 
 20 min prez per emne udover det foerste
