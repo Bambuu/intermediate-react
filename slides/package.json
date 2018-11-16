@@ -11,14 +11,14 @@
   "license": "UNLICENSED",
   "private": false,
   "scripts": {
-	"start": "mdx-deck deck.mdx",
-	"prebuild": "rimraf dist",
-    "build": "npm run build:site && npm run build:pdf",
-    "build:site": "mdx-deck build deck.mdx",
-	"build:pdf": "mdx-deck pdf deck.mdx",
-	"postbuild": "cp -r ./public dist/public"
+    "start": "mdx-deck deck.mdx",
+    "prebuild": "rimraf build",
+    "build": "mdx-deck build --no-html deck.mdx -d build",
+    "build:pdf": "mdx-deck pdf deck.mdx -d build",
+    "postbuild": "copyfiles ./public/* build"
   },
   "devDependencies": {
+    "copyfiles": "^2.1.0",
     "css-loader": "^1.0.1",
     "mdx-deck": "^1.7.7",
     "mdx-deck-code-surfer": "^0.5.3",

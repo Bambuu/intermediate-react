@@ -3,7 +3,7 @@ class AddHero extends React.Component {
     value: "" // initial value
   };
 
-  onValueChange = event => {
+  onValueChange = (event) => {
     const nextValue = event.target.value;
     this.setState({ value: nextValue });
   };

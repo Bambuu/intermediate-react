@@ -2,5 +2,5 @@
 yarn.lock
 node_modules
 yarn-error.log
-dist
+build
 package-lock.json

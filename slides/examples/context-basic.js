@@ -28,10 +28,10 @@ import { ThemeContext } from "./theme-context";
 const NavLink = () => {
   return (
     <ThemeContext.Consumer>
-      {theme => {
+      {(theme) => {
         return (
           <Link
-            style={{ color: theme.color }}
+            style={{ color: theme.textColor }}
             to="/some-link"
           >
             This is a link

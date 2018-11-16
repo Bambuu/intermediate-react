@@ -16,17 +16,18 @@ import {
 } from "./theme-context";
 
 class App extends React.Component {
-  state = {
-    theme: redTheme, //GUSTAV: USE TOGGLETHEME BEFORE DEFINE?
-    toggleTheme: this.toggleTheme
-  };
-
+	
   toggleTheme = () => {
     if (this.state.theme === redTheme) {
       this.setState({ theme: orangeTheme });
     } else {
       this.setState({ theme: redTheme });
     }
+  };
+
+  state = {
+    theme: redTheme,
+    toggleTheme: this.toggleTheme
   };
 
   render() {
@@ -45,7 +46,7 @@ import { ThemeContext } from "./theme-context";
 const NavLink = () => {
   return (
     <ThemeContext.Consumer>
-      {context => {
+      {(context) => {
         const theme = context.theme;
         return (
           <Link
@@ -66,7 +67,7 @@ import { ThemeContext } from "./theme-context";
 const ThemeButton = () => {
   return (
     <ThemeContext.Consumer>
-      {context => {
+      {(context) => {
         const toggleTheme = context.toggleTheme;
         return (
           <button onClick={toggleTheme}>
