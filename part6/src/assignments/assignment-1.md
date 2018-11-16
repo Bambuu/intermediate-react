@@ -1,6 +1,4 @@
-# Assignment 1
-Let's look at defining a Context.
-
+# Assignment 1 - Static Context
 ## Exercise A
 Let's have a look at creating a Context
 We can create one using
@@ -20,30 +18,28 @@ to. We'll create in inside `App.js`
 We'll need to
   - Import the Context we just exported 
   - Create a top-level object called "theme"
-  that contains `color: #f4b642`
+  that contains `color: "#f4b642"`
 
-Inside the Render method, we'll need to add the provider.
-Every object that will need access to this context, must be a descendant of
-the provider.
+We'll need to add the provider in the render method.
+Everything that needs the theme, must be below the Provider in the Hierarchy.
 
 Add the `<ThemeContext.Provider>` just below the `BrowserRouter` in the hierarchy.
-Set the `value` prop of the `Provider` to be the `theme` object we declared earlier. 
+Set the `value` prop of the `Provider` to be the `theme` object.
 
 ## Exercise C:
 Let's look at consuming our Context!
-We use our Theme through a Provider, which uses a function-as-a-child
-to provide the theme:
+We get the theme though a `Consumer`, that uses a function-as-a-child:
 ```jsx harmony
 <ThemeContext.Consumer>
   (themeContext) => {
-    return <div>Your JSX here..!</div>
+    return <div>/* In here we can use the themeContext! */</div>
   }
 </ThemeContext.Consumer>
 ```
 Inside Theming.js
 - Import our `ThemeContext`
 - Use the `ThemeContext.Consumer` inside the render function
-- Render the value of the "color" attribute on the themeContext.
+- Render the `color` attribute as a string on the themeContext.
 
 You're done when you see the hex-code you defined in `App.js`
 
@@ -59,4 +55,4 @@ You should have a nice orange button now!
 Let's try to consume the context another place as well.
 Inside our `<HeroList>` component, subscribe to the context, using
 a `Consumer`.
-Use inline-styles to change the `backgroundColor` of the "Add Hero" button.
+Use inline-styles to change the `backgroundColor` of the header div.

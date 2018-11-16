@@ -1,7 +1,7 @@
-# ASSIGNMENT 2 - Changing the theme!
+# ASSIGNMENT 2 - Theme-togglin'
 
 ## Exercise A:
-Let's look at changing the theme now! To do that, we'll need two themes.
+To change the theme that, we'll need two themes.
 Change our `theme` object to look like this:
 ```js
 {
@@ -54,6 +54,8 @@ Have it compare `this.state.theme === theme.orange`.
 If this evaluates to true, use `setState` to change the theme to `theme.green`
 Otherwise, it should switch the theme to `theme.orange`
 
+
+## Final notes
 Now your button should switch the theme when clicked. You will see both the
 header and the buttons color is updated. All without passing a simple prop down
 to components that don't need it.
