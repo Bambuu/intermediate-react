@@ -64,7 +64,6 @@ Part 3 - ...??!?!
 ----
 
 Decision points:
-- Should we reorder the methods in controlled-final.js, so they are in order of appearance instead of the "correct" order?
 
 Work to be done:
 - Consider running setupAll in parallel
