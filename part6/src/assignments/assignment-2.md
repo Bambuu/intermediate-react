@@ -1,8 +1,7 @@
 # ASSIGNMENT 2 - Theme-togglin'
 
 ## Exercise A:
-GUSTAV: TYPO BENEITH!
-To change the theme that, we'll need two themes.
+To change the theme, we'll need two themes.
 Change our `theme` object to look like this:
 ```js
 {
@@ -21,7 +20,7 @@ Change the Providers `value` to be `theme.orange` - check it still works.
 We'll also need to be able to let React know when the Theme has updated.
 To do that, we'll need to put it inside the state.
 
-Add a "theme" state to the `App` component. Have the default value be `theme.orange`
+Add a `theme` state to the `App` component. Have the default value be `theme.orange`
 
 Change the Providers `value` to be `this.state.theme`
 Ensure it still works.
@@ -41,12 +40,11 @@ Add `toggleTheme: this.toggleTheme` into state
 However, we only pass down the `theme` part of the state currently! We'll
 need to pass down all of the state.
 - Change the `value` of the Provider to be `this.state`
-- Anywhere you access `themeContext.color`, you will have to update to access
-`themeContext.theme.color`
+- Anywhere you accessed `themeContext.color`, you  must change it to `themeContext.theme.color`
 
 ## EXERCISE E 
 Now we have access to our the function anywhere we subscribe to the context.
-Inside `Theming.js`, call the `toggleTheme` when the button is clicked.
+Inside `Theming.js`, call `toggleTheme` when the button is clicked.
 Check that the `console.log` is being called.
 
 ## EXERCISE B:
@@ -61,8 +59,9 @@ Now your button should switch the theme when clicked. You will see both the
 header and the buttons color is updated. All without passing a simple prop down
 to components that don't need it.
 
-To end off the course - a warning: Some of Reacts greatest strengths are its
+Be careful though: One of Reacts greatest strengths is its
 explicitness. Use Context sparingly.
+
 Preferably only for global state, e.g. user login status,
 theming, internationalization etc. 
 
