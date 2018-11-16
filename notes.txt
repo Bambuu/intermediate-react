@@ -62,38 +62,29 @@ Part 3 - ...??!?!
 20 * 5 + 10 = 110 = 2h
 
 ----
-potential extra
-    - refs
-    - withRouter
 
-
+Decision points:
+- Should we remove the withRouter functionality post-part4?
 - Should we reorder the methods in controlled-final.js, so they are in order of appearance instead of the "correct" order?
-
-- dont have extra assignment components in the assignment file, have them along with the others
+- Refactor components from "App" out into seperate components
 
 - Extra Assignment height ???
 
+
+Work to be done:
 - Consider running setupAll in parallel
-
-- classnames inside HeroList or not?
-
-    - Movies component says it'll be implemented later..?
-
-- Refactor components from "App" out into seperate components
-
 - change assignments to markdown
-
 - still unresolved comments in part2
+- run prettier on the whole shebang
 
-run prettier on the whole shebang
+MARKDOWN:
+  Talk markdown syntax
 
-Talk markdown syntax
-
-Render markdown into html..?
-
-mAybe make 2-3 (refs) an extra assignment
+  Convert .md to html?
 
 FINAL CHECKLIST:
+    - Tjek at refs er væk alle steder
+    - Last proofread
     - Ensure not-important directory are the same throughout exercises
     - Synchronize so app is the same component everywhere
     - streamline npm run vs npm run partX

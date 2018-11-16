@@ -80,3 +80,22 @@ Implement the two other Routes (theming, extra), just like you did with the "/he
 
 Test to see if all routes work.
 */
+
+/*
+EXERCISE F:
+It's time for a little spring cleaning.
+Remove everything related to the old way of managing links
+ - The state key in App
+ - The commented out if-statements in App
+ - The changePage function in app
+ - The changePage props passed down to SideBar
+ - The propType in SideBar
+*/
+
+
+/*
+After this, you should have a functional navigation, with
+routes and links.
+The index route at '/' still doesn't work, but we'll
+look at that in the extra exercises.
+*/
