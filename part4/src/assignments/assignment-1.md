@@ -26,7 +26,7 @@ Inside `SideBar.js`, `import {Link} from "react-router-dom"`
 
 Inside SideBar, you will find several `<a>` components.
  - Replace them with `<Link>` components.
- - Remove the onClick prop
+ - Remove the onClick & href props
 
 Link takes a `to` prop, that will set the url.
 Give the different pages different urls like this schema:
