@@ -1,20 +1,13 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import { ThemeContext } from './ThemeContext';
+/* eslint-disable */
+import React from 'react';
+import PropTypes from "prop-types";
+import {Link} from 'react-router-dom'
 
-export class SideBar extends Component {
-	render() {
-		return (
-			<ThemeContext.Consumer>
-				{
-					themeContext => (
-						<div className="sidebar" style={{backgroundColor: themeContext.theme.sidebarColor}}>
-							<Link to="/heroes">Heroes</Link>
-							<Link to="/movies">Movies</Link>
-							<Link to="/theme">Theming</Link>
-						</div>)
-				}
-			</ThemeContext.Consumer>
-		)
-	}
-}
+export const SideBar = () => {
+  return (
+    <div className="sidebar">
+      <Link to="/">Heroes</Link>
+      <Link to="/theming">Theming</Link>
+      <Link to="/extra">Extra Exercise</Link>
+    </div>)
+};

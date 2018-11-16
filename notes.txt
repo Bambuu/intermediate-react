@@ -37,11 +37,14 @@ Part 5 time (Jeppe) (21min)
   - assignment 1+2 = 09:30
   - assignment 3 = 13:00
 
+Part 6 time (Gustav)
+  - Static Context: 12.5min
+  - Changing theme. 4.5 min
+
 Dinner: 30 min
 Exercises total: part1?? + 23 + 15 + 11 + 27(G)+ = 91 min
 Plus buffer: 91 * 2 = 182
-Total : 297min
-
+Total : 297min / 60 = ???
 
 -----  SLIDES -----
 Part 1: 8.5
@@ -64,11 +67,13 @@ Part 3 - ...??!?!
 ----
 
 Decision points:
+Don't manually implement scrolling?
 
 Work to be done:
 - Consider running setupAll in parallel
 - change assignments to markdown
 - run prettier on the whole shebang
+- Maybe pick some nicer colors?
 
 MARKDOWN:
   Talk markdown syntax
@@ -82,4 +87,6 @@ FINAL CHECKLIST:
     - Synchronize so app is the same component everywhere
     - streamline npm run vs npm run partX
     - add react routing to all package.json
+    - check no lint errors
+    - Streamline assignment / exercise capitalization
     - make
