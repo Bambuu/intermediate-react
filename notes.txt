@@ -40,8 +40,7 @@ Part 5 time (Jeppe) (21min)
 Dinner: 30 min
 Exercises total: part1?? + 23 + 15 + 11 + 27(G)+ = 91 min
 Plus buffer: 91 * 2 = 182
-Total : 297min
-
+Total : 297min / 60 = ???
 
 -----  SLIDES -----
 Part 1: 8.5
@@ -64,11 +63,13 @@ Part 3 - ...??!?!
 ----
 
 Decision points:
+Don't manually implement scrolling?
 
 Work to be done:
 - Consider running setupAll in parallel
 - change assignments to markdown
 - run prettier on the whole shebang
+- Maybe pick some nicer colors?
 
 MARKDOWN:
   Talk markdown syntax
