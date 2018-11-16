@@ -728,7 +728,8 @@ Problems:
     },
     {
       lines: [6],
-      notes: "Show Heroes component when location is /heroes"
+      notes:
+        "Show Heroes component when location is /heroes"
     },
     {
       lines: [7],
@@ -1118,29 +1119,300 @@ If you want to see a deeper comparison, check out ["Use A Render Prop!" by Micha
 
 ---
 
-Assignments
+# Assignments - Part 5
+
+1. Use the _function as a child_ pattern
+2. Use a `<FormController/>` render prop to simplify our HeroList input
+3. Submit new heroes using the new render prop
+4. 🏕
 
 ---
 
-Context
-problem:
+# React Context API
 
-- passing information between components is done with direct props
-- this is a problem when you want information from high level App, that is needed in a deeply nested component
-- the components between also need to know about the info, even though they dont use it
-- so every time you have global state in App, you have a problem with passing props
-  solution: the official Context API
-- a provider in the react tree, that makes the info available to any decending component that consumes for it
+# Part 6
 
-- how to build a provider - WITHOUT STATE (own file)
-- how to build a consumer
-- how to change provided value
-- how to put provided value in state
+---
 
-- unneccessary rerenders, dont inline value
+## The Problem
 
+<ul style={{ fontSize: "1.2em" }}>
+  <Appear>
+    <li>
+      Passing information between components is done with{" "}
+      <em>direct props</em>
+    </li>
+    <li>
+      This is cumbersome for information that is held higher
+      up the component tree and needed in a deeply nested
+      component
+    </li>
+    <li>
+      We have to pass it down via each component in between
+    </li>
+    <li>Global state, such as a theme or user info</li>
+  </Appear>
+</ul>
 
-- GUSTAV: in examples/routes.js - DONT WE NEED EXACT, OR ELSE HOME WILL ALWAYS RENDER?
+---
+
+## The Problem
+
+<div
+  className="stacked-container"
+  style={{ width: "90vw", height: "80vh" }}
+>
+  <Appear>
+    <img
+      src="./public/context-base.svg"
+      className="stacked"
+    />
+    <img
+      src="./public/context-theme.svg"
+      className="stacked"
+    />
+    <img
+      src="./public/context-props.svg"
+      className="stacked"
+    />
+  </Appear>
+</div>
+
+---
+
+# The Simple Solution
+
+## Keeping the info out of the component tree
+
+<ul style={{ fontSize: "1.2em" }}>
+  <Appear>
+    <li>Only works if the information is constant </li>
+    <li>
+      This is cumbersome for information that is held higher
+      up the component tree and needed in a deeply nested
+      component
+    </li>
+    <li>
+      Declare constant as an object in a separate file{" "}
+    </li>
+    <li>Import it directly whereever it is needed</li>
+  </Appear>
+</ul>
+
+---
+
+# The Simple Solution
+
+<img
+  src="./public/context-constant.svg"
+  style={{ width: "90vw", height: "80vh" }}
+/>
+
+---
+
+do we need code here?
+
+---
+
+# The Context Solution
+
+## Using React Context
+
+<ul style={{ fontSize: "1.2em" }}>
+  <Appear>
+    <li>
+      A <em>provider</em> in the tree, that provides the
+      info to any descendants that <em>consumes</em> it
+    </li>
+    <li>
+      We can "teleport" the info to any descendants, without
+      using props
+    </li>
+  </Appear>
+</ul>
+
+---
+
+# The Context Solution
+
+<div
+  className="stacked-container"
+  style={{ width: "90vw", height: "80vh" }}
+>
+  <img
+    src="./public/context-theme.svg"
+    className="stacked"
+  />
+  <Appear>
+    <img
+      src="./public/context-solution.svg"
+      className="stacked"
+    />
+  </Appear>
+</div>
+
+---
+
+<CodeSurfer
+  title="Basic Context"
+  code={require("!raw-loader!./examples/context-basic.js")}
+  lang="jsx"
+  showNumbers={true}
+  theme={nightOwl}
+  steps={[
+    {
+      range: [1, 8],
+      notes:
+        "Defined theme object and ThemeContext in separate file"
+    },
+    {
+      range: [10, 23],
+      notes: "The component that will Provide the context"
+    },
+    {
+      range: [10, 11],
+      notes:
+        "Import ThemeContext and theme to the component that provides it"
+    },
+    {
+      range: [15, 21],
+      notes:
+        "Wrap components that need it with TemeContext.Provider, set value = theme"
+    },
+    {
+      range: [25, 43],
+      notes: "The component that will consume the context"
+    },
+    {
+      range: [25, 26],
+      notes: "Again, import the ThemeContext"
+    },
+    {
+      lines: [30, 31, 40, 41],
+      notes:
+        "A context Consumer uses the Render prop pattern, get the context as parameter"
+    },
+    {
+      range: [31, 40],
+      notes:
+        "Read from the context, and render anything with it"
+    },
+    {
+      range: [28, 43]
+    }
+  ]}
+/>
+
+---
+
+But we aren't actually changing the theme? 🤔
+
+---
+
+<CodeSurfer
+  title="Dynamic Context"
+  code={require("!raw-loader!./examples/context-state.js")}
+  lang="jsx"
+  showNumbers={true}
+  theme={nightOwl}
+  steps={[
+    {
+      range: [1, 9],
+      notes:
+        "Defined theme object and ThemeContext in separate file"
+    },
+    {
+      range: [11, 40],
+      notes: "The component that will Provide the context"
+    },
+    {
+      range: [11, 16],
+      notes:
+        "Import ThemeContext and themes to the component that provides it"
+    },
+    {
+      lines: [19, 20, 22],
+      notes:
+        "Put current theme in state of providing component"
+    },
+    {
+      lines: [34],
+      notes:
+        "Set value to this.state instead of theme directly"
+    },
+    {
+      range: [24, 30],
+      notes:
+        "function that changes the state in the providing component"
+    },
+    {
+      range: [19, 22],
+      notes:
+        "put toggleTheme function in state, so it is part of context as well"
+    },
+    {
+      range: [42, 61],
+      notes: "The theme consuming component"
+    },
+    {
+      range: [47, 49],
+      notes: "theme is now an object INSIDE the context"
+    },
+    {
+      range: [63, 79],
+      notes:
+        "The button to change the theme, also a consumer"
+    },
+    {
+      range: [68, 77],
+      notes:
+        "use the toggleTheme function from the context, to change the state higher up"
+    }
+  ]}
+/>
+
+---
+
+# React Context Gotchas
+
+<ul style={{ fontSize: "1.2em" }}>
+  <Appear>
+    <li>
+      The context is not magic, you still have to maintain
+      and change the state manually
+    </li>
+    <li>
+      It just enables you to pass props down, without touch
+      all the components in between
+    </li>
+    <li>
+      The Provider doesn't have to be top level, it just
+      have to be above all consumers
+    </li>
+    <li><b>Don't define the Provider value object inline</b></li>
+  </Appear>
+</ul>
+
+---
+
+<CodeSurfer
+  title="Dangerous object inline"
+  code={`<Provider value={{something: 'hello'}}>
+  <SideBar/>
+  <Main/>
+</Provider>`}
+  lang="jsx"
+  showNumbers={true}
+  theme={nightOwl}
+  steps={[{notes: 'The value in the Provider is now rebuilt every time, causing all consumers to re-render'}]}
+/>
+
+---
+
+# Assignments - Part 6
+
+1. be cool
+4. 🏕
 
 ---
 
