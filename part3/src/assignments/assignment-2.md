@@ -11,7 +11,9 @@ Delete all the code related to scrolling.
 - the key in state.
 
 ## EXERCISE B:
-Now, we'll need a HOC. You can import one that keeps track of scroll-position from the wonderful "react-fns" library.
+Now, we'll need a HOC.
+You can import one that keeps track of scroll-position from the "react-fns" library, that
+we have installed for you.
 Write
 ```js
 import {withScroll} from 'react-fns'
@@ -20,8 +22,7 @@ at the top of your HeroList.
 
 ## EXERCISE C:
 HOCs are functions that take in a component, and returns an enhanced component.
-The syntax is
-
+The syntax is:
 ```js
 const EnhancedComponent = withSomeExtraFunctionality(OriginalComponent)
 ```
@@ -33,7 +34,7 @@ export const HeroListWithScroll = withScroll(HeroList);
 We'd prefer not to change the name, so let's not do that. Instead:
 - Change the `HeroList` name to `BaseHeroList`
 - Remove the export statement in front of `BaseHeroList`
-- At the bottom of the file, export the enhanced component. Use the line below:
+- At the bottom of the file, export the enhanced component:
 ```js
 export const HeroList = withScroll(BaseHeroList)
 ```
@@ -41,23 +42,20 @@ export const HeroList = withScroll(BaseHeroList)
 Check to see if the app still runs.
 
 ## EXERCISE D:
-The withScroll HOC, keeps track of the scroll position,
-and passes them to the HeroList component through props.
-You can access them through the "x" and "y" props
+The withScroll HOC passes the scroll position through the "x" and "y" props.
 
-Try `console.log(this.props.y)` inside your render method, and see it work!
+Try writing `console.log(this.props.y)` inside your render method to see it work.
 
 ## EXERCISE E:
-Alright, now we have the scroll position, let's use it to color the background.
+Let's use the scroll position to color the background.
 We've exported a `calculateBackgroundColor` function inside `not-important/utils.js`
 
-Import it (named import), and inside the render() method, call it with the current y position.
-Log the result to make sure it changes.
+Import it (it's a named export), and inside the `render()` method, call it with the current y position.
+`console.log()` the result, to test if it works.
 
 ## EXERCISE F:
 You style a div using inline styles, by setting the style property to an object
-containing styles. E.g.
-
+containing styles:
 `<div style={{backgroundColor: "red"}}></div>`
 
 Note the double curly braces - the first one is to tell React that we're writing some JavaScript, and the second
@@ -71,5 +69,5 @@ one is an object, in this case the object:
 Style the root `<div>` in your HeroList.
 Use the calculateBackgroundColor function instead of "red" in the example above, to set the backgroundColor.
 
-## Now you've learned how to use a HOC - they're very simple to use. You wrap your component in them, and they're responsible
+Now you've learned how to use a HOC - they're very simple to use. You wrap your component in them, and they're responsible
 for keeping track of some sort of logic. That's all there is to it!
