@@ -208,7 +208,7 @@ by Jeppe Reinhold and Gustav Wengel
 
 ### How we get user input into our React world
 
-#### (... how to do forms, baiscally)
+#### (... how to do forms, basically)
 
 ---
 
@@ -249,11 +249,11 @@ Pulling the `value` of the `<input/>` up to the component `state`
   className="stacked-container"
   style={{ width: "80vw", height: "50vh" }}
 >
-  <img
-    src="./public/controlled-component-flow-1.svg"
-    className="stacked"
-  />
   <Appear>
+    <img
+      src="./public/controlled-component-flow-1.svg"
+      className="stacked"
+    />
     <img
       src="./public/controlled-component-flow-2.svg"
       className="stacked"
@@ -405,7 +405,6 @@ We want to share behavior between components
     <li>Subscribing to same data sources</li>
     <li>React to same events (scroll, resize, etc.)</li>
     <li>Read from the Location (URL)</li>
-    <li>Interact with global theme or state</li>
   </Appear>
 </ul>
 
@@ -449,8 +448,8 @@ We want to share behavior between components
       via <code>props</code>
     </li>
     <li>
-      HOCs are just function that takes in any component,
-      and returns an <em>enhanced component</em>
+      HOCs are functions that takes in any component, and
+      returns an <em>enhanced component</em>
     </li>
     <li>
       We've never written our own HOC before, only used
@@ -552,8 +551,8 @@ We want to share behavior between components
 <ul style={{ fontSize: "1.5em" }}>
   <Appear>
     <li>
-      HOCs are just function that takes in any component,
-      and returns an <em>enhanced component</em>
+      HOCs are functions that takes in any component, and
+      returns an <em>enhanced component</em>
     </li>
     <li>Always beware of premature composition 🤓</li>
   </Appear>
@@ -580,8 +579,14 @@ We want to share behavior between components
 .. is easier to show than tell
 
 ```notes
-Show implementation in part4
--
+Open new tab
+Problems:
+- URL doesn't change
+- Browser history doesn't change
+- Reload
+- Share location
+- Press back
+- New tab
 ```
 
 ---
@@ -598,6 +603,10 @@ Show implementation in part4
       notes: "The App.js in part 4"
     },
     {
+      range: [9, 15],
+      notes: "the currentPage state"
+    },
+    {
       range: [29, 37],
       notes: "Returned from render()"
     },
@@ -609,31 +618,9 @@ Show implementation in part4
       range: [24, 25],
       notes: "mainComponent if currentPage === /theming"
     },
-    { range: [26, 28] },
-    {
-      range: [9, 15],
-      notes: "the currentPage state"
-    }
+    { range: [26, 28] }
   ]}
 />
-
----
-
-<img
-  src="./public/fascinating-meme.jpg"
-  style={{ height: "90vh" }}
-/>
-
-```notes
-Open new tab
-Problems:
-- URL doesn't change
-- Browser history doesn't change
-- Reload
-- Share location
-- Press back
-- New tab
-```
 
 ---
 
@@ -682,7 +669,7 @@ Problems:
       (replaces <Code code="<a>" /> tags)
     </li>
     <li>
-      <Code code="<Route/>" /> - To configure which route
+      <Code code="<Route/>" /> - To configure which location
       must render which component
     </li>
     <li>
@@ -741,16 +728,16 @@ Problems:
     },
     {
       lines: [6],
-      notes: "Show Heroes component when route is /heroes"
+      notes: "Show Heroes component when location is /heroes"
     },
     {
       lines: [7],
       notes:
-        "Show Villains component when route is /villains"
+        "Show Villains component when location is /villains"
     },
     {
       lines: [8],
-      notes: "Show Home component when route is /"
+      notes: "Show Home component when location is /"
     }
   ]}
 />
@@ -799,7 +786,7 @@ Problems:
       <Code code="<Link to='/location'/>" />
     </li>
     <li>
-      Map routes to components with
+      Map locations to components with
       <br />
       <Code code="<Route path='/location' component={Component}/>" />
     </li>
@@ -958,13 +945,13 @@ We teach you both patterns because you will most likely use both when you start 
     {
       range: [1, 9],
       notes:
-        "Putting HeroList inside the FancyBorder component, as a child",
+        "Putting HeroList inside the FancyBorder component, as a child"
     },
     {
       range: [11, 18],
       notes: "Rendering children inside the FancyBorder"
     },
-	{}
+    {}
   ]}
 />
 
@@ -979,17 +966,16 @@ We teach you both patterns because you will most likely use both when you start 
   steps={[
     {
       range: [1, 12],
-      notes:
-        "Giving a function as a child to FancyBorder",
+      notes: "Giving a function as a child to FancyBorder"
     },
     {
-      range: [5,8]
-	},
+      range: [5, 8]
+    },
     {
       range: [14, 21],
       notes: "props.children() is now invoked as a function"
     },
-	{}
+    {}
   ]}
 />
 
@@ -1138,11 +1124,12 @@ Assignments
 
 Context
 problem:
+
 - passing information between components is done with direct props
 - this is a problem when you want information from high level App, that is needed in a deeply nested component
 - the components between also need to know about the info, even though they dont use it
 - so every time you have global state in App, you have a problem with passing props
-solution: the official Context API
+  solution: the official Context API
 - a provider in the react tree, that makes the info available to any decending component that consumes for it
 
 - how to build a provider - WITHOUT STATE (own file)
@@ -1151,6 +1138,9 @@ solution: the official Context API
 - how to put provided value in state
 
 - unneccessary rerenders, dont inline value
+
+
+- GUSTAV: in examples/routes.js - DONT WE NEED EXACT, OR ELSE HOME WILL ALWAYS RENDER?
 
 ---
 

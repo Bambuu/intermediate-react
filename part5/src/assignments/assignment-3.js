@@ -12,8 +12,8 @@ When you do this, you will get an error.
 /*
 EXERCISE B:
 This is because the FormController requires the prop "onSubmit" to be a function.
-
-- Create a function called "handleFormSubmit" - have it take in one parameter,
+GUSTAV: WHY? A FUNCTION THAT DOES WHAT?
+- Create a function inside the HeroList class called "handleFormSubmit" - have it take in one parameter,
   and console.log it.
 - Set onSubmit to be "this.handleFormSubmit"
 
@@ -35,10 +35,12 @@ the "nameInputValue" and "awesomeInputValue" parts of the state
 */
 
 /*
+GUSTAV: COULD BE EXTRA
 EXERCISE D
 Notice how we've actually replicated all of the behaviour of our previous form, with this new FormController.
 Except for the refs!
 
+GUSTAV: ALSO REMOVE IT FROM THE ORIGINAL?
   - Attach "this.ref" to the first <input> field of the new form instead.
   - Make sure to call this.ref.current.focus() inside handleFormSubmit
 */
@@ -59,10 +61,13 @@ Alright! Now let's clean up our old form behaviour.
 - delete the "onAwesomeInputChange" method
 - delete the "onNameInputChange" method
 
+GUSTAV: UNNECESSARY IMO
 "addSuperHero" was a better name than 'handleFormSubmit' though.
 Let's rename our "handleFormSubmit" to "addSuperHero"
 
 Make sure everything still works, and then be a little impressed with
 yourself. You've managed to remove a *lot* of boilerplate code, by using
 render props.
+
+GUSTAV: ...BECAUSE WE HAVE REFACTORED THE BEHAVIOR INTO A SHARED COMPONENT BLA BLA BLA
 */

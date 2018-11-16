@@ -38,7 +38,7 @@ inside 'not-important/utils'
  - Import it somewhere inside your HeroList.
  - Use it somewhere inside your render JSX.
  - Copy-paste the following code in, as the child:
-    {params => {console.log(params)}}
+    {(params) => {console.log(params)}}
 
 You're done when you see "Hello from RenderProp" in your console.
 (You might see it multiple times, don't worry about that)
