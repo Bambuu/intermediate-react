@@ -13,10 +13,11 @@ Inside the file:
 
 ## Exercise B:
 Let's create a `Provider`, that will pass the value of the context
-to. We'll create in inside `App.js`
+to. We'll create it inside `App.js`
 
 We'll need to
-  - Import the Context we just exported 
+  - Import the Context we just exported
+GUSTAV: WHY CREATE THE THEME OBJECT IN APP.JS AND NOT THEMECONTEXT.JS??? 
   - Create a top-level object called "theme"
   that contains `color: "#f4b642"`
 
@@ -48,6 +49,7 @@ Let's try using this hex-code to style something.
 Inside `Theming.js` create a button with the text "Toggle Theme"
 Using inline styles, use the "color" value you get from the theme, to
 set the backgroundColor of the button.
+GUSTAV: ARE THEY TOTALLY FAMILIAR WITH INLINE STYLES?
 
 You should have a nice orange button now!
 
@@ -55,4 +57,5 @@ You should have a nice orange button now!
 Let's try to consume the context another place as well.
 Inside our `<HeroList>` component, subscribe to the context, using
 a `Consumer`.
+GUSTAV: WHICH HEADER DIV?
 Use inline-styles to change the `backgroundColor` of the header div.

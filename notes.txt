@@ -87,6 +87,8 @@ FINAL CHECKLIST:
     - Synchronize so app is the same component everywhere
     - streamline npm run vs npm run partX
     - add react routing to all package.json
+	- delete src-copy folders
+	- delete .gitkeep
     - check no lint errors
     - Streamline assignment / exercise capitalization
     - make
