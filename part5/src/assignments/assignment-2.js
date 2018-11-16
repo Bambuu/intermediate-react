@@ -6,6 +6,8 @@ We've created our own FormController render-prop. It's in not-important/FormCont
 */
 
 /*
+GUSTAV: WE MIGHT NEED AN EXPLANATION OF WHAT FORMCONTROLLER DOES, AND WHAT ITS PURPOSE IS
+OTHERWISE WE ARE JUST IMPLEMENTING STUFF WITHOUT KNOWING WHY, OR WHAT THE END GOAL IS
 EXERCISE A
 Inside HeroList.js, import the FormController from 'not-important/FormController'
 */
@@ -24,6 +26,7 @@ you've succeeded.
 
 /*
 EXERCISE C:
+GUSTAV: WE HAVE NOT EXPLAINED PASSING PROPS TO OUR RENDER PROPS, SHOULD WE?
 Our FormController takes in an 'initialValues' prop,
 which consists of an object, and the initial values they
 should be set to in your form.
