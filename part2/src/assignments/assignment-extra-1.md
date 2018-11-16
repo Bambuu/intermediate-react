@@ -1,4 +1,4 @@
-# ASSIGNMENT THREE - REFS
+# EXTRA ASSIGNMENT - REFS
 Occasionally we do need to access the underlying DOM. It's very rare,
 and mostly for managing user focus, or integrating with third party libraries.
 
