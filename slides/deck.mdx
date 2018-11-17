@@ -108,7 +108,7 @@ by Jeppe Reinhold and Gustav Wengel
 
 ---
 
-# Working with forms and lists
+# Working with lists and forms
 
 ## Part 2
 
@@ -144,19 +144,47 @@ by Jeppe Reinhold and Gustav Wengel
 
 <CodeSurfer
   title="array.map()"
+  code={require("!raw-loader!./examples/array-map-simple.js")}
+  lang="javascript"
+  showNumbers={true}
+  theme={nightOwl}
+  steps={[
+    { lines: [1], notes: "Define a list of cities" },
+    {
+      range: [3, 5],
+      notes: "Go through each city, and change it"
+    },
+    {
+      tokens: {
+        3: [8, 9, 10, 11, 12, 13, 14],
+        4: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        5: [1]
+      }
+    },
+    {
+      range: [7, 12],
+      notes: "Result is the array with the changes"
+    }
+  ]}
+/>
+
+---
+
+<CodeSurfer
+  title="array.map()"
   code={require("!raw-loader!./examples/array-map-faulty.js")}
   lang="jsx"
   showNumbers={true}
   theme={nightOwl}
   steps={[
-    { range: [1, 8] },
-    { lines: [2] },
+    { range: [1, 12] },
+    { range: [2, 6], notes: "Our list of animals" },
     {
-      range: [2, 5],
+      range: [7, 9],
       notes: "map array values to JSX elements"
     },
-    { lines: [7], notes: "return created elements" },
-    { range: [10, 16], notes: "output" }
+    { lines: [11], notes: "return created elements" },
+    { range: [14, 20], notes: "output" }
   ]}
 />
 
@@ -175,10 +203,10 @@ by Jeppe Reinhold and Gustav Wengel
   theme={nightOwl}
   steps={[
     {
-      range: [3, 5],
-      notes: "adding 'key' prop to element"
+      range: [7, 9],
+      notes: "adding a unique key to the element"
     },
-    { range: [10, 16], notes: "output" }
+    { range: [14, 20], notes: "output" }
   ]}
 />
 
@@ -186,19 +214,7 @@ by Jeppe Reinhold and Gustav Wengel
 
 # Don't use the array index as key!
 
-<ul style={{ fontSize: "1.5em" }}>
-  <Appear>
-    <li>What happens if the array gets reordered?</li>
-    <li>
-      Or if an item in the middle of the array is added?
-    </li>
-    <li>Or removed?</li>
-    <li>
-      Indexes are not bound to the item, only its{" "}
-      <b>position</b>!
-    </li>
-  </Appear>
-</ul>
+If you use the index as a key, you'll get weird bugs in your lists
 
 ---
 
@@ -231,9 +247,9 @@ You want read the value from an `<input/>` element and do stuff with it
   showNumbers={true}
   theme={nightOwl}
   steps={[
-    { range: [1, 17] },
-    { range: [9, 14] },
-    { range: [2, 5] }
+    { range: [1, 16] },
+    { range: [8, 13] },
+    { range: [2, 4] }
   ]}
 />
 

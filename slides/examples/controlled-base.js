@@ -1,14 +1,13 @@
 class AddHero extends React.Component {
-  submitToBackend = () => {
-    // What to submit? What is the value of the input?? 🤨
-    postBackend({ data: "????" });
+  addHero = () => {
+    // What to add? What is the value of the input?? 🤨
   };
 
   render() {
     return (
       <div>
         <input type="text" />
-        <button onClick={this.submitToBackend}>
+        <button onClick={this.addHero}>
           Add Hero
         </button>
       </div>
