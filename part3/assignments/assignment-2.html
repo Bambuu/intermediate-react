@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>./part3/src/assignments/assignment-2.md</title>
-  <link rel="stylesheet" href="../../../github-markdown.css">
+  <title>./part3/assignments/assignment-2.md</title>
+  <link rel="stylesheet" href="../../github-markdown.css">
 </head>
 <body>
 <h1>
@@ -20,14 +20,16 @@ We're not going to be building one in this exercise, simply using one.</p>
 </ul>
 <h2>
 <a id="user-content-exercise-b" class="anchor" href="#exercise-b" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EXERCISE B:</h2>
-<p>Now, we'll need a HOC. You can import one that keeps track of scroll-position from the wonderful "react-fns" library.
+<p>Now, we'll need a HOC.
+You can import one that keeps track of scroll-position from the "react-fns" library, that
+we have installed for you.
 Write</p>
 <div class="highlight highlight-source-js"><pre><span class="pl-k">import</span> {<span class="pl-smi">withScroll</span>} <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>react-fns<span class="pl-pds">'</span></span></pre></div>
 <p>at the top of your HeroList.</p>
 <h2>
 <a id="user-content-exercise-c" class="anchor" href="#exercise-c" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EXERCISE C:</h2>
 <p>HOCs are functions that take in a component, and returns an enhanced component.
-The syntax is</p>
+The syntax is:</p>
 <div class="highlight highlight-source-js"><pre><span class="pl-k">const</span> <span class="pl-c1">EnhancedComponent</span> <span class="pl-k">=</span> <span class="pl-en">withSomeExtraFunctionality</span>(OriginalComponent)</pre></div>
 <p>We can wrap and export our HeroList like this.</p>
 <div class="highlight highlight-source-js"><pre><span class="pl-k">export</span> <span class="pl-k">const</span> <span class="pl-c1">HeroListWithScroll</span> <span class="pl-k">=</span> <span class="pl-en">withScroll</span>(HeroList);</pre></div>
@@ -37,27 +39,25 @@ The syntax is</p>
 </li>
 <li>Remove the export statement in front of <code>BaseHeroList</code>
 </li>
-<li>At the bottom of the file, export the enhanced component. Use the line below:</li>
+<li>At the bottom of the file, export the enhanced component:</li>
 </ul>
 <div class="highlight highlight-source-js"><pre><span class="pl-k">export</span> <span class="pl-k">const</span> <span class="pl-c1">HeroList</span> <span class="pl-k">=</span> <span class="pl-en">withScroll</span>(BaseHeroList)</pre></div>
 <p>Check to see if the app still runs.</p>
 <h2>
 <a id="user-content-exercise-d" class="anchor" href="#exercise-d" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EXERCISE D:</h2>
-<p>The withScroll HOC, keeps track of the scroll position,
-and passes them to the HeroList component through props.
-You can access them through the "x" and "y" props</p>
-<p>Try <code>console.log(this.props.y)</code> inside your render method, and see it work!</p>
+<p>The withScroll HOC passes the scroll position through the "x" and "y" props.</p>
+<p>Try writing <code>console.log(this.props.y)</code> inside your render method to see it work.</p>
 <h2>
 <a id="user-content-exercise-e" class="anchor" href="#exercise-e" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EXERCISE E:</h2>
-<p>Alright, now we have the scroll position, let's use it to color the background.
+<p>Let's use the scroll position to color the background.
 We've exported a <code>calculateBackgroundColor</code> function inside <code>not-important/utils.js</code></p>
-<p>Import it (named import), and inside the render() method, call it with the current y position.
-Log the result to make sure it changes.</p>
+<p>Import it (it's a named export), and inside the <code>render()</code> method, call it with the current y position.
+<code>console.log()</code> the result, to test if it works.</p>
 <h2>
 <a id="user-content-exercise-f" class="anchor" href="#exercise-f" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EXERCISE F:</h2>
 <p>You style a div using inline styles, by setting the style property to an object
-containing styles. E.g.</p>
-<p><code>&lt;div style={{backgroundColor: "red"}}&gt;&lt;/div&gt;</code></p>
+containing styles:
+<code>&lt;div style={{backgroundColor: "red"}}&gt;&lt;/div&gt;</code></p>
 <p>Note the double curly braces - the first one is to tell React that we're writing some JavaScript, and the second
 one is an object, in this case the object:</p>
 <div class="highlight highlight-source-js"><pre>{
@@ -65,9 +65,8 @@ one is an object, in this case the object:</p>
 }</pre></div>
 <p>Style the root <code>&lt;div&gt;</code> in your HeroList.
 Use the calculateBackgroundColor function instead of "red" in the example above, to set the backgroundColor.</p>
-<h2>
-<a id="user-content-now-youve-learned-how-to-use-a-hoc---theyre-very-simple-to-use-you-wrap-your-component-in-them-and-theyre-responsible" class="anchor" href="#now-youve-learned-how-to-use-a-hoc---theyre-very-simple-to-use-you-wrap-your-component-in-them-and-theyre-responsible" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Now you've learned how to use a HOC - they're very simple to use. You wrap your component in them, and they're responsible</h2>
-<p>for keeping track of some sort of logic. That's all there is to it!</p>
+<p>Now you've learned how to use a HOC - they're very simple to use. You wrap your component in them, and they're responsible
+for keeping track of some sort of logic. That's all there is to it!</p>
 
 </body>
 </html>

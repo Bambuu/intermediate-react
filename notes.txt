@@ -2,11 +2,11 @@
 
 Decision points:
 
-
 Work to be done:
 - Consider running setupAll in parallel
 - run prettier on the whole shebang - BUT NOT SLIDES! (it removes () around function parameters)
 - Maybe pick some nicer colors?
+- Create an assignments.html that just links to all the assignments in all parts
 
 Potential things to cut:
   - Manual implementation of scrolling
