@@ -45,7 +45,7 @@ You're done when you see "Hello from RenderProp" in your console.
 ## EXERCISE B:
 Let's change our function, to return some JSX.
 
-Have your function as a child return a <p></p> with the parameter it received from the
+Have your function as a child return a `<p></p>` with the parameter it received from the
 render prop component.
 You're done when you see the text "Hello from RenderProp" rendered.
 

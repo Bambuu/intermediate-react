@@ -265,14 +265,13 @@ Pulling the `value` of the `<input/>` up to the component `state`
 >
   <Appear>
     <img
-      src="./public/controlled-component-flow-1.svg"
+      src="./public/controlled-component-flow-initial.svg"
       className="stacked"
     />
     <img
-      src="./public/controlled-component-flow-2.svg"
+      src="./public/controlled-component-flow-simple.svg"
       className="stacked"
     />
-    <div />
   </Appear>
 </div>
 
@@ -308,6 +307,15 @@ Pulling the `value` of the `<input/>` up to the component `state`
     },
     { notes: "Done! 🥳" }
   ]}
+/>
+
+---
+
+Pulling the `value` of the `<input/>` up to the component `state`
+
+<img
+  src="./public/controlled-component-flow-final.svg"
+  style={{ width: "80vw", height: "50vh" }}
 />
 
 ---
@@ -349,19 +357,6 @@ We want to share behavior between components
 
 ## Composition 🥰 vs. inheritance 🤕
 
-<ul style={{ fontSize: "1.5em" }}>
-  <Appear>
-    <li>React is built around composition 💪</li>
-    <li>
-      Inheritance in JavaScript <em>is</em> technically
-      possible, but not favorable
-    </li>
-    <li>Extending a class component? 🙅‍♀️</li>
-  </Appear>
-</ul>
-
----
-
 <blockquote style={{ fontSize: "1.5em" }}>
   <i>
     "We haven’t found any use cases where we would recommend
@@ -385,6 +380,8 @@ We want to share behavior between components
     <li>
       HOCs are functions that takes in any component, and
       returns an <em>enhanced component</em>
+      <br />
+      <Code code="const EnhancedComponent = withHOC(OriginalComponent);" />
     </li>
     <li>
       We've never written our own HOC before, only used
@@ -403,6 +400,11 @@ We want to share behavior between components
   theme={nightOwl}
   steps={[
     {
+      range: [16, 17],
+      notes:
+        "Using a PizzaOrderButton that takes in the amount of pizzas to order"
+    },
+    {
       range: [1, 10],
       notes: "A network aware Order button"
     },
@@ -418,6 +420,11 @@ We want to share behavior between components
     {
       range: [12, 14],
       notes: "Wrap with HOC to enhance component"
+    },
+    {
+      range: [16, 17],
+      notes:
+        "Users of the enhanced component don't know about the HOC"
     }
   ]}
 />
@@ -488,8 +495,9 @@ We want to share behavior between components
     <li>
       HOCs are functions that takes in any component, and
       returns an <em>enhanced component</em>
+      <br />
+      <Code code="const EnhancedComponent = withHOC(OriginalComponent);" />
     </li>
-    <li>Always beware of premature composition 🤓</li>
   </Appear>
 </ul>
 
@@ -536,7 +544,7 @@ Problems:
   theme={nightOwl}
   steps={[
     {
-      range: [8, 39],
+      range: [8, 35],
       notes: "The App.js in part 4"
     },
     {
@@ -544,18 +552,9 @@ Problems:
       notes: "the currentPage state"
     },
     {
-      range: [29, 37],
-      notes: "Returned from render()"
-    },
-    {
-      range: [17, 22],
-      notes: "default mainComponent"
-    },
-    {
-      range: [24, 25],
-      notes: "mainComponent if currentPage === /theming"
-    },
-    { range: [26, 28] }
+      range: [17, 24],
+      notes: "if state is 'string' show this component"
+    }
   ]}
 />
 
@@ -740,21 +739,10 @@ Problems:
 
 ---
 
-## When to route - and when to just conditionally render? 🧐
-
-<ul style={{ fontSize: "1.5em" }}>
-  <Appear>
-    <li>Do you want the view to be deep linkable?</li>
-    <li>... the back button to change view?</li>
-  </Appear>
-</ul>
-
----
-
 # Assignments - Part 4
 
 1. Implement routing in the Heroes app
-2. Show the current location in the header using the `withRouter()` HOC
+2. Extra: Use `withRouter()` HOC to show current location in header
 3. ⛱
 
 <ReadMore link="reacttraining.com/react-router/web" />
@@ -776,17 +764,6 @@ Problems:
       behavior 🤝
     </li>
     <li>
-      HOCs wrap a component and{" "}
-      <em>inject behavior via props</em>
-    </li>
-    <li>
-      Render props instead render a component, that passes
-      the behavior to the component{" "}
-      <em>
-        from within the <Code code="render()" /> method
-      </em>
-    </li>
-    <li>
       Render props are sometimes refered to as{" "}
       <em>"function as a child"</em>
     </li>
@@ -804,6 +781,19 @@ Don't worry if it doesn't make sense, it's easier to understand when you try it.
 # 👍
 
 We teach you both patterns because you will most likely use both when you start using libraries.
+
+---
+
+<CodeSurfer
+  title="The children prop"
+  code={`<FancyBorder>
+  <HeroList/>
+</FancyBorder>`}
+  lang="jsx"
+  showNumbers={true}
+  theme={nightOwl}
+  steps={[{}]}
+/>
 
 ---
 
@@ -860,9 +850,9 @@ We teach you both patterns because you will most likely use both when you start 
       range: [1, 12],
       notes: "Giving a function as a child to FancyBorder"
     },
-    {
+    /*{
       range: [5, 8]
-    },
+    },*/
     {
       range: [14, 21],
       notes: "props.children() is now invoked as a function"
@@ -874,17 +864,14 @@ We teach you both patterns because you will most likely use both when you start 
 ---
 
 <CodeSurfer
-  title="Using a Network render prop"
   code={require("!raw-loader!./examples/render-prop-usage.js")}
   lang="jsx"
   showNumbers={true}
   theme={nightOwl}
   steps={[
+    {} /*,
     {
-      notes: "Our network aware OrderPizzaButton"
-    },
-    {
-      range: [1, 2],
+       range: [1, 2],
       notes: "The basics"
     },
     {
@@ -912,14 +899,32 @@ We teach you both patterns because you will most likely use both when you start 
       range: [4, 14],
       notes:
         "In short, the Render prop component is added inside our JSX"
-    }
+    }*/
   ]}
 />
 
 ---
 
-When you get that you are _"just"_ passing a function as the child to `<Network/>`,
-it becomes easier to understand 😇
+<ul style={{ fontSize: "1.2em" }}>
+  <li>
+    When you get that you are <em>"just"</em> passing a
+    function as the child to <Code code="<Network />" />, it
+    becomes easier to understand 😇
+  </li>
+  <Appear>
+    <li>
+      HOCs wrap a component and{" "}
+      <em>inject behavior via props</em>
+    </li>
+    <li>
+      Render props instead render a component, that passes
+      the behavior to the component{" "}
+      <em>
+        inside the <Code code="render()" /> method
+      </em>
+    </li>
+  </Appear>
+</ul>
 
 ---
 
@@ -928,13 +933,12 @@ Let us see how the Network Render prop component is implemented
 ---
 
 <CodeSurfer
-  title="Building the Network render prop"
   code={require("!raw-loader!./examples/network-render-prop.js")}
   lang="jsx"
   showNumbers={true}
   theme={nightOwl}
   steps={[
-    {},
+    {} /*,
     {
       lines: [1],
       notes:
@@ -949,7 +953,7 @@ Let us see how the Network Render prop component is implemented
       notes:
         "Render the 'children' prop, and run it as a function. Pass relevant arguments"
     },
-    { notes: "Done! 🥳" }
+    { notes: "Done! 🥳" }*/
   ]}
 />
 
@@ -1108,53 +1112,31 @@ If you want to see a deeper comparison, check out ["Use A Render Prop!" by Micha
 ---
 
 <CodeSurfer
-  title="Basic Context"
-  code={require("!raw-loader!./examples/context-basic.js")}
+  code={require("!raw-loader!./examples/context-static-theme.js")}
   lang="jsx"
   showNumbers={true}
   theme={nightOwl}
-  steps={[
-    {
-      range: [1, 8],
-      notes:
-        "Defined theme object and ThemeContext in separate file"
-    },
-    {
-      range: [10, 23],
-      notes: "The component that will Provide the context"
-    },
-    {
-      range: [10, 11],
-      notes:
-        "Import ThemeContext and theme to the component that provides it"
-    },
-    {
-      range: [15, 21],
-      notes:
-        "Wrap components that need it with TemeContext.Provider, set value = theme"
-    },
-    {
-      range: [25, 43],
-      notes: "The component that will consume the context"
-    },
-    {
-      range: [25, 26],
-      notes: "Again, import the ThemeContext"
-    },
-    {
-      lines: [30, 31, 40, 41],
-      notes:
-        "A context Consumer uses the Render prop pattern, get the context as parameter"
-    },
-    {
-      range: [31, 40],
-      notes:
-        "Read from the context, and render anything with it"
-    },
-    {
-      range: [28, 43]
-    }
-  ]}
+  steps={[{}]}
+/>
+
+---
+
+<CodeSurfer
+  code={require("!raw-loader!./examples/context-static-app.js")}
+  lang="jsx"
+  showNumbers={true}
+  theme={nightOwl}
+  steps={[{}]}
+/>
+
+---
+
+<CodeSurfer
+  code={require("!raw-loader!./examples/context-static-button.js")}
+  lang="jsx"
+  showNumbers={true}
+  theme={nightOwl}
+  steps={[{}]}
 />
 
 ---
@@ -1164,65 +1146,31 @@ But we aren't actually changing the theme? 🤔
 ---
 
 <CodeSurfer
-  title="Dynamic Context"
-  code={require("!raw-loader!./examples/context-state.js")}
+  code={require("!raw-loader!./examples/context-dynamic-theme.js")}
   lang="jsx"
   showNumbers={true}
   theme={nightOwl}
-  steps={[
-    {
-      range: [1, 9],
-      notes:
-        "Defined theme object and ThemeContext in separate file"
-    },
-    {
-      range: [11, 40],
-      notes: "The component that will Provide the context"
-    },
-    {
-      range: [11, 16],
-      notes:
-        "Import ThemeContext and themes to the component that provides it"
-    },
-    {
-      lines: [28, 29, 31],
-      notes:
-        "Put current theme in state of providing component"
-    },
-    {
-      lines: [35],
-      notes:
-        "Set value to this.state instead of theme directly"
-    },
-    {
-      range: [20, 26],
-      notes:
-        "function that changes the state in the providing component"
-    },
-    {
-      range: [28, 31],
-      notes:
-        "put toggleTheme function in state, so it is part of context as well"
-    },
-    {
-      range: [43, 62],
-      notes: "The theme consuming component"
-    },
-    {
-      range: [48, 50],
-      notes: "theme is now an object INSIDE the context"
-    },
-    {
-      range: [64, 80],
-      notes:
-        "The button to change the theme, also a consumer"
-    },
-    {
-      range: [69, 78],
-      notes:
-        "use the toggleTheme function from the context, to change the state higher up"
-    }
-  ]}
+  steps={[{}]}
+/>
+
+---
+
+<CodeSurfer
+  code={require("!raw-loader!./examples/context-dynamic-app.js")}
+  lang="jsx"
+  showNumbers={true}
+  theme={nightOwl}
+  steps={[{}]}
+/>
+
+---
+
+<CodeSurfer
+  code={require("!raw-loader!./examples/context-dynamic-button.js")}
+  lang="jsx"
+  showNumbers={true}
+  theme={nightOwl}
+  steps={[{}]}
 />
 
 ---

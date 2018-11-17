@@ -76,7 +76,7 @@ an `awesome` and a `name` property.
 ## EXERCISE H:
 Let's add another `<input>` that corresponds to `awesome`
 Like before:
-  - Add an <input> field inside the FormController
+  - Add an `<input>` field inside the FormController
   - set the `value` prop to `formValues.awesome.value`
   - set the `onChange` prop to `formValues.awesome.onChange`
 
