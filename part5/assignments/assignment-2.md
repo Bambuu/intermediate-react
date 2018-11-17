@@ -6,7 +6,7 @@ We've created our own render-prop component. We can use it to keep track of our
 `<input>` elements inside our HeroList.
 The component is called `FormController` and it can be imported from `not-important/FormController.js`
 
-#EXERCISE A
+## EXERCISE A
 Inside `HeroList.js`, import the FormController from 'not-important/FormController'
 
 ## EXERCISE B
