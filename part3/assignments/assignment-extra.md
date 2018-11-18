@@ -34,11 +34,9 @@ wraps the old one.
 ## EXERCISE D:
 So let's try returning a Class-Based Component!
 
-Inside your `withScroll` function define a class, call it `OuterComponent`:
-
-Return some random text from the render method.
-
-Return this class you've just created.
+- Inside your `withScroll` function define a class, call it `OuterComponent`:
+- Return some random text from the render method.
+- `return` this class you've just created.
 
 Tip: If you're confused, just define it exactly the way `BaseExtraAssignment` is
 defined below.
