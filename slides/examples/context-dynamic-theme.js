@@ -2,8 +2,8 @@
 export const redTheme = {
   color: "red"
 };
-export const orangeTheme = {
-  color: "orange"
+export const greenTheme = {
+  color: "green"
 };
 
 export const ThemeContext = React.createContext();

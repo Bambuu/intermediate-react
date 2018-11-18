@@ -12,6 +12,3 @@ const BaseOrderPizzaButton = props => {
 export const OrderPizzaButton = withNetwork(
   BaseOrderPizzaButton
 );
-
-// usage of OrderPizzaButton
-<OrderPizzaButton amount={4} />
