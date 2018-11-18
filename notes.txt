@@ -5,15 +5,12 @@ P4: Fjern alt med assignemnt descriptions og links
 Nicer exercise descriptions
   - Rename Assignment til AssignmentDescription
 
-Unresolved feedback slides:
-
 - P4. Hav en slide som siger de nok skal bruge .md filen
 - P5. Hav et ekstra slide med function as a child
 - p6. missing line
 
+
 FINAL CHECKLIST:
-    - Read the generated html and see if there are errors
-    - Proofread p5 and p6 again
     - Last check to see if all the links work
 
 

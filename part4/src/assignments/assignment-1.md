@@ -3,6 +3,9 @@
 Let's add some routing. We've installed `react-router` for you.
 You will be importing from "react-router-dom"
 
+**Note that in this exercise, we won't have the Assignment Descriptions in the SideBar. You'll have to read
+them from the `.md` file.**
+
 The first thing we need to do is add a top-level `Router`, that will help us
 keep our UI in sync with our URL.
 
@@ -24,23 +27,13 @@ React Router uses a `<Link/>` component, that acts like an `<a>` tag.
 
 Inside `SideBar.js`, `import {Link} from "react-router-dom"`
 
-You will find several `<a>` components.
-Start off by replacing the three bottom ones, with the following:
-```js
-<Link className="assignment-link" to="/assignment-1">Assignment 1</Link>
-<Link className="assignment-link" to="/assignment-extra-1">Extra Assignment 1</Link>
-<Link className="assignment-link" to="/assignment-extra-2">Extra Assignment 2</Link>
-```
-
-## EXERCISE C:
-Let's replace the rest of the `<a>` components with Links:
-
-For the rest of the `<a>` tags:
+Inside SideBar, you will find several `<a>` components.
  - Replace them with `<Link>` components.
  - Remove the onClick & href props
 
 Link takes a `to` prop, that will set the url.
 Give the different pages different urls like this schema:
+
   - Heroes page: `"/heroes"`
   - Theming page: `"/theming"`
   - Extra Exercise: `"/extra"`
@@ -48,7 +41,7 @@ Give the different pages different urls like this schema:
 When this exercise is finished, you'll see that when you click a link,
 the url changes - but the UI does not!
 
-## EXERCISE D:
+## EXERCISE C:
 Let's have the UI update based on the url.
 Currently inside `App` we use Conditional Rendering to render
 the correct component. We'll replace this with `Routes`
@@ -60,7 +53,7 @@ In the App component:
 
 Your app should now show nothing but a sidebar and a header.
 
-## EXERCISE F:
+## EXERCISE D:
 Let's add our first `Route`.
 
 Import it inside `App.js`, like the other components.
@@ -76,22 +69,12 @@ A Route takes a path, and a component to display:
 
 * Note: Currently it will not work with the index url `"/"` - which will still show nothing. *
 
-## EXERCISE G:
+## EXERCISE E:
 Implement the two other Routes (theming, extra), just like you did with the `"/heroes"` route
 
 Test to see if all routes work.
 
-## EXERCISE H:
-Implement the Routes for the Exercise descriptions. At the end of your routes, copy the following:
-```js
-<Route path="/assignment-1" component={Assignment}/>
-<Route path="/assignment-extra-1" component={Assignment}/>
-<Route path="/assignment-extra-2" component={Assignment}/>
-```
-
-Make sure your Assignment Description links work now.
-
-## EXERCISE H:
+## EXERCISE F:
 It's time for a little spring cleaning.
 Remove everything related to the old way of managing links
 
