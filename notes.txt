@@ -1,12 +1,6 @@
 ---- TODOS ----
 
-Decision points:
-
-Work to be done:
-- Slides:
-
 Nicer exercise descriptions
-  - Sæt øvelsesbeskrivelserne ind i sidebaren direkte fra .md
   - Rename Assignment til AssignmentDescription
 
 Unresolved feedback slides:
@@ -15,9 +9,6 @@ Unresolved feedback slides:
 - P3, kan vi bruge noget andet end withNetwork til HoC? Ex. scroll.
 - P5. Svært at forstå pros/cons af HOC & render props før man har prøvet det. Opsummeringsslide?
   Det er motivation nok at forskellige libraries bruger forskellige ting.
-
-- Nice To Have
-
 
 FINAL CHECKLIST:
     - Read the generated html and see if there are errors
