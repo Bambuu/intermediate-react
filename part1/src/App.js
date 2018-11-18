@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Assignment } from "./not-important/Assignment";
+import { AssignmentDescription } from "./not-important/AssignmentDescription";
 import { SideBar } from "./SideBar";
 import { Header } from "./Header";
 import { HeroList } from "./HeroList";
@@ -17,23 +17,21 @@ class App extends Component {
 
   render() {
     // Default component is HeroList
-    let mainComponent = <HeroList />;
+    let mainComponent = <HeroList/>;
     if (this.state.currentPage === "/theming") {
-      mainComponent = <Theming />;
+      mainComponent = <Theming/>;
     } else if (this.state.currentPage === "/extra") {
-      mainComponent = <ExtraAssignment />;
+      mainComponent = <ExtraAssignment/>;
     } else if (this.state.currentPage === "/assignment-1") {
-      mainComponent = <Assignment file="1"/>;
-    } else if (
-      this.state.currentPage === "/assignment-extra"
-    ) {
-      mainComponent = <Assignment file="extra"/>;
+      mainComponent = <AssignmentDescription file="1"/>;
+    } else if (this.state.currentPage === "/assignment-extra") {
+      mainComponent = <AssignmentDescription file="extra"/>;
     }
     return (
       <div className="root">
-        <SideBar changePage={this.changePage} />
+        <SideBar changePage={this.changePage}/>
         <div className="content">
-          <Header />
+          <Header/>
           {mainComponent}
         </div>
       </div>
