@@ -2,8 +2,8 @@
 
 Decision points:
 - Skal vi kun have et <input> i HeroList?
-  - Cut FormController even *shorter*
-    - Will involve implementing one of the fields for them.
+- Cut FormController even *shorter*
+  - Will involve implementing one of the fields for them.
 
 
 Work to be done:
