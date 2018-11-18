@@ -1,15 +1,29 @@
 ---- TODOS ----
 
 Decision points:
+- Inline heroList så man kan se komponenternes dele?
+- Skal vi kun have et <input> i HeroList?
 
 Work to be done:
-- Consider running setupAll in parallel
+- Consider running setupAll in parallel.
+  - Run part1 by itself
+  - Run setupAll for the rest, during p2 slides
+- Slide del-1, præsenter komponenterne
+- Make p1 a full project. Add extra assignment to read source code.
+- Øvelsesslide skal indeholde de filer de skal ændre i
+- Sæt øvelsesbeskrivelserne ind i sidebaren direkte fra .md
+- Lav Theming.js til multi-line jsx
+- Gør sådan vi kan markere uden den hopper rundt.
+
 - run prettier on the whole shebang - BUT NOT SLIDES! (it removes () around function parameters)
 - Maybe pick some nicer colors?
 - Create an assignments.html that just links to all the assignments in all parts
 
 Potential things to cut:
   - Manual implementation of scrolling
+
+- Nice To Have
+  - Lav en opsummering af øvelserne fra tidligere inden hver del starter
 
 FINAL CHECKLIST:
     - NOTHING BABYYYYY
