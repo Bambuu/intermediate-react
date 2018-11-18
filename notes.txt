@@ -10,20 +10,20 @@ Work to be done:
   - Run setupAll for the rest, during p2 slides
   - Update assignment text in p1 after doing this
 
+- Slides:
+  - Slide del-1, præsenter komponenterne
+  - Øvelsesslide skal indeholde de filer de skal ændre i
+  - Gør sådan vi kan markere uden den hopper rundt.
 
-- Slide del-1, præsenter komponenterne
-- Make p1 a full project. Add extra assignment to read source code.
-- Øvelsesslide skal indeholde de filer de skal ændre i
-- Sæt øvelsesbeskrivelserne ind i sidebaren direkte fra .md
-- Gør sådan vi kan markere uden den hopper rundt.
+Nicer exercise descriptions
+  - Sæt øvelsesbeskrivelserne ind i sidebaren direkte fra .md
+  - Create an assignments.html that just links to all the assignments in all parts
 
-- run prettier on the whole shebang - BUT NOT SLIDES! (it removes () around function parameters)
-- Maybe pick some nicer colors?
-- Create an assignments.html that just links to all the assignments in all parts
+TODO:
 - Read the generated html and see if there are errors
+- P6. Samme theme-eksempel som i slides
 - Cut FormController short
 - Cut down on assignment 6?
-- P6. Samme theme-eksempel som i slides
 
 Unresolved feedback slides:
 - P3, dræb building a HoC?
@@ -44,6 +44,8 @@ Potential things to cut:
 
 - Nice To Have
   - Lav en opsummering af øvelserne fra tidligere inden hver del starter
+  - Maybe pick some nicer colors?
+  - run prettier on the whole shebang - BUT NOT SLIDES! (it removes () around function parameters)
 
 FINAL CHECKLIST:
     - NOTHING BABYYYYY
