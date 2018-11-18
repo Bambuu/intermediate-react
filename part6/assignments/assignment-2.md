@@ -42,7 +42,8 @@ Have it compare `this.state.theme === redTheme`.
 If this evaluates to true, use `setState` to change the theme to `greenTheme`
 Otherwise, it should switch the theme to `redTheme`
 
-## EXERCISE G:
+## EXTRA EXERCISE:
+We're at the roads end, but we have one last extra exercise:
 Let's try to consume the context another place as well.
 Inside our `<Header>` component, subscribe to the context, using
 a `Consumer`.
