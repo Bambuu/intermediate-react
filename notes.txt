@@ -17,6 +17,35 @@ FINAL CHECKLIST:
 
 ---- TIME ----
 
+(Beta-test)
+P1 slides:  10 min
+P1 Ex:      26 min
+P1 total:   36 min
+
+P2 slides:  15.5 min
+P2 Ex:      37 min
+P2 total:   52.5 min
+
+P3 slides:  12 min
+P3 Ex:      53 min
+P3 total:   65 min
+
+Lunch:      20 min
+
+P4 slides:  12.5 min
+P4 Ex:      20 min
+P4 total:   32.5 min
+
+P5 slides:  11.5 min
+P5 Ex:      30 min
+P5 total:   41.5 min
+
+P6 slides:  12 min
+P6 Ex:      47 min
+P6 total:   59 min
+
+Total: 305 min = 5h
+
 ------- EXERCISES ------
 
 Part 2 time (Gustav):
