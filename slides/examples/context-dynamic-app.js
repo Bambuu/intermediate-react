@@ -1,9 +1,5 @@
 // app.js
-import {
-  redTheme,
-  greenTheme,
-  ThemeContext
-} from "./theme-context";
+import { redTheme, greenTheme, ThemeContext } from "./theme-context";
 
 class App extends React.Component {
   toggleTheme = () => {
@@ -21,10 +17,13 @@ class App extends React.Component {
 
   render() {
     return (
-      <ThemeContext.Provider value={this.state}>
-        <SideBar />
-        <Main />
-      </ThemeContext.Provider>
+      <div>
+        <ThemeContext.Provider value={this.state}>
+          <SideBar />
+          <Main />
+        </ThemeContext.Provider>
+        <Footer />
+      </div>
     );
   }
 }

@@ -757,9 +757,9 @@ We teach you both patterns because you will most likely use both when you start 
 
 <CodeSurfer
   title="The children prop"
-  code={`<FancyBorder>
+  code={`<Highlight>
   <HeroList/>
-</FancyBorder>`}
+</Highlight>`}
   lang="jsx"
   showNumbers={true}
   theme={nightOwl}
@@ -924,11 +924,11 @@ Let us see how the Network Render prop component is implemented
 
 ---
 
-# Personal rule of thumb guides
+# Personal rule of thumb
 
 1. Use render props where you can
 2. Use HOCs if you have to combine multiple in _same_ component
-3. Use HOCs if you have to access enhancement in lifecycle methods
+3. Use HOCs if you need access to enhancement in other lifecycle methods
 
 ---
 
@@ -936,7 +936,7 @@ If you want to see a deeper comparison, check out ["Use A Render Prop!" by Micha
 
 ---
 
-# Assignments - Part 5
+## Assignments - Part 5
 
 1. Use the _function as a child_ pattern
 2. Use a `<FormController/>` render prop to simplify our HeroList input
@@ -1121,10 +1121,10 @@ But we aren't actually changing the theme? 🤔
   theme={nightOwl}
   steps={[
     {},
-    { range: [2, 6] },
-    { lines: [17, 18, 20, 24] },
-    { range: [9, 15] },
-    { range: [9, 20] }
+    { lines: [2] },
+    { lines: [13, 14, 16, 21] },
+    { range: [5, 11] },
+    { range: [5, 16] }
   ]}
 />
 

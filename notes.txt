@@ -5,33 +5,17 @@ Decision points:
 - Skal vi kun have et <input> i HeroList?
 
 Work to be done:
-- Consider running setupAll in parallel.
-  - Run part1 by itself
-  - Run setupAll for the rest, during p2 slides
-  - Update assignment text in p1 after doing this
 
 - Slides:
-  - Slide del-1, præsenter komponenterne
-  - Øvelsesslide skal indeholde de filer de skal ændre i
-  - Gør sådan vi kan markere uden den hopper rundt.
 
 Nicer exercise descriptions
   - Sæt øvelsesbeskrivelserne ind i sidebaren direkte fra .md
-  - Create an assignments.html that just links to all the assignments in all parts
 
 Unresolved feedback slides:
 - P3, dræb building a HoC?
 - P3, kan vi bruge noget andet end withNetwork til HoC? Ex. scroll.
-- P4. Assignment slide passer ikke
-- P5. Se om vi kan forklare render props med FancyBorder
-- P5. Se om vi kan vise render props på en anden måde, hvor man passer ting ned til funktionen
-hurtigere.
-- P5. Send "this.state.online" med i stedet for "this.state" hvis det er.
-- P5. Ændr "Rule of thumb guides" til "Rules of thumb"
 - P5. Svært at forstå pros/cons af HOC & render props før man har prøvet det. Opsummeringsslide?
   Det er motivation nok at forskellige libraries bruger forskellige ting.
-- P6. Lad være med at kalde det et NavLink
-- P6. App.js er for mange linjer, kan vi skære eksemplet ned?
 
 Potential things to cut:
   - Manual implementation of scrolling
