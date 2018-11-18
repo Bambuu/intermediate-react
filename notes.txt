@@ -1,10 +1,6 @@
 ---- TODOS ----
 
 Decision points:
-- Skal vi kun have et <input> i HeroList?
-- Cut FormController even *shorter*
-  - Will involve implementing one of the fields for them.
-
 
 Work to be done:
 - Slides:
@@ -19,9 +15,7 @@ Unresolved feedback slides:
   Det er motivation nok at forskellige libraries bruger forskellige ting.
 
 - Nice To Have
-  - Lav en opsummering af øvelserne fra tidligere inden hver del starter
-  - Maybe pick some nicer colors?
-  - run prettier on the whole shebang - BUT NOT SLIDES! (it removes () around function parameters)
+
 
 FINAL CHECKLIST:
     - Read the generated html and see if there are errors
