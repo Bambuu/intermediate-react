@@ -1,17 +1,17 @@
 const App = () => {
   return (
     <div>
-      <FancyBorder>
+      <Highlight>
         <HeroList />
-      </FancyBorder>
+      </Highlight>
     </div>
   );
 };
 
 // Containing component
-const FancyBorder = (props) => {
+const Highlight = (props) => {
   return (
-    <div className="redBorder">
+    <div className="redBackground">
       {props.children}
     </div>
   );

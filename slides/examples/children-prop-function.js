@@ -1,21 +1,21 @@
 const App = () => {
   return (
     <div>
-      <FancyBorder>
-        {() => {
+      <Highlight>
+        {(textColor) => {
           const favHero = "Deadpool";
-          return <HeroList hero={favHero} />;
+          return <HeroList hero={favHero} style={{color: textColor}}/>;
         }}
-      </FancyBorder>
+      </Highlight>
     </div>
   );
 };
 
 // Containing component
-const FancyBorder = (props) => {
+const Highlight = (props) => {
   return (
 	<div className="redBorder">
-	  {props.children()}
+	  {props.children('yellow')}
 	</div>
   );
 };

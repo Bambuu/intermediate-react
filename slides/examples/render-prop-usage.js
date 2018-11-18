@@ -3,9 +3,9 @@ export const OrderPizzaButton = props => {
 
   return (
     <Network>
-      {(networkProps) => {
+      {(online) => {
         return (
-          <button disabled={!networkProps.online}>
+          <button disabled={!online}>
             Order {amount} Pizzas
           </button>
         );
