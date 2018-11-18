@@ -1,18 +1,12 @@
 ---- TODOS ----
 
-P4: Fjern alt med assignemnt descriptions og links
-
-Nicer exercise descriptions
-  - Rename AssignmentDescription til AssignmentDescription
-
 - P4. Hav en slide som siger de nok skal bruge .md filen
 - P5. Hav et ekstra slide med function as a child
 - p6. missing line
 
 
 FINAL CHECKLIST:
-    - Last check to see if all the links work
-
+  - Nothiiin
 
 ---- TIME ----
 
