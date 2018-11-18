@@ -1,11 +1,12 @@
 ---- TODOS ----
 
 Decision points:
-- Inline heroList så man kan se komponenternes dele?
 - Skal vi kun have et <input> i HeroList?
+  - Cut FormController even *shorter*
+    - Will involve implementing one of the fields for them.
+
 
 Work to be done:
-
 - Slides:
 
 Nicer exercise descriptions
@@ -16,11 +17,6 @@ Unresolved feedback slides:
 - P3, kan vi bruge noget andet end withNetwork til HoC? Ex. scroll.
 - P5. Svært at forstå pros/cons af HOC & render props før man har prøvet det. Opsummeringsslide?
   Det er motivation nok at forskellige libraries bruger forskellige ting.
-
-Potential things to cut:
-  - Cut FormController even *shorter*
-    - Will involve implementing one of the fields for them.
-  - Cut down on assignment 6?
 
 - Nice To Have
   - Lav en opsummering af øvelserne fra tidligere inden hver del starter
