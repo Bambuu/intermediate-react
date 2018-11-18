@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Assignment } from './not-important/Assignment';
+import { AssignmentDescription } from './not-important/AssignmentDescription';
 import { SideBar } from "./SideBar";
 import { Header } from "./Header";
 import { HeroList } from "./HeroList";
@@ -23,13 +23,11 @@ class App extends Component {
     } else if (this.state.currentPage === "/extra") {
       mainComponent = <ExtraAssignment />;
     } else if (this.state.currentPage === "/assignment-1") {
-      mainComponent = <Assignment file="1" />;
+      mainComponent = <AssignmentDescription file="1" />;
     } else if (this.state.currentPage === "/assignment-2") {
-      mainComponent = <Assignment file="2" />;
-    } else if (
-      this.state.currentPage === "/assignment-extra"
-    ) {
-      mainComponent = <Assignment file="extra" />;
+      mainComponent = <AssignmentDescription file="2" />;
+    } else if (this.state.currentPage === "/assignment-extra") {
+      mainComponent = <AssignmentDescription file="extra" />;
     }
 
     return (
