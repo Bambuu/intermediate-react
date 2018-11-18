@@ -8,6 +8,8 @@ Work to be done:
 - Consider running setupAll in parallel.
   - Run part1 by itself
   - Run setupAll for the rest, during p2 slides
+
+- FormController remove proptypes
 - Slide del-1, præsenter komponenterne
 - Make p1 a full project. Add extra assignment to read source code.
 - Øvelsesslide skal indeholde de filer de skal ændre i
