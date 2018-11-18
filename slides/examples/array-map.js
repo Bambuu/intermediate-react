@@ -1,8 +1,12 @@
 const FavoriteAnimals = () => {
-  const animals = ["elephant", "lion", "giraffe"];
-  const animalElements = animals.map(animal => (
-    <li key={animal}>{animal}</li>
-  ));
+  const animals = [
+    { id: 110, name: "elephant" },
+    { id: 5, name: "lion" },
+    { id: 2, name: "giraffe" }
+  ];
+  const animalElements = animals.map((animal) => {
+    return <li key={animal.id}>{animal.name}</li>;
+  });
 
   return <ul>{animalElements}</ul>;
 };

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>./part5/assignments/assignment-3.md</title>
+  <link rel="stylesheet" href="../../github-markdown.css">
+</head>
+<body>
+<h1>
+<a id="user-content-assignment-3---tying-it-all-together" class="anchor" href="#assignment-3---tying-it-all-together" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ASSIGNMENT 3 - TYING IT ALL TOGETHER</h1>
+<p>In this section we'll look at submitting the form.</p>
+<h2>
+<a id="user-content-exercise-a" class="anchor" href="#exercise-a" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EXERCISE A:</h2>
+<p>Create a <code>&lt;button&gt;</code> inside the FormController, and click it.
+Buttons inside form submit the form by default.
+When you do this, you will get an error.</p>
+<h2>
+<a id="user-content-exercise-b" class="anchor" href="#exercise-b" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EXERCISE B:</h2>
+<p>This is because the FormController requires the prop <code>onSubmit</code>.
+<code>onSubmit</code> is a function where you will do something with the form values, when the user clicks
+"Submit"</p>
+<ul>
+<li>Create a function inside the HeroList class called <code>handleFormSubmit</code> - have it take in one parameter,
+and <code>console.log</code> it.</li>
+<li>Set <code>onSubmit</code> to be <code>this.handleFormSubmit</code>
+</li>
+</ul>
+<p>When you click your button, you should see the value of the input fields
+in your console.</p>
+<p><em>Note that the form will reset after each submission, so the  values will
+reset to their initialValue</em></p>
+<h2>
+<a id="user-content-exercise-c" class="anchor" href="#exercise-c" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EXERCISE C:</h2>
+<p>Now that we have both an <code>awesome</code> and a <code>name</code> from our form,
+we can create a new Superhero!</p>
+<p>Rewrite <code>handleFormSubmit</code> to create a new superhero. Take inspiration
+in <code>addSuperHero</code>, but notice you don't manually need to keep track of
+the <code>nameInputValue</code> and <code>awesomeInputValue</code> parts of the state</p>
+<h2>
+<a id="user-content-exercise-d" class="anchor" href="#exercise-d" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EXERCISE D:</h2>
+<p>Let's set the initialValues to something more sensible than <code>MyHeroName</code> and <code>999</code>.
+Set the initial name of a superhero to an empty string, and the initial awesome to 0</p>
+<h2>
+<a id="user-content-exercise-e" class="anchor" href="#exercise-e" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EXERCISE E:</h2>
+<p>Alright! Now let's clean up our old form behaviour.</p>
+<ul>
+<li>Remove the old form from the render method</li>
+<li>remove <code>awesomeInputValue</code> and <code>nameInputValue</code> from the state</li>
+<li>delete the <code>addSuperHero</code> method</li>
+<li>delete the <code>onAwesomeInputChange</code> method</li>
+<li>delete the <code>onNameInputChange</code> method</li>
+</ul>
+<p>Make sure everything still works and then be a little impressed with
+yourself. You've managed to remove a <em>lot</em> of boilerplate code, by using a
+render prop.</p>
+
+</body>
+</html>

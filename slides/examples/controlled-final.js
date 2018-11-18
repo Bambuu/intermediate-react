@@ -8,9 +8,9 @@ class AddHero extends React.Component {
     this.setState({ value: nextValue });
   };
 
-  submitToBackend = () => {
-    postBackend({ data: this.state.value });
-    this.setState({ value: "" }); // reset state
+  addHero = () => {
+    // now we can read whatever the user has inputted,
+    // from this.state.value 🎉
   };
 
   render() {
@@ -21,9 +21,7 @@ class AddHero extends React.Component {
           value={this.state.value}
           onChange={this.onValueChange}
         />
-        <button onClick={this.submitToBackend}>
-          Add Hero
-        </button>
+        <button onClick={this.addHero}>Add Hero</button>
       </div>
     );
   }

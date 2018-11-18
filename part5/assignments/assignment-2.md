@@ -6,7 +6,7 @@ We've created our own render-prop component. We can use it to keep track of our
 `<input>` elements inside our HeroList.
 The component is called `FormController` and it can be imported from `not-important/FormController.js`
 
-#EXERCISE A
+## EXERCISE A
 Inside `HeroList.js`, import the FormController from 'not-important/FormController'
 
 ## EXERCISE B
@@ -76,7 +76,7 @@ an `awesome` and a `name` property.
 ## EXERCISE H:
 Let's add another `<input>` that corresponds to `awesome`
 Like before:
-  - Add an <input> field inside the FormController
+  - Add an `<input>` field inside the FormController
   - set the `value` prop to `formValues.awesome.value`
   - set the `onChange` prop to `formValues.awesome.onChange`
 

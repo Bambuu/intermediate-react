@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>./part4/assignments/assignment-extra-1.md</title>
+  <link rel="stylesheet" href="../../github-markdown.css">
+</head>
+<body>
+<h1>
+<a id="user-content-extra-assignment-1---default-routes-and-higher-order-components" class="anchor" href="#extra-assignment-1---default-routes-and-higher-order-components" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EXTRA ASSIGNMENT 1 - DEFAULT ROUTES AND HIGHER ORDER COMPONENTS</h1>
+<h1>
+<a id="user-content-exercise-a" class="anchor" href="#exercise-a" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EXERCISE A:</h1>
+<p>Let's look at the Header. We want it to show the current url.</p>
+<p>Luckily we can tap into this information, with a Higher-Order Component!</p>
+<p>Inside <code>Header.js</code> import the <code>withRouter</code> HOC</p>
+<h1>
+<a id="user-content-exercise-b" class="anchor" href="#exercise-b" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EXERCISE B</h1>
+<p>Let's export the Header with the withRouter Higher Order Component.</p>
+<p>We've only done this with class based components before, but it works exactly the same
+way with a functional component.</p>
+<p>As a reminder, this involves</p>
+<ul>
+<li>Renaming the component</li>
+<li>Removing the original export</li>
+<li>Creating a new export line, where the "withRouter" HOC is applied.</li>
+</ul>
+<p><em>(Look at HeroList and withScroll for inspiration if you need it)</em></p>
+<h1>
+<a id="user-content-exercise-c" class="anchor" href="#exercise-c" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EXERCISE C</h1>
+<p>withRouter gives us the location info as props, inside <code>Header</code>:</p>
+<ul>
+<li>Have the Header take in <code>props</code> as a parameter</li>
+<li>
+<code>console.log()</code> the props.</li>
+</ul>
+<p>Try navigating around - you'll see the Header gets new props
+whenever a link is clicked.</p>
+<h1>
+<a id="user-content-exercise-d" class="anchor" href="#exercise-d" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EXERCISE D</h1>
+<p>Let's have the header display our current relative position.
+<em>(So if we're at "localhost:3000/heroes" it should display "/heroes")</em></p>
+<p>Have a look at the props you're receiving from <code>withRouter</code>
+to figure out how to accomplish this.</p>
+<p>Make sure it shows correctly on all the pages.</p>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>./part5/assignments/assignment-2.md</title>
+  <link rel="stylesheet" href="../../github-markdown.css">
+</head>
+<body>
+<h1>
+<a id="user-content-assignment-2---using-a-render-prop" class="anchor" href="#assignment-2---using-a-render-prop" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ASSIGNMENT 2 - USING A RENDER PROP</h1>
+<h2>
+<a id="user-content-the-formcontroller" class="anchor" href="#the-formcontroller" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The FormController</h2>
+<p>Let's look at how using a Render Prop, can drastically simplify our form code.
+We've created our own render-prop component. We can use it to keep track of our
+<code>&lt;input&gt;</code> elements inside our HeroList.
+The component is called <code>FormController</code> and it can be imported from <code>not-important/FormController.js</code></p>
+<p>#EXERCISE A
+Inside <code>HeroList.js</code>, import the FormController from 'not-important/FormController'</p>
+<h2>
+<a id="user-content-exercise-b" class="anchor" href="#exercise-b" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EXERCISE B</h2>
+<p>Render the <code>FormController</code> inside the JSX. It expects
+a function-as-a-child.
+Give it a function that console.logs() the parameter it is given.
+You can call the parameter anything, but I'll call it <code>formValues</code></p>
+<p>When your app logs an empty object to the console, you've succeeded.</p>
+<h2>
+<a id="user-content-exercise-c" class="anchor" href="#exercise-c" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EXERCISE C:</h2>
+<p>Render-prop components are just like regular components.
+This means they also take in props.</p>
+<p>FormController takes an <code>initialValue</code> prop.
+<code>initialValues</code> consists of an object, and the initial values they
+should be set to in your form.</p>
+<p>Pass it the object <code>{name: "MyHeroName"}</code></p>
+<p>Make sure the object you're console.logging is no longer empty.</p>
+<h2>
+<a id="user-content-exercise-d" class="anchor" href="#exercise-d" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EXERCISE D:</h2>
+<p>Let's look at rendering some JSX inside our form.
+Have the function-as-a-child return a <code>&lt;div&gt;</code>
+with an <code>&lt;input&gt;</code> element inside it.</p>
+<p><em>Tip: It's a good idea to keep the <code>console.log</code> inside the function
+for now, to log the parameters you're getting. It'll help
+figuring out how to use them.</em></p>
+<h2>
+<a id="user-content-exercise-e" class="anchor" href="#exercise-e" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EXERCISE E:</h2>
+<p>Let's look at wiring this <code>&lt;input&gt;</code> up to our FormController.
+Inside our function, we should have been passed an object that looks like this:</p>
+<div class="highlight highlight-source-js"><pre>{
+  name<span class="pl-k">:</span> {
+    value<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>MyHeroName<span class="pl-pds">"</span></span>,
+    onChange<span class="pl-k">:</span> <span class="pl-c"><span class="pl-c">//</span>some function</span>
+    }
+}</pre></div>
+<p>Let's pass down the <code>value</code> to our <code>&lt;input&gt;</code>, through the value
+prop:
+<code>&lt;input value={formValues.name.value} /&gt;</code></p>
+<p>You should have an <code>&lt;input&gt;</code> with the value of "myHeroName" now!</p>
+<h2>
+<a id="user-content-exercise-f" class="anchor" href="#exercise-f" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EXERCISE F</h2>
+<p>Like before, if we want to write in the field, we'll
+need an onChange handler. Use the onChange handler that
+the FormController provides in
+<code>formValues.name.onChange</code></p>
+<p>You should now have an <code>&lt;input&gt;</code> component which you can type in,
+and that has an initial value of "MyHeroName".</p>
+<h2>
+<a id="user-content-exercise-g" class="anchor" href="#exercise-g" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EXERCISE G</h2>
+<p>Let's look at doing the same thing again with another field.</p>
+<p>In <code>initialValues</code>, add <code>awesome: 999</code> to the object</p>
+<p>Notice how the <code>formValues</code> parameter you've given changes. It now has both
+an <code>awesome</code> and a <code>name</code> property.</p>
+<h2>
+<a id="user-content-exercise-h" class="anchor" href="#exercise-h" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EXERCISE H:</h2>
+<p>Let's add another <code>&lt;input&gt;</code> that corresponds to <code>awesome</code>
+Like before:</p>
+<ul>
+<li>Add an  field inside the FormController</li>
+<li>set the <code>value</code> prop to <code>formValues.awesome.value</code>
+</li>
+<li>set the <code>onChange</code> prop to <code>formValues.awesome.onChange</code>
+</li>
+</ul>
+<p>Here you'll want to mark <code>type</code> of the input as <code>number</code> as well.</p>
+<p>Now you should have two <code>&lt;input&gt;</code> elements you can type in!
+This new one should have 999 as the initial value.</p>
+
+</body>
+</html>

@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>./part6/src/assignments/assignment-2.md</title>
-  <link rel="stylesheet" href="../../../github-markdown.css">
+  <title>./part6/assignments/assignment-2.md</title>
+  <link rel="stylesheet" href="../../github-markdown.css">
 </head>
 <body>
 <h1>
 <a id="user-content-assignment-2---theme-togglin" class="anchor" href="#assignment-2---theme-togglin" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ASSIGNMENT 2 - Theme-togglin'</h1>
 <h2>
-<a id="user-content-exercise-a" class="anchor" href="#exercise-a" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Exercise A:</h2>
-<p>To change the theme that, we'll need two themes.
+<a id="user-content-exercise-a" class="anchor" href="#exercise-a" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EXERCISE A:</h2>
+<p>To change the theme, we'll need two themes.
 Change our <code>theme</code> object to look like this:</p>
 <div class="highlight highlight-source-js"><pre>{
   orange<span class="pl-k">:</span> {
@@ -24,7 +24,7 @@ Change our <code>theme</code> object to look like this:</p>
 <a id="user-content-exercise-b" class="anchor" href="#exercise-b" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EXERCISE B:</h2>
 <p>We'll also need to be able to let React know when the Theme has updated.
 To do that, we'll need to put it inside the state.</p>
-<p>Add a "theme" state to the <code>App</code> component. Have the default value be <code>theme.orange</code></p>
+<p>Add a <code>theme</code> state to the <code>App</code> component. Have the default value be <code>theme.orange</code></p>
 <p>Change the Providers <code>value</code> to be <code>this.state.theme</code>
 Ensure it still works.</p>
 <h2>
@@ -43,14 +43,13 @@ need to pass down all of the state.</p>
 <ul>
 <li>Change the <code>value</code> of the Provider to be <code>this.state</code>
 </li>
-<li>Anywhere you access <code>themeContext.color</code>, you will have to update to access
-<code>themeContext.theme.color</code>
+<li>Anywhere you accessed <code>themeContext.color</code>, you  must change it to <code>themeContext.theme.color</code>
 </li>
 </ul>
 <h2>
 <a id="user-content-exercise-e" class="anchor" href="#exercise-e" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EXERCISE E</h2>
 <p>Now we have access to our the function anywhere we subscribe to the context.
-Inside <code>Theming.js</code>, call the <code>toggleTheme</code> when the button is clicked.
+Inside <code>Theming.js</code>, call <code>toggleTheme</code> when the button is clicked.
 Check that the <code>console.log</code> is being called.</p>
 <h2>
 <a id="user-content-exercise-b-1" class="anchor" href="#exercise-b-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EXERCISE B:</h2>
@@ -63,9 +62,9 @@ Otherwise, it should switch the theme to <code>theme.orange</code></p>
 <p>Now your button should switch the theme when clicked. You will see both the
 header and the buttons color is updated. All without passing a simple prop down
 to components that don't need it.</p>
-<p>To end off the course - a warning: Some of Reacts greatest strengths are its
-explicitness. Use Context sparingly.
-Preferably only for global state, e.g. user login status,
+<p>Be careful though: One of Reacts greatest strengths is its
+explicitness. Use Context sparingly.</p>
+<p>Preferably only for global state, e.g. user login status,
 theming, internationalization etc.</p>
 <p>Good job on completing!</p>
 

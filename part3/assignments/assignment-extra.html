@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>./part3/src/assignments/assignment-extra.md</title>
-  <link rel="stylesheet" href="../../../github-markdown.css">
+  <title>./part3/assignments/assignment-extra.md</title>
+  <link rel="stylesheet" href="../../github-markdown.css">
 </head>
 <body>
 <h1>
@@ -20,7 +20,7 @@ The first step is to create a function that takes in a component, and returns th
 <ul>
 <li>Take in <code>WrappedComponent</code> as a parameter in <code>withScroll</code>
 </li>
-<li>Return <code>WrappedComponent</code> without doing nothing to it.</li>
+<li>Return <code>WrappedComponent</code> without doing anything to it.</li>
 </ul>
 <h2>
 <a id="user-content-exercise-c" class="anchor" href="#exercise-c" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EXERCISE C:</h2>
@@ -32,7 +32,9 @@ The first step is to create a function that takes in a component, and returns th
 <li>Below everything, add:</li>
 </ul>
 <div class="highlight highlight-source-js"><pre>  <span class="pl-k">export</span> <span class="pl-k">const</span> <span class="pl-c1">ExtraAssignment</span> <span class="pl-k">=</span> <span class="pl-en">withScroll</span>(BaseExtraAssignment)</pre></div>
-<p>Note here that components aren't very "magic"
+<h2>
+<a id="user-content-components-and-magic" class="anchor" href="#components-and-magic" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>COMPONENTS AND MAGIC</h2>
+<p>As you can see, components aren't very magic.
 We can take components in as parameters, and return them from
 functions.</p>
 <p>However, how do we <em>do</em> something with the component?
@@ -40,7 +42,7 @@ The answer is - we don't! We return a <em>new</em> component that
 wraps the old one.</p>
 <h2>
 <a id="user-content-exercise-d" class="anchor" href="#exercise-d" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EXERCISE D:</h2>
-<p>So let's try returning a Class-Based Component instead!</p>
+<p>So let's try returning a Class-Based Component!</p>
 <p>Inside your <code>withScroll</code> function define a class, call it <code>OuterComponent</code>:</p>
 <p>Return some random text from the render method.</p>
 <p>Return this class you've just created.</p>
@@ -48,7 +50,7 @@ wraps the old one.</p>
 defined below.</p>
 <h2>
 <a id="user-content-exercise-e" class="anchor" href="#exercise-e" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EXERCISE E</h2>
-<p>Now, let's return the <code>&lt;WrappedComponent/&gt;</code> from our render method
+<p>Now, let's return the <code>&lt;WrappedComponent/&gt;</code> from the render method of <code>OuterComponent</code>
 You can use the <code>&lt;WrappedComponent/&gt;</code> you get as a parameter, just like any other Component
 you would import from somewhere.</p>
 <p>You will notice the props are missing from the component</p>
@@ -59,24 +61,20 @@ you would import from somewhere.</p>
 <code>&lt;WrappedComponent {...this.props} /&gt;</code></p>
 <p>This takes all the props the HOC was given, and passes them to the <code>WrappedComponent</code>.</p>
 <p>Pass down the props to the <code>WrappedComponent</code>, and ensure they're displayed.</p>
-<p>**
-Tip: If you're confused by the {...props} line, it's a spread operator.
+<p><em>Tip: If you're confused by the {...props} line, it's a spread operator.
 Feel free to ask about it - you can also read more info here:
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax" rel="nofollow">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax</a>
-**</p>
-<p>Now we've actually got a proper class-based Higher-Order Component. We can do anything with this
-component we'd normally do, including setting state, and getting props.</p>
-<p>Let's pass some extra props to our <code>WrappedComponent</code>. Let's just start off by hard-coding the props <code>x</code> and <code>y</code></p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax" rel="nofollow">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax</a></em></p>
 <h2>
 <a id="user-content-exercise-h" class="anchor" href="#exercise-h" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EXERCISE H:</h2>
+<p>Let's pass some extra props to our <code>WrappedComponent</code>. Let's just start off by hard-coding the props <code>x</code> and <code>y</code></p>
 <p>Render the WrappedComponent like this:</p>
 <div class="highlight highlight-source-js-jsx"><pre>&lt;<span class="pl-ent">WrappedComponent</span> <span class="pl-e">x</span><span class="pl-k">=</span><span class="pl-pse">{</span><span class="pl-c1">0</span><span class="pl-pse">}</span> <span class="pl-e">y</span><span class="pl-k">=</span><span class="pl-pse">{</span><span class="pl-c1">0</span><span class="pl-pse">}</span> <span class="pl-pse">{</span><span class="pl-k">...</span><span class="pl-smi">props</span><span class="pl-pse">}</span> /&gt;</pre></div>
-<p>Display both the x and the y prop inside the BaseExtraAssignment</p>
+<p>Display both the x and the y prop inside the <code>BaseExtraAssignment</code> component.</p>
 <h2>
 <a id="user-content-exercise-i" class="anchor" href="#exercise-i" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EXERCISE I:</h2>
 <p>Now all that's left to do, is get the scroll position into the state, and pass that as the x and y
 props. This is exactly like we implemented it in part 1</p>
-<p>In the OuterComponent:</p>
+<p>In the <code>OuterComponent</code>:</p>
 <ul>
 <li>Create <code>x</code> and <code>y</code> in the state, set them to 0 to start</li>
 <li>Create a <code>scrollHandle</code> function inside the class.</li>
@@ -88,7 +86,7 @@ props. This is exactly like we implemented it in part 1</p>
 </li>
 <li>Pass the <code>x</code> and <code>y</code> of the state, down into the wrappedComponent</li>
 </ul>
-<p>Now you've (basically) implemented the withScroll component of react-fns.
+<p>Now you've (basically) implemented the <code>withScroll</code> component of <code>react-fns</code>.
 If you want, you can try using your withScroll on the HeroList, to see if it works.</p>
 
 </body>

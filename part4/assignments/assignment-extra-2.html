@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>./part4/assignments/assignment-extra-2.md</title>
+  <link rel="stylesheet" href="../../github-markdown.css">
+</head>
+<body>
+<h1>
+<a id="user-content-extra-assignment-2---switches-and-redirects" class="anchor" href="#extra-assignment-2---switches-and-redirects" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EXTRA ASSIGNMENT 2 - SWITCHES AND REDIRECTS</h1>
+<h2>
+<a id="user-content-extra-exercise-a" class="anchor" href="#extra-exercise-a" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EXTRA EXERCISE A:</h2>
+<p>Here we're going to be looking at Redirects, so that we can make the
+index route "/" work properly!
+But before we can play with redirects, we need to learn a little
+bit more about how Routes work.</p>
+<p>Try changing the "path" of all the Routes inside App.js to "heroes"</p>
+<p>Now go to the Heroes page and see what's rendered.</p>
+<h2>
+<a id="user-content-switches-and-routes" class="anchor" href="#switches-and-routes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SWITCHES AND ROUTES</h2>
+<p>All of the components are rendered!
+That's because <code>&lt;Route&gt;</code> is <strong>inclusive</strong> - it will render
+all Routes that match a given path.</p>
+<p>Sometimes that's what we want, sometimes it's not.
+<code>react-router</code> also has a component called <code>Switch</code> that does
+the opposite.</p>
+<h2>
+<a id="user-content-extra-exercise-b" class="anchor" href="#extra-exercise-b" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EXTRA EXERCISE B</h2>
+<ul>
+<li>Import Switch inside App.js, from 'react-router-dom'</li>
+<li>Surround your Routes with</li>
+</ul>
+<div class="highlight highlight-source-js-jsx"><pre>&lt;<span class="pl-ent">Switch</span>&gt; /* routes in here! */ &lt;/<span class="pl-ent">Switch</span>&gt;</pre></div>
+<p>Now look at your app in the browser and see what happens.</p>
+<h2>
+<a id="user-content-extra-exercise-c" class="anchor" href="#extra-exercise-c" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EXTRA EXERCISE C</h2>
+<p>You'll see that Switch only renders one component, more specifically it renders
+the <em>first</em> matching component.</p>
+<p>Move the order of the components around, to convince yourself
+that only the first one is rendered.</p>
+<h2>
+<a id="user-content-extra-exercise-d" class="anchor" href="#extra-exercise-d" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EXTRA EXERCISE D:</h2>
+<p>Revert the paths and order of the Route inside <code>App</code></p>
+<h2>
+<a id="user-content-redirects" class="anchor" href="#redirects" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>REDIRECTS</h2>
+<p>Now that we know how a Switch works, we can implement the following redirect:
+We want the index route '/' to redirect to the '/heroes' page.
+We can redirect things in React Router by rendering the <code>&lt;Redirect/&gt;</code> component.</p>
+<h2>
+<a id="user-content-extra-exercise-e" class="anchor" href="#extra-exercise-e" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EXTRA EXERCISE E</h2>
+<ul>
+<li>Import Redirect inside App.js, from 'react-router-dom';</li>
+</ul>
+<p>Redirect takes several props. It takes (among others):</p>
+<ul>
+<li>
+<code>to</code> : A string that tells the Redirect where to Redirect to</li>
+<li>
+<code>from</code> : A string that tells the Redirect to only redirect from a specific url.
+<code>from</code> is only usable inside a <code>&lt;Switch&gt;</code> component, it behaves like the 'path' prop in a </li>
+<li>
+<code>exact</code> : A boolean that tells Redirect whether it should do fuzzy matching or not
+otherwise <code>/</code> will also match <code>"/ilikeapples"</code>
+</li>
+</ul>
+<p>Use a Redirect inside your Switch, to make sure that the index page "/" is redirected to the heroes url.</p>
+<p>Things to test, to make sure you've gotten it right:</p>
+<ul>
+<li>All pages should still work</li>
+<li>Reloading the /theming and /extra page should not redirect</li>
+<li>When loading the page at localhost:3000 , it should redirect to localhost:3000/heroes</li>
+<li>If you manually enter the path "/foo" - it should NOT redirect to /heroes</li>
+</ul>
+<h2>
+<a id="user-content-extra-exercise-f" class="anchor" href="#extra-exercise-f" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EXTRA EXERCISE F</h2>
+<p>Let's look at adding a little style.</p>
+<p>Instead of <code>&lt;Link&gt;</code> in our SideBar, we can use a <code>&lt;NavLink&gt;</code>.
+A NavLink allows us to style a Link, if the path matches the one the link
+has. So we can style the link, if it represents the page we're currently on.
+We call a link like this "active"</p>
+<p>Replace all the <code>&lt;Link&gt;</code> components in the SideBar with <code>&lt;NavLink&gt;</code>
+No need to change anything but the type.</p>
+<h2>
+<a id="user-content-extra-exercise-g" class="anchor" href="#extra-exercise-g" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EXTRA EXERCISE G</h2>
+<p>You can style a NavLink via the <code>activeStyle</code> prop, which takes in an object of styles to apply,
+if the link is "active".</p>
+<ul>
+<li>Use the activeStyle prop, to style the link if it's active.</li>
+<li>You can bold the text, and set the color to 'red' when it's active</li>
+</ul>
+
+</body>
+</html>

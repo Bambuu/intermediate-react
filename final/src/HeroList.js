@@ -45,8 +45,8 @@ class BaseHeroList extends Component {
         <FormController initialValues={{name: '', awesome: 0}} onSubmit={this.addSuperHero}>
           {(formValues) => {
             return (<div>
-                <input value={formValues.name.value} onChange={formValues.name.onChange}/>
                 <input value={formValues.awesome.value} onChange={formValues.awesome.onChange} type="number"/>
+                <input value={formValues.name.value} onChange={formValues.name.onChange}/>
                 <button>Submit</button>
             </div>
             )
