@@ -6,6 +6,7 @@ import { Split } from "mdx-deck/layouts";
 import nightOwl from "prism-react-renderer/themes/nightOwl";
 import { CodeSurfer } from "mdx-deck-code-surfer";
 import { Code } from "./components/code";
+import { CodeSurferNoZoom } from "./components/code-surfer-no-zoom";
 import { ReadMore } from "./components/read-more";
 
 <Head>
@@ -142,17 +143,16 @@ by Jeppe Reinhold and Gustav Wengel
 
 ---
 
-<CodeSurfer
+<CodeSurferNoZoom
   title="array.map()"
   code={require("!raw-loader!./examples/array-map-simple.js")}
   lang="javascript"
   showNumbers={true}
   theme={nightOwl}
   steps={[
-    { lines: [1], notes: "Define a list of cities" },
+    { lines: [1] },
     {
-      range: [3, 5],
-      notes: "Go through each city, and change it"
+      range: [3, 5]
     },
     {
       tokens: {
@@ -162,32 +162,29 @@ by Jeppe Reinhold and Gustav Wengel
       }
     },
     {
-      range: [7, 12],
-      notes: "Result is the array with the changes"
+      range: [7, 12]
     }
   ]}
 />
 
 ---
 
-<CodeSurfer
-  title="array.map()"
+<CodeSurferNoZoom
+  title="map array to JSX elements"
   code={require("!raw-loader!./examples/array-map-faulty.js")}
   lang="jsx"
   showNumbers={true}
   theme={nightOwl}
   steps={[
     { range: [1, 12] },
-    { range: [2, 6], notes: "Our list of animals" },
+    { range: [2, 6] },
     {
       range: [7, 9],
-      notes: "map array values to JSX elements"
     },
-    { lines: [11], notes: "return created elements" },
-    { range: [14, 20], notes: "output" }
+    { lines: [11] },
+    { range: [14, 20] }
   ]}
 />
-
 ---
 
 <img style={{height: "300px"}} src="./public/computer-says-no.png"/>
@@ -195,18 +192,17 @@ by Jeppe Reinhold and Gustav Wengel
 
 ---
 
-<CodeSurfer
-  title="array.map()"
+<CodeSurferNoZoom
+  title="Add key to elements"
   code={require("!raw-loader!./examples/array-map.js")}
   lang="jsx"
   showNumbers={true}
   theme={nightOwl}
   steps={[
     {
-      range: [7, 9],
-      notes: "adding a unique key to the element"
+      range: [7, 9]
     },
-    { range: [14, 20], notes: "output" }
+    { range: [14, 20] }
   ]}
 />
 
@@ -240,7 +236,7 @@ You want read the value from an `<input/>` element and do stuff with it
 
 ---
 
-<CodeSurfer
+<CodeSurferNoZoom
   title="Controlled components"
   code={require("!raw-loader!./examples/controlled-base.js")}
   lang="jsx"
@@ -277,8 +273,7 @@ Pulling the `value` of the `<input/>` up to the component `state`
 
 ---
 
-<CodeSurfer
-  title="Controlled components"
+<CodeSurferNoZoom
   code={require("!raw-loader!./examples/controlled-final.js")}
   lang="jsx"
   showNumbers={true}
@@ -393,17 +388,23 @@ We want to share behavior between components
 ---
 
 <CodeSurfer
+  title="Usage of OrderPizzaButton"
+  code="<OrderPizzaButton amount={4} />"
+  lang="jsx"
+  showNumbers={true}
+  theme={nightOwl}
+  steps={[{}]}
+/>
+
+---
+
+<CodeSurferNoZoom
   title="Using a HOC"
   code={require("!raw-loader!./examples/hoc-usage.js")}
   lang="jsx"
   showNumbers={true}
   theme={nightOwl}
   steps={[
-    {
-      range: [16, 17],
-      notes:
-        "Using a PizzaOrderButton that takes in the amount of pizzas to order"
-    },
     {
       range: [1, 10],
       notes: "A network aware Order button"
@@ -420,11 +421,6 @@ We want to share behavior between components
     {
       range: [12, 14],
       notes: "Wrap with HOC to enhance component"
-    },
-    {
-      range: [16, 17],
-      notes:
-        "Users of the enhanced component don't know about the HOC"
     }
   ]}
 />
@@ -432,57 +428,32 @@ We want to share behavior between components
 ---
 
 <CodeSurfer
+  title="Usage of OrderPizzaButton"
+  code="<OrderPizzaButton amount={4} />"
+  lang="jsx"
+  showNumbers={true}
+  theme={nightOwl}
+  steps={[{}]}
+/>
+
+---
+
+<CodeSurferNoZoom
   title="Building a withNetwork HOC"
   code={require("!raw-loader!./examples/with-network-hoc.js")}
   lang="jsx"
   showNumbers={true}
   theme={nightOwl}
   steps={[
-    {
-      range: [1, 24],
-      notes: "the withNetwork HOC"
-    },
-    {
-      lines: [1],
-      notes: () => (
-        <p>
-          Take in any WrappedComponent -{" "}
-          <code>withNetwork(MyComponent)</code>
-        </p>
-      )
-    },
-    {
-      lines: [2],
-      notes: "Build the wrapping component"
-    },
-    {
-      lines: [3],
-      notes:
-        "Set initial state of HOC to current network status"
-    },
-    {
-      range: [5, 8],
-      notes:
-        "When HOC mount, listen for network changes and set state"
-    },
-    {
-      range: [5, 13],
-      notes:
-        "When HOC mount, listen for network changes and set state"
-    },
-    {
-      range: [15, 22],
-      notes: "Render WrappedComponent with online status"
-    },
-    {
-      lines: [19],
-      notes:
-        "Remember to pass all other props along to the WrappedComponent"
-    },
-    {
-      range: [1, 24],
-      notes: "Done! 🥳"
-    }
+    { range: [1, 24] },
+    { lines: [1] },
+    { lines: [2] },
+    { lines: [3] },
+    { range: [5, 8] },
+    { range: [5, 13] },
+    { range: [15, 22] },
+    { lines: [19] },
+    { range: [1, 24] }
   ]}
 />
 
@@ -536,25 +507,15 @@ Problems:
 
 ---
 
-<CodeSurfer
-  title="Managing pages in React state 😔"
-  code={require("!raw-loader!../part4/src/App.js")}
+<CodeSurferNoZoom
+  code={require("!raw-loader!./examples/part4-app.js")}
   lang="jsx"
   showNumbers={true}
   theme={nightOwl}
   steps={[
-    {
-      range: [8, 35],
-      notes: "The App.js in part 4"
-    },
-    {
-      range: [9, 15],
-      notes: "the currentPage state"
-    },
-    {
-      range: [17, 24],
-      notes: "if state is 'string' show this component"
-    }
+    { range: [1, 28] },
+    { range: [2, 8] },
+    { range: [12, 17] }
   ]}
 />
 
@@ -617,7 +578,7 @@ Problems:
 
 ---
 
-<CodeSurfer
+<CodeSurferNoZoom
   title="Using the <Link/> component"
   code={require("!raw-loader!./examples/link.js")}
   lang="jsx"
@@ -648,7 +609,7 @@ Problems:
 
 ---
 
-<CodeSurfer
+<CodeSurferNoZoom
   title="Using the <Route/> component"
   code={require("!raw-loader!./examples/routes.js")}
   lang="jsx"
@@ -681,7 +642,7 @@ Problems:
 
 ---
 
-<CodeSurfer
+<CodeSurferNoZoom
   title="Using the <BrowserRouter/> component"
   code={require("!raw-loader!./examples/router.js")}
   lang="jsx"
@@ -817,29 +778,18 @@ We teach you both patterns because you will most likely use both when you start 
 
 ---
 
-<CodeSurfer
+<CodeSurferNoZoom
   title="The children prop"
   code={require("!raw-loader!./examples/children-prop.js")}
   lang="jsx"
   showNumbers={true}
   theme={nightOwl}
-  steps={[
-    {
-      range: [1, 9],
-      notes:
-        "Putting HeroList inside the FancyBorder component, as a child"
-    },
-    {
-      range: [11, 18],
-      notes: "Rendering children inside the FancyBorder"
-    },
-    {}
-  ]}
+  steps={[{ range: [1, 9] }, { range: [11, 18] }, {}]}
 />
 
 ---
 
-<CodeSurfer
+<CodeSurferNoZoom
   title="child as a function"
   code={require("!raw-loader!./examples/children-prop-function.js")}
   lang="jsx"
@@ -847,15 +797,10 @@ We teach you both patterns because you will most likely use both when you start 
   theme={nightOwl}
   steps={[
     {
-      range: [1, 12],
-      notes: "Giving a function as a child to FancyBorder"
+      range: [1, 12]
     },
-    /*{
-      range: [5, 8]
-    },*/
     {
-      range: [14, 21],
-      notes: "props.children() is now invoked as a function"
+      range: [14, 21]
     },
     {}
   ]}
@@ -863,15 +808,15 @@ We teach you both patterns because you will most likely use both when you start 
 
 ---
 
-<CodeSurfer
+<CodeSurferNoZoom
   code={require("!raw-loader!./examples/render-prop-usage.js")}
   lang="jsx"
   showNumbers={true}
   theme={nightOwl}
   steps={[
-    {} /*,
+    {},
     {
-       range: [1, 2],
+      range: [1, 2],
       notes: "The basics"
     },
     {
@@ -899,7 +844,7 @@ We teach you both patterns because you will most likely use both when you start 
       range: [4, 14],
       notes:
         "In short, the Render prop component is added inside our JSX"
-    }*/
+    }
   ]}
 />
 
@@ -932,28 +877,23 @@ Let us see how the Network Render prop component is implemented
 
 ---
 
-<CodeSurfer
+<CodeSurferNoZoom
   code={require("!raw-loader!./examples/network-render-prop.js")}
   lang="jsx"
   showNumbers={true}
   theme={nightOwl}
   steps={[
-    {} /*,
+    {},
     {
-      lines: [1],
-      notes:
-        "Directly exporting a class component, no class within a function or anything like the HOC"
+      lines: [1]
     },
     {
-      range: [2, 12],
-      notes: "Same as before - in the withNetwork() HOC"
+      range: [2, 12]
     },
     {
-      range: [14, 16],
-      notes:
-        "Render the 'children' prop, and run it as a function. Pass relevant arguments"
+      range: [14, 16]
     },
-    { notes: "Done! 🥳" }*/
+    { notes: "Done! 🥳" }
   ]}
 />
 
@@ -1126,17 +1066,24 @@ If you want to see a deeper comparison, check out ["Use A Render Prop!" by Micha
   lang="jsx"
   showNumbers={true}
   theme={nightOwl}
-  steps={[{}]}
+  steps={[{}, { lines: [2, 7, 8, 9, 10] }]}
 />
 
 ---
 
-<CodeSurfer
+<CodeSurferNoZoom
+  title="A button with the theme color"
   code={require("!raw-loader!./examples/context-static-button.js")}
   lang="jsx"
   showNumbers={true}
   theme={nightOwl}
-  steps={[{}]}
+  steps={[
+    {},
+    { lines: [2] },
+    { lines: [6, 14] },
+    { lines: [6, 7, 13, 14] },
+    { range: [6, 14] }
+  ]}
 />
 
 ---
@@ -1155,23 +1102,41 @@ But we aren't actually changing the theme? 🤔
 
 ---
 
-<CodeSurfer
+<CodeSurferNoZoom
   code={require("!raw-loader!./examples/context-dynamic-app.js")}
   lang="jsx"
   showNumbers={true}
   theme={nightOwl}
-  steps={[{}]}
+  steps={[
+    {},
+    { range: [2, 6] },
+    { lines: [17, 18, 20, 24] },
+    { range: [9, 15] },
+    { range: [9, 20] }
+  ]}
 />
 
 ---
 
-<CodeSurfer
+<CodeSurferNoZoom
+  title="Themed buttom - now changes the theme!"
   code={require("!raw-loader!./examples/context-dynamic-button.js")}
   lang="jsx"
   showNumbers={true}
   theme={nightOwl}
-  steps={[{}]}
+  steps={[
+    {},
+    { lines: [6, 7, 10, 17] },
+    { lines: [11] },
+    {}
+  ]}
 />
+
+---
+
+# Passing Theme directly to ThemeButton
+
+<img src="./public/context-theme-button.svg" />
 
 ---
 
