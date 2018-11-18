@@ -13,9 +13,9 @@ const App = () => {
 
 // Containing component
 const FancyBorder = (props) => {
-	return (
-	  <div className="redBorder">
-		{props.children()}
-	  </div>
-	);
-  }
+  return (
+	<div className="redBorder">
+	  {props.children()}
+	</div>
+  );
+};

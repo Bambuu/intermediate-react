@@ -67,8 +67,6 @@ by Jeppe Reinhold and Gustav Wengel
 
 ## What we'll build
 
-[Final application](LINK-TO-FINAL-APPLICATION)
-
 ---
 
 # How we'll build it
@@ -98,14 +96,21 @@ by Jeppe Reinhold and Gustav Wengel
 
 ---
 
+# Demonstration
+
+## The components we'll we working on
+
+---
 # Assignments - Part 1
 
 1. Clone or download the git repo - [github.com/bambuu/intermediate-react](https://github.com/bambuu/intermediate-react)
 2. Open the project with your favorite editor
-3. Run `npm run setupAll`
-4. Installing all parts might take some time, grab some coffee. ☕️
-5. Run `npm run part1`
-6. Make sure it works by visiting [localhost:3000](http://localhost:3000)
+3. Run `npm run setupPart1`
+4. Run `npm run part1`
+5. Make sure it works by visiting [localhost:3000](http://localhost:3000)
+6. Run `npm run setupAll`
+7. let it install in the background while we continue
+8. Optionally take a look at the source code in part1
 
 ---
 
@@ -315,12 +320,13 @@ Pulling the `value` of the `<input/>` up to the component `state`
 
 ---
 
-# Assignments - Part 2
+## Assignments - Part 2
 
 1. Setup the 'Part 2' project
 2. Add `keys` to lists
 3. Building a form using the Controlled Component technique
-4. 🏖
+
+Files: `HeroList.js` 
 
 <ReadMore link="reactjs.org/docs/lists-and-keys"/>
 <br/>
@@ -474,11 +480,13 @@ We want to share behavior between components
 
 ---
 
-# Assignments - Part 3
+## Assignments - Part 3
 
 1. Listen for scrolling events in the `<HeroList/>`
 2. Use a `withScroll()` HOC to do it instead
 3. 🏝
+
+Files: `HeroList.js` 
 
 <ReadMore link="reactjs.org/docs/higher-order-components" />
 
@@ -700,11 +708,13 @@ Problems:
 
 ---
 
-# Assignments - Part 4
+## Assignments - Part 4
 
 1. Implement routing in the Heroes app
 2. Extra: Use `withRouter()` HOC to show current location in header
 3. ⛱
+
+Files: `App.js`, `SideBar.js`
 
 <ReadMore link="reacttraining.com/react-router/web" />
 
@@ -932,6 +942,8 @@ If you want to see a deeper comparison, check out ["Use A Render Prop!" by Micha
 2. Use a `<FormController/>` render prop to simplify our HeroList input
 3. Submit new heroes using the new render prop
 4. 🏕
+
+Files: `HeroList.js`
 
 <ReadMore link="reactjs.org/docs/render-props" />
 
@@ -1185,8 +1197,11 @@ But we aren't actually changing the theme? 🤔
 
 # Assignments - Part 6
 
-1. be cool
+1. Pass a theme down via context
+2. Change the theme from a Consumer
 2. 🏕
+
+- Files: `App.js`, `ThemeContext.js`, `Theming.js`
 
 <ReadMore link="reactjs.org/docs/context" />
 

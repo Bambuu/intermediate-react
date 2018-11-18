@@ -53,7 +53,7 @@ Your app should now show nothing but a sidebar and a header.
 ## EXERCISE D:
 Let's add our first `Route`.
 
-Import it inside App.js, like the other components.
+Import it inside `App.js`, like the other components.
 
 A Route takes a path, and a component to display:
 ```jsx harmony

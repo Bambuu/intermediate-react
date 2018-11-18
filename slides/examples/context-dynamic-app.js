@@ -1,14 +1,14 @@
 // app.js
 import {
   redTheme,
-  orangeTheme,
+  greenTheme,
   ThemeContext
 } from "./theme-context";
 
 class App extends React.Component {
   toggleTheme = () => {
     if (this.state.theme === redTheme) {
-      this.setState({ theme: orangeTheme });
+      this.setState({ theme: greenTheme });
     } else {
       this.setState({ theme: redTheme });
     }
