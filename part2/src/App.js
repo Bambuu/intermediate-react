@@ -23,20 +23,20 @@ class App extends Component {
     } else if (this.state.currentPage === "/extra") {
       mainComponent = <ExtraAssignment />;
     } else if (this.state.currentPage === "/assignment-1") {
-      mainComponent = <Assignment file="1" key="1" />;
+      mainComponent = <Assignment file="1" />;
     } else if (this.state.currentPage === "/assignment-2") {
-      mainComponent = <Assignment file="2" key="2" />;
+      mainComponent = <Assignment file="2" />;
     } else if (
       this.state.currentPage === "/assignment-extra-1"
     ) {
       mainComponent = (
-        <Assignment file="extra-1" key="extra-1" />
+        <Assignment file="extra-1" />
       );
     } else if (
 		this.state.currentPage === "/assignment-extra-2"
 	  ) {
 		mainComponent = (
-		  <Assignment file="extra-2" key="extra-2" />
+		  <Assignment file="extra-2" />
 		);
 	  }
     return (
