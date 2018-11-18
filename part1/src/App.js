@@ -23,11 +23,11 @@ class App extends Component {
     } else if (this.state.currentPage === "/extra") {
       mainComponent = <ExtraAssignment />;
     } else if (this.state.currentPage === "/assignment-1") {
-      mainComponent = <Assignment file="1" key="1"/>;
+      mainComponent = <Assignment file="1"/>;
     } else if (
       this.state.currentPage === "/assignment-extra"
     ) {
-      mainComponent = <Assignment file="extra" key="extra" />;
+      mainComponent = <Assignment file="extra"/>;
     }
     return (
       <div className="root">
