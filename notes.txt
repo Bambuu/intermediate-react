@@ -8,21 +8,22 @@ Work to be done:
 - Consider running setupAll in parallel.
   - Run part1 by itself
   - Run setupAll for the rest, during p2 slides
+  - Update assignment text in p1 after doing this
 
-- Slide del-1, præsenter komponenterne
-- Make p1 a full project. Add extra assignment to read source code.
-- Øvelsesslide skal indeholde de filer de skal ændre i
-- Sæt øvelsesbeskrivelserne ind i sidebaren direkte fra .md
-- Lav Theming.js til multi-line jsx
-- Gør sådan vi kan markere uden den hopper rundt.
+- Slides:
+  - Slide del-1, præsenter komponenterne
+  - Øvelsesslide skal indeholde de filer de skal ændre i
+  - Gør sådan vi kan markere uden den hopper rundt.
 
-- run prettier on the whole shebang - BUT NOT SLIDES! (it removes () around function parameters)
-- Maybe pick some nicer colors?
-- Create an assignments.html that just links to all the assignments in all parts
+Nicer exercise descriptions
+  - Sæt øvelsesbeskrivelserne ind i sidebaren direkte fra .md
+  - Create an assignments.html that just links to all the assignments in all parts
+
+TODO:
 - Read the generated html and see if there are errors
+- P6. Samme theme-eksempel som i slides
 - Cut FormController short
 - Cut down on assignment 6?
-- P6. Samme theme-eksempel som i slides
 
 Unresolved feedback slides:
 - P3, dræb building a HoC?
@@ -43,6 +44,8 @@ Potential things to cut:
 
 - Nice To Have
   - Lav en opsummering af øvelserne fra tidligere inden hver del starter
+  - Maybe pick some nicer colors?
+  - run prettier on the whole shebang - BUT NOT SLIDES! (it removes () around function parameters)
 
 FINAL CHECKLIST:
     - NOTHING BABYYYYY
@@ -78,64 +81,3 @@ P6 Ex:      47 min
 P6 total:   59 min
 
 Total: 305 min = 5h
-
-------- EXERCISES ------
-
-Part 2 time (Gustav):
-    Lists and keys: 5min
-    Controlled components: 25min
-
-Part 2 time (Jeppe): (23min / 28min)
-    Keys: 8min
-    Controlled components: 15min
-    Refs: 5min
-
-Part 3 time (Gustav):
-    Manual scrolling: 20min
-    HOC: 11min
-
-Part 3 time (Jeppe): (15.5min / 32min)
-    Manual scrolling: 8.5min
-    HOC: 7min
-    Extra: 17min
-
-Part 4 time (Gustav)
-    Links and Routes: 8.5min
-    withRouter: 5min
-    extra: 10min~
-
-Part 4 time (Jeppe) (11min / 20min)
-    Links and Routes: 7min
-    withRouter: 4min
-    extra: 10min
-
-Part 5 time (Gustav) (27min)
-    Function-as-child: 8min
-    ex2: 9min
-    ex3: 10min
-
-Part 5 time (Jeppe) (21min)
-  - assignment 1+2 = 09:30
-  - assignment 3 = 13:00
-
-Part 6 time (Gustav)
-  - Static Context: 12.5min
-  - Changing theme. 4.5 min
-
-Part 6 time (Jeppe)
-  - Static: 9min
-  - Changing the theme: 5min
-
-Dinner: 30 min
-Exercises total: part1?? + 23 + 15 + 11 + 27(G)+ = 91 min
-Plus buffer: 91 * 2 = 182
-Total : 297min / 60 = ???
-
------  SLIDES -----
-Part 1: 8.5
-Part 2: 24
-Part 3: 16
-Part 4: 19
-Part 5: 13.5 + 4.5 (18)
-
-TOTAL: 85min (not updated w part6)
