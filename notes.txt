@@ -10,6 +10,7 @@ Nicer exercise descriptions
   - Rename Assignment til AssignmentDescription
 
 Unresolved feedback slides:
+- P4. Hav en slide som siger de nok skal bruge .md filen
 - P3, dræb building a HoC?
 - P3, kan vi bruge noget andet end withNetwork til HoC? Ex. scroll.
 - P5. Svært at forstå pros/cons af HOC & render props før man har prøvet det. Opsummeringsslide?
