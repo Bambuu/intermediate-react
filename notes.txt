@@ -19,12 +19,6 @@ Nicer exercise descriptions
   - Sæt øvelsesbeskrivelserne ind i sidebaren direkte fra .md
   - Create an assignments.html that just links to all the assignments in all parts
 
-TODO:
-- Read the generated html and see if there are errors
-- P6. Samme theme-eksempel som i slides
-- Cut FormController short
-- Cut down on assignment 6?
-
 Unresolved feedback slides:
 - P3, dræb building a HoC?
 - P3, kan vi bruge noget andet end withNetwork til HoC? Ex. scroll.
@@ -41,6 +35,8 @@ hurtigere.
 
 Potential things to cut:
   - Manual implementation of scrolling
+  - Cut FormController short
+  - Cut down on assignment 6?
 
 - Nice To Have
   - Lav en opsummering af øvelserne fra tidligere inden hver del starter
@@ -48,7 +44,7 @@ Potential things to cut:
   - run prettier on the whole shebang - BUT NOT SLIDES! (it removes () around function parameters)
 
 FINAL CHECKLIST:
-    - NOTHING BABYYYYY
+    - Read the generated html and see if there are errors
 
 
 ---- TIME ----
