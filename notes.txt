@@ -22,6 +22,7 @@ Unresolved feedback slides:
 FINAL CHECKLIST:
     - Read the generated html and see if there are errors
     - Proofread p5 and p6 again
+    - Last check to see if all the links work
 
 
 ---- TIME ----
