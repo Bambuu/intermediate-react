@@ -8,12 +8,13 @@ Work to be done:
 - Consider running setupAll in parallel.
   - Run part1 by itself
   - Run setupAll for the rest, during p2 slides
+  - Update assignment text in p1 after doing this
+
 
 - Slide del-1, præsenter komponenterne
 - Make p1 a full project. Add extra assignment to read source code.
 - Øvelsesslide skal indeholde de filer de skal ændre i
 - Sæt øvelsesbeskrivelserne ind i sidebaren direkte fra .md
-- Lav Theming.js til multi-line jsx
 - Gør sådan vi kan markere uden den hopper rundt.
 
 - run prettier on the whole shebang - BUT NOT SLIDES! (it removes () around function parameters)

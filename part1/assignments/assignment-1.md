@@ -10,8 +10,8 @@ After that is done, run:
 
 `npm run part1`
 
-A browser will appear out of thin air, showing you a "Hello World"
+A browser will appear out of thin air, showing you a list of superheroes
 page on `localhost:3000`
 
-That's it - you're done.
+That means it's working! There's an extra assignment in the next file!
 
