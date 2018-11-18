@@ -41,22 +41,22 @@ Revert the paths and order of the Route inside `App`
 
 ## REDIRECTS
 Now that we know how a Switch works, we can implement the following redirect:
-We want the index route '/' to redirect to the '/heroes' page.
+We want the index route `"/"` to redirect to the `"/heroes"` page.
 We can redirect things in React Router by rendering the `<Redirect/>` component.
 
 ## EXTRA EXERCISE E
 
-- Import Redirect inside App.js, from 'react-router-dom';
+- Import `Redirect` inside App.js, from `'react-router-dom'`;
 
 Redirect takes several props. It takes (among others):
 
  - `to` : A string that tells the Redirect where to Redirect to
  - `from` : A string that tells the Redirect to only redirect from a specific url.
-  `from` is only usable inside a `<Switch>` component, it behaves like the 'path' prop in a <Route/>
+  `from` is only usable inside a `<Switch>` component, it behaves like the `path` prop in a `<Route/>`
  - `exact` : A boolean that tells Redirect whether it should do fuzzy matching or not
     otherwise `/` will also match `"/ilikeapples"`
 
-Use a Redirect inside your Switch, to make sure that the index page "/" is redirected to the heroes url.
+Use a `Redirect` inside your `Switch`, to make sure that the index page `"/"` is redirected to the heroes url.
 
 Things to test, to make sure you've gotten it right:
 
