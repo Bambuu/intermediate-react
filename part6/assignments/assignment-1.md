@@ -52,8 +52,15 @@ We get the theme though a `Consumer`, that uses a function-as-a-child:
 Inside `Theming.js`:
 
 - Import our `ThemeContext`
-- Use the `ThemeContext.Consumer` inside the render function
-- Render the `color` attribute to the page. You can use `{}`'s like normally.
+- Use the `ThemeContext.Consumer` inside the render function, to render the 
+`color` attribute to the page:
+```jsx harmony
+      <ThemeContext.Consumer>
+       {themeContext => {
+         return <p>Color: {themeContext.color}</p>
+       }}
+      </ThemeContext.Consumer>
+```
 
 You're done when you see the hex-code you defined in `ThemeContext.js`
 
