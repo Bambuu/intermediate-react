@@ -1,3 +1,11 @@
+const Highlight = (props) => {
+  return (
+    <div className="redBackground">
+      {props.children}
+    </div>
+  );
+}
+
 const App = () => {
   return (
     <div>
@@ -7,12 +15,3 @@ const App = () => {
     </div>
   );
 };
-
-// Containing component
-const Highlight = (props) => {
-  return (
-    <div className="redBackground">
-      {props.children}
-    </div>
-  );
-}

@@ -30,18 +30,11 @@ by Jeppe Reinhold and Gustav Wengel
 <ul style={{ fontSize: "1.5em" }}>
   <li>We are Jeppe and Gustav</li>
   <Appear>
-    <li>
-      We’ve done web development and specifically React
-      development for two years
-    </li>
+    <li>We’ve done web development and specifically React development for two years</li>
     <li>The workshop is split into 6 parts</li>
+    <li>Each with a short presentation followed, by you doing exercises</li>
     <li>
-      Each with a short presentation followed, by you doing
-      exercises
-    </li>
-    <li>
-      We might add or remove exercises during the workshop,
-      to account for your specific level
+      We might add or remove exercises during the workshop, to account for your specific level
     </li>
   </Appear>
 </ul>
@@ -74,17 +67,9 @@ by Jeppe Reinhold and Gustav Wengel
 <ul style={{ fontSize: "1.5em" }}>
   <Appear>
     <li>Git repository with all exercises (and slides)</li>
-    <li>
-      Each part has its own directory with assignments
-    </li>
-    <li>
-      We will be working on the same application throughout
-      the workshop
-    </li>
-    <li>
-      You can always see the solution, by peaking in the
-      directory for the next part
-    </li>
+    <li>Each part has its own directory with assignments</li>
+    <li>We will be working on the same application throughout the workshop</li>
+    <li>You can always see the solution, by peaking in the directory for the next part</li>
   </Appear>
 </ul>
 
@@ -98,9 +83,10 @@ by Jeppe Reinhold and Gustav Wengel
 
 # Demonstration
 
-## The components we'll we working on
+## The components we'll be working on
 
 ---
+
 # Assignments - Part 1
 
 1. Clone or download the git repo - [github.com/bambuu/intermediate-react](https://github.com/bambuu/intermediate-react)
@@ -124,17 +110,13 @@ by Jeppe Reinhold and Gustav Wengel
 
 <ul style={{ fontSize: "1.5em" }}>
   <Appear>
-    <li>
-      React needs a way to uniquely identify components
-    </li>
+    <li>React needs a way to uniquely identify components</li>
     <li>Usually this is handled by React</li>
     <li>
-      But when you <b>dynamically render lists</b>, React
-      can't do that automatically
+      But when you <b>dynamically render lists</b>, React can't do that automatically
     </li>
     <li>
-      We have to add a <code>key</code> prop to each element
-      in our list
+      We have to add a <code>key</code> prop to each element in our list
     </li>
   </Appear>
 </ul>
@@ -247,11 +229,7 @@ You want read the value from an `<input/>` element and do stuff with it
   lang="jsx"
   showNumbers={true}
   theme={nightOwl}
-  steps={[
-    { range: [1, 16] },
-    { range: [8, 13] },
-    { range: [2, 4] }
-  ]}
+  steps={[{ range: [1, 16] }, { range: [8, 13] }, { range: [2, 4] }]}
 />
 
 ---
@@ -260,19 +238,10 @@ You want read the value from an `<input/>` element and do stuff with it
 
 Pulling the `value` of the `<input/>` up to the component `state`
 
-<div
-  className="stacked-container"
-  style={{ width: "80vw", height: "50vh" }}
->
+<div className="stacked-container" style={{ width: "80vw", height: "50vh" }}>
   <Appear>
-    <img
-      src="./public/controlled-component-flow-initial.svg"
-      className="stacked"
-    />
-    <img
-      src="./public/controlled-component-flow-simple.svg"
-      className="stacked"
-    />
+    <img src="./public/controlled-component-flow-initial.svg" className="stacked" />
+    <img src="./public/controlled-component-flow-simple.svg" className="stacked" />
   </Appear>
 </div>
 
@@ -286,8 +255,7 @@ Pulling the `value` of the `<input/>` up to the component `state`
   steps={[
     {
       range: [2, 4],
-      notes:
-        "Create a component state that will hold the value"
+      notes: "Create a component state that will hold the value"
     },
     {
       lines: [19, 20, 21, 23],
@@ -313,10 +281,7 @@ Pulling the `value` of the `<input/>` up to the component `state`
 
 Pulling the `value` of the `<input/>` up to the component `state`
 
-<img
-  src="./public/controlled-component-flow-final.svg"
-  style={{ width: "80vw", height: "50vh" }}
-/>
+<img src="./public/controlled-component-flow-final.svg" style={{ width: "80vw", height: "50vh" }} />
 
 ---
 
@@ -326,7 +291,7 @@ Pulling the `value` of the `<input/>` up to the component `state`
 2. Add `keys` to lists
 3. Building a form using the Controlled Component technique
 
-Files: `HeroList.js` 
+Files: `HeroList.js`
 
 <ReadMore link="reactjs.org/docs/lists-and-keys"/>
 <br/>
@@ -360,8 +325,8 @@ We want to share behavior between components
 
 <blockquote style={{ fontSize: "1.5em" }}>
   <i>
-    "We haven’t found any use cases where we would recommend
-    creating component inheritance hierarchies."
+    "We haven’t found any use cases where we would recommend creating component inheritance
+    hierarchies."
   </i>
   <p>- Facebook, maintains over 30.000 components</p>
 </blockquote>
@@ -375,19 +340,14 @@ We want to share behavior between components
 <ul style={{ fontSize: "1.5em" }}>
   <Appear>
     <li>
-      Wrap a component in a HOC, that passes functionality
-      via <code>props</code>
+      Wrap a component in a HOC, that passes functionality via <code>props</code>
     </li>
     <li>
-      HOCs are functions that takes in any component, and
-      returns an <em>enhanced component</em>
+      HOCs are functions that takes in any component, and returns an <em>enhanced component</em>
       <br />
       <Code code="const EnhancedComponent = withHOC(OriginalComponent);" />
     </li>
-    <li>
-      We've never written our own HOC before, only used
-      libraries with HOCs
-    </li>
+    <li>We've never written our own HOC before, only used libraries with HOCs</li>
   </Appear>
 </ul>
 
@@ -444,34 +404,12 @@ We want to share behavior between components
 
 ---
 
-<CodeSurferNoZoom
-  title="Building a withNetwork HOC"
-  code={require("!raw-loader!./examples/with-network-hoc.js")}
-  lang="jsx"
-  showNumbers={true}
-  theme={nightOwl}
-  steps={[
-    { range: [1, 24] },
-    { lines: [1] },
-    { lines: [2] },
-    { lines: [3] },
-    { range: [5, 8] },
-    { range: [5, 13] },
-    { range: [15, 22] },
-    { lines: [19] },
-    { range: [1, 24] }
-  ]}
-/>
-
----
-
 ## Higher-Order Components
 
 <ul style={{ fontSize: "1.5em" }}>
   <Appear>
     <li>
-      HOCs are functions that takes in any component, and
-      returns an <em>enhanced component</em>
+      HOCs are functions that takes in any component, and returns an <em>enhanced component</em>
       <br />
       <Code code="const EnhancedComponent = withHOC(OriginalComponent);" />
     </li>
@@ -486,7 +424,7 @@ We want to share behavior between components
 2. Use a `withScroll()` HOC to do it instead
 3. 🏝
 
-Files: `HeroList.js` 
+Files: `HeroList.js`
 
 <ReadMore link="reactjs.org/docs/higher-order-components" />
 
@@ -520,11 +458,7 @@ Problems:
   lang="jsx"
   showNumbers={true}
   theme={nightOwl}
-  steps={[
-    { range: [1, 28] },
-    { range: [2, 8] },
-    { range: [12, 17] }
-  ]}
+  steps={[{ range: [1, 28] }, { range: [2, 8] }, { range: [12, 17] }]}
 />
 
 ---
@@ -541,25 +475,14 @@ Problems:
     <li>
       There are <em>many</em> to choose from, just go with{" "}
       <code>
-        <a
-          target="_blank"
-          href="https://reacttraining.com/react-router/web"
-        >
+        <a target="_blank" href="https://reacttraining.com/react-router/web">
           React Router
         </a>
       </code>
     </li>
-    <li>
-      Manages location (URL) and browser history for you
-    </li>
-    <li>
-      Always shows the correct component, based on the
-      current location
-    </li>
-    <li>
-      Beware: There is a big difference with React Router v3
-      and v4
-    </li>
+    <li>Manages location (URL) and browser history for you</li>
+    <li>Always shows the correct component, based on the current location</li>
+    <li>Beware: There is a big difference with React Router v3 and v4</li>
   </Appear>
 </ul>
 
@@ -570,16 +493,13 @@ Problems:
 <ul style={{ fontSize: "1.5em" }}>
   <Appear>
     <li>
-      <Code code="<Link/>" /> - To navigate between pages
-      (replaces <Code code="<a>" /> tags)
+      <Code code="<Link/>" /> - To navigate between pages (replaces <Code code="<a>" /> tags)
     </li>
     <li>
-      <Code code="<Route/>" /> - To configure which location
-      must render which component
+      <Code code="<Route/>" /> - To configure which location must render which component
     </li>
     <li>
-      <Code code="<BrowserRouter/>" /> - Handles updating
-      the location
+      <Code code="<BrowserRouter/>" /> - Handles updating the location
     </li>
   </Appear>
 </ul>
@@ -633,13 +553,11 @@ Problems:
     },
     {
       lines: [6],
-      notes:
-        "Show Heroes component when location is /heroes"
+      notes: "Show Heroes component when location is /heroes"
     },
     {
       lines: [7],
-      notes:
-        "Show Villains component when location is /villains"
+      notes: "Show Villains component when location is /villains"
     },
     {
       lines: [8],
@@ -666,13 +584,11 @@ Problems:
     },
     {
       lines: [5, 10],
-      notes:
-        "The BrowserRouter needs to be above all your <Link/> and <Route/>"
+      notes: "The BrowserRouter needs to be above all your <Link/> and <Route/>"
     },
     {
       range: [5, 10],
-      notes:
-        "Can contain any components, with deeply nested <Link/> and <Route/>"
+      notes: "Can contain any components, with deeply nested <Link/> and <Route/>"
     }
   ]}
 />
@@ -684,8 +600,7 @@ Problems:
 <ol>
   <Appear>
     <li>
-      Have a top-level <Code code="<BrowserRouter/>" /> in
-      your app
+      Have a top-level <Code code="<BrowserRouter/>" /> in your app
     </li>
     <li>
       Navigate between pages with
@@ -701,10 +616,7 @@ Problems:
 
 ---
 
-<img
-  src="./public/is-it-working.jpg"
-  style={{ height: "70vh" }}
-/>
+<img src="./public/is-it-working.jpg" style={{ height: "70vh" }} />
 
 ---
 
@@ -715,6 +627,8 @@ Problems:
 3. ⛱
 
 Files: `App.js`, `SideBar.js`
+
+**Read assignments from `src/assignments` instead of in the app!**
 
 <ReadMore link="reacttraining.com/react-router/web" />
 
@@ -730,13 +644,9 @@ Files: `App.js`, `SideBar.js`
 
 <ul style={{ fontSize: "1.2em" }}>
   <Appear>
+    <li>Solves the same problem as HOCs: sharing common behavior 🤝</li>
     <li>
-      Solves the same problem as HOCs: sharing common
-      behavior 🤝
-    </li>
-    <li>
-      Render props are sometimes refered to as{" "}
-      <em>"function as a child"</em>
+      Render props are sometimes refered to as <em>"function as a child"</em>
     </li>
   </Appear>
 </ul>
@@ -756,7 +666,11 @@ We teach you both patterns because you will most likely use both when you start 
 ---
 
 <CodeSurfer
-  title="The children prop"
+  title={() => (
+    <h1>
+      The <Code code="children" /> prop
+    </h1>
+  )}
   code={`<Highlight>
   <HeroList/>
 </Highlight>`}
@@ -773,28 +687,27 @@ We teach you both patterns because you will most likely use both when you start 
 <ul style={{ fontSize: "1.2em" }}>
   <Appear>
     <li>
-      The special <Code code="props.children" /> prop can be
-      used to render all children of a component
+      The special <Code code="props.children" /> prop can be used to render all children of a
+      component
     </li>
-    <li>
-      Then we can have "containing" components that wraps
-      whatever their children are
-    </li>
-    <li>
-      Child components are defined in JSX like regular HTML
-    </li>
+    <li>Then we can have "containing" components that wraps whatever their children are</li>
+    <li>Child components are defined in JSX like regular HTML</li>
   </Appear>
 </ul>
 
 ---
 
 <CodeSurferNoZoom
-  title="The children prop"
+  title={() => (
+    <h1>
+      The <Code code="children" /> prop
+    </h1>
+  )}
   code={require("!raw-loader!./examples/children-prop.js")}
   lang="jsx"
   showNumbers={true}
   theme={nightOwl}
-  steps={[{ range: [1, 9] }, { range: [11, 18] }, {}]}
+  steps={[{ range: [1, 7] }, { range: [9, 17] }, {}]}
 />
 
 ---
@@ -807,13 +720,36 @@ We teach you both patterns because you will most likely use both when you start 
   theme={nightOwl}
   steps={[
     {
-      range: [1, 12]
+      range: [1, 7]
     },
     {
-      range: [14, 21]
+      range: [9, 20]
     },
     {}
   ]}
+/>
+
+---
+
+<CodeSurferNoZoom
+  title="child as a function with arguments!"
+  code={require("!raw-loader!./examples/children-prop-function-args.js")}
+  lang="jsx"
+  showNumbers={true}
+  theme={nightOwl}
+  steps={[
+    {
+      range: [1, 7]
+    },
+    {},
+	{
+		tokens: {
+			4: [4,5,6,7],
+			13: [2,3,4],
+			15: [12,13,14,15,,16,17,18,19,20],
+    	}
+    }
+]}
 />
 
 ---
@@ -839,8 +775,7 @@ We teach you both patterns because you will most likely use both when you start 
     },
     {
       lines: [5, 6, 12, 13],
-      notes:
-        'Child of <Network/> component is a function - "function as a child"'
+      notes: 'Child of <Network/> component is a function - "function as a child"'
     },
     {
       tokens: { 6: [2, 3, 4, 5, 6, 7, 8] },
@@ -852,8 +787,7 @@ We teach you both patterns because you will most likely use both when you start 
     },
     {
       range: [4, 14],
-      notes:
-        "In short, the Render prop component is added inside our JSX"
+      notes: "In short, the Render prop component is added inside our JSX"
     }
   ]}
 />
@@ -862,18 +796,15 @@ We teach you both patterns because you will most likely use both when you start 
 
 <ul style={{ fontSize: "1.2em" }}>
   <li>
-    When you get that you are <em>"just"</em> passing a
-    function as the child to <Code code="<Network />" />, it
-    becomes easier to understand 😇
+    When you get that you are <em>"just"</em> passing a function as the child to{" "}
+    <Code code="<Network />" />, it becomes easier to understand 😇
   </li>
   <Appear>
     <li>
-      HOCs wrap a component and{" "}
-      <em>inject behavior via props</em>
+      HOCs wrap a component and <em>inject behavior via props</em>
     </li>
     <li>
-      Render props instead render a component, that passes
-      the behavior to the component{" "}
+      Render props instead render a component, that passes the behavior to the component{" "}
       <em>
         inside the <Code code="render()" /> method
       </em>
@@ -883,41 +814,12 @@ We teach you both patterns because you will most likely use both when you start 
 
 ---
 
-Let us see how the Network Render prop component is implemented
-
----
-
-<CodeSurferNoZoom
-  code={require("!raw-loader!./examples/network-render-prop.js")}
-  lang="jsx"
-  showNumbers={true}
-  theme={nightOwl}
-  steps={[
-    {},
-    {
-      lines: [1]
-    },
-    {
-      range: [2, 12]
-    },
-    {
-      range: [14, 16]
-    },
-    { notes: "Done! 🥳" }
-  ]}
-/>
-
----
-
 ## Render prop vs HOC - When to use what?
 
 <ul style={{ fontSize: "1.5em" }}>
   <Appear>
     <li>As you see, they solve the same problem</li>
-    <li>
-      It often comes down to a matter of taste, or what the
-      library exposes
-    </li>
+    <li>It often comes down to a matter of taste, or what the library exposes</li>
     <li>(as we'll see first hand in the final part)</li>
   </Appear>
 </ul>
@@ -960,15 +862,10 @@ Files: `HeroList.js`
 <ul style={{ fontSize: "1.2em" }}>
   <Appear>
     <li>
-      Passing information between components is done with{" "}
-      <em>direct props</em>
+      Passing information between components is done with <em>direct props</em>
     </li>
-    <li>
-      Cumbersome when passing through multiple components
-    </li>
-    <li>
-      We have to pass it down via each component in between
-    </li>
+    <li>Cumbersome when passing through multiple components</li>
+    <li>We have to pass it down via each component in between</li>
     <li>Global state, such as a theme or user info</li>
   </Appear>
 </ul>
@@ -977,23 +874,11 @@ Files: `HeroList.js`
 
 ## The Problem
 
-<div
-  className="stacked-container"
-  style={{ width: "90vw", height: "80vh" }}
->
+<div className="stacked-container" style={{ width: "90vw", height: "80vh" }}>
   <Appear>
-    <img
-      src="./public/context-base.svg"
-      className="stacked"
-    />
-    <img
-      src="./public/context-theme.svg"
-      className="stacked"
-    />
-    <img
-      src="./public/context-props.svg"
-      className="stacked"
-    />
+    <img src="./public/context-base.svg" className="stacked" />
+    <img src="./public/context-theme.svg" className="stacked" />
+    <img src="./public/context-props.svg" className="stacked" />
   </Appear>
 </div>
 
@@ -1006,9 +891,7 @@ Files: `HeroList.js`
 <ul style={{ fontSize: "1.2em" }}>
   <Appear>
     <li>Only works if the information is constant</li>
-    <li>
-      Declare constant as an object in a separate file
-    </li>
+    <li>Declare constant as an object in a separate file</li>
     <li>Import it directly whereever it is needed</li>
   </Appear>
 </ul>
@@ -1017,10 +900,7 @@ Files: `HeroList.js`
 
 # The Simple Solution
 
-<img
-  src="./public/context-constant.svg"
-  style={{ width: "90vw", height: "80vh" }}
-/>
+<img src="./public/context-constant.svg" style={{ width: "90vw", height: "80vh" }} />
 
 ---
 
@@ -1031,13 +911,10 @@ Files: `HeroList.js`
 <ul style={{ fontSize: "1.2em" }}>
   <Appear>
     <li>
-      A <em>provider</em> in the tree, that provides the
-      info to any descendants that <em>consumes</em> it
+      A <em>provider</em> in the tree, that provides the info to any descendants that{" "}
+      <em>consumes</em> it
     </li>
-    <li>
-      We can "teleport" the info to any descendants, without
-      using props
-    </li>
+    <li>We can "teleport" the info to any descendants, without using props</li>
   </Appear>
 </ul>
 
@@ -1045,19 +922,10 @@ Files: `HeroList.js`
 
 # The Context Solution
 
-<div
-  className="stacked-container"
-  style={{ width: "90vw", height: "80vh" }}
->
-  <img
-    src="./public/context-theme.svg"
-    className="stacked"
-  />
+<div className="stacked-container" style={{ width: "90vw", height: "80vh" }}>
+  <img src="./public/context-theme.svg" className="stacked" />
   <Appear>
-    <img
-      src="./public/context-solution.svg"
-      className="stacked"
-    />
+    <img src="./public/context-solution.svg" className="stacked" />
   </Appear>
 </div>
 
@@ -1089,13 +957,7 @@ Files: `HeroList.js`
   lang="jsx"
   showNumbers={true}
   theme={nightOwl}
-  steps={[
-    {},
-    { lines: [2] },
-    { lines: [6, 14] },
-    { lines: [6, 7, 13, 14] },
-    { range: [6, 14] }
-  ]}
+  steps={[{}, { lines: [2] }, { lines: [6, 14] }, { lines: [6, 7, 13, 14] }, { range: [6, 14] }]}
 />
 
 ---
@@ -1119,13 +981,7 @@ But we aren't actually changing the theme? 🤔
   lang="jsx"
   showNumbers={true}
   theme={nightOwl}
-  steps={[
-    {},
-    { lines: [2] },
-    { lines: [13, 14, 16, 21] },
-    { range: [5, 11] },
-    { range: [5, 16] }
-  ]}
+  steps={[{}, { lines: [2] }, { lines: [13, 14, 16, 21] }, { range: [5, 11] }, { range: [5, 16] }]}
 />
 
 ---
@@ -1136,12 +992,7 @@ But we aren't actually changing the theme? 🤔
   lang="jsx"
   showNumbers={true}
   theme={nightOwl}
-  steps={[
-    {},
-    { lines: [6, 7, 10, 17] },
-    { lines: [11] },
-    {}
-  ]}
+  steps={[{}, { lines: [6, 7, 10, 17] }, { lines: [11] }, {}]}
 />
 
 ---
@@ -1156,18 +1007,9 @@ But we aren't actually changing the theme? 🤔
 
 <ul style={{ fontSize: "1.2em" }}>
   <Appear>
-    <li>
-      The context is not magic, you still have to maintain
-      and change the state manually
-    </li>
-    <li>
-      It just enables you to pass props down, without
-      touching all the components in between
-    </li>
-    <li>
-      The Provider doesn't have to be top level, it just
-      have to be above all consumers
-    </li>
+    <li>The context is not magic, you still have to maintain and change the state manually</li>
+    <li>It just enables you to pass props down, without touching all the components in between</li>
+    <li>The Provider doesn't have to be top level, it just have to be above all consumers</li>
     <li>
       <b>Don't define the Provider value object inline</b>
     </li>
@@ -1199,7 +1041,7 @@ But we aren't actually changing the theme? 🤔
 
 1. Pass a theme down via context
 2. Change the theme from a Consumer
-2. 🏕
+3. 🏕
 
 - Files: `App.js`, `ThemeContext.js`, `Theming.js`
 
@@ -1217,18 +1059,10 @@ export default Split;
   }}
 >
   🙋‍♂️
-  <a
-    href="https://twitter.com/drreinhold"
-    target="_blank"
-    className="link"
-  >
+  <a href="https://twitter.com/drreinhold" target="_blank" className="link">
     @DrReinhold
   </a>
-  <a
-    href="mailto:jeppe@bambuu.dk"
-    target="_blank"
-    className="link"
-  >
+  <a href="mailto:jeppe@bambuu.dk" target="_blank" className="link">
     jeppe@bambuu.dk
   </a>
 </div>
@@ -1241,18 +1075,10 @@ export default Split;
   }}
 >
   🙋‍♂️
-  <a
-    href="https://twitter.com/geewengel"
-    target="_blank"
-    className="link"
-  >
+  <a href="https://twitter.com/geewengel" target="_blank" className="link">
     @GeeWengel
   </a>
-  <a
-    href="mailto:gustav@bambuu.dk"
-    target="_blank"
-    className="link"
-  >
+  <a href="mailto:gustav@bambuu.dk" target="_blank" className="link">
     gustav@bambuu.dk
   </a>
 </div>
