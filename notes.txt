@@ -9,7 +9,6 @@ Work to be done:
   - Run part1 by itself
   - Run setupAll for the rest, during p2 slides
 
-- FormController remove proptypes
 - Slide del-1, præsenter komponenterne
 - Make p1 a full project. Add extra assignment to read source code.
 - Øvelsesslide skal indeholde de filer de skal ændre i
@@ -20,6 +19,8 @@ Work to be done:
 - run prettier on the whole shebang - BUT NOT SLIDES! (it removes () around function parameters)
 - Maybe pick some nicer colors?
 - Create an assignments.html that just links to all the assignments in all parts
+- Read the generated html and see if there are errors
+- Cut FormController short
 
 Unresolved feedback slides:
 - P3, dræb building a HoC?

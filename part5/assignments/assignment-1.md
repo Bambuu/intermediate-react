@@ -30,7 +30,7 @@ Functions like this are usually passed down a parameter of some kind from its pa
 ## EXERCISE A:
 
 Let's get used to the syntax.
-We've created a TestRenderProp class that uses the render prop pattern,
+We've created a `TestRenderProp` class that uses the render prop pattern,
 inside `not-important/utils`
 
  - Import it somewhere inside your `HeroList`.
