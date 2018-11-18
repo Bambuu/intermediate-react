@@ -22,18 +22,9 @@ at the top of your HeroList.
 
 ## EXERCISE C:
 HOCs are functions that take in a component, and returns an enhanced component.
-The syntax is:
-```js
-const EnhancedComponent = withSomeExtraFunctionality(OriginalComponent)
-```
-We can wrap and export our HeroList like this.
-```js
-export const HeroListWithScroll = withScroll(HeroList);
-```
-
-We'd prefer not to change the name, so let's not do that. Instead:
+Let's export our `HeroList` as an enhanced component, but with the same name:
 - Change the `HeroList` name to `BaseHeroList`
-- Remove the export statement in front of `BaseHeroList`
+- Stop exporting the `BaseHeroList`
 - At the bottom of the file, export the enhanced component:
 ```js
 export const HeroList = withScroll(BaseHeroList)

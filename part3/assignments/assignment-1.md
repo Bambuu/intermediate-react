@@ -5,7 +5,7 @@ behaviour, and in the next exercise we'll use a
 Higher-Order Component to achieve the same result.
 
 ## EXERCISE A:
-Switch to the part 2 directory in your terminal and run "npm start"
+Switch to the part 3 directory in your terminal and run "npm start"
 *If you get a `ENOENT` error, try running "npm install" first*
 
 ## EXERCISE B:
@@ -14,8 +14,15 @@ more golden the further down the user scrolls.
 More awesome heroes = more gold!
 
 We need to listen to the scroll event.
-Inside the `componentDidMount()` lifecycle method
-of your HeroList, add the following line:
+Add an empty `componentDidMount` lifecycle method inside
+the `HeroList` class:
+```js
+componentdidMount() {
+  // this is emtpy.
+}
+```
+
+Inside `componentDidMount` add the following line:
 `window.addEventListener('scroll', console.log);`
 
 Make sure you can see the scroll events in the console,

@@ -7,12 +7,12 @@ We've created our own render-prop component. We can use it to keep track of our
 The component is called `FormController` and it can be imported from `not-important/FormController.js`
 
 ## EXERCISE A
-Inside `HeroList.js`, import the FormController from 'not-important/FormController'
+Inside `HeroList.js`, import the FormController from `not-important/FormController`
 
 ## EXERCISE B
-Render the `FormController` inside the JSX. It expects
+Render the `FormController` *inside* of the `HeroList` JSX. It expects
 a function-as-a-child.
-Give it a function that console.logs() the parameter it is given.
+Give the `HeroList` a function-as-a-child console.logs() the parameter it is given.
 You can call the parameter anything, but I'll call it `formValues`
 
 When your app logs an empty object to the console, you've succeeded.

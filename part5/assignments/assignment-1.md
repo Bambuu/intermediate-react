@@ -30,13 +30,16 @@ Functions like this are usually passed down a parameter of some kind from its pa
 ## EXERCISE A:
 
 Let's get used to the syntax.
-We've created a TestRenderProp class that uses the render prop pattern,
+We've created a `TestRenderProp` class that uses the render prop pattern,
 inside `not-important/utils`
 
  - Import it somewhere inside your `HeroList`.
  - Use it somewhere inside your render JSX.
- - Copy-paste the following code in, as the child:
-    `{(params) => {console.log(params)}}`
+ - Copy-paste the following code in, as the child of TestRenderProp
+    - aka between `<TestRenderProp>` and `</TestRenderProp>`:
+ ```jsx harmony
+    {(params) => {console.log(params)}}
+ ```
 
 You're done when you see "Hello from RenderProp" in your console.
 *(You might see it multiple times, don't worry about that)*

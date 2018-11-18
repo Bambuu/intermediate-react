@@ -19,12 +19,7 @@ import PropTypes from 'prop-types';
  *
  */
 export class FormController extends React.Component{
-	static propTypes = {
-		initialValues: PropTypes.object.isRequired,
-		onSubmit: PropTypes.func.isRequired,
-		children: PropTypes.func.isRequired,
-	};
-	
+
 	constructor(props){
 		super(props);
 		

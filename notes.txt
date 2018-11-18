@@ -1,21 +1,83 @@
 ---- TODOS ----
 
 Decision points:
+- Inline heroList så man kan se komponenternes dele?
+- Skal vi kun have et <input> i HeroList?
 
 Work to be done:
-- Consider running setupAll in parallel
+- Consider running setupAll in parallel.
+  - Run part1 by itself
+  - Run setupAll for the rest, during p2 slides
+
+- Slide del-1, præsenter komponenterne
+- Make p1 a full project. Add extra assignment to read source code.
+- Øvelsesslide skal indeholde de filer de skal ændre i
+- Sæt øvelsesbeskrivelserne ind i sidebaren direkte fra .md
+- Lav Theming.js til multi-line jsx
+- Gør sådan vi kan markere uden den hopper rundt.
+
 - run prettier on the whole shebang - BUT NOT SLIDES! (it removes () around function parameters)
 - Maybe pick some nicer colors?
 - Create an assignments.html that just links to all the assignments in all parts
+- Read the generated html and see if there are errors
+- Cut FormController short
+- Cut down on assignment 6?
+- P6. Samme theme-eksempel som i slides
+
+Unresolved feedback slides:
+- P3, dræb building a HoC?
+- P3, kan vi bruge noget andet end withNetwork til HoC? Ex. scroll.
+- P4. Assignment slide passer ikke
+- P5. Se om vi kan forklare render props med FancyBorder
+- P5. Se om vi kan vise render props på en anden måde, hvor man passer ting ned til funktionen
+hurtigere.
+- P5. Send "this.state.online" med i stedet for "this.state" hvis det er.
+- P5. Ændr "Rule of thumb guides" til "Rules of thumb"
+- P5. Svært at forstå pros/cons af HOC & render props før man har prøvet det. Opsummeringsslide?
+  Det er motivation nok at forskellige libraries bruger forskellige ting.
+- P6. Lad være med at kalde det et NavLink
+- P6. App.js er for mange linjer, kan vi skære eksemplet ned?
 
 Potential things to cut:
   - Manual implementation of scrolling
+
+- Nice To Have
+  - Lav en opsummering af øvelserne fra tidligere inden hver del starter
 
 FINAL CHECKLIST:
     - NOTHING BABYYYYY
 
 
 ---- TIME ----
+
+(Beta-test)
+P1 slides:  10 min
+P1 Ex:      26 min
+P1 total:   36 min
+
+P2 slides:  15.5 min
+P2 Ex:      37 min
+P2 total:   52.5 min
+
+P3 slides:  12 min
+P3 Ex:      53 min
+P3 total:   65 min
+
+Lunch:      20 min
+
+P4 slides:  12.5 min
+P4 Ex:      20 min
+P4 total:   32.5 min
+
+P5 slides:  11.5 min
+P5 Ex:      30 min
+P5 total:   41.5 min
+
+P6 slides:  12 min
+P6 Ex:      47 min
+P6 total:   59 min
+
+Total: 305 min = 5h
 
 ------- EXERCISES ------
 
