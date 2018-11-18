@@ -1,4 +1,4 @@
-# ASSIGNMENT 1 - Routing and the sidebar
+# ASSIGNMENT 1 - ROUTING AND THE SIDEBAR
 
 Let's add some routing. We've installed `react-router` for you.
 You will be importing from "react-router-dom"

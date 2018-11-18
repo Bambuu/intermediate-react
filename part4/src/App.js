@@ -4,6 +4,7 @@ import { Header } from "./Header";
 import { HeroList } from "./HeroList";
 import { ExtraAssignment } from "./ExtraAssignment";
 import { Theming } from "./Theming";
+import { Assignment } from "./not-important/Assignment";
 
 class App extends Component {
   state = {
@@ -21,7 +22,14 @@ class App extends Component {
       mainComponent = <Theming />;
     } else if (this.state.currentPage === "/extra") {
       mainComponent = <ExtraAssignment />;
+    } else if (this.state.currentPage === "/assignment-1") {
+      mainComponent = <Assignment file="1" />;
+    } else if (this.state.currentPage === "/assignment-extra-1") {
+      mainComponent = <Assignment file="extra-1" />;
+    } else if (this.state.currentPage === "/assignment-extra-2") {
+      mainComponent = <Assignment file="extra-2" />;
     }
+
     return (
       <div className="root">
         <SideBar changePage={this.changePage} />
