@@ -10,7 +10,7 @@ Delete all the code related to scrolling.
 
 ## EXERCISE B:
 Now, we'll need a HOC.
-You can import one that keeps track of scroll-position from the "react-fns" library, that
+You can import one that keeps track of scroll-position from the `"react-fns"` library, that
 we have installed for you.
 Write
 ```js
@@ -45,7 +45,9 @@ Import it (it's a named export), and inside the `render()` method, call it with 
 ## EXERCISE F:
 You style a div using inline styles, by setting the style property to an object
 containing styles:
-`<div style={{backgroundColor: "red"}}></div>`
+```js
+<div style={{backgroundColor: "red"}}></div>
+```
 
 Note the double curly braces - the first one is to tell React that we're writing some JavaScript, and the second
 one is an object, in this case the object:

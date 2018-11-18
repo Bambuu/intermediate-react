@@ -31,9 +31,9 @@ Inside SideBar, you will find several `<a>` components.
 Link takes a `to` prop, that will set the url.
 Give the different pages different urls like this schema:
 
-  - Heroes page: "/heroes"
-  - Theming page: "/theming"
-  - Extra Exercise: "/extra"
+  - Heroes page: `"/heroes"`
+  - Theming page: `"/theming"`
+  - Extra Exercise: `"/extra"`
 
 When this exercise is finished, you'll see that when you click a link,
 the url changes - but the UI does not!
@@ -64,10 +64,10 @@ A Route takes a path, and a component to display:
   if the correct path is specified.
 - Click the "Heroes" link in the sidebar, to see if it works.
 
-* Note: Currently it will not work with the index url "/" - which will still show nothing. *
+* Note: Currently it will not work with the index url `"/"` - which will still show nothing. *
 
 ## EXERCISE E:
-Implement the two other Routes (theming, extra), just like you did with the "/heroes" route
+Implement the two other Routes (theming, extra), just like you did with the `"/heroes"` route
 
 Test to see if all routes work.
 
@@ -84,5 +84,5 @@ Remove everything related to the old way of managing links
 
 After this, you should have a functional navigation, with
 routes and links.
-The index route at '/' still doesn't work, but we'll
+The index route at `"/"` still doesn't work, but we'll
 look at that in the extra exercises.
