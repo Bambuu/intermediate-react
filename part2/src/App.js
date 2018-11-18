@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {Assignment} from './not-important/Assignment'
+import { Assignment } from "./not-important/Assignment";
 import { SideBar } from "./SideBar";
 import { Header } from "./Header";
 import { HeroList } from "./HeroList";
@@ -33,12 +33,12 @@ class App extends Component {
         <Assignment file="extra-1" key="extra-1" />
       );
     } else if (
-		this.state.currentPage === "/assignment-extra-2"
-	  ) {
-		mainComponent = (
-		  <Assignment file="extra-2" key="extra-2" />
-		);
-	  }
+      this.state.currentPage === "/assignment-extra-2"
+    ) {
+      mainComponent = (
+        <Assignment file="extra-2" key="extra-2" />
+      );
+    }
     return (
       <div className="root">
         <SideBar changePage={this.changePage} />

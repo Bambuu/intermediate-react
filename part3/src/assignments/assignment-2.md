@@ -49,7 +49,7 @@ containing styles:
 
 Note the double curly braces - the first one is to tell React that we're writing some JavaScript, and the second
 one is an object, in this case the object:
-```json5
+```json
 {
   backgroundColor: "red"
 }
