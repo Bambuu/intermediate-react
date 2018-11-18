@@ -1,26 +1,15 @@
 # ASSIGNMENT 2 - Theme-togglin'
 
 ## EXERCISE A:
-To change the theme, we'll need two themes.
-Change our `theme` object to look like this:
-```js
-{
-  orange: {
-    color: '#f4b642'
-  },
-  green: {
-    color: '#41f459'
-  }
-}
-```
-
-Change the Providers `value` to be `theme.orange` - check it still works.
+To change the theme, we'll need two themes!
+Export a `greenTheme` object from `ThemeContext.js`
+that contains `color : "#249313"`
 
 ## EXERCISE B:
 We'll also need to be able to let React know when the Theme has updated.
 To do that, we'll need to put it inside the state.
 
-Add a `theme` state to the `App` component. Have the default value be `theme.orange`
+Add a `theme` state to the `App` component. Have the default value be `redTheme`
 
 Change the Providers `value` to be `this.state.theme`
 Ensure it still works.
@@ -49,9 +38,9 @@ Check that the `console.log` is being called.
 
 ## EXERCISE B:
 Let's implement the `toggleTheme` function.
-Have it compare `this.state.theme === theme.orange`.
-If this evaluates to true, use `setState` to change the theme to `theme.green`
-Otherwise, it should switch the theme to `theme.orange`
+Have it compare `this.state.theme === redTheme`.
+If this evaluates to true, use `setState` to change the theme to `greenTheme`
+Otherwise, it should switch the theme to `redTheme`
 
 
 ## Final notes

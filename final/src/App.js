@@ -5,33 +5,24 @@ import { HeroList } from "./HeroList";
 import { ExtraAssignment } from "./ExtraAssignment";
 import { Theming } from "./Theming";
 import { BrowserRouter, Route } from "react-router-dom";
-import { ThemeContext } from "./ThemeContext";
-
-const theme = {
-  orange: {
-    color: '#f4b642'
-  },
-  green: {
-    color: '#41f459'
-  }
-};
+import { greenTheme, redTheme, ThemeContext } from "./ThemeContext";
 
 class App extends Component {
 
   toggleTheme = () => {
-    if (this.state.theme === theme.orange){
+    if (this.state.theme === redTheme){
       this.setState({
-        theme: theme.green,
+        theme: greenTheme,
       });
     } else {
       this.setState({
-        theme: theme.orange,
+        theme: redTheme,
       });
     }
   };
 
   state = {
-    theme: theme.orange,
+    theme: redTheme,
     toggleTheme: this.toggleTheme
   };
 

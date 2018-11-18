@@ -15,21 +15,21 @@ export const ThemeContext = React.createContext()
 
 ## EXERCISE B
 We'll also want to define a starting theme.
-Inside `ThemeContext.js` export a object called `theme`
-that contains `color: "#f4b642"`
+Inside `ThemeContext.js` export a object called `redTheme`
+that contains `color: "#c4361d"`
 
 ## EXERCISE C:
 Let's create a `Provider`, that will pass the value of the context
 to. We'll create it inside `App.js`
 
-We'll need to import the `ThemeContext` and `theme` we just exported
+We'll need to import the `ThemeContext` and `redTheme` we just exported
 
 ## EXERCISE D
 We'll need to add the provider in the render method.
 Everything that needs the theme, must be below the Provider in the Hierarchy.
 
 Add the `<ThemeContext.Provider>` just below the `BrowserRouter` in the hierarchy.
-Set the `value` prop of the `Provider` to be the `theme` object you imported.
+Set the `value` prop of the `Provider` to be the `redTheme` object you imported.
 
 ## EXERCISE E:
 Let's look at consuming our Context!
@@ -47,7 +47,7 @@ Inside `Theming.js`:
 
 - Import our `ThemeContext`
 - Use the `ThemeContext.Consumer` inside the render function
-- Render the `color` attribute as a string on the themeContext.
+- Render the `color` attribute to the page. You can use `{}`'s like normally.
 
 You're done when you see the hex-code you defined in `ThemeContext.js`
 
