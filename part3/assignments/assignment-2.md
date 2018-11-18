@@ -5,10 +5,8 @@ We're not going to be building one in this exercise, simply using one.
 
 ## EXERCISE A:
 Delete all the code related to scrolling.
-- Adding and removing eventListeners
-- the `onScroll` method,
-- displaying the scroll position in render
-- the key in state.
+- The code in `componentDidMount`
+- the `scrollPosition` key in state.
 
 ## EXERCISE B:
 Now, we'll need a HOC.

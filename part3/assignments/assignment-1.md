@@ -18,46 +18,31 @@ Add an empty `componentDidMount` lifecycle method inside
 the `HeroList` class:
 ```js
 componentdidMount() {
-  // this is emtpy.
+  // Put stuff in here!
 }
 ```
 
+## EXERCISE C
 Inside `componentDidMount` add the following line:
-`window.addEventListener('scroll', console.log);`
+```js
+window.addEventListener('scroll', () => {
+  // This is our eventListener!
+  console.log("Scrolled to coordinate",  window.scrollY)
+});
+```
+This attaches an eventListener, which is a function that will be called
+every time the user scrolls. Now when you scroll down your HeroList, you
+should be able to see the current position in the console.
 
+You should be able to see 
 Make sure you can see the scroll events in the console,
 when you scroll up and down your HeroList.
 
-## EXERCISE C
-Create a new function inside your HeroList
-called `onScroll`. Have this function `console.log("scrolled")`
-
-Change the `addEventListener` call, from `console.log`, to `this.onScroll`
-Ensure it logs "scrolled"
-
 ## EXERCISE D:
-Now, try to go to the **Theming** page, and scroll down.
-You will still see new scroll events in your console!
-When using `addEventListener()` in JavaScript, the eventListener,
-stay on, until the page changes.
-As React never "changes" the page, we have to remove the `eventListener` manually
-
-We can do this in the lifecycle method `componentWillUnmount`
-Implement `componentWillUnmount()` and have it `console.log("Goodbye")`
-Click around to get a feel for when it is called.
-
-## EXERCISE E:
-Now let's unsubscribe from scroll events in our `componentWillUnmount()` like this:
-```js
-window.removeEventListener('scroll', this.onScroll)
-```
-Now we should get scroll events inside our HeroList, but not in **Theming**
-
-## EXERCISE F:
 We need the scroll position inside our render method.
 That means we have to put it in `state`
 
-- Add a "scrollPosition" key to the state. Have it be 0 as a default.
-- Inside your onScroll function, call setState with the new scroll position.
+- Add a `scrollPosition` key to the state. Have it be 0 as a default.
+- Inside your `eventListener` function, call `this.setState` with the new scroll position.
     - You can access the position through `window.scrollY`
 - Below your list, display `this.state.scrollPosition` from state.
