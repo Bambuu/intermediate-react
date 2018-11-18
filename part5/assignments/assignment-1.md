@@ -9,14 +9,14 @@ In React and HTML, a child is what's nested inside another element, e.g.
 </div>
 ```
 However..! The child of an element can also be a function:
-```jsx harmony
+```js
 <ComponentExpectingAFunctionAsChild>
   { () => { /*...Your function in here...*/  } }
 </ComponentExpectingAFunctionAsChild>
 ```
 
 These functions can be multi-line, and often returns JSX, like below.
-```jsx harmony
+```js
 <ComponentExpectingAFunctionAsChild>
   { (value) => {
     return <div>I'm returned from this function. I got the parameter {value} </div>
@@ -37,7 +37,7 @@ inside `not-important/utils`
  - Use it somewhere inside your render JSX.
  - Copy-paste the following code in, as the child of TestRenderProp
     - aka between `<TestRenderProp>` and `</TestRenderProp>`:
- ```jsx harmony
+ ```js
     {(params) => {console.log(params)}}
  ```
 

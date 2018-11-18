@@ -66,7 +66,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spre
 Let's pass some extra props to our `WrappedComponent`. Let's just start off by hard-coding the props `x` and `y`
 
 Render the WrappedComponent like this:
-```jsx harmony
+```js
 <WrappedComponent x={0} y={0} {...props} />
 ```
 

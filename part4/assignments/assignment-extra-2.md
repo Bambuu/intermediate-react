@@ -23,7 +23,7 @@ the opposite.
 
 - Import Switch inside App.js, from 'react-router-dom'
 - Surround your Routes with 
-```jsx harmony
+```js
 <Switch> /* routes in here! */ </Switch>
 ```
 

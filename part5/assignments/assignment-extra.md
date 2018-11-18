@@ -26,7 +26,7 @@ JSX tags, is automatically assigned to `children`
 Let's convince ourselves of that:
 Inside ExtraAssignment, add the child as a regular prop called `children`
 instead of as a `regular` child:
-```jsx harmony
+```js
 <RenderPropComponent children={ /* jsx here */ }>
 </RenderPropComponent>
 ```

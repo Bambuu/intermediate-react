@@ -30,7 +30,7 @@ Everything that needs the theme, must be below the Provider in the Hierarchy.
 
 Add the `<ThemeContext.Provider>` just below the `BrowserRouter` in the hierarchy.
 Set the `value` prop of the `Provider` to be the `redTheme` object you imported:
-```jsx harmony
+```js
 // Inside render
 <ThemeContext.Provider value={redTheme}>
   ...The rest of your app should be in here...
@@ -40,7 +40,7 @@ Set the `value` prop of the `Provider` to be the `redTheme` object you imported:
 ## EXERCISE E:
 Let's look at consuming our Context!
 We get the theme though a `Consumer`, that uses a function-as-a-child:
-```jsx harmony
+```js
 <ThemeContext.Consumer>
   {
     (themeContext) => {
@@ -54,7 +54,7 @@ Inside `Theming.js`:
 - Import our `ThemeContext`
 - Use the `ThemeContext.Consumer` inside the render function, to render the 
 `color` attribute to the page:
-```jsx harmony
+```js
       <ThemeContext.Consumer>
        {themeContext => {
          return <p>Color: {themeContext.color}</p>
@@ -72,6 +72,6 @@ set the backgroundColor of the button.
 You should have a nice orange button now!
 
 *Tip: If you've forgotten the syntax of inline styles, here's an example:*
-```jsx harmony
+```js
 <div style={{backgroundColor: "rebeccapurple"}}> This div has style! </div>
 ```

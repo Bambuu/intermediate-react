@@ -15,7 +15,7 @@ ref = React.createRef();
 
 Now we have a `ref`. Inside our render method, we specify what element this ref should point to.
 We do this by adding our ref to the `ref` attribute:
-```jsx harmony
+```js
   <li ref={this.ref}> </li>
 ```
 

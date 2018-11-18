@@ -11,7 +11,7 @@ Inside `App.js`, `import {BrowserRouter} from "react-router-dom"`
 
 We'll want the Router to be at the outermost layer of our app.
 Inside `App` surround the outermost div with a `BrowserRouter`:
-```jsx harmony
+```js
 <BrowserRouter>
   ...rest of render in here...
 </BrowserRouter>
@@ -56,7 +56,7 @@ Let's add our first `Route`.
 Import it inside `App.js`, like the other components.
 
 A Route takes a path, and a component to display:
-```jsx harmony
+```js
 <Route path="/mySuperCoolPath" component={MySuperCoolComponent} />
 ```
 

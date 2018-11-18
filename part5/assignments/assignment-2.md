@@ -8,7 +8,7 @@ The component is called `FormController` and it can be imported from `not-import
 
 ## EXERCISE A
 Inside `HeroList.js`, import the FormController:
-```jsx harmony
+```js
 import { FormController } from "./not-important/FormController";
 ```
 
@@ -18,7 +18,7 @@ a function-as-a-child, and it takes in a prop called `initialValues` which is an
 consisting of names, and initial values.
 
 You can copy the following snippet inside the JSX of your `render` function:
-```jsx harmony
+```js
 <FormController initialValues={{name: "MyHeroName"}}>
 {
   (formValues) => {

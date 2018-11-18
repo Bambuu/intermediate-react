@@ -12,7 +12,7 @@ We're missing a key in our list!
 React warns you of this with a message like this:
 ```
 "Warning: Each child in an array or iterator should have a unique "key" prop.
-Check the render method of `HeroList`"
+Check the render method of HeroList"
 ```
 
 Open up your Developer Tools and make sure you can see the warning in the console.
@@ -22,6 +22,7 @@ Let's try to go through the `render()` method of the HeroList. Spend a few minut
 going on.
 You can find it in the file `src/HeroList.js`
 If you need it, there's a walkthrough just below.
+
 ```js
 render() {
   // Here we create a copy of the array in state, using slice(). Normally this is not needed but..
@@ -56,9 +57,9 @@ render() {
   In our case, we can use the `name` property of the hero, assuming nobody adds the same hero twice.
   When you add the key, the warning should disappear in your console.
 
-  An example of adding a key to a <li> element:
+  An example of adding a key to a `<li>` element:
 
-```jsx harmony
+```js
 const animals = [
     { id: 2, name: "giraffe" },
     { id: 5, name: "lion" },
