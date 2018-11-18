@@ -1,4 +1,4 @@
-# EXTRA ASSIGNMENT - KEYS GONE WILD
+# EXTRA ASSIGNMENT 2 - KEYS GONE WILD
 
 Let's take a look at what happens when you implement keys wrong.
 In `ExtraAssignment.js` is a component, with a list of Superhero movies.
