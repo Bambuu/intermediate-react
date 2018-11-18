@@ -26,6 +26,10 @@ a {
   color: inherit;
 }
 
+.code-surfer-no-zoom p {
+	font-size: 2rem;
+}
+
 body {
 	cursor: none;
 }
