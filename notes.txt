@@ -21,6 +21,8 @@ Work to be done:
 - Create an assignments.html that just links to all the assignments in all parts
 - Read the generated html and see if there are errors
 - Cut FormController short
+- Cut down on assignment 6?
+- P6. Samme theme-eksempel som i slides
 
 Unresolved feedback slides:
 - P3, dræb building a HoC?
@@ -31,6 +33,8 @@ Unresolved feedback slides:
 hurtigere.
 - P5. Send "this.state.online" med i stedet for "this.state" hvis det er.
 - P5. Ændr "Rule of thumb guides" til "Rules of thumb"
+- P5. Svært at forstå pros/cons af HOC & render props før man har prøvet det. Opsummeringsslide?
+  Det er motivation nok at forskellige libraries bruger forskellige ting.
 - P6. Lad være med at kalde det et NavLink
 - P6. App.js er for mange linjer, kan vi skære eksemplet ned?
 

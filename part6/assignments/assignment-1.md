@@ -1,16 +1,17 @@
 # ASSIGNMENT 1 - STATIC CONTEXT
 
 ## EXERCISE A
-Let's have a look at creating a Context
-We can create one using
-`React.createContext()`
+Let's have a look at creating a Context for our Theme.
+We can create one using `React.createContext()`
 
   - Create a new file `ThemeContext.js`
 Inside the file:
   - Import React
-  - Create a context
-  - Assign it to a `const ThemeContext`
-  - Export it
+  - Create a context and export it:
+
+```js
+export const ThemeContext = React.createContext()
+```
 
 ## EXERCISE B
 We'll also want to define a starting theme.
@@ -35,8 +36,10 @@ Let's look at consuming our Context!
 We get the theme though a `Consumer`, that uses a function-as-a-child:
 ```jsx harmony
 <ThemeContext.Consumer>
-  (themeContext) => {
-    return <div>/* In here we can use the themeContext! */</div>
+  {
+    (themeContext) => {
+    return (<div>/* In here we can use the themeContext! */</div>)
+  }
   }
 </ThemeContext.Consumer>
 ```
