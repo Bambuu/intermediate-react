@@ -4,7 +4,7 @@ import Prism from "prismjs";
 import "prismjs/themes/prism.css";
 import "./github-markdown.css";
 
-export class Assignment extends React.Component {
+export class AssignmentDescription extends React.Component {
   state = {
     markdown: null
   };
@@ -13,8 +13,16 @@ export class Assignment extends React.Component {
     let name = this.props.file;
     if (!name){
       // If no file given, read from URL
-      name = document.location.pathname.split('-')[1];
+      const pathSplit = document.location.pathname.split('-');
+      if (pathSplit.length === 3){
+        // Extra assignment of the form assignment-extra-1
+        name = pathSplit[1] + '-' + pathSplit[2]
+      } else {
+        // Extra assignment of the form "assignment-1"
+        name = pathSplit[1]
+      }
     }
+    
     const file = await fetch(require(`../assignments/assignment-${name}.md`));
     const markdown = await file.text();
     this.setState({ markdown });
@@ -27,14 +35,6 @@ export class Assignment extends React.Component {
   async componentDidUpdate(prevProps) {
     if (this.props.file !== prevProps.file){
       this.fetchNewMarkdown()
-    }
-  }
-
-  async componentDidUpdate(prevProps) {
-    if (this.props.file !== prevProps.file){
-      const file = await fetch(require(`../assignments/assignment-${this.props.file}.md`));
-      const markdown = await file.text();
-      this.setState({ markdown });
     }
   }
 

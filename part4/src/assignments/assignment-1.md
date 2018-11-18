@@ -3,6 +3,9 @@
 Let's add some routing. We've installed `react-router` for you.
 You will be importing from "react-router-dom"
 
+**Note that in this exercise, we won't have the AssignmentDescription Descriptions in the SideBar. You'll have to read
+them from the `.md` file.**
+
 The first thing we need to do is add a top-level `Router`, that will help us
 keep our UI in sync with our URL.
 
