@@ -30,14 +30,6 @@ export class Assignment extends React.Component {
     }
   }
 
-  async componentDidUpdate(prevProps) {
-    if (this.props.file !== prevProps.file){
-      const file = await fetch(require(`../assignments/assignment-${this.props.file}.md`));
-      const markdown = await file.text();
-      this.setState({ markdown });
-    }
-  }
-
   render() {
     return (
       <ReactMarkdown

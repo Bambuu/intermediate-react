@@ -9,5 +9,9 @@ export const SideBar = () => {
       <Link to="/">Heroes</Link>
       <Link to="/theming">Theming</Link>
       <Link to="/extra">Extra Exercise</Link>
+      <Link className="assignment-link" to="/assignment-1">Assignment 1</Link>
+      <Link className="assignment-link" to="/assignment-2">Assignment 2</Link>
+      <Link className="assignment-link" to="/assignment-3">Assignment 3</Link>
+      <Link className="assignment-link" to="/assignment-extra">Extra Assignment 1</Link>
     </div>)
 };

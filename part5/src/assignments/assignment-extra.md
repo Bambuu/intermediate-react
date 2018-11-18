@@ -1,4 +1,4 @@
-# EXTRA ASSIGNMENT : Creating A Render Prop
+# EXTRA ASSIGNMENT : CREATING A RENDER PROP
 Let's take a look at creating a Render Prop. Render props are
 very simple to create, - they're just components.
 

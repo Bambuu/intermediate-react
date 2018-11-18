@@ -5,6 +5,7 @@ import { HeroList } from './HeroList';
 import { ExtraAssignment } from "./ExtraAssignment";
 import { Theming } from "./Theming";
 import { BrowserRouter, Route } from "react-router-dom";
+import { Assignment } from "./not-important/Assignment";
 
 class App extends Component {
   render() {
@@ -17,6 +18,11 @@ class App extends Component {
           <Route exact path="/" component={HeroList} />
           <Route path="/theming" component={Theming} />
           <Route path="/extra" component={ExtraAssignment} />
+
+          <Route path="/assignment-1" component={Assignment} />
+          <Route path="/assignment-2" component={Assignment} />
+          <Route path="/assignment-3" component={Assignment} />
+          <Route path="/assignment-extra" component={Assignment} />
         </div>
       </div>
 
