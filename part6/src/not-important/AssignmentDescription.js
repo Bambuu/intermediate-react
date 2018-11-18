@@ -4,7 +4,7 @@ import Prism from "prismjs";
 import "prismjs/themes/prism.css";
 import "./github-markdown.css";
 
-export class Assignment extends React.Component {
+export class AssignmentDescription extends React.Component {
   state = {
     markdown: null
   };
