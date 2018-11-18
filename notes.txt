@@ -18,7 +18,8 @@ Unresolved feedback slides:
   Det er motivation nok at forskellige libraries bruger forskellige ting.
 
 Potential things to cut:
-  - Cut FormController short
+  - Cut FormController even *shorter*
+    - Will involve implementing one of the fields for them.
   - Cut down on assignment 6?
 
 - Nice To Have
@@ -28,6 +29,7 @@ Potential things to cut:
 
 FINAL CHECKLIST:
     - Read the generated html and see if there are errors
+    - Proofread p5 and p6 again
 
 
 ---- TIME ----

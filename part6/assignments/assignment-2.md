@@ -36,12 +36,17 @@ Now we have access to our the function anywhere we subscribe to the context.
 Inside `Theming.js`, call `toggleTheme` when the button is clicked.
 Check that the `console.log` is being called.
 
-## EXERCISE B:
+## EXERCISE F:
 Let's implement the `toggleTheme` function.
 Have it compare `this.state.theme === redTheme`.
 If this evaluates to true, use `setState` to change the theme to `greenTheme`
 Otherwise, it should switch the theme to `redTheme`
 
+## EXERCISE G:
+Let's try to consume the context another place as well.
+Inside our `<Header>` component, subscribe to the context, using
+a `Consumer`.
+Use inline-styles to change the `backgroundColor` of the header div.
 
 ## Final notes
 Now your button should switch the theme when clicked. You will see both the

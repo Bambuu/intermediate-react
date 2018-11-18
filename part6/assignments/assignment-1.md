@@ -29,7 +29,13 @@ We'll need to add the provider in the render method.
 Everything that needs the theme, must be below the Provider in the Hierarchy.
 
 Add the `<ThemeContext.Provider>` just below the `BrowserRouter` in the hierarchy.
-Set the `value` prop of the `Provider` to be the `redTheme` object you imported.
+Set the `value` prop of the `Provider` to be the `redTheme` object you imported:
+```jsx harmony
+// Inside render
+<ThemeContext.Provider value={redTheme}>
+  ...The rest of your app should be in here...
+</ThemeContext.Provider>
+```
 
 ## EXERCISE E:
 Let's look at consuming our Context!
@@ -62,9 +68,3 @@ You should have a nice orange button now!
 ```jsx harmony
 <div style={{backgroundColor: "rebeccapurple"}}> This div has style! </div>
 ```
-
-## EXERCISE G:
-Let's try to consume the context another place as well.
-Inside our `<Header>` component, subscribe to the context, using
-a `Consumer`.
-Use inline-styles to change the `backgroundColor` of the header div.
