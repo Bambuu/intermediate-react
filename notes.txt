@@ -1,11 +1,8 @@
 ---- TODOS ----
 
 Decision points:
-- Inline heroList så man kan se komponenternes dele?
-- Skal vi kun have et <input> i HeroList?
 
 Work to be done:
-
 - Slides:
 
 Nicer exercise descriptions
@@ -17,18 +14,12 @@ Unresolved feedback slides:
 - P5. Svært at forstå pros/cons af HOC & render props før man har prøvet det. Opsummeringsslide?
   Det er motivation nok at forskellige libraries bruger forskellige ting.
 
-Potential things to cut:
-  - Manual implementation of scrolling
-  - Cut FormController short
-  - Cut down on assignment 6?
-
 - Nice To Have
-  - Lav en opsummering af øvelserne fra tidligere inden hver del starter
-  - Maybe pick some nicer colors?
-  - run prettier on the whole shebang - BUT NOT SLIDES! (it removes () around function parameters)
+
 
 FINAL CHECKLIST:
     - Read the generated html and see if there are errors
+    - Proofread p5 and p6 again
 
 
 ---- TIME ----
