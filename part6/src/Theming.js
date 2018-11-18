@@ -1,5 +1,9 @@
 import React from 'react';
 
 export const Theming = () => {
-  return <div> Here we'll implement theming.. later. </div>
+  return (<div className="tall-div">
+      <h1>Theming</h1>
+      Here we'll implement theming.. later.
+    </div>
+  )
 };
