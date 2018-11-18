@@ -25,12 +25,13 @@ This means two things:
 Add two new keys to the state, call them `awesomeInputValue` and `nameInputValue`.
 Have `awesomeInputValue` start as 0, and `nameInputValue` start as an empty string ""
 
-Set the `value` prop of the `<input/>` element to the value of the new state you just created,
+Set the `value` prop of the first `<input/>` element to the value of the new state you just created,
 like this:
 ```js
 value={this.state.awesomeInputValue}
 ```
-Now the value is always the value in state. But as we never change the state, the value never changes.
+You'll get an error saying that the component won't ever update. That's because
+the value in state never changes. 
 Try typing in the `<input>` component - nothing happens.
 
 ## EXERCISE C:

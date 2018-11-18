@@ -53,12 +53,18 @@ render() {
 ## EXERCISE D:
   You need to add a "key" property to the `<li>` elements returned by our `.map()` function.
   A key should be unique.
-  In our case, we can use the name of the hero, assuming nobody adds the same hero twice.
+  In our case, we can use the `name` property of the hero, assuming nobody adds the same hero twice.
   When you add the key, the warning should disappear in your console.
 
-  An example of adding a key to a <li> element is below:
+  An example of adding a key to a <li> element:
 
-```js
-const animalElements = ['elephant', 'zebra', 'giraffe']
-  .map(animal => <li key={animal}>This animal is a {animal}</li>);
+```jsx harmony
+const animals = [
+    { id: 2, name: "giraffe" },
+    { id: 5, name: "lion" },
+    { id: 9, name: "elephant" }
+  ];
+  const animalElements = animals.map((animal) => {
+    return <li key={animal.id}>{animal.name}</li>;
+  });
 ```
