@@ -1,4 +1,4 @@
-# ASSIGNMENT 2 - Theme-togglin'
+# ASSIGNMENT 2 - THEME-TOGGLIN'
 
 ## EXERCISE A:
 To change the theme, we'll need two themes!

@@ -7,6 +7,7 @@ Work to be done:
 
 Nicer exercise descriptions
   - Sæt øvelsesbeskrivelserne ind i sidebaren direkte fra .md
+  - Rename Assignment til AssignmentDescription
 
 Unresolved feedback slides:
 - P3, dræb building a HoC?

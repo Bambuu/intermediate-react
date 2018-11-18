@@ -9,10 +9,25 @@ export class Assignment extends React.Component {
     markdown: null
   };
 
-  async componentDidMount() {
-    const file = await fetch(require(`../assignments/assignment-${this.props.file}.md`));
+  fetchNewMarkdown = async () => {
+    let name = this.props.file;
+    if (!name){
+      // If no file given, read from URL
+      name = document.location.pathname.split('-')[1];
+    }
+    const file = await fetch(require(`../assignments/assignment-${name}.md`));
     const markdown = await file.text();
     this.setState({ markdown });
+  };
+
+  async componentDidMount() {
+    this.fetchNewMarkdown()
+  }
+
+  async componentDidUpdate(prevProps) {
+    if (this.props.file !== prevProps.file){
+      this.fetchNewMarkdown()
+    }
   }
 
   render() {
