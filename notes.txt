@@ -18,7 +18,6 @@ Unresolved feedback slides:
   Det er motivation nok at forskellige libraries bruger forskellige ting.
 
 Potential things to cut:
-  - Manual implementation of scrolling
   - Cut FormController short
   - Cut down on assignment 6?
 

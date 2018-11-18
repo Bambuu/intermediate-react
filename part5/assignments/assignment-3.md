@@ -3,8 +3,7 @@
 In this section we'll look at submitting the form.
 
 ## EXERCISE A:
-Create a `<button>` inside the FormController, and click it.
-Buttons inside form submit the form by default.
+Create a `<button>` *inside* the FormController function, and click it.
 When you do this, you will get an error.
 
 ## EXERCISE B:
@@ -12,9 +11,13 @@ This is because the FormController requires the prop `onSubmit`.
 `onSubmit` is a function where you will do something with the form values, when the user clicks
 "Submit"
 
-- Create a function inside the HeroList class called `handleFormSubmit` - have it take in one parameter,
-  and `console.log` it.
-- Set `onSubmit` to be `this.handleFormSubmit`
+- Create a function inside the HeroList class called `handleFormSubmit`:
+```js
+handleFormSubmit = (inputFieldValues) => {
+  console.log(inputFieldValues)
+}
+```
+- On FormController, set the `onSubmit` prop to be `{this.handleFormSubmit}`
 
 When you click your button, you should see the value of the input fields
 in your console.
@@ -26,13 +29,13 @@ reset to their initialValue*
 Now that we have both an `awesome` and a `name` from our form,
 we can create a new Superhero!
 
-Rewrite `handleFormSubmit` to create a new superhero. Take inspiration
-in `addSuperHero`, but notice you don't manually need to keep track of
-the `nameInputValue` and `awesomeInputValue` parts of the state
+Rewrite `handleFormSubmit` to create a new superhero. You can implement it like
+you did in `addSuperHero`, but without having to keep track of the `nameInputValue` and
+`awesomeInputValue` parts of the state.
 
 ## EXERCISE D:
 Let's set the initialValues to something more sensible than `MyHeroName` and `999`.
-Set the initial name of a superhero to an empty string, and the initial awesome to 0
+Set the initial `name` of a superhero to an empty string `''`, and the initial `awesome` to `0`
 
 ## EXERCISE E:
 Alright! Now let's clean up our old form behaviour.
