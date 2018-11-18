@@ -14,4 +14,3 @@ A browser will appear out of thin air, showing you a list of superheroes
 page on `localhost:3000`
 
 That means it's working! There's an extra assignment in the next file!
-
