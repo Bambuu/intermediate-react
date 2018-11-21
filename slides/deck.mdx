@@ -890,7 +890,7 @@ Files: `HeroList.js`
 
 <ul style={{ fontSize: "1.2em" }}>
   <Appear>
-    <li>Only works if the information is constant</li>
+    <li>Only works if the information is <b>constant</b></li>
     <li>Declare constant as an object in a separate file</li>
     <li>Import it directly whereever it is needed</li>
   </Appear>
@@ -901,6 +901,20 @@ Files: `HeroList.js`
 # The Simple Solution
 
 <img src="./public/context-constant.svg" style={{ width: "90vw", height: "80vh" }} />
+
+---
+
+# The Library Solution
+## Using Redux, MobX, etc.
+
+<ul style={{ fontSize: "1.2em" }}>
+  <Appear>
+    <li>A common beginner mistake (we did it)</li>
+	<li>Often makes everything more complex, with very little gain</li>
+    <li>Made sense a year ago, when the Context API wasn't mature</li>
+	<li>Use <b>Component setState</b> and <b>Context</b> as long as you can maintain it, it's simpler!</li>
+  </Appear>
+</ul>
 
 ---
 
