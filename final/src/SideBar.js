@@ -9,5 +9,6 @@ export const SideBar = () => {
       <Link to="/">Heroes</Link>
       <Link to="/theming">Theming</Link>
       <Link to="/extra">Extra Exercise</Link>
+	  <Link className="assignment-link" to="/assignment-fake">Fake Assignment</Link>
     </div>)
 };

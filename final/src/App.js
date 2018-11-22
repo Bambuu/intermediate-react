@@ -6,6 +6,7 @@ import { ExtraAssignment } from "./ExtraAssignment";
 import { Theming } from "./Theming";
 import { BrowserRouter, Route } from "react-router-dom";
 import { greenTheme, redTheme, ThemeContext } from "./ThemeContext";
+import { AssignmentDescription} from './not-important/AssignmentDescription';
 
 class App extends Component {
 
@@ -39,6 +40,7 @@ class App extends Component {
               <Route exact path="/" component={HeroList}/>
               <Route path="/theming" component={Theming}/>
               <Route path="/extra" component={ExtraAssignment}/>
+              <Route path="/assignment-fake" component={AssignmentDescription}/>
             </div>
           </div>
         </ThemeContext.Provider>
