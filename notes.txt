@@ -7,8 +7,6 @@ P2. Chart: Rename "Form" -> "AddHero"
 
 P2: Fjern "Setup part2" fra assignments slide?
 
-P2 Øvelser: Skal vi give dem muligheden for et bedre key end "name" ? Det er ikke super-optimalt
-
 +++++p3++++
 Composition vs Inheritance sejler lidt, eller også er det bare lidt langt.
 
