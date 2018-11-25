@@ -21,6 +21,8 @@ Slet NavLink fra chart?
 Kun brug større highlights fordi ellers glemmer du dem når du skal fremvise. Lad os gå dem igennem og kun beholde
 de "større"
 
+- [del{g react router v3}]
+
 ---- TIME ----
 
 (Beta-test)

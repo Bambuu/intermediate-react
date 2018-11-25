@@ -139,13 +139,6 @@ by Jeppe Reinhold and Gustav Wengel
       range: [3, 5]
     },
     {
-      tokens: {
-        3: [8, 9, 10, 11, 12, 13, 14],
-        4: [1, 2, 3, 4, 5, 6, 7, 8, 9],
-        5: [1]
-      }
-    },
-    {
       range: [7, 12]
     }
   ]}
@@ -163,9 +156,8 @@ by Jeppe Reinhold and Gustav Wengel
     { range: [1, 12] },
     { range: [2, 6] },
     {
-      range: [7, 9],
+      range: [7, 11],
     },
-    { lines: [11] },
     { range: [14, 20] }
   ]}
 />
@@ -370,14 +362,13 @@ We want to share behavior between components
       range: [1, 10],
       notes: "A network aware Order button"
     },
-    { lines: [1], notes: "Basic order button" },
-    {
-      range: [5, 9],
-      notes: "Disable button if there is no network"
-    },
     {
       lines: [2, 3],
       notes: "Get current network status from prop"
+    },
+    {
+      range: [5, 9],
+      notes: "Disable button if there is no network"
     },
     {
       range: [12, 14],
@@ -723,7 +714,7 @@ We teach you both patterns because you will most likely use both when you start 
 ---
 
 <CodeSurferNoZoom
-  title="child as a function with arguments!"
+  title="child as a function with arguments"
   code={require("!raw-loader!./examples/children-prop-function-args.js")}
   lang="jsx"
   showNumbers={true}
@@ -732,14 +723,7 @@ We teach you both patterns because you will most likely use both when you start 
     {
       range: [1, 7]
     },
-    {},
-    {
-      tokens: {
-        4: [4, 5, 6, 7],
-        13: [2, 3, 4],
-        15: [12, 13, 14, 15, 16, 17, 18, 19, 20]
-      }
-    }
+    {}
   ]}
 />
 
@@ -754,32 +738,13 @@ We teach you both patterns because you will most likely use both when you start 
     {},
     {
       range: [1, 2],
-      notes: "The basics"
-    },
-    {
-      range: [7, 11],
-      notes: "The usual JSX"
-    },
-    {
-      lines: [5, 13],
-      notes: "Render an outer <Network/> component"
-    },
-    {
-      lines: [5, 6, 12, 13],
-      notes: 'Child of <Network/> component is a function - "function as a child"'
-    },
-    {
-      tokens: { 6: [2, 3, 4, 5, 6, 7, 8] },
-      notes: "Child function gets behavior as arguments"
-    },
-    {
-      range: [6, 12],
-      notes: "Use arguments to return final result"
+      notes: "Only amount is read from props"
     },
     {
       range: [4, 14],
-      notes: "In short, the Render prop component is added inside our JSX"
-    }
+      notes: "Online status received from Network render prop"
+    },
+	{}
   ]}
 />
 
@@ -962,7 +927,7 @@ Files: `HeroList.js`
   lang="jsx"
   showNumbers={true}
   theme={nightOwl}
-  steps={[{}, { lines: [2] }, { lines: [6, 14] }, { lines: [6, 7, 13, 14] }, { range: [6, 14] }]}
+  steps={[{}, { lines: [2] }, { range: [6, 14] }, {}]}
 />
 
 ---
