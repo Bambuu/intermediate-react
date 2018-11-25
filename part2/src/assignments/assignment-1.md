@@ -9,7 +9,7 @@ Tip: You might have to run `npm install` inside this directory if you get an err
 
 ## EXERCISE B:
 We're missing a key in our list!
-React warns you of this with a message like this:
+React warns you of this in your Developer Tools console:
 ```
 "Warning: Each child in an array or iterator should have a unique "key" prop.
 Check the render method of HeroList"

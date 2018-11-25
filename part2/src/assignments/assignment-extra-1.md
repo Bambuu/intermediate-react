@@ -16,18 +16,18 @@ ref = React.createRef();
 Now we have a `ref`. Inside our render method, we specify what element this ref should point to.
 We do this by adding our ref to the `ref` attribute:
 ```js
-  <li ref={this.ref}> </li>
+  // An example of how to attach a ref to a <div> 
+  <div ref={this.ref}> </div>
 ```
 
 ## EXERCISE B:
 Add your `ref` to the first `<input>` element in your form.
 
 ## EXERCISE C:
-When the user looks at the HeroList, they should
-be able to start typing immediately.
+We want the user to be able to start typing, immediately when the HeroList is shown.
 
 Use the `ref` inside the `componentDidMount` lifecycle method
-to focus the *first* `<input>` component when the component loads:
+to focus the *first* `<input>` component:
 ```js
 componentDidMount(){
   // Here we can access "this.ref"

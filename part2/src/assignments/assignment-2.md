@@ -30,7 +30,7 @@ like this:
 ```js
 value={this.state.awesomeInputValue}
 ```
-You'll get an error saying that the component won't ever update. That's because
+You'll get an error in your developer tools console, that the component won't ever update. That's because
 the value in state never changes. 
 Try typing in the `<input>` component - nothing happens.
 
@@ -68,7 +68,7 @@ and then loads a new page. We'll want to implement our custom logic.
 Create a function inside HeroList that's called `addSuperhero`, it will take in an `event` as parameter.
 To stop the default behaviour call `event.preventDefault()` on the event parameter.
 
-Add `this.addSuperHero` to the `onSubmit` attribute on the form element.
+Add `this.addSuperHero` to the `onSubmit` attribute on the **form** element.
 
 Ensure that when you submit your form now, nothing happens.
 
