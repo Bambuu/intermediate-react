@@ -1,5 +1,54 @@
 ---- TODOS ----
 
+P1 Øvelser.
+Hvis folk læser for tidligt fatter de ikke splice. Skriv kommentarer til koden.
+
+
+++++p2++++
+P2. Der er en highlight for meget i map.
+
+P2. Chart: Rename "Form" -> "AddHero"
+
+P2: Fjern "Setup part2" fra assignments slide?
+
+P2 Øvelser: Skal vi give dem muligheden for et bedre key end "name" ? Det er ikke super-optimalt
+P2: Der står man får et error i konsollen, men man er ikke sikker på om det er devtools eller compile-konsollen
+P2: Gør det mere tydeligt at li eksemplet med ref, bare er et eksempel
+Formuler starten lidt bedre af Refs-C
+
+En del mennesker har prøvet at lave onSubmit på knappen og ikke formen
+
++++++p3++++
+Composition vs Inheritance sejler lidt, eller også er det bare lidt langt.
+
+øvelsestypo: "componentdidMount" til "componentDidMount"
+"Cannot perform setstate on unmounted component" scroll memory leak.
+
+++++++p4+++++
+Bare sig BrowserRouter skal være i toppen
+
+øvelseestekst. Add Router under <HEader> component, INSIDE APP.JS!!
+
+Where to import withRouter from?
+
+++++++++p5++++++
+Delete " IT doesn't make sense yet " slide
+
+P5. Why is the Highlighter prop called yellow?  What about "isHighlighted?"
+
+====p6=====
+Slet NavLink fra chart?
+
+P6 exercises. It says "render" function a lot, but Theming is a functional component
+
+Generelt:
+Lav lidt baggrundsfarve på ekstraøvelserne, så du kan se hvor langt folk er kommet!
+
+Kun brug større highlights fordi ellers glemmer du dem når du skal fremvise. Lad os gå dem igennem og kun beholde
+de "større"
+
+
+PREVIOUS:
 - P4. Hav en slide som siger de nok skal bruge .md filen
 - P5. Hav et ekstra slide med function as a child
 - p6. missing line
