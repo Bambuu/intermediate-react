@@ -10,34 +10,16 @@ P2: Fjern "Setup part2" fra assignments slide?
 P2 Øvelser: Skal vi give dem muligheden for et bedre key end "name" ? Det er ikke super-optimalt
 
 +++++p3++++
+
+- man kunne jo nedarve, men det er ikke den bedste l[sning.] vi gr ikke i detaljer, men se hvad facebook siger.
+
 Composition vs Inheritance sejler lidt, eller også er det bare lidt langt.
-
-++++++p4+++++
-Bare sig BrowserRouter skal være i toppen
-
-++++++++p5++++++
-Delete " IT doesn't make sense yet " slide
-
-P5. Why is the Highlighter prop called yellow?  What about "isHighlighted?"
 
 ====p6=====
 Slet NavLink fra chart?
 
-Generelt:
-Lav lidt baggrundsfarve på ekstraøvelserne, så du kan se hvor langt folk er kommet!
-
 Kun brug større highlights fordi ellers glemmer du dem når du skal fremvise. Lad os gå dem igennem og kun beholde
 de "større"
-
-
-PREVIOUS:
-- P4. Hav en slide som siger de nok skal bruge .md filen
-- P5. Hav et ekstra slide med function as a child
-- p6. missing line
-
-
-FINAL CHECKLIST:
-  - Nothiiin
 
 ---- TIME ----
 
