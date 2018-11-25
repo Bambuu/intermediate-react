@@ -23,6 +23,7 @@ P5. Why is the Highlighter prop called yellow?  What about "isHighlighted?"
 ====p6=====
 Slet NavLink fra chart?
 
+
 Generelt:
 Lav lidt baggrundsfarve på ekstraøvelserne, så du kan se hvor langt folk er kommet!
 
