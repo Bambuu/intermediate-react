@@ -8,14 +8,25 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html, body {
+    min-height: 100vh;
+    overflow: auto;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
   monospace;
 }
 
-.root {
+.root, #root {
   display: flex;
   width: 100%;
+  min-height: 100vh;
+}
+
+.extra-assignment {
+    background-color: LightGoldenRodYellow;
+    height: 100%;
 }
 
 .sidebar {
@@ -41,6 +52,8 @@ code {
   flex: 1;
   margin-left: 140px;
   background-origin: content-box;
+  display: flex;
+  flex-direction: column;
 }
 
 .tall-div {

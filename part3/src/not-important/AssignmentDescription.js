@@ -40,7 +40,7 @@ export class AssignmentDescription extends React.Component {
 
   render() {
     return (
-      <div style={{backgroundColor: "LightGoldenRodYellow"}}>
+      <div className="extra-assignment">
       <ReactMarkdown
         className="markdown-body"
         source={this.state.markdown}
