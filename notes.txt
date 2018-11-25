@@ -23,8 +23,6 @@ P5. Why is the Highlighter prop called yellow?  What about "isHighlighted?"
 ====p6=====
 Slet NavLink fra chart?
 
-P6 exercises. It says "render" function a lot, but Theming is a functional component
-
 Generelt:
 Lav lidt baggrundsfarve på ekstraøvelserne, så du kan se hvor langt folk er kommet!
 

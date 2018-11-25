@@ -52,7 +52,7 @@ We get the theme though a `Consumer`, that uses a function-as-a-child:
 Inside `Theming.js`:
 
 - Import our `ThemeContext`
-- Use the `ThemeContext.Consumer` inside the render function, to render the 
+- Use the `ThemeContext.Consumer` inside the returned JSX, to render the 
 `color` attribute to the page:
 ```js
       <ThemeContext.Consumer>
