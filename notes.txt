@@ -1,28 +1,5 @@
 ---- TODOS ----
 
-++++p2++++
-P2. Der er en highlight for meget i map.
-
-P2. Chart: Rename "Form" -> "AddHero"
-
-P2: Fjern "Setup part2" fra assignments slide?
-
-P2 Øvelser: Skal vi give dem muligheden for et bedre key end "name" ? Det er ikke super-optimalt
-
-+++++p3++++
-
-- man kunne jo nedarve, men det er ikke den bedste l[sning.] vi gr ikke i detaljer, men se hvad facebook siger.
-
-Composition vs Inheritance sejler lidt, eller også er det bare lidt langt.
-
-====p6=====
-Slet NavLink fra chart?
-
-Kun brug større highlights fordi ellers glemmer du dem når du skal fremvise. Lad os gå dem igennem og kun beholde
-de "større"
-
-- [del{g react router v3}]
-
 ---- TIME ----
 
 (Beta-test)

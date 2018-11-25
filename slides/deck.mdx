@@ -276,9 +276,8 @@ Pulling the `value` of the `<input/>` up to the component `state`
 
 ## Assignments - Part 2
 
-1. Setup the 'Part 2' project
-2. Add `keys` to lists
-3. Building a form using the Controlled Component technique
+1. Add `keys` to lists
+2. Building a form using the Controlled Component technique
 
 Files: `HeroList.js`
 
@@ -308,9 +307,11 @@ We want to share behavior between components
 
 ---
 
-# The solutions
+_"Can't we just put the behavior in a super component, and extend from that using inheritance?"_
 
-## Composition 🥰 vs. inheritance 🤕
+# 🤕
+
+---
 
 <blockquote style={{ fontSize: "1.5em" }}>
   <i>
@@ -319,6 +320,10 @@ We want to share behavior between components
   </i>
   <p>- Facebook, maintains over 50.000 components</p>
 </blockquote>
+
+---
+
+Using composition is better suited for React 👌
 
 ---
 
@@ -744,7 +749,7 @@ We teach you both patterns because you will most likely use both when you start 
       range: [4, 14],
       notes: "Online status received from Network render prop"
     },
-	{}
+    {}
   ]}
 />
 
@@ -831,8 +836,8 @@ Files: `HeroList.js`
 ## The Problem
 
 <div className="stacked-container" style={{ width: "90vw", height: "80vh" }}>
+  <img src="./public/context-base.svg" className="stacked" />
   <Appear>
-    <img src="./public/context-base.svg" className="stacked" />
     <img src="./public/context-theme.svg" className="stacked" />
     <img src="./public/context-props.svg" className="stacked" />
   </Appear>
@@ -846,7 +851,9 @@ Files: `HeroList.js`
 
 <ul style={{ fontSize: "1.2em" }}>
   <Appear>
-    <li>Only works if the information is <b>constant</b></li>
+    <li>
+      Only works if the information is <b>constant</b>
+    </li>
     <li>Declare constant as an object in a separate file</li>
     <li>Import it directly whereever it is needed</li>
   </Appear>
@@ -861,14 +868,17 @@ Files: `HeroList.js`
 ---
 
 # The Library Solution
+
 ## Using Redux, MobX, etc.
 
 <ul style={{ fontSize: "1.2em" }}>
   <Appear>
     <li>A common beginner mistake (we did it)</li>
-	<li>Often makes everything more complex, with very little gain</li>
+    <li>Often makes everything more complex, with very little gain</li>
     <li>Made sense a year ago, when the Context API wasn't mature</li>
-	<li>Use <b>Component setState</b> and <b>Context</b> as long as you can maintain it, it's simpler!</li>
+    <li>
+      Use <b>Component setState</b> and <b>Context</b> as long as you can maintain it, it's simpler!
+    </li>
   </Appear>
 </ul>
 
