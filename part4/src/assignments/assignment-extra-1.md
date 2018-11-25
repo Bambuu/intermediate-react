@@ -5,7 +5,7 @@ Let's look at the Header. We want it to show the current url.
 
 Luckily we can tap into this information, with a Higher-Order Component!
 
-Inside `Header.js` import the `withRouter` HOC
+Inside `Header.js` import the `withRouter` HOC from `react-router-dom`
 
 # EXERCISE B
 Let's export the Header with the withRouter Higher Order Component.

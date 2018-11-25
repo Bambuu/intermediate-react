@@ -15,10 +15,6 @@ Composition vs Inheritance sejler lidt, eller også er det bare lidt langt.
 ++++++p4+++++
 Bare sig BrowserRouter skal være i toppen
 
-øvelseestekst. Add Router under <HEader> component, INSIDE APP.JS!!
-
-Where to import withRouter from?
-
 ++++++++p5++++++
 Delete " IT doesn't make sense yet " slide
 
