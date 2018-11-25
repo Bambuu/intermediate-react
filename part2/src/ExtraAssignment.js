@@ -75,7 +75,7 @@ class ListItemWithState extends React.Component {
   };
 
   static propTypes = {
-    year: PropTypes.number.isRequired,
+    year: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
   };
 
