@@ -12,9 +12,6 @@ P2 Øvelser: Skal vi give dem muligheden for et bedre key end "name" ? Det er ik
 +++++p3++++
 Composition vs Inheritance sejler lidt, eller også er det bare lidt langt.
 
-øvelsestypo: "componentdidMount" til "componentDidMount"
-"Cannot perform setstate on unmounted component" scroll memory leak.
-
 ++++++p4+++++
 Bare sig BrowserRouter skal være i toppen
 

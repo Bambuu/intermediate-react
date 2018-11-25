@@ -4,9 +4,13 @@ In this exercise we'll try implementing some
 behaviour, and in the next exercise we'll use a
 Higher-Order Component to achieve the same result.
 
+## Note
+During these exercises, you might get the following error in your Developer Tools Console:
+`Can't perform a React state update on an unmounted component. This is a no-op, but it indicates a memory leak in your application.`
+This is because we're skipping some steps to make the exercises simpler. Feel free to ignore this error.
+
 ## EXERCISE A:
 Switch to the part 3 directory in your terminal and run "npm start"
-*If you get a `ENOENT` error, try running "npm install" first*
 
 ## EXERCISE B:
 We want to make the background of the document
@@ -17,7 +21,7 @@ We need to listen to the scroll event.
 Add an empty `componentDidMount` lifecycle method inside
 the `HeroList` class:
 ```js
-componentdidMount() {
+componentDidMount() {
   // Put stuff in here!
 }
 ```
@@ -35,7 +39,7 @@ every time the user scrolls. Now when you scroll down your HeroList, you
 should be able to see the current position in the console.
 
 You should be able to see 
-Make sure you can see the scroll events in the console,
+Make sure you can see the scroll events in the developer tools console,
 when you scroll up and down your HeroList.
 
 ## EXERCISE D:
